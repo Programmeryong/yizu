@@ -1,0 +1,181 @@
+
+*{font-size: 14px; list-style: none;  margin: 0; padding: 0;}
+.fontSize12{font-size: 12px!important;}
+.fontSize14{font-size: 14px!important;}
+.fontSize16{font-size: 16px!important;}
+.fontSize18{font-size: 18px!important;}
+.fontSize24{font-size: 24px!important;}
+.fontSize36{font-size: 36px!important;}
+.cursor{cursor: pointer;}
+main{width: 100%;height: 100%; /*background: rgba(0,0,0,0.04);*/}
+.clear:after{content: "";display: block;clear: both;}
+/*a{display: block;}*/
+a{color:rgba(0,0,0,0.8);}
+a:hover{text-decoration: none;}
+a:active{text-decoration: none;}
+ul{text-decoration: none;list-style: none;margin: 0;padding: 0;}
+/*img{cursor: pointer;}*/
+
+@media (min-width:480px){}
+@media (min-width:768px){}
+@media (min-width:992px){}
+@media (min-width:1200px) {
+	main{font-size:14px;
+		font-family:PingFangSC-Regular;
+		color:rgba(0,0,0,1);
+	}
+	html{font-size: 16px!important;}
+	.active{background: #198CFF; color: #ffffff;}
+	.main{width: 75rem; height: auto; margin:0 auto;/*background: #F5F7FA;*/padding-top: 1rem;}
+	.main_top{width: 75rem; height: 37.5rem;background: #FFFFFF; margin: 0 auto; margin-bottom: 1rem;}
+	.main_top_title{padding-top: 1rem; margin-left: 5px;}
+	.main_top_title span:last-child{display:block;width: 6rem; height: 22px; line-height: 22px;
+									background:-webkit-gradient(linear, 0 0, 0 100%, from(rgba(245,206,98,1)), to(rgba(245,180,49,1)));
+									background:-webkit-linear-gradient(rgba(245,206,98,1), rgba(245,180,49,1));
+									background:-moz-linear-gradient(rgba(245,206,98,1), rgba(245,180,49,1));
+									background:-o-linear-gradient(rgba(245,206,98,1), rgba(245,180,49,1));
+									background:linear-gradient(rgba(245,206,98,1), rgba(245,180,49,1));
+									color: #ffffff; transform:skew(-12deg);text-align: center; border-radius: 2px;
+									float: left; margin-top: 2px; margin-left: 1rem; overflow: hidden; }
+	
+	.tabs_li ul li{width:7.5rem; height: 1.87rem; line-height: 1.87rem; margin-top: 0.6rem; text-align: center;
+				/*margin-left: 0px;*/ }
+	.tabs_li ul li:hover{background: #198CFF; color: #ffffff; cursor: pointer;}
+	.tabs_box{width: 75rem; height: 31.1rem; display: flex; justify-content: space-between;}
+	.xuanka_out{width: 53rem; height: 31.1rem; overflow: hidden;}
+	.xuanka_in{width: 159rem; height: 31.1rem; position: relative;}
+	.xuanka_in>div{float: left;}
+	.tabs_img{width: 53rem; height: 31.1rem;  display: flex; justify-content: space-between;}
+	.quanjin{width: 53rem; height: 31.1rem;}
+	.house-style{width: 53rem; height: 31.1rem; background: blue;}
+	.tabs_img_big{width: 44.35rem; height: 31.1rem;  overflow: hidden;}
+	.tabs_img_big_lun{width: 44.35rem; height:auto; position: relative;}
+	.tabs_img_big_lun div{width: 44.23rem; height: 496px;}
+	.tabs_img_small{width:8.6rem; height: 31.1rem; overflow: hidden;}
+	.tabs_img_small .img_hadow li{width:8.6rem; height: 6.21rem; background: rgba(0,0,0,0.5); position: relative; top:-498px;}
+	.curr{visibility: hidden;}
+	.tabs_img_small ul{width:8.6rem; height: 31.1rem; }
+	.tabs_img_small ul li{width:8.6rem; height: 6.21rem; border-bottom: 1px solid #ffffff;}
+	.tabs_img_small li:last-child{border:0;}
+	
+	/*house info*/
+	.top_infos{width: 19.5rem; height: 31.1rem; margin-right: 1rem; color: rgba(0,0,0,0.8);}
+	.top_house_info{width: 19.5rem; height: 16rem; border-bottom: 2px solid rgba(0,0,0,0.04);}
+	.top_house_from{width: 19.5rem; height: 13rem; /*outline: 1px solid red;*/}
+	.house_title{width: 19.5rem; height: 3rem; line-height: 3rem;  
+				display: flex; justify-content: space-between; margin: 0.5rem 0;}
+	.house_title_left{ color:rgba(245,34,48,1);}
+	.house_title_right{margin-top: 6px;}
+	.house_title_right a:hover{color: rgba(245,34,48,1);}
+	.collection{padding-left:25px; background: url(../images/icon/collection.png) no-repeat; background-size: 20px 20px; background-origin: 10px 10px;}
+	.collection:hover{padding-left:25px; background: url(../images/icon/collection-red.png) no-repeat; background-size: 20px 20px; background-origin: 10px 10px;}
+	.share{padding-left: 25px; background: url(../images/icon/share.png) no-repeat; background-size: 20px 20px; background-origin: 10px 10px;}
+	.share:hover{padding-left: 25px; background: url(../images/icon/share-red.png) no-repeat; background-size: 20px 20px; background-origin: 10px 10px;}
+	.top_house_info>p{padding-left: 5px;}
+	.top_house_info>p:not(.address){height: 40px;line-height: 40px;}
+	.address{line-height: 15px;}
+	.area{padding-left: 25px; background: url(../images/icon/house.png) no-repeat; background-size: 20px 20px; background-origin: 10px 10px;}
+	.where{display: block; width: 300px; height: 16px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; 
+			padding-left: 25px; background: url(../images/icon/where.png) no-repeat; background-size: 20px 20px; background-origin: 10px 10px;}
+	.floor{padding-left: 25px; background: url(../images/icon/floor.png) no-repeat; background-size: 20px 20px; background-origin: 10px 10px;}
+	.wuye{padding-left: 25px; background: url(../images/icon/people.png) no-repeat; background-size: 20px 20px; background-origin: 10px 10px;}
+	.top_house_from_title{ width: 100%; height: 70px;  margin-top: 20px; display: flex; justify-content: space-between;}
+	.top_house_from_img{ width: 70px; height: 70px; -webkit-border-radius: 3rem; background: skyblue;overflow: hidden;}
+	.top_house_from_title_right{width: 14.5rem; height: 70px; padding-top:10px; }
+	.top_house_from_title_right>p{line-height: 20px;}
+	.out_house{color: #198CFF; text-decoration: underline;}
+	.cctn{width: 6rem; height: 2.5rem; line-height: 2.5rem; color: #ffffff; background:rgba(255,179,25,1); border-radius: 3px;
+			padding-left: 10px;}
+	.cctn img{margin-right: 10px;}
+	.cctn:hover{ background: orange;}
+	/*头部结束*/
+
+	
+	
+	/*中部*/
+	.middle_title{background: #ffffff;}
+	.middle_title li{width: 8.6rem; height: 2.2rem; line-height: 2.2; text-align: center;}
+	.middle_title li:hover{background: #198CFF; color: #fff; cursor: pointer;}
+	.middle_content{background: #ffffff; width: 100%; height: 11.75rem; margin-top: 1rem;}
+	/*全部户型*/
+	#house_and_find{width: 75rem;height: auto; margin-top: 1rem; display: flex; justify-content: space-between;}
+	#all_house{width: 53rem; height: auto; background: #ffffff;}
+	#find_house_out{width: 20.75rem; height: auto; }
+	#find_house{width: 20.75rem; height: 18rem; background: #ffffff; position: relative;}
+	#find_house h2{margin-left: 25px; height: 3rem; line-height: 3rem; margin-top: 0;}
+	.inputphone{width: 17.75rem; height: 13rem; background: rgba(0,0,0,0.04); margin: 0 auto;}
+	.inputphone form input:first-child{width: 260px; height: 42px; margin: 0 12px; margin-top: 30px; margin-bottom: 5px; border: 0; text-align: center;}
+	.inputphone form input:last-child{width: 260px; height: 42px; margin: 15px 12px;  background: #F5B431;color: #fff;border: 0;}
+	.inputphone form input:last-child:hover{background: orange;}
+	#all_house h1{margin-left: 1rem; margin-bottom: 1rem;}
+	.all_house_area{width:51rem; display: flex; border-bottom: 2px solid rgba(0,0,0,0.04);border-top: 2px solid rgba(0,0,0,0.04);
+					height: 3rem; line-height: 3rem; margin: 0 auto;}
+	.all_house_area ul li{margin-left: 2rem; text-align: center;}
+	.all_house_type{width:51rem; display: flex; border-bottom: 2px solid rgba(0,0,0,0.04); padding-left: 3rem;
+					height: 3rem; line-height: 3rem; margin: 0 auto;}
+	.all_house_type ul li:not(.biaozhi){margin-left: 8.36rem; text-align: center;}
+	.all_house_list{width:51rem; height: 10rem; border-bottom: 2px solid rgba(0,0,0,0.04); 
+					margin: 0 auto; padding-top: 2rem;}
+	.all_house_list img{ width: 100%; height: 100%;}
+	.all_house_list ul{}
+	.all_house_list ul li{width: 138px; height: 98px; line-height: 98px; margin: auto 0;}
+	.all_house_list ul li:not(.biaozhi){width: 150px; margin-left: 1rem; text-align: center;}
+	.show_all_house{width: 180px; height: 36px; line-height: 36px; margin: 1rem auto; border-radius: 3px;
+					border: 2px solid rgba(0,0,0,0.04); text-align: center; margin-top: 1rem; cursor: pointer;}
+	.show_all_house:hover{background: #F5B431; color: #fff;}
+	#office_info{margin: 1rem 0; width: 53rem; height: 26.19rem; background: #fff;}
+	#office_info h1{width:51rem; height: 4rem; line-height: 4rem; margin: 0 auto; border-bottom: 2px solid rgba(0,0,0,0.04); }
+	.office_content{width:51rem; height: 17rem; margin: 0 auto; border-bottom: 2px solid rgba(0,0,0,0.04); }
+	.office_content div:first-child{width: 51rem; height: 4rem; line-height: 4rem; }
+	.metro,.less_house{width: auto; height: 22px; padding: 2px 1rem; border-radius: 3px; }
+	.metro{background:rgba(245,180,49,0.1); border: 1px solid rgba(245,180,49,0.5); color: rgba(245,180,49,1);}
+	.metro:hover{background:rgba(245,180,49,0.3);}
+	.less_house{background: rgba(255,85,51,0.1); border: 1px solid rgba(255,85,51,0.5); color: rgba(255,85,51,1); margin-left: 1rem;}
+	.less_house:hover{background: rgba(255,85,51,0.2);}
+	.office_list{width: 100%; height: 100%; outline: 1px solid red;}
+	.office_content ul{float: left; width: 25.5rem; height: 12rem; line-height: 3rem;}
+	.house_present{width: 51rem; margin: 1rem auto;}
+	#telText{padding-left: 2rem; color: red; display: none;}
+	/*用户评价*/
+	.user_evaluate{width: 75rem; height: auto; background: #ffffff; margin-bottom: 1rem;}
+	.user_evaluate h1{width:73rem; height: 4rem; line-height: 4rem; margin: 0 auto; border-bottom: 2px solid rgba(0,0,0,0.04);}
+	.user_evaluate_list{width:73rem; height: auto; margin: 0 auto;}
+	.user_evaluate_list ul li>div{width: auto; height: 9.4rem; line-height: 2.2rem; padding-top: 10px; border-bottom: 2px solid rgba(0,0,0,0.04);}
+	.user_evaluate_list ul li>div>p:first-child{color: rgba(0,0,0,0.6);}
+	.star img{width: 18px; height: 17px;}
+	.star{margin-left: 1.5rem;}
+	.evaluate_time{float: right; margin-right: 3rem;}
+	.near,.house_analyse{width: auto; height: 22px; padding: 2px 1rem; border-radius: 3px; }
+	.near{background:rgba(245,180,49,0.1); border: 1px solid rgba(245,180,49,0.5); color: rgba(245,180,49,1);}
+	.house_analyse{background: rgba(255,85,51,0.08); border: 1px solid rgba(255,85,51,0.5); color: rgba(255,85,51,1); margin-left: 1rem;}
+	.near:hover{background:rgba(245,180,49,0.3); }
+	.house_analyse:hover{background: rgba(255,85,51,0.15);}
+	/*分页*/
+	.paging{height: 4.5rem;text-align: center;}
+	.paging ul li a{width: 32px; height: 32px; line-height: 20px; text-align: center; margin-left: 8px; padding-left: 10px;
+					 border-radius: 5px; color: rgba(0,0,0,0.8);}	
+	.paging ul li a:hover{background: #1890FF; color: #fff;}				 
+	/*用户评价结束*/
+	
+	/*周边设施*/
+	#around{width: 75rem; height: 38rem; background: #ffffff; margin-bottom: 1rem;}
+	#around h1{width:73rem; height: 4rem; line-height: 4rem; margin: 0 auto; border-bottom: 2px solid rgba(0,0,0,0.04);}
+	.map_around{width: 73rem; height: 31.6rem; margin: 1rem auto;  overflow: hidden; outline: 1px solid red;}
+	
+	/*猜你喜欢*/
+	.lovely{width: 100%; height: 24.6rem; background: #fff;}
+	.lovely_middle{width: 75rem; height: 24.6rem; margin: 0 auto; }
+	.lovely_middle h1{ height: 4rem; line-height: 4rem; margin: 0 auto;}
+	.lovely_infoimg{width: 75rem; height: 19.6rem;}
+	.lovely_infoimg ul{display: flex;justify-content: space-between;}
+	.lovely_infoimg ul li a>div{width: 285px; height: 19.6rem; border: 1px solid rgba(0,0,0,0.04);}
+	.lovely_imgbox{width: 285px; height: 220px; overflow: hidden;}
+	.lovely_infoimg ul li a:active{text-decoration: none;}
+	.lovely_infoimg ul li a>div img{width: 285px; height: 220px; transition: all 0.6s;}
+	.lovely_infoimg ul li a>div img:hover{transform: scale(1.13);}
+	.house_name{margin-top: 12px; padding-left: 10px;}
+	#money_type>img{width: 20px; height: 20px;}
+	#money_type{color: rgba(0,0,0,0.6); height: 2rem; line-height: 2rem; padding: 0 10px;}
+	.howMoney{float: right; margin-top: -5px;}
+	.howMoney .moneys{color:rgba(250,84,28,1); font-size: 24px!important;}
+}
