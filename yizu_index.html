@@ -7,12 +7,14 @@
 	<title>乙租网</title>
 	<link rel="shortcut icon" href="./images/yz.ico">
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/index_style.css">
 	<link rel="stylesheet" type="text/css" href="./css/yizu_index.css">
 	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./js/yizu_index.js"></script>
 </head>
 <body style="background:rgba(0,0,0,.04)">
+	<!-- 顶部导航栏开始 -->
 <nav class="navbar navbar-default top_bg mar">
 	  <div class="container">
 	    <!-- Brand and toggle get grouped for better mobile display -->
@@ -115,8 +117,477 @@
 	</div>
 </header>
 	<!-- 中部 -->
-	<main>
-		
+	<main class="container">
+		<div class="row main_box1" style="margin-bottom: 1rem;">
+			<!-- 轮播图 -->
+			<div class="col-md-9 pad">
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				  <!-- 小圆点 -->
+				  <ol class="carousel-indicators">
+				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				  </ol>
+
+				  <!-- 图片 -->
+				  <div class="carousel-inner" role="listbox">
+				    <div class="item active">
+				      <img src="./images/banner/banner_1.jpg">
+				    </div>
+				    <div class="item">
+				      <img src="./images/banner/banner_2.jpg">
+				    </div>
+				    <div class="item">
+				      <img src="./images/banner/banner_3.jpg">
+				    </div>
+				  </div>
+				</div>
+			</div>
+			<!-- 轮播图右边 -->
+			<div class="col-md-3 box1_r">
+				<!-- 上 -->
+				<div class="col-md-12" style="margin-top: 15px;">
+					<div class="col-md-12 tac fw_bold fsize18">已成交面积</div>
+					<div class="col-md-12 tac"><span class="tr_numbre">1203750</span><i class="trmin_numebr fsize14">/m²</i></div>
+					<div class="col-md-12 tac fw_bold">业主的放心之选</div>
+					<div class="col-md-12 tac fsize18" style="margin-top: 2rem;">
+						<span class="tr_btn">闪电出租</span>
+					</div>
+				</div>
+				<!-- 下 新闻资讯 -->
+				<div class="col-md-12 new_box">
+					<div class="col-md-12 pad new_box_t">
+						<a href="#"><span class="newtit_l fsize18">新闻资讯</span></a>
+						<a href="#"><i class="newtit_r fsize12">更多</i></a>
+					</div>
+					<div class="col-md-12 pad">
+						<ul class="pad ">
+							<li class="minnew"><a href="#"><i class="minjump fsize14">行业</i></a><a href="#">最适合在办公室养的10种小植物</a></li>
+							<li class="minnew"><a href="#"><i class="minjump fsize14">攻略</i></a><a href="#">办公室里的那些事儿</a></li>
+							<li class="minnew"><a href="#"><i class="minjump fsize14">行业</i></a><a href="#">最适合在办公室养的10种小植物</a></li>
+							<li class="minnew"><a href="#"><i class="minjump fsize14">行业</i></a><a href="#">最适合在办公室养的10种小植物</a></li>
+							<li class="minnew"><a href="#"><i class="minjump fsize14">行业</i></a><a href="#">最适合在办公室养的10种小植物</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row main_box2">
+			<div class="col-md-12 pad">
+				<h1 class="fsize24">乙租服务</h1>
+				<div class="col-md-12 col-xs-12 marpad">
+					<p class="fsize14" style="float: left;">一站式服务帮您省更多的钱</p>
+					<p style="float:right;"><a class="fsize14" href="#">查看内容</a></p>	
+				</div>
+				<div class="col-md-12 marpad" style="margin-top: 15px">
+					<ul class="yizu_service marpad">
+						<li>
+							<img src="./images/icon/fixture.png">
+							<p>装修服务</p>
+						</li>
+						<li>
+							<img src="./images/icon/edifice.png">
+							<p>工商注册</p>
+						</li>
+						<li>
+							<img src="./images/icon/accbook.png">
+							<p>代理记账</p>
+						</li>
+						<li>
+							<img src="./images/icon/printer.png">
+							<p>办公设备</p>
+						</li>
+						<li>
+							<img src="./images/icon/crown.png">
+							<p>办公家具</p>
+						</li>
+						<li>
+							<img src="./images/icon/gift.png">
+							<p>广告宣传</p>
+						</li>
+						<li>
+							<img src="./images/icon/office.png">
+							<p>办公协同系统</p>
+						</li>
+						<li>
+							<img src="./images/icon/truck.png">
+							<p>搬家服务</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 知名物业PC端 -->
+		<div class="row main_box3">
+			<h1 class="fsize24">知名物业</h1>
+			<div class="col-md-12 col-xs-12 marpad">
+				<p class="fsize14" style="float: left;">交通便利 环境优美</p>
+				<p style="float:right;"><a class="fsize14" href="#">查看内容</a></p>	
+			</div>
+			<!-- 小轮播 -->
+			<div class="col-md-12 box3_nav">
+				<div class="movebox">
+					<ul>
+						<li>
+							<img src="./images/banner/banner_1.jpg">
+							<div>
+								<p>黑豹振金加工厂</p>
+								<p>￥62<i>/m²</i></p>
+							</div>
+						</li>
+						<li>
+							<img src="./images/banner/banner_2.jpg">
+							<div>
+								<p>钢铁侠科技大楼</p>
+								<p>￥62<i>/m²</i></p>
+							</div>
+						</li>
+						<li>
+							<img src="./images/banner/banner_1.jpg">
+							<div>
+								<p>黑豹振金加工厂</p>
+								<p>￥62<i>/m²</i></p>
+							</div>
+						</li>
+						<li>
+							<img src="./images/banner/banner_2.jpg">
+							<div>
+								<p>钢铁侠科技大楼</p>
+								<p>￥62<i>/m²</i></p>
+							</div>
+						</li>
+						<li>
+							<img src="./images/banner/banner_1.jpg">
+							<div>
+								<p>黑豹振金加工厂</p>
+								<p>￥62<i>/m²</i></p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="row reserve">
+			<!-- 预留位 -->
+			<div>
+				
+			</div>
+		</div>
+		<div class="row main_box4">
+			<h1 class="fsize24">广州精选写字楼</h1>
+			<div class="col-md-12 col-xs-12 marpad">
+				<p class="fsize14" style="float: left;">高性价 高格调 超大面积</p>
+				<p style="float:right;"><a class="fsize14" href="#">查看内容</a></p>	
+			</div>
+			<div class="col-md-12 marpad">
+				<ul class="pad box4_nav">
+					<li>
+						<img src="./images/banner/banner_1.jpg">
+						<div class="col-md-12">
+							<p class="fsize18 box4_tit">绿巨人写字楼</p>
+							<p>
+								<span class="box4_tit_l fsize14">写字楼出租 <i>50</i>m²</span>
+								<span class="box4_tit_r fsize14"><i class="fsize24">73</i>元/m²/月</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<img src="./images/banner/banner_1.jpg">
+						<div class="col-md-12">
+							<p class="fsize18 box4_tit">绿巨人写字楼</p>
+							<p>
+								<span class="box4_tit_l fsize14">写字楼出租 <i>50</i>m²</span>
+								<span class="box4_tit_r fsize14"><i class="fsize24">73</i>元/m²/月</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<img src="./images/banner/banner_1.jpg">
+						<div class="col-md-12">
+							<p class="fsize18 box4_tit">绿巨人写字楼</p>
+							<p>
+								<span class="box4_tit_l fsize14">写字楼出租 <i>50</i>m²</span>
+								<span class="box4_tit_r fsize14"><i class="fsize24">73</i>元/m²/月</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<img src="./images/banner/banner_1.jpg">
+						<div class="col-md-12">
+							<p class="fsize18 box4_tit">绿巨人写字楼</p>
+							<p>
+								<span class="box4_tit_l fsize14">写字楼出租 <i>50</i>m²</span>
+								<span class="box4_tit_r fsize14"><i class="fsize24">73</i>元/m²/月</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<img src="./images/banner/banner_1.jpg">
+						<div class="col-md-12">
+							<p class="fsize18 box4_tit">绿巨人写字楼</p>
+							<p>
+								<span class="box4_tit_l fsize14">写字楼出租 <i>50</i>m²</span>
+								<span class="box4_tit_r fsize14"><i class="fsize24">73</i>元/m²/月</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<img src="./images/banner/banner_1.jpg">
+						<div class="col-md-12">
+							<p class="fsize18 box4_tit">绿巨人写字楼</p>
+							<p>
+								<span class="box4_tit_l fsize14">写字楼出租 <i>50</i>m²</span>
+								<span class="box4_tit_r fsize14"><i class="fsize24">73</i>元/m²/月</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<img src="./images/banner/banner_1.jpg">
+						<div class="col-md-12">
+							<p class="fsize18 box4_tit">绿巨人写字楼</p>
+							<p>
+								<span class="box4_tit_l fsize14">写字楼出租 <i>50</i>m²</span>
+								<span class="box4_tit_r fsize14"><i class="fsize24">73</i>元/m²/月</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<img src="./images/banner/banner_1.jpg">
+						<div class="col-md-12">
+							<p class="fsize18 box4_tit">绿巨人写字楼</p>
+							<p>
+								<span class="box4_tit_l fsize14">写字楼出租 <i>50</i>m²</span>
+								<span class="box4_tit_r fsize14"><i class="fsize24">73</i>元/m²/月</span>
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row advert_1 ">
+			<div class="col-md-6 advert_l marpad">
+				<img src="./images/banner/banner_2.jpg">
+			</div>
+			<div class="col-md-6 advert_r marpad">
+				<form method="POST">
+					<input type="text" name="" placeholder="请输入手机号码，预约找房，5分钟内回复">
+					<span>立即咨询</span>
+				</form>
+			</div>
+		</div>
+		<div class="row main_box4">
+			<h1 class="fsize24">广州精选创意园</h1>
+			<div class="col-md-12 col-xs-12 marpad">
+				<p class="fsize14" style="float: left;">高性价 高格调 超大面积</p>
+				<p style="float:right;"><a class="fsize14" href="#">查看内容</a></p>	
+			</div>
+			<div class="col-md-12 marpad">
+				<ul class="pad box4_nav">
+					<li>
+						<img src="./images/banner/banner_1.jpg">
+						<div class="col-md-12">
+							<p class="fsize18 box4_tit">绿巨人写字楼</p>
+							<p>
+								<span class="box4_tit_l fsize14">写字楼出租 <i>50</i>m²</span>
+								<span class="box4_tit_r fsize14"><i class="fsize24">73</i>元/m²/月</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<img src="./images/banner/banner_1.jpg">
+						<div class="col-md-12">
+							<p class="fsize18 box4_tit">绿巨人写字楼</p>
+							<p>
+								<span class="box4_tit_l fsize14">写字楼出租 <i>50</i>m²</span>
+								<span class="box4_tit_r fsize14"><i class="fsize24">73</i>元/m²/月</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<img src="./images/banner/banner_1.jpg">
+						<div class="col-md-12">
+							<p class="fsize18 box4_tit">绿巨人写字楼</p>
+							<p>
+								<span class="box4_tit_l fsize14">写字楼出租 <i>50</i>m²</span>
+								<span class="box4_tit_r fsize14"><i class="fsize24">73</i>元/m²/月</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<img src="./images/banner/banner_1.jpg">
+						<div class="col-md-12">
+							<p class="fsize18 box4_tit">绿巨人写字楼</p>
+							<p>
+								<span class="box4_tit_l fsize14">写字楼出租 <i>50</i>m²</span>
+								<span class="box4_tit_r fsize14"><i class="fsize24">73</i>元/m²/月</span>
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row main_box4">
+			<h1 class="fsize24">广州精选厂房</h1>
+			<div class="col-md-12 col-xs-12 marpad">
+				<p class="fsize14" style="float: left;">高性价 高格调 超大面积</p>
+				<p style="float:right;"><a class="fsize14" href="#">查看内容</a></p>	
+			</div>
+			<div class="col-md-12 marpad">
+				<ul class="pad box4_nav">
+					<li>
+						<img src="./images/banner/banner_1.jpg">
+						<div class="col-md-12">
+							<p class="fsize18 box4_tit">绿巨人写字楼</p>
+							<p>
+								<span class="box4_tit_l fsize14">写字楼出租 <i>50</i>m²</span>
+								<span class="box4_tit_r fsize14"><i class="fsize24">73</i>元/m²/月</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<img src="./images/banner/banner_1.jpg">
+						<div class="col-md-12">
+							<p class="fsize18 box4_tit">绿巨人写字楼</p>
+							<p>
+								<span class="box4_tit_l fsize14">写字楼出租 <i>50</i>m²</span>
+								<span class="box4_tit_r fsize14"><i class="fsize24">73</i>元/m²/月</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<img src="./images/banner/banner_1.jpg">
+						<div class="col-md-12">
+							<p class="fsize18 box4_tit">绿巨人写字楼</p>
+							<p>
+								<span class="box4_tit_l fsize14">写字楼出租 <i>50</i>m²</span>
+								<span class="box4_tit_r fsize14"><i class="fsize24">73</i>元/m²/月</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<img src="./images/banner/banner_1.jpg">
+						<div class="col-md-12">
+							<p class="fsize18 box4_tit">绿巨人写字楼</p>
+							<p>
+								<span class="box4_tit_l fsize14">写字楼出租 <i>50</i>m²</span>
+								<span class="box4_tit_r fsize14"><i class="fsize24">73</i>元/m²/月</span>
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row main_box5">
+			<h1 class="fsize24">新闻资讯</h1>
+			<div class="col-md-12 col-xs-12 marpad">
+				<p class="fsize14" style="float: left;">了解行业形态 把握市场脉搏</p>
+				<p style="float:right;"><a class="fsize14" href="#">查看内容</a></p>	
+			</div>
+			<!-- 这里循环输出三次 -->
+			<div class="row new_summary">
+				<div class="col-md-4">
+					<img src="./images/banner/banner_3.jpg">
+				</div>
+				<div class="col-md-6">
+					<div class="new_tit">
+						<h1 class="fsize18">【<a href="#">攻略</a>】<a href="#">视觉盛宴Linkdln伦敦二期创意园装修设计</a></h1>
+					</div>
+					<div class="new_cen">
+						<p>在以运动为主题的楼层，可以看到网球运动的诸多元素，以及由网球拍定制设计的天花灯具。为需求灵活办公的员工提供了极大的便利和多元的选择。</p>
+					</div>
+				</div>
+				<div class="col-md-2 new_summary_r">
+					<p>05-17</p>
+					<span>
+						<a href="#"><img src="./images/icon/arrow_r.png"></a>
+					</span>
+				</div>
+			</div>
+			<div class="row new_summary">
+				<div class="col-md-4">
+					<img src="./images/banner/banner_3.jpg">
+				</div>
+				<div class="col-md-6">
+					<div class="new_tit">
+						<h1 class="fsize18">【<a href="#">攻略</a>】<a href="#">视觉盛宴Linkdln伦敦二期创意园装修设计</a></h1>
+					</div>
+					<div class="new_cen">
+						<p>在以运动为主题的楼层，可以看到网球运动的诸多元素，以及由网球拍定制设计的天花灯具。为需求灵活办公的员工提供了极大的便利和多元的选择。</p>
+					</div>
+				</div>
+				<div class="col-md-2 new_summary_r">
+					<p>05-17</p>
+					<span>
+						<a href="#"><img src="./images/icon/arrow_r.png"></a>
+					</span>
+				</div>
+			</div>
+			<div class="row new_summary">
+				<div class="col-md-4">
+					<img src="./images/banner/banner_3.jpg">
+				</div>
+				<div class="col-md-6">
+					<div class="new_tit">
+						<h1 class="fsize18">【<a href="#">攻略</a>】<a href="#">视觉盛宴Linkdln伦敦二期创意园装修设计</a></h1>
+					</div>
+					<div class="new_cen">
+						<p>在以运动为主题的楼层，可以看到网球运动的诸多元素，以及由网球拍定制设计的天花灯具。为需求灵活办公的员工提供了极大的便利和多元的选择。</p>
+					</div>
+				</div>
+				<div class="col-md-2 new_summary_r">
+					<p>05-17</p>
+					<span>
+						<a href="#"><img src="./images/icon/arrow_r.png"></a>
+					</span>
+				</div>
+			</div>
+		</div>
+		<!-- 这里要判断是否为登录状态，如果没有登录就显示，登录就隐藏 -->
+		<div class="row main_box6">
+			<a href="#">
+				<img src="./images/banner/banner_2.jpg">
+			</a>
+		</div>
+		<!--  -->
+		<div class="row main_box7">
+			<div class="col-md-3 marpad">
+				<div class="col-md-4 box7_img">
+					<img src="./images/icon/Group_6.png">
+				</div>
+				<div class="col-md-8 box7_text">
+					<h1 style="font-weight: 700;font-size: 18px!important;">租房首单优惠</h1>
+					<p style="font-size: 12px!important; color:rgba(0,0,0,.5)">租金最高可减20%</p>
+				</div>
+			</div>
+			<div class="col-md-3 marpad">
+				<div class="col-md-4 box7_img">
+					<img src="./images/icon/Group_6.png">
+				</div>
+				<div class="col-md-8 box7_text">
+					<h1 style="font-weight: 700;font-size: 18!important;">720°全景看房</h1>
+					<p style="font-size: 12px!important; color:rgba(0,0,0,.5)">租金最高可减20%</p>
+				</div>
+			</div>
+			<div class="col-md-3 marpad">
+				<div class="col-md-4 box7_img">
+					<img src="./images/icon/Group_6.png">
+				</div>
+				<div class="col-md-8 box7_text">
+					<h1 style="font-weight: 700;font-size: 18!important;">地图找房</h1>
+					<p style="font-size: 12px!important; color:rgba(0,0,0,.5)">租金最高可减20%</p>
+				</div>
+			</div>
+			<div class="col-md-3 marpad">
+				<div class="col-md-4 box7_img">
+					<img src="./images/icon/Group_6.png">
+				</div>
+				<div class="col-md-8 box7_text">
+					<h1 style="font-weight: 700;font-size: 18!important;">推荐赚佣金</h1>
+					<p style="font-size: 12px!important; color:rgba(0,0,0,.5)">租金最高可减20%</p>
+				</div>
+			</div>
+		</div>
 	</main>
 	<!-- 底部 -->
 	<!-- PC版本 -->
@@ -174,15 +645,46 @@
 			</div>
 		</div>
 	</footer>		
-<!-- 移动端版本 -->
-	<div class="phone">
+	<!-- 移动端版本 -->
+<!-- 	<div class="phone">
 		<div class="container" >
 			<div class="col-xs-12 col-sm-12 fsize14 tac bai pad_top">广州乙租信息科技有限公司</div>
 			<div class="col-xs-12 col-sm-12 fsize12 tac bai pad_top pad_bot">
 				Copyright © 2017 广州乙租信息科技有限公司 粤ICP备18010088号
 			</div>
 		</div>
-	</div >
-
+	</div> -->
+	<!-- 右边固定 -->
+	<div class="right_box marpad">
+		<ul class="right_icon marpad">
+			<li>
+				<p><img src="./images/logo/min_logo.png"></p>
+				<p class="fsize18">服务</p>
+			</li>
+			<li>
+				<p><img src="./images/icon/custom.png"></p>
+				<p class="fsize18">客服</p>
+			</li>
+			<li>
+				<p><img src="./images/icon/scan.png"></p>
+				<p class="fsize18">扫码</p>
+			</li>
+			<li>
+				<p><img src="./images/icon/groon.png"></p>
+				<p class="fsize18">推荐</p>
+			</li>
+			<li>
+				<p><img src="./images/icon/feedback.png"></p>
+				<p class="fsize18">反馈</p>
+			</li>
+			<li>
+				<p><img src="./images/icon/arrow_top.png"></p>
+			</li>
+		</ul>
+	</div>
+	<!-- 左边固定 -->
+	<!-- <div class="left_box marpad">
+		
+	</div> -->
 </body>
 </html>
