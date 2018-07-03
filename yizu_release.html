@@ -8,10 +8,10 @@
 	<link rel="shortcut icon" href="./images/yz.ico">
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="./css/index_style.css">
-	<link rel="stylesheet" type="text/css" href="./css/yizu_editme.css">
+	<link rel="stylesheet" type="text/css" href="./css/yizu_release.css">
 	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="./js/yizu_editme.js"></script>
+	<script type="text/javascript" src="./js/yizu_release.js"></script>
 </head>
 <body style="background:rgba(0,0,0,.04)">
 	<!-- 顶部导航栏开始 -->
@@ -64,85 +64,61 @@
 	    </div>
 	  </div>
 </nav>
-	<header>
-		<img src="./images/banner/banner_2.jpg">
-	</header>
-	<!-- 中部 -->
-	<main>
-		<p class="fsize24 lead text-center" style="border-bottom: 1px solid rgba(0,0,0,.04);padding-bottom: 2rem;">账号设置</p>
-		<div class="container">
+<header class="nav_bot">
+		<div class="container top_bigbox">
 			<div class="row">
-				<div class="col-md-12 editme_box">
-					<span class="fsize18 lead editmetit_l">个人资料</span>
-					<span class="fsize14 editmetit_c">金鱼钰</span>
-					<span class="fsize14 editmetit_r">展开</span>
-					<div class="col-md-12 edirt_box">
-						<form>
-							<ul class="edirt_nav">
-								<li>
-									<div class="col-md-2 text-right fsize14 edirt_text"><i>*</i>你的昵称</div>
-									<div class="col-md-10"><input type="text" name="name" placeholder="金鱼钰"></div>
-								</li>
-								<li>
-									<div class="col-md-2 text-right fsize14 edirt_text"><i>*</i>联系电话</div>
-									<div class="col-md-10"><input type="text" name="phone" placeholder="请输入您要修改的电话号码"></div>
-								</li>
-								<li>
-									<div class="col-md-2 text-right fsize14 edirt_text"><i>*</i>身份</div>
-									<div class="col-md-10 controls">
-							            <ul class="ulradio">
-							            	<li value="0">租客</li>
-							            	<li value="1">房东</li>
-							            	<li value="2">经纪人</li>
-							            </ul>
-							        </div>
-								</li>
-							</ul>
-						<div class="col-md-9 col-md-offset-3" style="padding-bottom: 1rem;"><input class="instyle" type="submit" name="" value="保 存"></div>
-						</form>
+				<div class="col-md-2">
+					<div class="col-md-8 top_logo">
+						<img src="./images/logo/max_logo.png">
+					</div>
+					<div class="col-md-4 marpad logo_text">广州</div>
+				</div>
+				<div class="col-md-7 marpad">
+					<div class="col-md-12 marpad" style="margin:1rem 0 .5rem">
+						<ul class="bigbox_top">
+							<li><a href="#">写字楼</a></li>
+							<li><a href="#">创意园</a></li>
+							<li><a href="#">厂房</a></li>
+							<li><a href="#">装修服务</a></li>
+							<li><a href="#">工商注册</a></li>
+							<li><a href="#">财税</a></li>
+							<li><a href="#">办公设备</a></li>
+							<li><a href="#">品牌推广</a></li>
+							<li><a href="#">活动策划</a></li>
+						</ul>
+					</div>
+					<div class="col-md-12">
+						<input class="top_search" type="text" name="search" placeholder="请输入区域、商圈或名称开始找房">
+						<span class="top_buttom"><img src="./images/icon/magnifier.png"></span>
 					</div>
 				</div>
-				<div class="col-md-12 editme_box">
-					<span class="fsize18 lead editmetit_l">个人头像</span>
-					<span class="editmetit_img"><img src="./images/head/minhead.jpeg"></span>
-					<span class="fsize14 editmetit_r">展开</span>
-					<div class="col-md-12 edirt_box">
-						<form>
-							<div class="currentimg">
-								<img class="clickimg" src="./images/head/minhead.jpeg">
-								<input class="filetyle" type="file" name="" value="上 传">
-							</div>
-							<div class="col-md-9 col-md-offset-3" style="padding-bottom: 1rem;"><input class="instyle" type="submit" name="" value="保 存"></div>
-						</form>
+				<div class="col-md-3 marpad">
+					<div class="col-md-4 marpad minnav">
+						<a href="#">
+							<div class="col-md-12 marpad"><img src="./images/icon/map_y.png"></div>
+							<div class="col-md-12 marpad">地图找房</div>
+						</a>
 					</div>
-				</div>
-				<div class="col-md-12 editme_box">
-					<span class="fsize18 lead editmetit_l">密码设置</span>
-					<span class="fsize14 editmetit_c">******</span>
-					<span class="fsize14 editmetit_r">展开</span>
-					<div class="col-md-12 edirt_box">
-						<form>
-							<ul class="edirt_nav">
-								<li>
-									<div class="col-md-2 text-right fsize14 edirt_text"><i>*</i>当前密码</div>
-									<div class="col-md-10"><input type="password" name="name" placeholder="没有密码，可直接填写新密码"></div>
-								</li>
-								<li>
-									<div class="col-md-2 text-right fsize14 edirt_text"><i>*</i>新密码</div>
-									<div class="col-md-10"><input type="password" name="phone" placeholder=""></div>
-								</li>
-								<li>
-									<div class="col-md-2 text-right fsize14 edirt_text"><i>*</i>确认新密码</div>
-									<div class="col-md-10"><input type="password" name="phone" placeholder=""></div>
-								</li>
-							</ul>
-						<div class="col-md-9 col-md-offset-3" style="padding-bottom: 1rem;"><input class="instyle" type="submit" name="" value="保 存"></div>
-						</form>
+					<div class="col-md-4 marpad minnav">
+						<a href="#">
+							<div class="col-md-12 marpad"><img src="./images/icon/edifice_2.png"></div>
+							<div class="col-md-12 marpad">租房补贴</div>
+						</a>
+					</div>
+					<div class="col-md-4 marpad minnav">
+						<a href="#">
+							<div class="col-md-12 marpad"><img src="./images/icon/service.png"></div>
+							<div class="col-md-12 marpad">乙租服务</div>
+						</a>
 					</div>
 				</div>
 			</div>
+			
 		</div>
-		<p style="margin-bottom: 12rem;"></p>
+</header>
+	<!-- 中部 -->
+	<main>
+		
 	</main>
 	<!-- 底部 -->
 	<!-- PC版本 -->

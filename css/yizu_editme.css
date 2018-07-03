@@ -12,6 +12,98 @@ header img{
 }
 /*中部开始*/
 main{
-	height: 60rem;
+	/*height: 60rem;*/
+}
+input[type="text"],input[type="password"]{
+	width: 284px;
+	padding:5px 5px 5px 1rem;
+}
+.editme_box{
+	border-bottom: 1px solid rgba(0,0,0,.04);
+	margin-bottom: 10px;
+}
+.editmetit_l{
+	float: left;
+	padding:5px 0;
+}
+.editmetit_c{
+	color: rgba(0,0,0,.85);
+	line-height: 2.5rem;
+	margin-left: 5rem;
+}
+.editmetit_img{
+	width: 40px;
+	height: 40px;
+	margin-left: 5rem;
+}
+.editmetit_img img{
+	width: 40px;
+	height:40px;
+	border-radius: 50%;
+}
+.editmetit_r{
+	float: right;
+	line-height: 2.5rem;
+	color: rgba(0,0,0,.45);
+	padding-right: 35px;
+	background: url(../images/icon/down_arrow.png) no-repeat;
+	background-size: 20px 20px;
+	background-position:100% 50%;
+	display: block;
+	cursor:pointer;
+}
+.edirt_nav{
+	padding: 0;
+}
+.edirt_nav>li{
+	padding-bottom: 2.5rem;
+}
+.edirt_nav li input{
+	border:1px solid rgba(0,0,0,.15);
+	/*padding: 5px;*/
+}
+.ulradio{
+	line-height: 2rem;
+	padding:0;
+	margin: 0;
+}
+.ulradio li{
+	display: block;
+	cursor:pointer;
+	float: left;
+	padding-left: 2rem;
+	background-image: url(../images/icon/btn_on.png);
+	background-repeat:no-repeat;
+	background-size: 20px 20px;
+	background-position:10% 50%;
+}
+.filetyle{
+	opacity: 0;
+	margin-left: -999px;
+	/*display: none;*/
+}
+.clickimg{
+	cursor: pointer;
+}
+.currentimg{
+	padding:1rem 0 1rem 6.5rem;
+}
+.currentimg img{
+	width: 90px;
+	height: 90px;
+}
+.edirt_text{
+	color: rgba(0,0,0,.65);
+}
+.edirt_text i{
+	color: #F52230;
+	padding-right: 5px;
+}
+.instyle{
+	background: #198cff;
+	color: #fff;
+	border:0;
+	border-radius: 5px;
+	padding: 5px 15px;
 }
 /*中部结束*/
