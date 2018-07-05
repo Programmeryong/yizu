@@ -37,6 +37,18 @@
  	})
  		
  	
+ 	let new_box = $(".news .media");
+ 	$(".news>ul>li").hover(function(){
+ 		let indexs = $(this).index();
+ 		$(new_box[indexs]).stop();
+ 		$(new_box[indexs]).animate({left: "15px"},500)
+ 	},function(){
+ 		let indexs = $(this).index();
+ 		$(new_box[indexs]).stop();
+ 		$(new_box[indexs]).animate({left: "0px"},500)
+ 	
+	})
+ 
  })
  
  
