@@ -1045,7 +1045,7 @@
 						</ul>
 						
 						<ul class="service_lable clearfix col-md-12">
-							<li class="fontSize16">服务标签</li>
+							<li class="fontSize16"><span>服务标签</span></li>
 							<li><span class="metro_lable">地铁十分钟</span></li>
 							<li><span class="less_lable">稀缺房源</span></li>
 							<li><span class="worked_jiaju">带办公家具</span></li>
@@ -1140,7 +1140,11 @@
 		</div>
 		<!--底部-->
 		<div class="foot">
+			
 			<div class="foot_conten">
+				<div class="tubiao">
+					
+				</div>
 				<h3 class="fontSize24">最近浏览</h3>
 				<div class="recently_viewed" id="recently_viewed">
 					<div class="pre"><img src="images/icon/pre.png"/><img src="images/icon/pre_blue.png" /></div>
@@ -1212,6 +1216,7 @@
 									</div>
 								</a>
 							</li>
+							
 							<li>
 								<a href="#">
 									<div>
@@ -1273,4 +1278,9 @@
 	<script type="text/javascript" src="js/yizu_collection_top.js" ></script>
 	<script type="text/javascript" src="js/yizu_collection_bottom.js" ></script>
 	<script type="text/javascript" src="js/my_collection.js" ></script>
+	<script type="text/javascript">
+		window.onload = function (){
+		    lunbo2('recently_viewed',3000,305);
+		}
+	</script>
 </html>

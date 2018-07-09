@@ -29,11 +29,11 @@ $(function(){
 })
 
 
-window.onload = function (){
+/*window.onload = function (){
     
     lunbo2('recently_viewed',3000,305);/*固定的盒子，时间间隔，移动多少距离*/
-    
-}
+   /* lunbo2('lovely',3000,305);
+}*/
 
 	function lunbo2(div_id, auto_time,widths){
 		// 把常用的对象或变量先进行定义
@@ -48,9 +48,9 @@ window.onload = function (){
 	    // 图片数量
 	    let img_num = list.getElementsByTagName('li').length;
 	    // 图片索引的最大值
-	    let max_index = img_num;
+	    let max_index = img_num-1;
 	    // 图片索引
-	    let index = -2;
+	    let index = -1;
 	
 	    // 窗口、图片的宽度
 	    let width = widths;
@@ -63,7 +63,8 @@ window.onload = function (){
 	        let new_index = index;
 	        new_index--;
 	        if(new_index < -1){
-	            new_index = 3;
+	            new_index = img_num-6;
+	            /*$(list).css({letf:"-"+(new_index+1)*width+"px"});*/
 	        }
 	        console.log(index);
 	        console.log(new_index);
@@ -75,11 +76,11 @@ window.onload = function (){
 	    next_btn.onclick = function(){
 	        let new_index = index;
 	        new_index++;
-	        if(new_index > max_index+1){
-	            new_index = 0;
+	        if(new_index > (max_index-3)){
+	            new_index = -1;
 	        }
-	
-	        let new_left =-width* (new_index+1);
+			
+	        let new_left =-width* (new_index);
 	        animate(new_left, new_index);
 	    }
 	
@@ -112,7 +113,7 @@ window.onload = function (){
 	        let interval = 10;          // 速度的时间单位
 	        let speed = offset / (time/interval);
 	        index = new_index;
-	
+			let next = (img_num-4)*widths;
 	        function go(){
 	            if( speed < 0 && parseInt(list.style.left) > new_left || speed > 0 && parseInt(list.style.left) < new_left){
 	                list.style.left = parseInt(list.style.left)+speed +'px';
@@ -121,13 +122,13 @@ window.onload = function (){
 	                }, interval);
 	            }else{
 	                console.log(new_left);
-	                console.log(index);
-	                if(new_left == -1525){
+	                console.log("index"+index);
+	                if(new_left == -next){
 	                    list.style.left = '0px';
-	                    index = -2;
-	                }/*else if(new_left == 0){
-	                    list.style.left = '-2312px';
-	                    index = 4;
+	                    index = -1;
+	                }/*else if(new_left ==0){
+	                    list.style.left = "-"+next+'px';
+	                    index = 3;
 	                }*/else{
 	                    list.style.left = new_left +'px';
 	                }

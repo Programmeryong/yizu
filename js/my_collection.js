@@ -57,7 +57,7 @@ $(function(){
 	/*单选按钮*/
  	$('.ulradio li').on('click',function(){
 		let i = $(this).index();
-		console.log(i);
+		/*console.log(i);*/
 		$('.ulradio li').css({"background-image":"url(./images/icon/btn_off.png)"});
 		$('.ulradio li:eq('+i+')').css({"background-image":"url(./images/icon/btn_on.png)"});
 	})
@@ -96,11 +96,9 @@ $(function(){
 	})
 	
 	/*星星*/
-	//$(".stars").eq().css({"background":"url(images/icon/star-yellow.png) no-repeat","background-size":"20px 20px"});
 	$(".stars").click(function(){
 		$(".stars").css({"background":"url(images/icon/star.png) no-repeat","background-size":"20px 20px"});
 		let indexs = ($(this).index())+1;
-		console.log(indexs);
 		$(".stars:lt("+indexs+")").css({"background":"url(images/icon/star-yellow.png) no-repeat","background-size":"20px 20px"});
 		$(".star_sum").html(indexs);
 	})

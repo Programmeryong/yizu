@@ -51,10 +51,10 @@ main{width: 1200px; height: auto; margin: 0 auto;}
 .from{padding-left: 25px; background: url(../images/icon/people.png) no-repeat; background-size: 16px 16px; background-origin: 0px 0px;}
 
 .metro,.less_house{width: auto; height: 22px; padding: 2px 1rem; border-radius: 3px; cursor: pointer;}
-.metro{background:rgba(245,180,49,0.1); border: 1px solid rgba(245,180,49,0.5); color: rgba(245,180,49,1);}
-.metro:hover{background:rgba(245,180,49,0.3);}
-.less_house{background: rgba(255,85,51,0.1); border: 1px solid rgba(255,85,51,0.5); color: rgba(255,85,51,1); margin-left: 1rem;}
-.less_house:hover{background: rgba(255,85,51,0.2);}
+.metro{background:#FFF7E; border: 1px solid #FFD580; color: #FFB319;}
+.metro:hover{background:#FFB319; color: #fff;}
+.less_house{background: #FFEBEC; border: 1px solid #FFA39E; color: #F52230; margin-left: 1rem;}
+.less_house:hover{background: #F52230; color: #fff;}
 .metro_house_money{position: absolute; top: 10.4rem;}
 .metro_house_money>span:last-child{float: right; position: relative; top:-1rem;}
 .media-body>p:last-child{font-size: 16px; width: 100%; padding-right: 1.5rem;}
@@ -79,10 +79,10 @@ main{width: 1200px; height: auto; margin: 0 auto;}
 .star{margin-left: 1.5rem;}
 .evaluate_time{float: right; margin-right: 3rem;}
 .near,.house_analyse{width: auto; height: 22px; padding: 2px 1rem; border-radius: 3px; }
-.near{background:rgba(245,180,49,0.1); border: 1px solid rgba(245,180,49,0.5); color: rgba(245,180,49,1);}
-.house_analyse{background: rgba(255,85,51,0.08); border: 1px solid rgba(255,85,51,0.5); color: rgba(255,85,51,1); margin-left: 1rem;}
-.near:hover{background:rgba(245,180,49,0.3); }
-.house_analyse:hover{background: rgba(255,85,51,0.15);}
+.near{background:#FFF7E; border: 1px solid #FFD580; color: #FFB319;}
+.house_analyse{background: #FFEBEC; border: 1px solid #FFA39E; color: #F52230; margin-left: 1rem;}
+.near:hover{background:#FFB319; color: #fff; }
+.house_analyse:hover{background: #F52230; color: #fff;}
 
 /*分页*/		/*上面已有一个分页按钮样式*/
 /*.paging{height: 4.5rem;text-align: center;}

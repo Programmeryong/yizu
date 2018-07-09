@@ -1,5 +1,7 @@
 .foot{width: 100%; height: auto; background: #fff; padding-bottom: 1rem;}
+
 .foot_conten{width: 120rem; height: auto; margin: 0 auto;}
+.tubiao{width: 100%; height: 20rem; background: skyblue;}
 /*最近浏览*/
 .pre,.next{width: 5rem; height: 22rem; background: rgba(0,0,0,0.2); display: none; position: absolute; z-index: 9; cursor: pointer; overflow: hidden;}
 .pre:hover,.next:hover{background: rgba(0,0,0,0.5);}
