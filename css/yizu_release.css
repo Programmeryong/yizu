@@ -1,0 +1,130 @@
+/*发布房源页面样式表*/
+/*开始*/
+.round{
+	width: 32px;
+	height: 32px;
+	text-align: center;
+	line-height: 32px;
+	border-radius: 50%;
+	border:1px solid rgba(0,0,0,.14);
+}
+.round2{
+	border:1px solid #198cff;
+	background: #198cff;
+	color: #fff;
+}
+.text15{
+	color: rgba(0,0,0,.15);
+}
+.text45{
+	color: rgba(0,0,0,.45);
+}
+.text65{
+	color: rgba(0,0,0,.65);
+}
+.margin40{
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+.border04{
+	padding-bottom: 20px;
+	border-bottom:1px solid rgba(0,0,0,.15);
+}
+.input284{
+	border: 1px solid rgba(0,0,0,.25);
+	border-radius: 2px;
+	width: 284px;
+	height: 30px;
+	padding: 5px;
+	color: rgba(0,0,0,.45);
+}
+.input423{
+	border: 1px solid rgba(0,0,0,.25);
+	border-radius: 2px;
+	width: 423px;
+	height: 30px;
+	padding: 5px;
+	color: rgba(0,0,0,.45);
+}
+.select30{
+	width: 102px;
+	height: 30px;
+	padding: 4px 12px;
+	margin: 0 10px 0 0;
+}
+.releaseline{
+	line-height: 30px;
+}
+.tabnavbox{
+	padding: 0;
+}
+.tabnavbox li{
+	float: left;
+	margin: 0 12px 0 0;
+ 	padding: 6px 16px;
+ 	border-radius: 2px;
+ 	cursor: pointer;
+}	
+.tabcolor1{
+	color: #ffb319;
+	border: 1px solid #ffd580;
+	background: #fff7e6;
+}
+.tabcolor2{
+	color: #f52230;
+	border:1px solid #ffa39e;
+	background: #ffebec;
+}
+.tabcolor3{
+	color: #52c41a;
+	border: 1px solid #b7eb8f;
+	background: #f5ffeb;
+}
+.tabcolor4{
+	color: #198cff;
+	border: 1px solid #80bfff;
+	background: #ebf5ff;
+}
+.textfield{
+	width: 754px;
+	height: 230px;
+	padding: 5px;
+	resize : none; 
+	border-radius: 2px;
+	border: 1px solid rgba(0,0,0,.15);
+}
+.clicksubmit{
+	opacity: 0;
+	margin-left: -999px;
+}
+.releasethis{
+	padding: 10px 34px;
+	border-radius: 2px;
+	line-height: 37px;
+	color: #fff;
+	background: #FFB319;
+	text-align: center;
+	cursor: pointer;
+}
+.filestyle1,.filestyle2,.filestyle3{
+	position: absolute;
+	left: -9999px;
+	opacity: 0;
+}
+.filenav_1{
+	padding: 0;
+}
+.filenav_1 li{
+	width: 128px;
+	height: 102px;
+	border:1px dashed rgba(0,0,0,.15);
+	margin-right: 10px;
+	/*background: rgba(0,0,0,.04);*/
+	padding: 8px;
+}
+.filenav_1 li img{
+	width: 112px;
+	height: 86px;
+
+}
+/*结束*/

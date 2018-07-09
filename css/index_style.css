@@ -76,7 +76,9 @@ i{
 	display: none;
 }
 
-
+.mar_t{
+	margin-top: 21px;
+}
 /*顶部导航栏样式开始*/
 .top_bg{
 	background: #198CFF;
@@ -250,4 +252,28 @@ footer{
 	line-height: 25rem;
 	margin-right: 1rem;
 }
-/*底部样式结束
+/*底部样式结束*/
+
+/*单选按钮*/
+.edirt_text{
+	color: rgba(0,0,0,.65);
+}
+.edirt_text i{
+	color: #F52230;
+	padding-right: 5px;
+}
+.ulradio{
+	line-height: 2rem;
+	padding:0;
+	margin: 0;
+}
+.ulradio li{
+	display: block;
+	cursor:pointer;
+	float: left;
+	padding-left: 2rem;
+	background-image: url(../images/icon/btn_on.png);
+	background-repeat:no-repeat;
+	background-size: 20px 20px;
+	background-position:10% 50%;
+}

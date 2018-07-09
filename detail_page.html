@@ -9,7 +9,10 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/index_style.css" />
 	<link rel="stylesheet" href="css/detail_page.css" />
+	<link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=GGUV8UDfxsNh5apcGscrvFErOIn2gAK4"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/detail_page.js" ></script>
 	<script type="text/javascript" src="js/yizu_collection_bottom.js" ></script>
@@ -519,7 +522,24 @@
 			<nav id="around">
 				<h1 class="fontSize24">周边设施</h1>
 				<div class="map_around">
-					
+					<div id="allmap"></div>
+					<div class="map_box">
+						<div class="row mar">
+							<div class="map_top">
+								<ul style="padding:0;">
+									<li>交通</li>
+									<li>餐饮</li>
+									<li>娱乐</li>
+									<li>银行</li>
+									<li>酒店</li>
+									<li>周边楼盘</li>
+								</ul>
+							</div>
+							<div class="map_bom">
+								<div id="r-result"></div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</nav>
 			<!--周边设施结束-->
