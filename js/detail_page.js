@@ -54,17 +54,11 @@ $(document).ready(function(){
 	});
 	
 	
+	
 	$("form").submit(function(){
 		let tel = $("#tel").val();
 		let phone = /^[1][3,4,5,7,8][0-9]{9}$/;  
 		let telText = document.getElementById("telText");
-		
-		/*var regContent = new RegExp("(扑街)|(你妈的)|(他妈的)");
-		if(regContent.test(tel)){telText.style.display = "block";
-			telText.innerHTML="不能有敏感字汇";
-			return false;}
-		else*/
-		
 		if (tel==null || tel=="") {
 			telText.style.display = "block";
 			telText.innerHTML="手机号不能为空";
@@ -154,7 +148,7 @@ $(document).ready(function(){
 
 	function thismap(typename){
 		var map = new BMap.Map("allmap");            // 创建Map实例
-		var mPoint = new BMap.Point(113.2956311606, 23.2085909690);  //中心点的经纬度房源上传的地址（经纬度）
+		var mPoint = new BMap.Point(113.2956311606, 23.2085909690);  //中心点的经纬度
 	  	var marker = new BMap.Marker(mPoint); 
 	    map.addOverlay(marker);
 	    marker.setAnimation(BMAP_ANIMATION_BOUNCE);
@@ -169,11 +163,11 @@ $(document).ready(function(){
 
 })
 
-	/*大图片轮播*/
+/*大图片轮播*/
 	function lunbo_big(div_id, auto_time){
 		// 把常用的对象或变量先进行定义
 	    let box = document.getElementById(div_id);
-	    let pre_btn  = box.getElementsByClassName('pre_small')[0];
+	    let pre_btn = box.getElementsByClassName('pre_small')[0];
 	    let next_btn = box.getElementsByClassName('next_small')[0];
 	    let list = box.getElementsByClassName('tabs_img_big_lun')[0];
 	    let list_box = box.getElementsByClassName('tabs_img_big_lun')[0].getElementsByTagName("div")[0];
@@ -197,12 +191,13 @@ $(document).ready(function(){
 	        if(new_index < -1){
 	            new_index = max_index;
 	        }
-	       
+	        /*console.log("index"+index);
+	        console.log(new_index);*/
 	        let new_top = -height* (new_index+1);
 	       
 	       	let num = max_index - 4;
 	       	if(new_top==0){ $(".tabs_img_small").animate({top: -num*98.3+"px"},500);  }
-	       	else if(index<=num){$(".tabs_img_small").animate({top: "0px"},800);}
+	       	else if(index<=num){$(".tabs_img_small").animate({top: "0px"},1000);}
 	       	animate(new_top, new_index);
 	    }
 	    // 下一页的事件
@@ -213,7 +208,8 @@ $(document).ready(function(){
 	        if(new_index > max_index+1){
 	            new_index = 0;
 	        }
-	      
+	        /*console.log(index);
+	        console.log(new_index);*/
 	
 	        let new_top =-height* (new_index+1);
 	        animate(new_top, new_index);
@@ -278,9 +274,6 @@ $(document).ready(function(){
 	                console.log(new_top);
 	                console.log(index);
 	                if(new_top == -(img_num-1)*height){
-	                // console.log(new_top);
-	                // console.log(index);
-	                if(new_top == -2976){
 	                    list.style.top = '-496px';
 	                    index = 0;
 	                }else if(new_top == 0){
@@ -307,129 +300,5 @@ $(document).ready(function(){
 	        dots[index].className = 'curr';
 	    }
 	}
-<<<<<<< HEAD
-		//lunbo_big("lunbo_box",5000);
-	/*大图片轮播结束*/
-=======
 		
-	lunbo_big("lunbo_box",5000);
 	/*大图片轮播结束*/
-	
-	
-	/*委托找房*/
-	
-	$("input[type='tel']").change(function(){
-		$("#telText").css("display","none");
-	});
-	
-	
-	
-	$("form").submit(function(){
-		let tel = $("#tel").val();
-		let phone = /^[1][3,4,5,7,8][0-9]{9}$/;  
-		let telText = document.getElementById("telText");
-		if (tel==null || tel=="") {
-			telText.style.display = "block";
-			telText.innerHTML="手机号不能为空";
-			return false;
-		}else if(!phone.test(tel)){
-			telText.style.display = "block";
-			telText.innerHTML="请输入正确的手机号";
-			return false
-		}else{
-			telText.innerHTML="";
-		}
-	})
-	
-	
-	
-	$(".tabs_img_small,.pre_small,.next_small").hover(function(){
-		$(".pre_small,.next_small").css({"background": "rgba(0,0,0,0.5)"});
-	},function(){$(".pre_small,.next_small").css({"background": "rgba(0,0,0,0.01)"});})
-	
-	
-	
-	/*鼠标移入，显示上下一页按钮*/
- 	$("#lovely").mouseover(function(){
- 		$(".pre,.next").css("display","block");
- 	})
- 	/*鼠标移出，隐藏上下一页按钮*/
- 	$("#lovely").mouseout(function(){
- 		$(".pre,.next").css("display","none");
- 	})
- 	
-	$(".pre").mouseover(function(){
-        $(".pre img:first-child").css("display","none");
-        $(".pre img:last-child").css("display","block");
-    })
-    $(".pre").mouseout(function(){
-        $(".pre img:first-child").css("display","block");
-        $(".pre img:last-child").css("display","none");
-    })
-    $(".next").mouseover(function(){
-    	$(".next img:first-child").css("display","none");
-        $(".next img:last-child").css("display","block");
-    })
-    $(".next").mouseout(function(){
-    	$(".next img:first-child").css("display","block");
-        $(".next img:last-child").css("display","none");
-    })
-
-	// 地图模块
-	$('.map_top ul li').on('click',function(){
-		$('.map_top ul li').css({'border-top-color':'#f4f4f4','background':'rgba(0,0,0,.04)'});
-		$('.map_bom ul li').hide();
-		let i = $(this).index();
-		switch(i){
-			case 0: 
-				$('.map_top > ul > li:eq('+i+')').css({'border-top-color':'#87c4e5','background':'#fff'});
-				$('.map_bom > ul > li:eq('+i+')').show();
-				thismap('公交车');
-			break;
-			case 1: 
-				$('.map_top > ul > li:eq('+i+')').css({'border-top-color':'#f6b674','background':'#fff'});
-				$('.map_bom > ul > li:eq('+i+')').show();
-				thismap('餐饮');
-			break;
-			case 2: 
-				$('.map_top > ul > li:eq('+i+')').css({'border-top-color':'#ed93b1','background':'#fff'});
-				$('.map_bom > ul > li:eq('+i+')').show();
-				thismap('娱乐');
-			break;
-			case 3: 
-				$('.map_top > ul > li:eq('+i+')').css({'border-top-color':'#b0e0a3','background':'#fff'});
-				$('.map_bom > ul > li:eq('+i+')').show();
-				thismap('银行');
-			break;
-			case 4: 
-				$('.map_top > ul > li:eq('+i+')').css({'border-top-color':'#f1c493','background':'#fff'});
-				$('.map_bom > ul > li:eq('+i+')').show();
-				thismap('酒店');
-			break;
-			case 5: 
-				$('.map_top > ul > li:eq('+i+')').css({'border-top-color':'#dfaadf','background':'#fff'});
-				$('.map_bom > ul > li:eq('+i+')').show();
-			break;
-		}
-	})
-	$('.map_top ul li:eq(0)').click();
-
-	function thismap(typename){
-		var map = new BMap.Map("allmap");            // 创建Map实例
-		var mPoint = new BMap.Point(113.2956311606, 23.2085909690);  //中心点的经纬度
-	  	var marker = new BMap.Marker(mPoint); 
-	    map.addOverlay(marker);
-	    marker.setAnimation(BMAP_ANIMATION_BOUNCE);
-		map.enableScrollWheelZoom();
-		map.centerAndZoom(mPoint,15);
-		var circle = new BMap.Circle(mPoint,1000,{fillColor:"blue", strokeWeight: 1 ,fillOpacity: 0.3, strokeOpacity: 0.3});//画圈半径一千米
-	    map.addOverlay(circle);
-	    var local =  new BMap.LocalSearch(map, {renderOptions: {map: map, autoViewport: true,panel: "r-result",imagesUrl:'./images/icon/traffic.png',detail_info:2}});  
-	    local.searchNearby(typename,mPoint,1000);
-	    // local.Icon({imagesUrl:'./images/icon/traffic.png'});
-	    console.log(local);
-	}	
-
-})
-
->>>>>>> 7a583cc2648e0cbc0417c0cba22aab21049c84c4
