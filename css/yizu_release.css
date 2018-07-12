@@ -8,6 +8,9 @@
 	border-radius: 50%;
 	border:1px solid rgba(0,0,0,.14);
 }
+input{
+	border-radius: 2px;
+}
 .round2{
 	border:1px solid #198cff;
 	background: #198cff;
@@ -55,10 +58,10 @@
 .releaseline{
 	line-height: 30px;
 }
-.tabnavbox{
+.tabnavbox,.tabnavbox1{
 	padding: 0;
 }
-.tabnavbox li{
+.tabnavbox li,.tabnavbox1 li{
 	float: left;
 	margin: 0 12px 0 0;
  	padding: 6px 16px;
@@ -84,6 +87,16 @@
 	color: #198cff;
 	border: 1px solid #80bfff;
 	background: #ebf5ff;
+}
+.tabcolor5{
+	color: #13C2C2;
+	border:1px solid #87e8de;
+	background: #ebfffd;	
+}
+.tabcolor6{
+	color: #722ed1;
+	border:1px solid #d3adf7;
+	background: #f3edff;		
 }
 .textfield{
 	width: 754px;
@@ -121,6 +134,7 @@
 	margin-right: 10px;
 	/*background: rgba(0,0,0,.04);*/
 	padding: 8px;
+	cursor: pointer;
 }
 .filenav_1 li img{
 	width: 112px;

@@ -301,4 +301,5 @@ $(document).ready(function(){
 	    }
 	}
 		
+	//lunbo_big("lunbo_box",5000);
 	/*大图片轮播结束*/

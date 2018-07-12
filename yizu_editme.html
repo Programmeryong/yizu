@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="./css/index_style.css">
 	<link rel="stylesheet" type="text/css" href="./css/yizu_editme.css">
 	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="./js/index_style.js"></script>
 	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./js/yizu_editme.js"></script>
 </head>
@@ -17,7 +18,6 @@
 	<!-- 顶部导航栏开始 -->
 <nav class="navbar navbar-default top_bg mar">
 	  <div class="container">
-	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 	        <span class="sr-only">Toggle navigation</span>
@@ -27,7 +27,6 @@
 	      </button>
 
 	    </div>
-	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul id="top_text" class="nav navbar-nav">
 	        <li><a href="#">首页</a></li>
@@ -38,7 +37,6 @@
 	            <li><a href="#">创意园出租</a></li>
 	            <li><a href="#">厂房出租</a></li>
 	         </ul></li>
-	        <!-- <li><a href="#">地图找房</a></li> -->
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">乙租服务 <span class="caret"></span></a>
 	          <ul id="nav_mintext" class="dropdown-menu">
@@ -81,18 +79,18 @@
 							<ul class="edirt_nav">
 								<li>
 									<div class="col-md-2 text-right fsize14 edirt_text"><i>*</i>你的昵称</div>
-									<div class="col-md-10"><input type="text" name="name" placeholder="金鱼钰"></div>
+									<div class="col-md-10"><input class="yourname" type="text" name="name" placeholder="金鱼钰"></div>
 								</li>
 								<li>
 									<div class="col-md-2 text-right fsize14 edirt_text"><i>*</i>联系电话</div>
-									<div class="col-md-10"><input type="text" name="phone" placeholder="请输入您要修改的电话号码"></div>
+									<div class="col-md-10"><input class="yourphone" type="text" name="phone" placeholder="请输入您要修改的电话号码"></div>
 								</li>
 								<li>
 									<div class="col-md-2 text-right fsize14 edirt_text"><i>*</i>身份</div>
 									<div class="col-md-10 controls">
 							            <ul class="ulradio">
-							            	<li value="0">租客</li>
-							            	<li value="1">房东</li>
+							            	<li value="0">个人</li>
+							            	<!-- <li value="1">房东</li> -->
 							            	<li value="2">经纪人</li>
 							            </ul>
 							        </div>
@@ -109,14 +107,14 @@
 					<div class="col-md-12 edirt_box">
 						<form>
 							<div class="currentimg">
-								<img class="clickimg" src="./images/head/minhead.jpeg">
-								<input class="filetyle" type="file" name="" value="上 传">
+								<img id="preview3" class="clickimg" src="./images/head/minhead.jpeg">
+								<input id="h" class="filetyle" type="file" name="" value="上 传" onchange="change('preview3','h')">
 							</div>
 							<div class="col-md-9 col-md-offset-3" style="padding-bottom: 1rem;"><input class="instyle" type="submit" name="" value="保 存"></div>
 						</form>
 					</div>
 				</div>
-				<div class="col-md-12 editme_box">
+				<!-- <div class="col-md-12 editme_box">
 					<span class="fsize18 lead editmetit_l">密码设置</span>
 					<span class="fsize14 editmetit_c">******</span>
 					<span class="fsize14 editmetit_r">展开</span>
@@ -124,22 +122,26 @@
 						<form>
 							<ul class="edirt_nav">
 								<li>
+									<div class="col-md-2 text-right fsize14 edirt_text"><i>*</i>无密码</div>
+									<div class="col-md-10"><input class="newpow" type="password" name="name" placeholder="没有密码，可直接填写新密码并保存"></div>
+								</li>
+								<li>
 									<div class="col-md-2 text-right fsize14 edirt_text"><i>*</i>当前密码</div>
-									<div class="col-md-10"><input type="password" name="name" placeholder="没有密码，可直接填写新密码"></div>
+									<div class="col-md-10"><input class="pow1" type="password" name="name" placeholder="旧密码"></div>
 								</li>
 								<li>
 									<div class="col-md-2 text-right fsize14 edirt_text"><i>*</i>新密码</div>
-									<div class="col-md-10"><input type="password" name="phone" placeholder=""></div>
+									<div class="col-md-10"><input class="pow2" type="password" name="phone" placeholder="请输入新密码"></div>
 								</li>
 								<li>
 									<div class="col-md-2 text-right fsize14 edirt_text"><i>*</i>确认新密码</div>
-									<div class="col-md-10"><input type="password" name="phone" placeholder=""></div>
+									<div class="col-md-10"><input class="pow3" type="password" name="phone" placeholder="确认密码"></div>
 								</li>
 							</ul>
 						<div class="col-md-9 col-md-offset-3" style="padding-bottom: 1rem;"><input class="instyle" type="submit" name="" value="保 存"></div>
 						</form>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<p style="margin-bottom: 12rem;"></p>
