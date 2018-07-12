@@ -174,7 +174,7 @@ $(document).ready(function(){
 	        }
 	        go();
 	    }
-	
+	}
 	    // 控制显示焦点图标的方法
 	    function showDot(){
 	        for(let i=0; i<dots.length; i++){

@@ -2,7 +2,6 @@ $(function(){
 	// 模仿单选按钮效果
 	$('.ulradio li').on('click',function(){
 		let i = $(this).index();
-		console.log(i);
 		$('.ulradio li').css({"background-image":"url(./images/icon/btn_on.png)"});
 		$('.ulradio li:eq('+i+')').css({"background-image":"url(./images/icon/btn_off.png)"});
 	})
@@ -26,4 +25,30 @@ $(function(){
 		})
 	})
 
+	function textphone(thisclass){
+			$(thisclass).blur(function(){
+				let Uphone = $(thisclass).val();
+				let Tphone = /^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/;
+				if(Tphone.test(Uphone) == false|| Uphone == ''){
+					$(thisclass).css({'border':'1px solid #F52230'});
+				}else if(Tphone.test(Uphone)==true){
+					$(thisclass).css({'border':'1px solid #5FCC29'})
+				}
+			})
+		}
+		// 名字的验证
+		function textname(thisname){
+			$(thisname).blur(function(){
+				let Uname = $(thisname).val();
+				let Tname = /^[\u4e00-\u9fa5]{2,4}$/;
+				if(Tname.test(Uname)==false||Uname==''){
+					$(thisname).css({'border':'1px solid #F52230'});
+				}else if(Tname.test(Uname)==true){
+					$(thisname).css({'border':'1px solid #5FCC29'});
+				}
+			})
+		}
+		textname(".yourname");
+		textphone(".yourphone");
+		
 })
