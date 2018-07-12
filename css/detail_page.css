@@ -30,6 +30,7 @@ ul{text-decoration: none;list-style: none;margin: 0;padding: 0;}
 	.main_top{width: 75rem; height: 37.5rem;background: #FFFFFF; margin: 0 auto; margin-bottom: 1rem;}
 	.main_top_title{padding-top: 1rem; margin-left: 5px;}
 	.main_top_title span:last-child{display:block;width: 6rem; height: 22px; line-height: 22px;
+									
 									background:-webkit-gradient(linear, 0 0, 0 100%, from(rgba(245,206,98,1)), to(rgba(245,180,49,1)));
 									background:-webkit-linear-gradient(rgba(245,206,98,1), rgba(245,180,49,1));
 									background:-moz-linear-gradient(rgba(245,206,98,1), rgba(245,180,49,1));
@@ -65,7 +66,7 @@ ul{text-decoration: none;list-style: none;margin: 0;padding: 0;}
 	.next_small{background: rgba(0,0,0,0.01); right: 0; bottom: 0; }
 	/*house info*/
 	.top_infos{width: 19.5rem; height: 31.1rem; margin-right: 1rem; color: rgba(0,0,0,0.8);}
-	.top_house_info{width: 19.5rem; height: 16rem; border-bottom: 2px solid rgba(0,0,0,0.04);}
+	.top_house_info{width: 19.5rem; height: 17rem; border-bottom: 2px solid rgba(0,0,0,0.04);}
 	.top_house_from{width: 19.5rem; height: 13rem; }
 	.house_title{width: 19.5rem; height: 3rem; line-height: 3rem;  
 				display: flex; justify-content: space-between; margin: 0.5rem 0;}
@@ -84,10 +85,11 @@ ul{text-decoration: none;list-style: none;margin: 0;padding: 0;}
 			padding-left: 25px; background: url(../images/icon/where.png) no-repeat; background-size: 20px 20px; background-origin: 10px 10px;}
 	.floor{padding-left: 25px; background: url(../images/icon/floor.png) no-repeat; background-size: 20px 20px; background-origin: 10px 10px;}
 	.wuye{padding-left: 25px; background: url(../images/icon/people.png) no-repeat; background-size: 20px 20px; background-origin: 10px 10px;}
-	.top_house_from_title{ width: 100%; height: 70px;  margin-top: 20px; display: flex; justify-content: space-between;}
+	.top_house_from_title{ width: 100%; height: 70px;  margin-top: 20px; margin-bottom: 20px; display: flex; justify-content: space-between;}
 	.top_house_from_img{ width: 70px; height: 70px; -webkit-border-radius: 3rem; background: skyblue;overflow: hidden;}
 	.top_house_from_title_right{width: 14.5rem; height: 70px; padding-top:10px; }
 	.top_house_from_title_right>p{line-height: 20px;}
+	.zixun{color: #F52230; margin-top: 10px; height: 45px; line-height: 45px; margin-top: 1rem; }
 	.out_house{color: #198CFF; text-decoration: underline;}
 	.cctn{width: 6rem; height: 2.5rem; line-height: 2.5rem; color: #ffffff; background:rgba(255,179,25,1); border-radius: 3px;
 			padding-left: 10px;}
@@ -101,7 +103,7 @@ ul{text-decoration: none;list-style: none;margin: 0;padding: 0;}
 	.middle_title li:hover{background: #198CFF; color: #fff; cursor: pointer;}
 	.middle_content{background: #ffffff; width: 100%; height: 11.75rem; margin-top: 1rem; margin-bottom: 20px;}
 	/*全部户型*/
-	.houseinfo{width: 75rem;  display: flex; justify-content: space-between;}
+	.houseinfo{width: 75rem; margin-top: 1rem;  display: flex; justify-content: space-between;}
 	/*#house_and_find{width: 75rem;height: auto; margin-top: 1rem; }*/
 	.houseinfo_left{width: 53rem; height: auto;}
 	#all_house{width: 53rem; height: auto; background: #ffffff; padding-top: 1px; padding-bottom: 10px;}
@@ -113,7 +115,7 @@ ul{text-decoration: none;list-style: none;margin: 0;padding: 0;}
 	#find_house h2{margin-left: 25px; height: 3rem; line-height: 3rem; margin-top: 0;}
 	.inputphone{width: 17.75rem; height: 13rem; background: rgba(0,0,0,0.04); margin: 0 auto;}
 	.inputphone form input:first-child{width: 260px; height: 42px; margin: 0 12px; margin-top: 30px; margin-bottom: 5px; border: 0; text-align: center;}
-	.inputphone form input:last-child{width: 260px; height: 42px; margin: 15px 12px;  background: #F5B431;color: #fff;border: 0;}
+	.inputphone form input:last-child{width: 260px; height: 42px; margin: 15px 12px;  background: #F5B431;color: #fff; outline: none; border: none;}
 	.inputphone form input:last-child:hover{background: orange;}
 	#all_house h1{margin-left: 1rem; margin-bottom: 1rem;}
 	.all_house_area{width:51rem; display: flex; border-bottom: 2px solid rgba(0,0,0,0.04);border-top: 2px solid rgba(0,0,0,0.04);
@@ -168,7 +170,70 @@ ul{text-decoration: none;list-style: none;margin: 0;padding: 0;}
 	/*周边设施*/
 	#around{width: 75rem; height: 38rem; background: #ffffff; margin-bottom: 1rem;}
 	#around h1{width:73rem; height: 4rem; line-height: 4rem; margin: 0 auto; border-bottom: 2px solid rgba(0,0,0,0.04);}
-	.map_around{width: 73rem; height: 31.6rem; margin: 1rem auto;  overflow: hidden; outline: 1px solid red;}
+	.map_around{width: 73rem; height: 31.6rem; margin: 1rem auto;  overflow: hidden;position: relative;}
+	.map_box{
+		position: absolute;
+		top: 40px;
+		right: 40px;
+		width: 374px;
+		height: 391px;
+		border:1px solid #e5e5e5;
+		background: #fff;
+	}
+	.map_top ul li{
+		float: left;
+		padding: 0 17px;
+		display: inline-block;
+		color: #666;
+		font-size: 12px!important;
+		line-height: 34px;
+		border-top: 2px solid #f4f4f4;
+		cursor: pointer;
+		background: rgba(0,0,0,.04);
+	}
+	.mar{
+		margin: 0;
+	}
+	#r-result{width:100%;}	
+	#r-result > div{border:0!important;}
+	#r-result >div >div >ol >li >span{
+		background: url(../images/icon/traffic.png) no-repeat!important;
+		background-size: 20px 20px!important;
+		background-position: 0 0!important;
+	}
+	#r-result >div >div >ol >li >div{
+		background: #fff!important;
+	}
+	
+	#r-result >div>div>ol>li>div>div:first-child>span{
+		color: rgba(0,0,0,1)!important;
+	}
+	
+	#r-result >div>div>ol>li>div>div:first-child>a{
+		margin-left: 1rem!important;
+		color: rgba(0,0,0,1)!important;
+	}
+	
+	#r-result >div>div>ol>li>div>div:last-child{
+		margin-top: 5px;
+	}
+	
+	#r-result >div>div>ol>li>div>div:last-child>span{
+		color: rgba(0,0,0,0.65)!important;
+	}
+	#r-result >div>div>ol>li>div>div:last-child>b{
+		color: rgba(0,0,0,0.65)!important;
+	}
+	
+	#r-result >div>div>ol>li>div>div>span{
+		color: #000!important;
+	}
+	.map_bom{
+		margin-top: 36px;
+		height: 355px;
+		padding: 10px 20px 20px;
+		overflow-y:auto;
+	}
 	
 	/*猜你喜欢*/
 	.lovely{width: 100%; height: 24.6rem; background: #fff;}
@@ -195,4 +260,22 @@ ul{text-decoration: none;list-style: none;margin: 0;padding: 0;}
 	#money_type{color: rgba(0,0,0,0.6); height: 2rem; line-height: 2rem; padding: 0 10px;}
 	.howMoney{float: right; margin-top: -5px;}
 	.howMoney .moneys{color:rgba(250,84,28,1); font-size: 24px!important;}
+
+	#allmap{width:100%;height:100%;}
+	/*滚动条样式*/
+    .map_bom::-webkit-scrollbar {/*滚动条整体样式*/
+    width:4px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 4px;
+    }
+    .map_bom::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+     background: rgba(0,0,0,0.2);
+    }
+    .map_bom::-webkit-scrollbar-thumb/*定义滑块 内阴影+圆角*/
+	{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.4);
+    background-color: #555;
+	}
 }

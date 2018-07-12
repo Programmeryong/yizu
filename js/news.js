@@ -27,7 +27,7 @@
  	/*第一个函数是鼠标悬停，第二个函数是鼠标移出*/
  	$(".vision ul li").hover(function(){
  		let index = $(this).index();
- 		console.log(index);
+ 		/*console.log(index);*/
  		$(vision_box[index]).stop();
  		$(vision_box[index]).animate({top:"-194px"},500)
  	},function(){
@@ -42,11 +42,12 @@
  		let indexs = $(this).index();
  		$(new_box[indexs]).stop();
  		$(new_box[indexs]).animate({left: "15px"},500)
+ 		//$(".new_type").eq(indexs).css({"color":"#F59331"});
  	},function(){
  		let indexs = $(this).index();
  		$(new_box[indexs]).stop();
  		$(new_box[indexs]).animate({left: "0px"},500)
- 	
+ 		//$(".new_type").eq(indexs).css({"color":"rgba(0,0,0,0.85)"});
 	})
  
  })
@@ -89,8 +90,7 @@ function lunbo(div_id, auto_time){
         if(new_index < -1){
             new_index = 4;
         }
-        console.log(index);
-        console.log(new_index);
+        
         new_left = -width* (new_index+1);
         animate(new_left, new_index);
     }
@@ -102,8 +102,6 @@ function lunbo(div_id, auto_time){
         if(new_index > max_index+1){
             new_index = 0;
         }
-        //console.log(index);
-        //console.log(new_index);
 
         let new_left =-width* (new_index+1);
         animate(new_left, new_index);
@@ -112,7 +110,6 @@ function lunbo(div_id, auto_time){
     for(let i=0; i<dots.length; i++){
         dots[i].onclick = function(){
             let new_index = this.getAttribute('data-index');
-            console.log(new_index);
             let new_left = (-width * new_index)-width;
             animate(new_left, new_index);
         }
@@ -173,8 +170,6 @@ function lunbo(div_id, auto_time){
                     go();
                 }, interval);
             }else{
-                console.log(new_left);
-                console.log(index);
                 if(new_left == -5088){
                     list.style.left = '-848px';
                     index = 0;
@@ -274,8 +269,6 @@ function lunbo(div_id, auto_time){
 	                    go();
 	                }, interval);
 	            }else{
-	                console.log(new_left);
-	                console.log(index);
 	                if(new_left == -1734){
 	                    list.style.left = '0px';
 	                    index = -2;

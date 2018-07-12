@@ -53,7 +53,7 @@ main{width: 120rem; height: auto; margin: 3rem auto;}
 .new_type{display: -webkit-box; width: 34rem; -webkit-line-clamp: 1;overflow: hidden; -webkit-box-orient: vertical;}
 .time{ float: right; position: relative; top: -2rem; right: 3rem;}
 .news_info>p{display: -webkit-box; width: 32rem; margin-top: 2rem; -webkit-line-clamp: 2;overflow: hidden; -webkit-box-orient: vertical;}
-.news>ul>li:hover{ box-shadow: 0px 5px 10px rgba(0,0,0,0.1);}
+.news>ul>li:hover{ box-shadow: 0px 5px 10px rgba(0,0,0,0.1); cursor: pointer;}
 
 .arrow_right{ margin-left: 39rem; border-left: 2px solid rgba(0,0,0,0.1); padding-left: 2rem; height: 3rem; line-height: 3rem;}
 .arrow_right img{width: 25px; height: 20px;}

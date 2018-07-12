@@ -6,7 +6,7 @@
 .fontSize24{font-size: 24px!important;}
 .fontSize36{font-size: 36px!important;}
 html{font-size: 10px!important;}
-*{font-size: 14px; font-family:PingFangSC-Medium;}
+*{font-size: 14px; font-family:PingFangSC-Medium; }
 ul{text-decoration: none;list-style: none;margin: 0;padding: 0;}	
 a{color: rgba(0,0,0,1);}
 a:hover{text-decoration: none; color: rgba(0,0,0,1);}
@@ -108,7 +108,7 @@ a:hover{text-decoration: none; color: rgba(0,0,0,1);}
 .close_applic img{width: 100%; height: 100%;}
 .application>div:first-child{width: 100%; height: 16rem; padding-top: 1px; text-align: center;}
 .application h4{ font-weight: 600; margin-top: 2rem; margin-bottom: 3rem; padding-right: 1.5rem;}
-.application input[type='text']{width: 30rem; height: 4rem; border: 1px solid rgba(0,0,0,0.1); padding-left: 1rem; border-radius: 2px;}
+.application input[type='text']{width: 30rem; height: 4rem; border: 1px solid rgba(0,0,0,0.1); padding-left: 1rem; border-radius: 2px; outline: none;}
 .application input[type='submit']{height: 3.9rem; margin-left: -5px; background: #198CFF; border: 0; color: #fff; font-size: 16px; padding: 0 1rem; border-radius: 2px;}
 .application input[type='submit']:hover{background: #40ACFF;}
 .error{padding-left: 10rem; text-align: left; padding-top: 5px; color: deeppink;}
@@ -237,7 +237,7 @@ textarea{overflow: hidden; width: 51rem; height: 17rem; resize:none; float: left
 .close_rcdcmn_box img{width: 100%; height: 100%;}
 .rcdcmn_box>div:first-child{width: 100%; height: 16rem; padding-top: 1px; text-align: center;}
 .rcdcmn_box h4{ font-weight: 600; margin-top: 2rem; margin-bottom: 3rem; padding-right: 1.5rem;}
-.rcdcmn_box input[type='text']{width: 30rem; height: 4rem; border: 1px solid rgba(0,0,0,0.1); padding-left: 1rem; border-radius: 2px;}
+.rcdcmn_box input[type='text']{width: 30rem; height: 4rem; border: 1px solid rgba(0,0,0,0.1); padding-left: 1rem; border-radius: 2px; outline: none;}
 .rcdcmn_box input[type='submit']{height: 3.9rem; margin-left: -5px; background: #198CFF; border: 0; color: #fff; font-size: 16px; padding: 0 1rem; border-radius: 2px;}
 .rcdcmn_box input[type='submit']:hover{background: #40ACFF;}
 .rcdcmn_box .error{padding-left: 11.5rem; text-align: left; padding-top: 5px; color: deeppink;}

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<meta name="description" content="乙租网 - 写字楼、厂房、创意园区专业互联网服务平台，精品写字楼，广州楼盘全覆盖，真实房源，现场实勘，专业顾问3对1服务！预约看房，免费咨询请拨打 400-886-6391">
+	<meta name="description" content="乙租网 - 写字楼、厂房、创意园区专业互联网服务平台，精品写字楼，广州楼盘全覆盖，真实房源，现场实勘，专业顾问2对1服务！预约看房，免费咨询请拨打 400-886-6391">
 	<title>乙租网</title>
 	<link rel="shortcut icon" href="./images/yz.ico">
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
@@ -13,7 +13,36 @@
 	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./js/yizu_index.js"></script>
 </head>
-<body style="background:rgba(0,0,0,.04)">
+<body style="background:#fff">
+	<!--用于弹框后一层阴影铺满浏览器-->
+		<div class="temp"></div>
+	
+	<!--广告-优惠券-->
+	<div class="coupon clearfix">
+		<span class="close_coupon">
+			<!--<img src="images/icon/close_white.png" style="width: 12px; height: 12px;"/>-->
+			<i class="glyphicon glyphicon-remove-circle fsize24"></i>
+		</span>
+		<div class="coupon_img">
+			<img src="images/icon/coupon.png"/>
+		</div>
+	</div>
+	
+	<!--登录-->
+	<div class="login">
+		<div class="title">
+			<p class="fsize24 clearfix">快捷登录 <span class="closed"></span></p>
+			<p class="fsize14">登录享受更多优惠服务</p>
+		</div>
+		<form action="" method="post" class="clearfix">
+			<input type="tel" class="phone" name="" id="" value="" placeholder="手机号码"/>
+			<input type="text" class="yzm" name="" id="" value="" placeholder="验证码"/>
+			<input type="button" name="" id="" value="获取验证码" />
+			<p class="clearfix"><input type="checkbox" name="" id="" value=""/><span class="checkb fsize14">7天内免登录</span></p>
+			<input type="submit" value="确    定"/>
+		</form>
+	</div>
+	
 	<!-- 顶部导航栏开始 -->
 <nav class="navbar navbar-default top_bg mar">
 	  <div class="container">
@@ -164,9 +193,9 @@
 						<ul class="pad ">
 							<li class="minnew"><a href="#"><i class="minjump fsize14">行业</i></a><a href="#">最适合在办公室养的10种小植物</a></li>
 							<li class="minnew"><a href="#"><i class="minjump fsize14">攻略</i></a><a href="#">办公室里的那些事儿</a></li>
+							<li class="minnew"><a href="#"><i class="minjump fsize14">行业</i></a><a href="#">最适合在办公室养的10种小植物</a></li><!-- 
 							<li class="minnew"><a href="#"><i class="minjump fsize14">行业</i></a><a href="#">最适合在办公室养的10种小植物</a></li>
-							<li class="minnew"><a href="#"><i class="minjump fsize14">行业</i></a><a href="#">最适合在办公室养的10种小植物</a></li>
-							<li class="minnew"><a href="#"><i class="minjump fsize14">行业</i></a><a href="#">最适合在办公室养的10种小植物</a></li>
+							<li class="minnew"><a href="#"><i class="minjump fsize14">行业</i></a><a href="#">最适合在办公室养的10种小植物</a></li> -->
 						</ul>
 					</div>
 				</div>
@@ -381,7 +410,7 @@
 				</form>
 			</div>
 		</div>
-		<div class="row main_box4">
+		<div class="row main_box4 cyGraden">
 			<h1 class="fsize24">广州精选创意园</h1>
 			<div class="col-md-12 col-xs-12 marpad">
 				<p class="fsize14" style="float: left;">高性价 高格调 超大面积</p>
@@ -432,7 +461,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="row main_box4">
+		<div class="row main_box4 factory">
 			<h1 class="fsize24">广州精选厂房</h1>
 			<div class="col-md-12 col-xs-12 marpad">
 				<p class="fsize14" style="float: left;">高性价 高格调 超大面积</p>

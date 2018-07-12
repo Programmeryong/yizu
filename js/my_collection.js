@@ -57,7 +57,6 @@ $(function(){
 	/*单选按钮*/
  	$('.ulradio li').on('click',function(){
 		let i = $(this).index();
-		/*console.log(i);*/
 		$('.ulradio li').css({"background-image":"url(./images/icon/btn_off.png)"});
 		$('.ulradio li:eq('+i+')').css({"background-image":"url(./images/icon/btn_on.png)"});
 	})

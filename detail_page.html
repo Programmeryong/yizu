@@ -9,9 +9,12 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/index_style.css" />
 	<link rel="stylesheet" href="css/detail_page.css" />
+	<link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=GGUV8UDfxsNh5apcGscrvFErOIn2gAK4"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/detail_page.js" ></script>
+	<script type="text/javascript" src="js/detail_page.js" ></script>	
 	<script type="text/javascript" src="js/yizu_collection_bottom.js" ></script>
 </head>
 <body style="background:rgba(0,0,0,.04)">
@@ -242,8 +245,8 @@
 									<div>写字楼出租<span class="out_house">59</span>套</div>
 									<div><a href="" style="color: #198CFF;">进入他的店铺</a></div>
 								</div>
-								<p style="color: #F52230; font-size: 18px; margin-top: 10px;">免费咨询：400-886-6391</p>
-								<div class="cctn cursor"><img src="images/icon/cctn.png" alt="" width="22px" height="22px"/>沟 通</div>
+								<p class="zixun fontSize18">免费咨询：400-886-6391</p>
+								<!--<div class="cctn cursor"><img src="images/icon/cctn.png" alt="" width="22px" height="22px"/>沟 通</div>-->
 							</div>
 						</div>
 					</div>
@@ -262,10 +265,9 @@
 						<li role="presentation" value="3">周边设施</li>
 					</ul>
 				</div>
-				
-				<div class="middle_content">
+				<!--<div class="middle_content">
 					
-				</div>
+				</div>-->
 			</nav>
 			<!--中部导航结束-->
 			
@@ -397,8 +399,8 @@
 							<h2 style="font-size: 18px!important;"><strong>免费委托找房</strong></h2>
 							<div class="inputphone">
 								<form action="" method="post">
-									<input type="tel" name="tel" id="tel" placeholder="请输入手机号码" />
-									<span id="telText"></span>
+									<input type="tel" name="tel" id="tel" class="phone" placeholder="请输入手机号码" />
+									<span id="telText" class="fontSize14"></span>
 									<input type="submit" value="立即委托"/>
 								</form>
 								<p style="text-align: center; margin-top: 5px; color: rgba(0,0,0,0.8);">服务将在10分钟内给您致电！</p>
@@ -519,7 +521,24 @@
 			<nav id="around">
 				<h1 class="fontSize24">周边设施</h1>
 				<div class="map_around">
-					
+					<div id="allmap"></div>
+					<div class="map_box">
+						<div class="row mar">
+							<div class="map_top">
+								<ul style="padding:0;">
+									<li>交通</li>
+									<li>餐饮</li>
+									<li>娱乐</li>
+									<li>银行</li>
+									<li>酒店</li>
+									<li>周边楼盘</li>
+								</ul>
+							</div>
+							<div class="map_bom">
+								<div id="r-result"></div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</nav>
 			<!--周边设施结束-->
@@ -738,10 +757,11 @@
 			</div>
 		</div>
 	</div >
+
 <script type="text/javascript">
-	
 	window.onload = function (){
 	    lunbo2('lovely',3000,305);
+	    lunbo_big('lunbo_box',5000);
 	}
 </script>
 </body>

@@ -29,11 +29,7 @@ $(function(){
 })
 
 
-/*window.onload = function (){
-    
-    lunbo2('recently_viewed',3000,305);/*固定的盒子，时间间隔，移动多少距离*/
-   /* lunbo2('lovely',3000,305);
-}*/
+
 
 	function lunbo2(div_id, auto_time,widths){
 		// 把常用的对象或变量先进行定义
@@ -66,8 +62,6 @@ $(function(){
 	            new_index = img_num-6;
 	            /*$(list).css({letf:"-"+(new_index+1)*width+"px"});*/
 	        }
-	        console.log(index);
-	        console.log(new_index);
 	        new_left = -width* (new_index+1);
 	        animate(new_left, new_index);
 	    }
@@ -121,8 +115,6 @@ $(function(){
 	                    go();
 	                }, interval);
 	            }else{
-	                console.log(new_left);
-	                console.log("index"+index);
 	                if(new_left == -next){
 	                    list.style.left = '0px';
 	                    index = -1;
