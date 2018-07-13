@@ -26,7 +26,9 @@ function change(id1,id2) {
         html5Reader(file,id1);
      }
 }
- function html5Reader(file,id1){
+
+$(function(){
+   function html5Reader(file,id1){
     // console.log(file.files[0]);
      var file = file.files[0];
      var reader = new FileReader();
@@ -46,4 +48,6 @@ function change(id1,id2) {
             $(cals2).click();
             console.log(1);
         })
-    }
+    } 
+})
+ 
