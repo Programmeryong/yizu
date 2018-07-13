@@ -84,15 +84,7 @@ $(function(){
 	$(".close_coupon i").click(function(){$(".temp").css({"visibility":"hidden"}); $(".coupon").hide();})
 	/*优惠券结束*/
 	
-	/*模拟点击事件*/
-	clicktopbut('.top_buttom','.top_submit');
-	clicktopbut('.advert_call','.advert_submit');
-	function clicktopbut(clas1,cals2){
-		$(clas1).click(function(){
-			$(cals2).click();
-			console.log(1);
-		})
-	}
+	
 	
 	/*精选写字楼*/
 	jinxuan(".box4_nav li",".box4_nav li div");

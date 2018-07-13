@@ -37,3 +37,13 @@ function change(id1,id2) {
          pic.src=this.result;
      }
  }
+
+ /*模拟点击事件*/
+    clicktopbut('.top_buttom','.top_submit');
+    clicktopbut('.advert_call','.advert_submit');
+    function clicktopbut(clas1,cals2){
+        $(clas1).click(function(){
+            $(cals2).click();
+            console.log(1);
+        })
+    }
