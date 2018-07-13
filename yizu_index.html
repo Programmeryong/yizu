@@ -117,8 +117,12 @@
 					</ul>
 				</div>
 				<div class="col-md-12">
-					<input class="top_search" type="text" name="search" placeholder="请输入区域、商圈或名称开始找房">
-					<span class="top_buttom"><img src="./images/icon/magnifier.png"></span>
+					<form>
+						<input class="top_search" type="text" name="search" placeholder="请输入区域、商圈或名称开始找房">
+						<input class="top_submit" type="submit" name="" style="position: absolute;top: -999px;opacity: 0;">
+						<span class="top_buttom"><img src="./images/icon/magnifier.png"></span>
+					</form>
+						
 				</div>
 			</div>
 			<div class="col-md-3 marpad">
@@ -242,10 +246,6 @@
 						<li>
 							<img src="./images/icon/office.png">
 							<p>办公协同系统</p>
-						</li>
-						<li>
-							<img src="./images/icon/truck.png">
-							<p>搬家服务</p>
 						</li>
 					</ul>
 				</div>
@@ -406,7 +406,8 @@
 			<div class="col-md-6 advert_r marpad">
 				<form method="POST">
 					<input type="text" name="" placeholder="请输入手机号码，预约找房，5分钟内回复">
-					<span>立即咨询</span>
+					<input  class="advert_submit" type="submit" name="" style="position: absolute;right:-9999px;opacity: 0;">
+					<span class="advert_call" >立即咨询</span>
 				</form>
 			</div>
 		</div>
