@@ -70,5 +70,5 @@ main>p:nth-of-type(even){margin-bottom: 2rem;}
 
 
 /*底部*/
-footer{padding-top: 2rem;}
-footer>p{text-align: center;}
+.partner{padding-top: 2rem;}
+.partner>p{text-align: center;}
