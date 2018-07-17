@@ -1,0 +1,177 @@
+/*yizu_listpage 中部内容开始*/
+.list_box1 > div{
+	margin: 10px 0;
+	border-bottom:1px solid rgba(0,0,0,.04);
+}
+.list_box1 > div > span{
+	float: left;
+}
+.list_box1 > div > ul{
+	padding-left: 20px;
+	float: left;
+}
+.list_box1 > div > ul > li{
+	float: left;
+	padding:0 20px;
+	cursor:pointer;
+}
+.list_box1 > div > ul > li:hover{
+	color: #00a0e9;
+}
+.list_box1 > div > ul > li > span{
+	border: 1px solid rgba(0,0,0,.1);
+	border-radius: 5px;
+	padding: 5px;
+}
+.list_box1 > div > ul > li > span> input{
+	width: 3rem;
+	border:0;
+	padding-right: 5px;
+	padding-left: 5px;
+	margin:2px 5px;
+	outline:medium;
+}
+.list_box1 > div > ul > li > i{
+	padding: 5px;
+	background: #198cff;
+	color: #fff;
+}
+.list_box1 > div > ul > li > i:hover{
+	color: #fff;
+}
+.top_tab1 li,.top_tab2 li,.top_tab3 li,.top_tab4 li{
+	padding:5px 10px; 
+	float: left;
+}
+
+/*房源列表*/
+/*标题*/
+.house_listbox{width: 53rem;height: auto; background: #fff; padding-top: 10px;}
+.house_listnav{width: 53rem; height: auto; margin: 0 auto;}
+.house_listnav>ul{ overflow:hidden;width: 53rem; border-bottom: 1px solid #00A0E9; margin: 0 auto; margin-top: 1rem;}
+.house_listnav>ul>li{width:6.5rem; height: 2.5rem; line-height: 2.5rem; text-align: center; cursor: pointer; border-right: 3px solid #fff;}
+.house_listnav>ul>li:hover{background: #198CFF; color: #ffffff;}
+.house_listnav>span{float: right; position: relative; top: -1.8rem;}					 
+.evaluate_no{display: none;}				 
+/*列表项*/
+.house_list_out>div:first-child{width: 100%;}
+.house_lists{width: 53rem; height: auto; margin: 0 auto;}
+.house_list_out{width: 100%; height: 15.5rem; padding: 24px 0; border-bottom: 2px solid rgb(0,0,0,0.04);}
+.house_list_img{width: 17.81rem; height: 12.44rem; margin-right: 0;}
+.house_list_img img{width: 285px; height: 199px;}
+.media-body{padding-left: 1rem; position: relative;}
+.media-body>p{height: 2rem; line-height: 2.5rem;}
+.house_list_out h3{float: left;}
+.allowance{display:block;width: 6rem; height: 22px; line-height: 22px;
+									background:-webkit-gradient(linear, 0 0, 0 100%, from(rgba(245,206,98,1)), to(rgba(245,180,49,1)));
+									background:-webkit-linear-gradient(rgba(245,206,98,1), rgba(245,180,49,1));
+									background:-moz-linear-gradient(rgba(245,206,98,1), rgba(245,180,49,1));
+									background:-o-linear-gradient(rgba(245,206,98,1), rgba(245,180,49,1));
+									background:linear-gradient(rgba(245,206,98,1), rgba(245,180,49,1));
+									color: #ffffff; transform:skew(-12deg);text-align: center; border-radius: 2px;
+								    float: left; margin-top: 2px; margin-left: 1.5rem; overflow: hidden;}
+.allowance a{color: #fff;}
+.where{padding-left: 25px; background: url(../images/icon/where.png) no-repeat; background-size: 18px 18px; background-position:0px 0px;}
+.area{padding-left: 25px; background: url(../images/icon/house.png) no-repeat; background-size: 18px 18px; background-position:0px 0px;}
+.floor{margin-left: 4rem; padding-left: 20px; background: url(../images/icon/floor.png) no-repeat; background-size: 18px 18px; background-position:0px 0px;}
+.from{padding-left: 25px; background: url(../images/icon/people.png) no-repeat; background-size: 16px 16px; background-origin: 0px 0px;}
+
+.metro,.less_house{width: auto; height: 22px; padding: 2px 1rem; border-radius: 3px; cursor: pointer;}
+.metro{background:rgba(245,180,49,0.1); border: 1px solid rgba(245,180,49,0.5); color: rgba(245,180,49,1);}
+.metro:hover{background:rgba(245,180,49,0.3);}
+.less_house{background: rgba(255,85,51,0.1); border: 1px solid rgba(255,85,51,0.5); color: rgba(255,85,51,1); margin-left: 1rem;}
+.less_house:hover{background: rgba(255,85,51,0.2);}
+.metro_house_money{position: absolute; top: 10.4rem;}
+.metro_house_money>span:last-child{float: right; position: relative; top:-1rem;}
+.media-body>p:last-child{font-size: 16px; width: 100%; padding-right: 1.5rem;}
+
+/*分页按钮*/
+.paging{height: 4.5rem;text-align: center;}
+.paging ul li a{width: 32px; height: 32px; line-height: 20px; text-align: center; margin-left: 8px; padding-left: 10px;
+					 border-radius: 5px; color: rgba(0,0,0,0.8);}	
+.paging ul li a:hover{background: #1890FF; color: #fff;}
+
+/*右边开始*/
+.r_tit{
+	padding: 10px 0;
+}
+.r_box1,.r_box2{
+	margin-bottom: 1rem;
+}
+.r_box1 img{
+	width: 100%;
+	height: 15rem;
+}
+.r_box2 input{
+	text-align: center;
+	width: 100%;
+	height: 2rem;
+	border: 1px solid rgba(0,0,0,.04);
+	margin-bottom: 1rem;
+}
+.r_btn{
+	margin: 0;
+	padding:10px 0 20px; 
+	width: 100%;
+	height: 2.6rem;
+	line-height:1.5rem;
+	text-align: center;
+	border-radius: 2px;
+	color: #fff;
+	background:rgba(245,180,49,1);
+}
+.r_box3 ul li{
+	margin-bottom: 4.5rem;
+}
+.r_box3 ul li img{
+	width: 100%;
+	height: 13.5rem;
+}
+.r_box3_tit{
+	margin: 5px 0;
+}
+.r_box3_l{
+	color: rgba(0,0,0,.8);
+	padding-left: 25px;
+	background: url(../images/icon/village.png) no-repeat top left;
+	background-size: 20px 20px;
+}
+.r_box3_r{
+	color: rgba(0,0,0,.8);
+	line-height: 1rem;
+}
+.r_box3_r i{
+	color: #ff3333;
+	font-family:PingFangSC-Medium;
+}
+.r_box4_nav li{
+	height: 23.5rem;
+}
+.r_box4_nav li a img{
+	width: 100%;
+	height: 100%;
+}
+.list_box3 ul {
+	padding: 0;
+}
+.list_box3 ul li{
+	float: left;
+	width: 16.8rem;
+	border-bottom: 1px solid rgba(0,0,0,0.04);
+	padding-bottom: 10px;
+	margin-right: 10px;
+	margin-bottom: 2rem;
+}
+.list_box3 ul li img{
+	width: 100%;
+	height: 13.75rem;
+}
+/*结束*/
+/*选中时的颜色*/
+.clickcolor{
+	color:#00a0e9;
+}
+/*选中时其他隐藏*/
+.dispaly{
+	display: none;
+}
