@@ -108,7 +108,13 @@ $(function(){
 	/*委托找房*/
 	$(".entrust_once").click(function(){$(".application").css({"display":"block"});
 		$(".temp").css({"visibility":"visible"});//添加一层膜
+		$(".temp").show();
+		$(".temp").click(function(){
+			$(this).hide();
+			$(".application").css({"display":"none"});
+		})
 	})
+	
 	$(".close_applic").click(function(){$(".application").css({"display":"none"});
 		$(".temp").css({"visibility":"hidden"});
 		$(".application .error").html("");
@@ -135,6 +141,11 @@ $(function(){
 	/*推荐用户*/
 	$(".rcdcmn_once").click(function(){$(".rcdcmn_box").css({"display":"block"});
 		$(".temp").css({"visibility":"visible"});//添加一层膜
+		$(".temp").show();
+		$(".temp").click(function(){
+			$(this).hide();
+			$(".rcdcmn_box").css({"display":"none"});
+		})
 	})
 	$(".close_rcdcmn_box").click(function(){$(".rcdcmn_box").css({"display":"none"});
 		$(".temp").css({"visibility":"hidden"});
