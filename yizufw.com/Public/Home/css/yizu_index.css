@@ -1,0 +1,290 @@
+/*中部内容*/
+
+/*main_box1开始*/
+.main_box1{
+	height: 25rem;
+}
+.tr_numbre{
+	color: #ff5533;
+	font-family: newnumebr;
+	font-size: 36px!important;
+}
+.trmin_number{
+	color: #666666;
+}
+.tr_btn{
+	color: #fff;
+	padding: 8px 24px;
+	border-radius: 2px;
+	background:linear-gradient(90deg,rgba(255,218,56,1),rgba(255,179,26,1));
+}
+.new_box{
+	border:1px solid rgba(0,0,0,.04);
+	margin-top: 1rem;
+}
+.new_box_t{
+	padding-top: 1rem;
+	border-bottom: 1px solid rgba(0,0,0,.04);
+}
+.newtit_l{
+	float: left;
+}
+.newtit_r{
+	line-height: 1rem;
+	float: right;
+	color: #666666;
+}
+.minnew{
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis; 
+}
+.minjump{
+	border:1px solid #198cff;
+	padding: 1px 6px;
+	margin-right: 5px;
+	color: #198cff;
+}
+/*结束*/
+
+/*main_box2开始*/
+.yizu_service{
+
+}
+.yizu_service li{
+	float: left;
+	width: 12.5%;
+	height: 6rem;
+	text-align: center;
+}
+.yizu_service li p{
+	margin-top: 10px;
+	font-size: 14px!important;
+	color: #333;
+}
+/*结束*/
+
+/*main_box3开始*/
+.box3_nav{
+	padding: 0;
+	height: 20rem;
+	overflow: hidden;
+	position: relative;
+}
+.movebox{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 125rem;
+	height: 20rem;
+}
+.movebox ul{
+	padding: 0;
+}
+.movebox ul li{
+	float: left;
+	padding-right: 10px;
+}
+.movebox ul li img{
+	height: 18rem;
+}
+.movebox ul li p{
+	text-align: center;
+}
+/*结束*/
+
+/*main_box4开始*/
+.box4_nav li{
+	width: 25%;
+	padding-right: 10px;
+	margin-bottom: 15px;
+	float: left;
+	position: relative;
+}
+
+.box4_nav li div{border: 1px solid rgba(0,0,0,0.15); border-top: none; padding-bottom: 5px; }
+@keyframes shadow{
+	0%{box-shadow: 0 0 0 0 rgba(0,0,0,0.15);}
+	100%{box-shadow: 0px 4px 6px rgb(0,0,0,0.15);}
+}
+@-ms-keyframes shadow{
+	0%{box-shadow: 0 0 0 0 rgba(0,0,0,0.15);}
+	100%{box-shadow: 0px 4px 6px rgb(0,0,0,0.15);}
+}
+.box4_nav li:hover>div{animation: shadow 1s; -ms-animation: shadow 1s;}
+
+.box4_nav li img{
+	width: 100%;
+}
+.box4_tit{
+	padding-top: 10px;
+	margin: 0;
+	font-weight: bold;
+}
+.box4_tit_l{
+	float: left;
+	padding-left: 20px;
+	background: url(../images/icon/village.png) no-repeat -2px 0;
+	background-size: 20px 20px;
+}
+.box4_tit_r{
+	float: right;
+}
+.box4_tit_r i{
+	color: #FA541C;
+	line-height: 20px;
+	font-family: newnumebr;
+}
+/*结束*/
+
+/*main_box5开始*/
+.new_summary{
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+	border-bottom:1px solid rgba(0,0,0,.04);
+}
+.new_summary div img{
+	width: 100%;
+}
+.new_cen p{
+	padding-top: 2.5rem;
+
+	overflow:hidden; 
+	text-overflow:ellipsis;
+	display:-webkit-box; 
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:2; 
+}
+.new_summary_r p{
+	font-size: 24px!important;
+	text-align: center;
+	color: rgba(0,0,0,.4);
+	font-family:PingFangSC-Medium;
+}
+.new_summary_r span{
+	margin-left: 4rem;
+	line-height: 8rem;
+}
+.new_summary_r span img{
+	width: 2rem;
+}
+/*结束*/
+
+/*mian_box6开始*/
+.main_box6{
+	height: 11.25rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.main_box6 a img{
+	width: 100%;
+	height: 100%;
+}
+/*结束*/
+
+/*mian_box7开始*/
+.box7_img{
+	text-align: center;
+	line-height: 5rem;
+}
+/*结束*/
+
+
+/*广告开始*/
+.advert_1{
+	height: 7.5rem;
+	border:1px solid rgba(0,0,0,.15);
+	margin:2rem -15px;
+}
+/*广告左边*/
+.advert_l img{
+	width: 100%;
+	height: 7.5rem;
+}
+/*广告右边*/
+.advert_r{
+	
+}
+.advert_r input{
+	border:1px solid rgba(0,0,0,.15);
+	padding: 6px 0 6px 20px;
+	margin-left: 15px;
+	width: 70%;
+}
+.advert_r span{
+	color: #fff;	
+	cursor:pointer;
+	margin-left: -6px;
+	padding: 10px 15px;
+	line-height: 7.5rem;	
+	background-color: rgba(255,190,94,1);
+	border-bottom-right-radius: 2px;
+	border-top-right-radius: 2px;
+}
+/*广告结束*/
+/*右边固定导航栏*/
+.right_box{
+	width: 60px;
+	border: 1px solid rgba(0,0,0,.1);
+	border-radius: 2px;
+	position:fixed;
+	top: 20%;
+	right: 0px;
+	background-color: rgba(255,255,255,1);
+	box-shadow:4px 4px 4px rgba(0,0,0,.04);
+}
+.right_icon li p{
+	text-align: center;
+	color: #666666;
+}
+.right_icon li:nth-of-type(1) p:nth-of-type(1){
+	margin-top: 10px;
+}
+.right_icon li p img{
+	width: 30px;
+}
+
+/*媒体查询当设备宽度小于等于1024px*/
+@media only screen and  (max-width: 1024px){
+	.foot_logo img{
+		margin-right: 0;
+	}
+	.foot_t{
+		line-height: 1.5rem;
+	}
+	.pc,.nav_bot,.navbar-right{
+		display: none;
+	}
+	#nav_mintext>li>a{
+		color: #fff;
+	}
+	.right_box{
+		display: none;
+	}
+	.box1_r{
+		display: none;
+	}
+	.yizu_service li{
+		width: 25%;
+	}
+	.reserve{
+		display: none;
+	}
+	.advert_1{
+		display: none;
+	}
+	.main_box3{
+		display: none;
+	}
+	.box4_nav li{
+		width: 50%; 
+	}
+}
+@media only screen and  (min-width:1025px){
+	.phone{
+		display: none;
+	}
+}

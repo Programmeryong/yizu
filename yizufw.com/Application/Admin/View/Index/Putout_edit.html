@@ -1,0 +1,98 @@
+
+
+<div id="msg"></div>
+<form name="myform" id="myform" action="<if condition="$action_name=='add'">{:U($module_name.'/insert')}<else />{:U($module_name.'/update')}</if>&iscreatehtml=1" method="post">
+<div id="filelist" class="hide"></div>
+<div class="error"><ul></ul></div>
+<table cellpadding=0 cellspacing=0 class="table_form" width="100%">
+    
+	<volist name="fields" id="r">
+        <if condition="!empty($r['status'])">
+            <tr>
+                <td width="10%" ><if condition="$r['required']"><font color="red">*</font></if>{$r.name}</td>
+                <td width="90%" id="box_{$r['field']}">
+                {$r|getform=$form,###}
+                </td>
+            </tr>
+        </if>
+    </volist>
+
+    
+	<if condition="$action_name=='add'">
+        <tr class="li">
+            <td width="10%" >投放信息</td>
+            <td width="90%">
+                <input type="text" name="progress[]" size="55" class="input-text" value=""><span>&emsp;时间&emsp;</span><input class="Wdate input-text valid" validate=" required:true" name="progress_time[]" type="text" size="25" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="">
+            </td>
+        </tr>
+    <else />
+        <if condition="empty($vo['progress'])">
+            <tr class="li">
+                <td width="10%" >投放信息</td>
+                <td width="90%">
+                    <input type="text" name="progress[]" size="55" class="input-text" value=""><span>&emsp;时间&emsp;</span><input class="Wdate input-text valid" validate=" required:true" name="progress_time[]" type="text" size="25" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="">
+                </td>
+            </tr>
+        <else />
+            <volist name="vo['progress']" id="pro">
+                <tr class="li">
+                    <td width="10%" >投放信息</td>
+                    <td width="90%">
+                        <input type="text" name="progress[]" size="55" class="input-text" value="{$pro}"><span>&emsp;时间&emsp;</span><input class="Wdate input-text valid" validate=" required:true" name="progress_time[]" type="text" size="25" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="{$vo['progress_time'][$key]}">
+                    </td>
+                </tr>
+            </volist>
+        </if>
+    </if>
+    
+
+    <tr>
+    	<td width="10%" >操作</td>
+    	<td width="90%" ><button type="button" id="add">添加</button></td>
+    </tr>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$("#add").click(function(){
+			var ele = "<tr class='li'>"+"<td width='10%' >投放信息</td>"+"<td width='90%'>"+"<input type='text' name='progress[]' size='55' class='input-text'>"+"<span>&emsp;时间&emsp;</span>"+"<input class='Wdate input-text valid' validate='required:true' name='progress_time[]' type='text' size='25' onfocus="+"WdatePicker({dateFmt:'yyyy-MM-dd"+"&nbsp;"+"HH:mm:ss'})"+">"+"</td>"+"</tr>";
+			var len = $(".li").length;
+			$(".li").eq(len-1).after(ele);
+		})
+	</script>
+        
+</table>
+<div id="bootline"></div>
+<div id="btnbox" class="btn">
+<if condition="$vo['id']!=''"><input TYPE="hidden" name="id" value="{$vo.id}"></if>
+<input type="hidden"  name="lang" value="{$langid}" />
+<input type="hidden" name="forward" value="{$_SERVER['HTTP_REFERER']}" />
+<INPUT TYPE="submit"  value="{:L('dosubmit')}" class="button buttonBtn" >
+<input TYPE="reset"  value="{:L('cancel')}" class="button">
+</div>
+</form>
+</div>
+<script>
+    
+var catid = $("#catid"),
+    tips =  $(".thumb_tips");
+{if $action_name!='add'}
+    tips.html({$datas[0]}+'*'+{$datas[1]}+"px");
+{/if}
+catid.change(function(){
+    $.ajax({
+        type : "post",
+        url : "{:URL('Admin-Content/get_img')}",
+        data : {
+            cid : $(this).val(),
+            model : "Article",
+        },
+        dataType : "json",
+        success : function(msg){
+            if(msg[0]){
+                tips.html(msg[0]+'*'+msg[1]+"px");
+            }else{
+                tips.html("0");
+            }
+        }
+    })
+})
+</script>
