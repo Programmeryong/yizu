@@ -1,0 +1,43 @@
+html{ font-size: 10px;}
+*{ font-size: 18px; color: rgba(0,0,0,0.65);}
+.fsize12{font-size: 12px;}
+.fsize14{font-size: 14px;}
+.fsize16{font-size: 16px;}
+.fsize20{font-size: 20px;}
+.fsize22{font-size: 22px;}
+.fsize28{font-size: 28px;}
+.fsize24{font-size: 24px;}
+.black85{color: rgba(0,0,0,0.85);}
+.black65{color: rgba(0,0,0,0.65);}
+.black45{color: rgba(0,0,0,0.45);}
+.fweight60{font-weight: 60%;}
+.fweight80{font-weight: 80%;}
+.active{background: #fff; color: #0080FF;}
+ul{padding: 0; list-style: none;}
+.container-fluid{padding: 0; margin: 0;}
+p{margin: 0;}
+/*p标签只显示两行，溢出隐藏并且以...结束*/
+.twohide{overflow: hidden;
+	display: -webkit-box; display: -moz-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;}
+	
+.onehide{overflow: hidden;
+	display: -webkit-box; display: -moz-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;}
+
+a{text-decoration: none;}
+a:hover{text-decoration: none; color: #00A2FF;}
+/*全局结束*/
+
+
+.back{width: 100%; height: 5rem; line-height: 5rem; padding-left: 1rem; border-bottom: 1px solid rgba(0,0,0,0.15);}
+.back img{width: 25px; height: 25px;}
+
+.main{width: 100%; height: auto; padding: 1.5rem 1rem;}
+.main>p{ line-height: 3rem;}
+.drf{display: flex; justify-content: space-between; margin-top: 1.5rem; margin-bottom: 2rem;}
+.main img{width: 100%; height: 20rem; margin-top: 2rem; margin-bottom: 1.2rem;}
+.pre,.next{width: 48.5%; height: 7rem; background: rgba(0,0,0,0.04); padding-left: 1rem; padding-top: 1rem;}
+.qjbuttom{font-size: 22px; color: #fff; text-align: center; width: 100%; height: 5rem; line-height: 5rem; background: #F5A623; margin: 5px 0;}

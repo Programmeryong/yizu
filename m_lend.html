@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>乙租网-出租页</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/m_lend.css" />
+		<link rel="stylesheet" href="css/swiper-4.3.3.min.css" />
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+		<script type="text/javascript" src="js/swiper-4.3.3.min.js" ></script>
+		<script type="text/javascript" src="js/m_lend.js" ></script>
+	</head>
+	
+	
+	
+	<body>
+		<!--那层膜-->
+		<div class="temp"></div>
+		
+		<main class="container-fluid">
+			<!--轮播-->
+			<div class="swiper-container lunbo" style="height: 158px">
+			
+				<ul class="swiper-wrapper">
+					<li class="swiper-slide">
+						<a href=""><img src="images/banner/banner_1 - 副本.png"/></a>
+					</li>
+					<li  class="swiper-slide">
+						<a href=""><img src="images/banner/banner_3.jpg"/></a>
+					</li>
+					<li class="swiper-slide">
+						<a href=""><img src="images/banner/banner_2.jpg"/></a>
+					</li>
+					<li class="swiper-slide">
+						<a href=""><img src="images/test/5ae2c7541ef77.jpg"/></a>
+					</li>
+					<li class="swiper-slide">
+						<a href=""><img src="images/test/5ae2c75458309.jpg"/></a>
+					</li>
+					
+				</ul>	
+				
+				<!--轮播小圆点-->
+				<div class="swiper-pagination">
+					&nbsp;
+				</div>
+			</div>
+			<!--轮播结束-->
+			
+			<!--筛选标题+筛选内容-->
+			<div class="screen_box">
+				<!--筛选标题-->
+				<div class="screen_title">
+					<ul class="" style="display: flex; justify-content: space-between; padding-left: 1rem; padding-right: 2rem;">
+						<li class="">类型 <i class="glyphicon glyphicon-triangle-bottom"></i></li>
+						<li class="">区域 <i class="glyphicon glyphicon-triangle-bottom"></i></li>
+						<li class="">面积 <i class="glyphicon glyphicon-triangle-bottom"></i></li>
+						<li class="">价格 <i class="glyphicon glyphicon-triangle-bottom"></i></li>
+						<li><img src="images/icon/screen.png" class="sort" width="20px" height="20px"/>
+							<img src="images/icon/screen-blue.png" class="sort-blue" width="20px" height="20px"  style="display: none;"/>
+						</li>
+					</ul>
+					
+				</div>
+			
+				<!--筛选(类型)-->
+				<div class="screen screen_type">
+					<ul>
+						<li class="active">全部</li>
+						<li>写字楼</li>
+						<li>创意园</li>
+					</ul>
+					
+				</div>
+				
+				<!--筛选(区域)-->
+				<div class="screen screen_quyu">
+					<ul>
+						<li class="active2">区域</li>
+						<li>地铁</li>
+					</ul>
+					
+					<!--区域和地铁-->
+					<div class="quyu-metros">
+						<!--区域-->
+						<div class="swiper-container quyu q-m">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">全广州</li>
+								<li class="swiper-slide">天河</li>
+								<li class="swiper-slide">越秀</li>
+								<li class="swiper-slide">海珠</li>
+								<li class="swiper-slide">番禺</li>
+								<li class="swiper-slide">荔湾</li>
+								<li class="swiper-slide">白云</li>
+								<li class="swiper-slide">赤岗</li>
+								<li class="swiper-slide">增城</li>
+								<li class="swiper-slide">江夏</li>
+								<li class="swiper-slide">增城</li>
+								<li class="swiper-slide">江夏</li>
+								<li class="swiper-slide">增城</li>
+								<li class="swiper-slide">江夏</li>
+							</ul>	
+							
+						</div>
+						
+						<!--地铁-->
+						<div class="swiper-container metros q-m">
+			
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">1号线</li>
+								<li class="swiper-slide">2号线</li>
+								<li class="swiper-slide">3号线</li>
+								<li class="swiper-slide">4号线</li>
+								<li class="swiper-slide">5号线</li>
+								<li class="swiper-slide">6号线</li>
+								<li class="swiper-slide">7号线</li>
+								<li class="swiper-slide">8号线</li>
+								<li class="swiper-slide">9号线</li>
+								<li class="swiper-slide">10号线</li>
+								<li class="swiper-slide">11号线</li>
+								<li class="swiper-slide">12号线</li>
+							</ul>	
+						</div>
+						
+						<!--1号线-->
+						<div class="swiper-container line line1">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">你</li>
+								<li class="swiper-slide">好</li>
+								<li class="swiper-slide">hello</li>
+								<li class="swiper-slide">good</li>
+								<li class="swiper-slide">nice</li>
+								<li class="swiper-slide">哈哈</li>
+								<li class="swiper-slide">呵呵</li>
+								<li class="swiper-slide">嘿嘿</li>
+								<li class="swiper-slide">嗯嗯</li>
+								<li class="swiper-slide">哦哦</li>
+								<li class="swiper-slide">what</li>
+								<li class="swiper-slide">加油</li>
+							</ul>	
+						</div>
+						<!--2号线-->
+						<div class="swiper-container line line2">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">文</li>
+								<li class="swiper-slide">华</li>
+								<li class="swiper-slide">炎</li>
+								<li class="swiper-slide">黎</li>
+								<li class="swiper-slide">新</li>
+								<li class="swiper-slide">泳</li>
+								<li class="swiper-slide">李</li>
+								<li class="swiper-slide">洪</li>
+								<li class="swiper-slide">文</li>
+								<li class="swiper-slide">梁</li>
+								<li class="swiper-slide">健</li>
+								<li class="swiper-slide">平</li>
+							</ul>	
+						</div>
+						<!--3号线-->
+						<div class="swiper-container line line3">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">兰</li>
+								<li class="swiper-slide">代</li>
+								<li class="swiper-slide">平</li>
+								<li class="swiper-slide">good</li>
+								<li class="swiper-slide">nice</li>
+								<li class="swiper-slide">sdfas</li>
+								<li class="swiper-slide">水电费</li>
+								<li class="swiper-slide">dsf</li>
+								<li class="swiper-slide">fdgd</li>
+								<li class="swiper-slide">哦哦</li>
+								<li class="swiper-slide">what</li>
+								<li class="swiper-slide">加油</li>
+							</ul>	
+						</div>
+						<!--4号线-->
+						<div class="swiper-container line line4">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">规范</li>
+								<li class="swiper-slide">水电费</li>
+								<li class="swiper-slide">广发</li>
+								<li class="swiper-slide">管好</li>
+								<li class="swiper-slide">高富帅</li>
+								<li class="swiper-slide">突然</li>
+								<li class="swiper-slide">VB规范化呵呵</li>
+								<li class="swiper-slide">计划</li>
+								<li class="swiper-slide">一题嗯嗯</li>
+								<li class="swiper-slide">剖的说法</li>
+								<li class="swiper-slide">电风扇</li>
+								<li class="swiper-slide">广泛认同</li>
+							</ul>	
+						</div>
+						<!--5号线-->
+						<div class="swiper-container line line5">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">计划</li>
+								<li class="swiper-slide">一题嗯嗯</li>
+								<li class="swiper-slide">剖的说法</li>
+								<li class="swiper-slide">电风扇</li>
+								<li class="swiper-slide">广泛认同</li>
+								<li class="swiper-slide">哈哈</li>
+								<li class="swiper-slide">呵呵</li>
+								<li class="swiper-slide">nice</li>
+								<li class="swiper-slide">sdfas</li>
+								<li class="swiper-slide">水电费</li>
+								<li class="swiper-slide">dsf</li>
+								<li class="swiper-slide">fdgd</li>
+							</ul>	
+						</div>
+						<!--6号线-->
+						<div class="swiper-container line line6">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">不对</li>
+								<li class="swiper-slide">是吗</li>
+								<li class="swiper-slide">怎么</li>
+								<li class="swiper-slide">回事</li>
+								<li class="swiper-slide">hello</li>
+								<li class="swiper-slide">呵呵</li>
+								<li class="swiper-slide">嘿嘿</li>
+								<li class="swiper-slide">浮动</li>
+								<li class="swiper-slide">哦哦</li>
+								<li class="swiper-slide">good</li>
+								<li class="swiper-slide">nice</li>
+								<li class="swiper-slide">高富帅</li>
+							</ul>	
+						</div>
+						<!--7号线-->
+						<div class="swiper-container line line7">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">呵呵</li>
+								<li class="swiper-slide">嘿嘿</li>
+								<li class="swiper-slide">浮动</li>
+								<li class="swiper-slide">哦哦</li>
+								<li class="swiper-slide">good</li>
+								<li class="swiper-slide">nice</li>
+								<li class="swiper-slide">高富帅</li>
+								<li class="swiper-slide">不对</li>
+								<li class="swiper-slide">是吗</li>
+								<li class="swiper-slide">怎么</li>
+								<li class="swiper-slide">回事</li>
+							</ul>	
+						</div>
+						<!--8号线-->
+						<div class="swiper-container line line8">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">你</li>
+								<li class="swiper-slide">好</li>
+								<li class="swiper-slide">hello</li>
+								<li class="swiper-slide">good</li>
+								<li class="swiper-slide">nice</li>
+								<li class="swiper-slide">哈哈</li>
+								<li class="swiper-slide">呵呵</li>
+								<li class="swiper-slide">嘿嘿</li>
+								<li class="swiper-slide">嗯嗯</li>
+								<li class="swiper-slide">哦哦</li>
+								<li class="swiper-slide">what</li>
+								<li class="swiper-slide">加油</li>
+							</ul>	
+						</div>
+						<!--9号线-->
+						<div class="swiper-container line line9">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">1号线</li>
+								<li class="swiper-slide">2号线</li>
+								<li class="swiper-slide">3号线</li>
+								<li class="swiper-slide">4号线</li>
+								<li class="swiper-slide">5号线</li>
+								<li class="swiper-slide">6号线</li>
+								<li class="swiper-slide">7号线</li>
+								<li class="swiper-slide">8号线</li>
+								<li class="swiper-slide">9号线</li>
+								<li class="swiper-slide">10号线</li>
+								<li class="swiper-slide">11号线</li>
+								<li class="swiper-slide">12号线</li>
+							</ul>	
+						</div>
+						<!--10号线-->
+						<div class="swiper-container line line10">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">你</li>
+								<li class="swiper-slide">好</li>
+								<li class="swiper-slide">hello</li>
+								<li class="swiper-slide">good</li>
+								<li class="swiper-slide">nice</li>
+								<li class="swiper-slide">哈哈</li>
+								<li class="swiper-slide">呵呵</li>
+								<li class="swiper-slide">嘿嘿</li>
+								<li class="swiper-slide">嗯嗯</li>
+								<li class="swiper-slide">哦哦</li>
+								<li class="swiper-slide">what</li>
+								<li class="swiper-slide">加油</li>
+							</ul>	
+						</div>
+						<!--11号线-->
+						<div class="swiper-container line line11">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">全广州</li>
+								<li class="swiper-slide">天河</li>
+								<li class="swiper-slide">越秀</li>
+								<li class="swiper-slide">海珠</li>
+								<li class="swiper-slide">番禺</li>
+								<li class="swiper-slide">荔湾</li>
+								<li class="swiper-slide">白云</li>
+								<li class="swiper-slide">赤岗</li>
+								<li class="swiper-slide">增城</li>
+								<li class="swiper-slide">江夏</li>
+								<li class="swiper-slide">增城</li>
+								<li class="swiper-slide">江夏</li>
+								<li class="swiper-slide">增城</li>
+								<li class="swiper-slide">江夏</li>
+							</ul>	
+						</div>
+						<!--12号线-->
+						<div class="swiper-container line line12">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">文</li>
+								<li class="swiper-slide">华</li>
+								<li class="swiper-slide">炎</li>
+								<li class="swiper-slide">黎</li>
+								<li class="swiper-slide">新</li>
+								<li class="swiper-slide">泳</li>
+								<li class="swiper-slide">李</li>
+								<li class="swiper-slide">洪</li>
+								<li class="swiper-slide">文</li>
+								<li class="swiper-slide">梁</li>
+								<li class="swiper-slide">健</li>
+								<li class="swiper-slide">平</li>
+							</ul>	
+						</div>
+					</div>
+					
+				</div>
+				
+				<!--筛选(面积)-->
+				<div class="screen screen_area">
+					<ul>
+						<li class="active">全部</li>
+						<li>0-100m²</li>
+						<li>100-300m²</li>
+						<li>300-500m²</li>
+						<li>500-1000m²</li>
+						<li>1000m²以上</li>
+					</ul>
+					
+					<!--区间滑块-->
+					<div class="h-zscope area_hua" id="h-zscope">
+	                    <p class="h-zprice"><span class="h-zprice-min"><i id="min">0</i> </span>一<span class="h-zprice-max"><i id="max">不限</i></span></p>
+	                    <div class="h-range">
+	                        <div class="h-progress" id="h-progress"></div>
+	                        <div class="h-range-l" id="h-range-l"></div>
+	                        <div class="h-range-r" id="h-range-r"></div>
+	                    </div>
+	                </div>
+						
+					<div class="ok">确 定</div>
+				</div>
+				
+				<!--筛选(价格)-->
+				<div class="screen screen_price">
+					<ul>
+						<li class="active">全部</li>
+						<li>0-40m²/月</li>
+						<li>40-60m²/月</li>
+						<li>60-80m²/月</li>
+						<li>80-120m²/月</li>
+						<li>120m²/月²以上</li>
+					</ul>
+					
+					<!--区间滑块-->
+					<div class="h-zscope price_hua" id="h-zscope2">
+	                    <p class="h-zprice"><span class="h-zprice-min"><i id="min2">0</i> </span>一<span class="h-zprice-max"><i id="max2">不限</i></span></p>
+	                    <div class="h-range">
+	                        <div class="h-progress" id="h-progress2"></div>
+	                        <div class="h-range-l" id="h-range-l2"></div>
+	                        <div class="h-range-r" id="h-range-r2"></div>
+	                    </div>
+	                </div>
+	                
+					<div class="ok1">确 定</div>
+				</div>
+				
+				<!--筛选(排序)-->
+				<div class="screen screen_sort">
+					<ul>
+						<li class="active">默认排序</li>
+						<li>价格从高到低</li>
+						<li>价格从低到高</li>
+						<li>面积从大到小</li>
+						<li>面积从小到大</li>
+					</ul>
+				</div>
+			</div>	
+				
+			<!--房子列表-->
+			<div class="house_box">
+				<p class="none fsize20">没有找到相关的房源</p>
+				<ul>
+					<li class="col-xs-12">
+						<div>
+							<div class="house_img">
+								<img src="images/banner/banner_2.jpg"/>
+								<span class="quanjin">720°</span>
+							</div>
+							<div class="house_info" style="position: relative;">
+								<p class="black85">蝙蝠侠创意园</p>
+								<p>
+									<span class="qu">天河</span>-<span class="">体育西路</span>
+									/ <span class="from">平台</span>
+								</p>
+								
+								<p>
+									<span class="fooor">26</span>层 /
+									<span class="areaMin">125</span>-<span class="areaMax">1289</span>㎡ 
+									
+								</p>
+								<p class="">
+									<span class="biao ten">地铁十分钟</span> <span class="biao less">稀缺房源</span> 
+									<span class="biao ten">地铁十分钟</span>
+								</p>
+								<span class="fsize14" style="position: absolute; top: 5.3rem; right: 0;">
+									<span class="money">￥<span class="moneys">62</span></span>/㎡/月起
+								</span>
+							</div>
+						</div>
+					</li>
+					<li class="col-xs-12">
+						<div>
+							<div class="house_img">
+								<img src="images/banner/banner_2.jpg"/>
+								<span class="quanjin">720°</span>
+							</div>
+							<div class="house_info" style="position: relative;">
+								<p class="black85">蝙蝠侠创意园</p>
+								<p>
+									<span class="qu">天河</span>-<span class="">体育西路</span>
+									/ <span class="from">平台</span>
+								</p>
+								
+								<p>
+									<span class="fooor">26</span>层 /
+									<span class="areaMin">125</span>-<span class="areaMax">1289</span>㎡ 
+									
+								</p>
+								<p class="">
+									<span class="biao ten">地铁十分钟</span> <span class="biao less">稀缺房源</span> 
+									<span class="biao ten">地铁十分钟</span>
+								</p>
+								<span class="fsize14" style="position: absolute; top: 5.3rem; right: 0;">
+									<span class="money">￥<span class="moneys">62</span></span>/㎡/月起
+								</span>
+							</div>
+						</div>
+					</li>
+					<li class="col-xs-12">
+						<div>
+							<div class="house_img">
+								<img src="images/banner/banner_2.jpg"/>
+								<span class="quanjin">720°</span>
+							</div>
+							<div class="house_info" style="position: relative;">
+								<p class="black85">蝙蝠侠创意园</p>
+								<p>
+									<span class="qu">天河</span>-<span class="">体育西路</span>
+									/ <span class="from">平台</span>
+								</p>
+								
+								<p>
+									<span class="fooor">26</span>层 /
+									<span class="areaMin">125</span>-<span class="areaMax">1289</span>㎡ 
+									
+								</p>
+								<p class="">
+									<span class="biao ten">地铁十分钟</span> <span class="biao less">稀缺房源</span> 
+									<span class="biao ten">地铁十分钟</span>
+								</p>
+								<span class="fsize14" style="position: absolute; top: 5.3rem; right: 0;">
+									<span class="money">￥<span class="moneys">62</span></span>/㎡/月起
+								</span>
+							</div>
+						</div>
+					</li>
+					<li class="col-xs-12">
+						<div>
+							<div class="house_img">
+								<img src="images/banner/banner_2.jpg"/>
+								<span class="quanjin">720°</span>
+							</div>
+							<div class="house_info" style="position: relative;">
+								<p class="black85">蝙蝠侠创意园</p>
+								<p>
+									<span class="qu">天河</span>-<span class="">体育西路</span>
+									/ <span class="from">平台</span>
+								</p>
+								
+								<p>
+									<span class="fooor">26</span>层 /
+									<span class="areaMin">125</span>-<span class="areaMax">1289</span>㎡ 
+									
+								</p>
+								<p class="">
+									<span class="biao ten">地铁十分钟</span> <span class="biao less">稀缺房源</span> 
+									<span class="biao ten">地铁十分钟</span>
+								</p>
+								<span class="fsize14" style="position: absolute; top: 5.3rem; right: 0;">
+									<span class="money">￥<span class="moneys">62</span></span>/㎡/月起
+								</span>
+							</div>
+						</div>
+					</li>
+					<li class="col-xs-12">
+						<div>
+							<div class="house_img">
+								<img src="images/banner/banner_2.jpg"/>
+								<span class="quanjin">720°</span>
+							</div>
+							<div class="house_info" style="position: relative;">
+								<p class="black85">蝙蝠侠创意园</p>
+								<p>
+									<span class="qu">天河</span>-<span class="">体育西路</span>
+									/ <span class="from">平台</span>
+								</p>
+								
+								<p>
+									<span class="fooor">26</span>层 /
+									<span class="areaMin">125</span>-<span class="areaMax">1289</span>㎡ 
+									
+								</p>
+								<p class="">
+									<span class="biao ten">地铁十分钟</span> <span class="biao less">稀缺房源</span> 
+									<span class="biao ten">地铁十分钟</span>
+								</p>
+								<span class="fsize14" style="position: absolute; top: 5.3rem; right: 0;">
+									<span class="money">￥<span class="moneys">62</span></span>/㎡/月起
+								</span>
+							</div>
+						</div>
+					</li>
+					<li class="col-xs-12">
+						<div>
+							<div class="house_img">
+								<img src="images/banner/banner_2.jpg"/>
+								<span class="quanjin">720°</span>
+							</div>
+							<div class="house_info" style="position: relative;">
+								<p class="black85">蝙蝠侠创意园</p>
+								<p>
+									<span class="qu">天河</span>-<span class="">体育西路</span>
+									/ <span class="from">平台</span>
+								</p>
+								
+								<p>
+									<span class="fooor">26</span>层 /
+									<span class="areaMin">125</span>-<span class="areaMax">1289</span>㎡ 
+									
+								</p>
+								<p class="">
+									<span class="biao ten">地铁十分钟</span> <span class="biao less">稀缺房源</span> 
+									<span class="biao ten">地铁十分钟</span>
+								</p>
+								<span class="fsize14" style="position: absolute; top: 5.3rem; right: 0;">
+									<span class="money">￥<span class="moneys">62</span></span>/㎡/月起
+								</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</main>
+	</body>
+	
+	<script type="text/javascript">
+		var mySwiper = new Swiper('.lunbo',{
+		
+		speed:1500, /*滑动时间*/
+		//longSwipesRatio : 0.4, /*必须拖动40%才能切换*/
+		//threshold : 100, /*必须拖动100px才能切换*/
+
+		loop : true, /*是否循环轮播*/
+		
+		autoplay: {
+			delay: 2000, /*轮播间隔*/
+		    disableOnInteraction: false, /*触碰后是否停止切换*/
+		},
+
+		pagination: {
+		el: '.swiper-pagination', /*监听小圆点*/
+		},
+		
+		//observer:true,
+
+		})
+		
+		
+		/*上下滑动函数*/
+		function swiper(id){
+			var mySwiper1 = new Swiper(id,{
+				direction : 'vertical', //竖向切换
+				freeMode : true,
+				height: 400,
+				slidesPerView : 8,
+			})
+		}
+		
+		/*区域*/
+		swiper(".quyu");
+		/*地铁*/
+		swiper(".metros");
+		/*地铁线路*/
+		swiper(".line");
+		
+		
+		
+		
+		
+		
+		
+		
+		/*区间滑块(面积)*/
+		progress('h-range-l',event);
+        progress('h-range-r',event);
+        function $id(o){return document.getElementById(o) || o;}
+        function progress(o,e){
+            $id(o).addEventListener("touchstart",function(e){
+                //手指按下。
+                var init={
+                    mX : $id(o).offsetLeft,     //当前 起始 dom元素的左边 位置 0 起值
+                    lX : $id('h-range-l').offsetLeft,
+                    rX : $id('h-range-r').offsetLeft,
+                    dX : e.targetTouches[0].pageX,  //手指按下的位置。
+                }
+     
+                //手指移动
+                function fnMove(e){
+                	$id(o).addEventListener('touchmove',function(event){event.preventDefault(); },false);
+                    var dist = e.changedTouches[0].pageX-init.dX,   //手指一次移动的距离
+                        len = init.mX+dist,  //总体移动的距离（即滑块走的距离，你看到的）
+                        l_x = init.lX,  
+                        r_x = init.rX;
+                        //$id(o).style.left=len+'px';
+                    switch ($id(o).id){
+                        case 'h-range-l':
+                            l_x = init.lX + dist;
+                            drawMove('l');
+                            break;
+                        case 'h-range-r':
+                            r_x = init.rX + dist;
+                            drawMove('r');
+                            break;
+                        default: break;
+                    }
+                     
+                    function drawMove(d){
+                        if(r_x > l_x + 25 && len>=0 && len<=300 ) {
+                            $id(o).style.left=len+'px';
+                            $id('h-progress').style.left = l_x + 'px';
+                            $id('h-progress').style.width = r_x - l_x + 'px';
+                            /*if (d=='l') $id('min').innerHTML = Math.round(len*3.6+10);
+                            else $id('max').innerHTML = Math.round(len*3.6+10);*/
+                           
+                            if (d=='l') $id('min').innerHTML = Math.round(len*3);
+                            else $id('max').innerHTML = Math.round(len*3);
+                            
+                            if (len<2) {
+                            	$id('min').innerHTML ="0";
+                            } else if(len>=298){
+                            	$id('max').innerHTML ="不限";
+                            }
+                            
+                        }
+                    }   
+         
+                };
+                //手指抬起
+                function fnEnd(e){
+                    var endX = e.changedTouches[0].pageX;   //手指抬起，事件细节用changedTouches
+     
+                    //取消绑定事件。
+                    document.removeEventListener("touchmove",fnMove,false);
+                    document.removeEventListener("touchend",fnEnd,false);
+                };
+                //绑定事件。
+                document.addEventListener("touchmove",fnMove,false);
+                document.addEventListener("touchend",fnEnd,false);
+                //取消默认层。
+                e.preventDefault();
+            },false);
+        }
+        /*区间滑块（面积）结束*/
+       
+       /*区间滑块(价格)*/
+		progress2('h-range-l2',event);
+        progress2('h-range-r2',event);
+        function $id(o){return document.getElementById(o) || o;}
+        function progress2(o,e){
+            $id(o).addEventListener("touchstart",function(e){
+                //手指按下。
+                var init={
+                    mX : $id(o).offsetLeft,     //当前 起始 dom元素的左边 位置 0 起值
+                    lX : $id('h-range-l2').offsetLeft,
+                    rX : $id('h-range-r2').offsetLeft,
+                    dX : e.targetTouches[0].pageX,  //手指按下的位置。
+                }
+     
+                //手指移动
+                function fnMove(e){
+                	$id(o).addEventListener('touchmove',function(event){event.preventDefault(); },false);
+                    var dist = e.changedTouches[0].pageX-init.dX,   //手指一次移动的距离
+                        len = init.mX+dist,  //总体移动的距离（即滑块走的距离，你看到的）
+                        l_x = init.lX,  
+                        r_x = init.rX;
+                        //$id(o).style.left=len+'px';
+                    switch ($id(o).id){
+                        case 'h-range-l2':
+                            l_x = init.lX + dist;
+                            drawMove('l');
+                            break;
+                        case 'h-range-r2':
+                            r_x = init.rX + dist;
+                            drawMove('r');
+                            break;
+                        default: break;
+                    }
+                     
+                    function drawMove(d){
+                        if(r_x > l_x + 25 && len>=0 && len<=300 ) {
+                            $id(o).style.left=len+'px';
+                            $id('h-progress2').style.left = l_x + 'px';
+                            $id('h-progress2').style.width = r_x - l_x + 'px';
+                            /*if (d=='l') $id('min').innerHTML = Math.round(len*3.6+10);
+                            else $id('max').innerHTML = Math.round(len*3.6+10);*/
+                           
+                            if (d=='l') $id('min2').innerHTML = Math.round(len*3);
+                            else $id('max2').innerHTML = Math.round(len*3);
+                            
+                            if (len<2) {
+                            	$id('min2').innerHTML ="0";
+                            } else if(len>=298){
+                            	$id('max2').innerHTML ="不限";
+                            }
+                            
+                        }
+                    }   
+         
+                };
+                //手指抬起
+                function fnEnd(e){
+                    var endX = e.changedTouches[0].pageX;   //手指抬起，事件细节用changedTouches
+     
+                    //取消绑定事件。
+                    document.removeEventListener("touchmove",fnMove,false);
+                    document.removeEventListener("touchend",fnEnd,false);
+                };
+                //绑定事件。
+                document.addEventListener("touchmove",fnMove,false);
+                document.addEventListener("touchend",fnEnd,false);
+                //取消默认层。
+                e.preventDefault();
+            },false);
+        }
+        /*区间滑块(价格)结束*/
+	</script>
+</html>

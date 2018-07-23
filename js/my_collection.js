@@ -57,8 +57,8 @@ $(function(){
 	/*单选按钮*/
  	$('.ulradio li').on('click',function(){
 		let i = $(this).index();
-		$('.ulradio li').css({"background-image":"url(./images/icon/btn_off.png)"});
-		$('.ulradio li:eq('+i+')').css({"background-image":"url(./images/icon/btn_on.png)"});
+		$('.ulradio li').css({"background-image":"url(./images/icon/btn_on.png)"});
+		$('.ulradio li:eq('+i+')').css({"background-image":"url(./images/icon/btn_off.png)"});
 	})
 	$('.ulradio li:eq(0)').click();
 	
@@ -86,7 +86,6 @@ $(function(){
 		if(i2%2==1){$(this).css({"background":"#52C41A","color":"#fff"}); sum++;}else{$(this).css({"background":"#F5FFEB","color":"#52C41A"}); sum--;}
 		$(".label_sum").html(sum);
 	})
-	
 	
 	$(".property").click(function(){
 		i3++;

@@ -1,0 +1,158 @@
+html{ font-size: 10px;}
+*{ font-size: 16px; color: rgba(0,0,0,0.65);}
+.fsize12{font-size: 12px;}
+.fsize14{font-size: 14px;}
+.fsize16{font-size: 16px;}
+.fsize20{font-size: 20px;}
+.fsize22{font-size: 22px;}
+.fsize28{font-size: 28px;}
+.fsize24{font-size: 24px;}
+.black85{color: rgba(0,0,0,0.85);}
+.black65{color: rgba(0,0,0,0.65);}
+.black45{color: rgba(0,0,0,0.45);}
+
+.active{ color: #0080FF;}
+.active2{ background: #F0F0F0; color: #0080FF;}
+ul{padding: 0; list-style: none; margin: 0;}
+.container-fluid{padding: 0; margin: 0;}
+p{margin: 0;}
+/*p标签只显示两行，溢出隐藏并且以...结束*/
+.twohide{overflow: hidden;
+	display: -webkit-box; display: -moz-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;}
+	
+.onehide{overflow: hidden;
+	display: -webkit-box; display: -moz-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;}
+
+a{text-decoration: none;}
+a:hover{text-decoration: none; color: #00A2FF;}
+.pad{padding: 0;}
+/*全局结束*/
+
+/*图片轮播*/
+.lunbo{margin-bottom: 15px;}
+.lunbo ul{padding: 0; list-style: none;}
+.lunbo img{width: 100%; height: 100%;}
+.swiper-pagination{bottom: 0px!important;}
+.swiper-pagination .swiper-pagination-bullet{width: 1.5rem; height: 2px; border-radius: 1px; background: #fff;}
+
+
+/*筛选标题*/
+.screen_title{ height: 8rem; line-height: 8rem; border: 1px solid rgba(0,0,0,0.04);}
+.screen_title>ul{padding-right: 1rem!important;}
+/*.screen_title li:first-child{text-align: left; }*/
+.screen_title li{ text-align: center; font-size: 18px; color: rgba(0,0,0,0.85);}
+.screen_title li:nth-of-type(1),.screen_title li:nth-of-type(2),.screen_title li:nth-of-type(3),.screen_title li:nth-of-type(4){width: 22.5%;}
+.screen_title li:last-child{/*text-align: right;*/ width: 10%;}
+.screen_title li i{font-size: 14px; color: #D8D8D8;}
+.screen_title .active{ color: #0080FF;}
+/*筛选内容*/
+.posit{position: relative;}
+.screen_box{width: 100%; height: auto;  z-index: 3; background: #fff;}
+.screen_type,.screen_quyu,.screen_area,.screen_price,.screen_sort{width: 100%; height: 40rem;  position: absolute; top: 8rem; 
+				background: #fff; display: none;
+}
+.temp{width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: none; z-index: 2;  position: fixed;}
+/*筛选类型*/
+.screen_type{ padding: 0 1rem;}
+.screen_type ul li{height: 5rem; line-height: 5rem; border-bottom: 1px solid rgba(0,0,0,0.15);}
+/*筛选区域*/
+.screen_quyu{ }
+.screen_quyu ul li{height: 5rem; line-height: 5rem; padding: 0 1rem;}
+
+.quyu ul li,.metros ul li{ height: 5rem;  line-height: 5rem;}
+.quyu-metros{width: 60%; height: 100%; background: #FAFAFA; position: absolute; left: 40%; top: 0; 
+			border-left: 1px solid rgba(0,0,0,0.04); overflow: hidden;}
+.quyu{ }
+.metros{display: none; height: 40rem; }
+/*地铁线路*/
+.quyu-metros .line{width: 68%; background: #F5F5F5; display: none; position: absolute; left: 50%; top: 0; 
+		border-left: 1px solid rgba(0,0,0,0.15); }
+
+/*筛选面积*/
+.screen_area{ }
+.screen_area ul li{height: 4.5rem; line-height: 4.5rem; padding: 0 1rem; border-bottom: 1px solid rgba(0,0,0,0.15);}
+/*筛选价格*/
+.screen_price{ }
+.screen_price ul li{height: 4.5rem; line-height: 4.5rem; padding: 0 1rem; border-bottom: 1px solid rgba(0,0,0,0.15);}
+.screen_price>div,.screen_area>div{width: 100%; height: 6rem; background: #0080FF; text-align: center; 
+									line-height: 6rem; position: absolute; bottom: 0; font-size: 22px; color: #fff;}
+
+/*筛选排序*/
+
+.screen_sort ul li{height: 5rem;  line-height: 5rem; padding: 0 1rem; border-bottom: 1px solid rgba(0,0,0,0.15);}
+
+
+	/*===range 区间滑块===*/
+	#h-zscope,#h-zscope2{position: relative; width: 300px; margin: 0 auto; background: #fff;}
+	
+    .h-range {
+      width: 100%;
+      height: 5px;
+      position: relative;
+      background: rgba(0,0,0,0.04);
+    }
+    .h-range .h-progress {
+      width: 90%;
+      background: #00a3ff;
+      height: 5px;
+      left: 25px;
+      position: absolute;
+      margin-top: -1px;
+    }
+    .h-range .h-range-l,
+    .h-range .h-range-r {
+      width: 25px;
+      height: 25px;
+      border: 1px solid #00a3ff;
+      border-radius: 50%;
+      position: absolute;
+      margin-top: -9px;
+      background: #fff;
+    }
+    .h-range .h-range-r {
+      right: 0;
+    }
+    .h-zprice {
+    	width: 90%;
+    	height: 3rem; line-height: 3rem;
+        color: #00a3ff;
+        background: #fff;
+        /*padding-left: 125px;
+        text-align: left;*/
+       /*text-align: center;*/
+      	padding-left: 40px;
+    }
+
+	#min,#max{font-size: 16px;}
+	#min2,#max2{font-size: 16px;}
+
+
+
+/*房子列表*/
+.house_box{width: 100%; height: auto;}
+.house_box img{width: 100%; height: 100%;}
+.house_box>ul>li{height: 13rem; padding: 0 1rem;}
+.house_box>ul>li>div{width: 100%; height: 100%; padding: 1.2rem 0; display: flex; padding-top: 0.5rem;
+						border-bottom: 1px solid rgba(0,0,0,0.15);}
+
+.house_img{width: 35%; height: 100%; padding-top: 2%; position: relative;}
+.quanjin{position: absolute; top: 1.5rem; left: 0.5rem; width: 2.5rem; height: 2.5rem; line-height: 2.5rem; 
+			text-align: center; background: #000000; opacity: 0.5; border-radius: 50%;
+			color: #fff; font-size: 10px; }
+.house_img>img{width: 100%; height: 98%;}
+.house_info{width: 65%; height: 100%; padding-left: 1rem; font-size: 14px; color: rgba(0,0,0,0.65);}
+.addre{display: flex;}
+.house_info>p:first-child{font-size: 20px!important;}
+.house_info>p{margin-top: 0.5rem; font-size:14px;}
+.house_info>p span,.areaMin,.areaMax{font-size: 14px;}
+.biao{font-size: 10px!important; margin-right: 5px; padding: 0.5rem 0.5rem; height: 2.4rem; line-height: 2.4rem;
+		 border-radius: 2px;}
+.ten{background:#FFF7E6; border: 1px solid #FFD580; color: #FFB319;}
+.less{background: #FFEBEC; border: 1px solid #FFA39E; color: #F52230; }
+.money{color: #FF3333; }
+.moneys{color: #FF3333; font-size: 20px!important;}
+.none{text-align: center; height: 7rem; line-height: 7rem; display: none;}

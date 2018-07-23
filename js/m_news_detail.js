@@ -38,40 +38,11 @@
 
 $(function(){
 
-	/*选卡（全部，写字楼，创意园，出租屋）*/
-	function xuanka(){
-		$('.nav_title>li').touchClick(function(){
-			$('.nav_title>li').removeClass("active");
-			$(this).addClass("active");
-		});
-	}
-	xuanka();
-	
 	$("a").touchClick(function(){
 		$(this).css({"text-decoration":"none","color":"#00A2FF"});
 	})
 
-
+	$(".pre,.next").touchClick(function(){
+		$(this).css({"background":"skyblue"});
+	})
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
