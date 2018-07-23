@@ -124,10 +124,23 @@ input{
 	left: -9999px;
 	opacity: 0;
 }
-.filenav_1{
+#release_btn{
+	width: 128px;
+	height: 102px;
+	float: left;
+	padding:8px;
+	/*margin-top: -10px;*/
+	border: 1px dashed rgba(0,0,0,.15);
+}
+#release_btn img{
+	width: 112px;
+	height: 86px;
+}
+.filenav_1,.filenav_2{
 	padding: 0;
 }
-.filenav_1 li{
+.filenav_1 li,.filenav_2 li{
+	float: left;
 	width: 128px;
 	height: 102px;
 	border:1px dashed rgba(0,0,0,.15);
@@ -136,9 +149,32 @@ input{
 	padding: 8px;
 	cursor: pointer;
 }
-.filenav_1 li img{
+.filenav_1 li img,.filenav_2 li img{
 	width: 112px;
 	height: 86px;
-
+}
+.filenav_2 li{
+	margin-bottom: 10px;
+}
+.filenav_2 li i{
+	position: relative;
+	top: 0;
+	right: 0;
+}
+/*单选按钮样式*/
+.thanradio,.thanradio1{
+	position: absolute;
+	left: -9999px;
+	opacity: 0;
+}
+/*多选按钮*/
+/*.Tabnavbox2{
+	position: absolute;
+	left: -9999px;
+	opacity: 0;
+}*/
+.csclass{
+	color: rgba(0,0,0,.25);
+	border:1px solid rgba(0,0,0,.25);
 }
 /*结束*/

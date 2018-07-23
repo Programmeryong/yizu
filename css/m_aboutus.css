@@ -1,0 +1,92 @@
+main{
+	overflow: hidden;
+}
+.aboutus_top{
+	height: 3.75rem;
+	line-height: 3.75rem;
+	margin-bottom: 1rem;
+	border-bottom: 1px solid rgba(0,0,0,.15);
+}
+.aboutus_top ul {
+	padding: 0;
+	margin: 0;
+}
+.aboutus_top ul li{
+	width: 9.334rem;
+	line-height: 3.75rem;
+	text-align: center;
+}
+.aboutus_top ul li a{
+	font-size: 16px;
+	color: rgba(0,0,0,.45);
+}
+.aboutus_topli a{
+	color: #0080ff!important;
+}
+.aboutus_topli:after {
+	content: '';
+	position: absolute;
+	left: 3rem;
+	top: auto;
+	bottom: 0;
+	right: auto;
+	height: 2px;
+	width: 40%;
+	background-color: #0080FF;
+}
+.bom_ul{
+	padding: 0;
+}
+.bom_ul li{
+	padding: 0 1rem;
+}
+.bom_ul li img{
+	width: 100%;
+}
+.bom_ul li p{
+	font-size: 14px;
+	color: rgba(0,0,0,.65);
+}
+.bom_ulli{
+	display: none;
+}
+.margin_bom{
+	margin-bottom: 1rem;
+}
+.bom_ulli p{
+	font-size: 14px;
+	color: rgba(0,0,0,.65);
+}
+.m_text_3{
+	font-size: 20px;
+	font-weight: 600;
+}
+.mintext{
+	margin-bottom: 1rem;
+}
+.mintext li{
+	display: block!important;
+}
+.m_friendship li{
+	float: left;
+	width: 33%;
+	margin-bottom: 1rem;
+	padding: 0 6px;
+}
+.m_friendship li img{
+	width: 100%;
+}
+.m_webmap{
+	padding: 0;
+	margin-bottom: 1rem;
+}
+.m_webmap li{
+	float: left;
+	width: 50%;
+	padding-left: 0;
+	margin-bottom: .5rem;
+}
+.m_webmap li a{
+	color: rgba(0,0,0,.65);
+	font-size: 16px;
+}

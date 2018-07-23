@@ -1,0 +1,137 @@
+/*半透明幕布*/
+.Curtain{
+	width: 100%; 
+	height: 100%; 
+	background: rgba(0,0,0,0.5); 
+	display: none;
+	z-index: 99;  
+	position: fixed;
+	cursor:pointer;
+}
+/*汉堡栏样式*/
+.menustyle{
+	width: 65%; 
+	height: 100%; 
+	background: rgba(255,255,255,1); 
+	display: none;
+	z-index: 100;  
+	position: fixed;
+}
+.menu_img{
+	margin-bottom: 10px;
+	padding:1.04rem 0.84rem;
+}
+.menu_img img{
+	width: 20px;
+	height: 20px;
+	cursor:pointer;
+}
+.menu_ul{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.menu_ul li{
+	padding:1.04rem 0 1.04rem 0;
+	cursor:pointer;
+	border-bottom:1px solid rgba(0,0,0,.15);
+}
+.menuul{
+	padding-left: 7px;
+    border-left: 3px solid #0080ff;
+    margin-left: -10px;
+    color: #0080ff!important;
+    border-radius: 1px;
+}
+.menu_ul li p{
+	color: rgba(0,0,0,1);
+	font-size: 1.17rem; 
+	font-weight:bold;
+	margin-bottom: 0;
+}
+
+.menu_ul li:nth-of-type(1){
+	border-top: 1px solid rgba(0,0,0,.15);
+}
+
+.m_top_bg{
+	background: #0080ff;
+	height: 4.17rem;
+}
+.m_top_l{
+	line-height: 4.17rem;
+}
+.m_top_l img{
+	width: 19px;
+	height: 14px;
+	cursor:pointer;
+}
+.m_top_c{
+	line-height: 4.17rem;
+	text-align: center;
+}
+.m_top_c img{
+	width: 60px;
+	height: 20px;
+}
+.m_top_r li{
+	line-height: 4.17rem;
+	float: left;
+}
+.m_top_r li:first-child{
+	padding-right: 19px;
+}
+.m_top_r li img{
+	width: 18px;
+	height: 18px;
+	cursor:pointer;
+}
+
+.m_top_box2{
+	display: none;
+}
+.m_box2_l{
+	line-height: 4.17rem;
+}
+.m_box2_l img{
+	width: 19px;
+	height: 14px;
+	margin-left: 1rem;
+}
+.box2text,.box2submit{
+	position: absolute;
+}
+.box2text{
+	border:1px solid #0080ff;
+}
+.box2btn{
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	top: 26px;
+	right: 0px;
+	margin-top: -9px;
+}
+.m_box2_c input{
+	width: 100%;
+	height: 30px;
+}
+.m_box2_r{
+	line-height: 4.17rem;
+    padding-left: 1.8rem;
+}
+.m_box2_r img{
+	width: 18px;
+	height: 18px;
+}
+.box2text{
+	top: 10px;
+	left: 10px;
+	border-radius: 2px;
+}
+.box2submit{
+	top: 999px;
+	opacity: 0;
+}
+input[type="search"]::-webkit-search-cancel-button{
+    display: none;
+}
