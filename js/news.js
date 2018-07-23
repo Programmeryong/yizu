@@ -36,7 +36,7 @@
  		$(vision_box[index]).animate({top:"0px"},500)
  	})
  		
- 	
+ 	/*
  	let new_box = $(".news .media");
  	$(".news>ul>li").hover(function(){
  		let indexs = $(this).index();
@@ -49,7 +49,7 @@
  		$(new_box[indexs]).animate({left: "0px"},500)
  		//$(".new_type").eq(indexs).css({"color":"rgba(0,0,0,0.85)"});
 	})
- 
+ 	*/
  })
  
  

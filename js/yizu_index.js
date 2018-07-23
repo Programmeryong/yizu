@@ -1,3 +1,4 @@
+ 
 $(function(){
 	// 鼠标移入变色事件
 	$('.yizu_service li').mouseover(function(){
@@ -69,11 +70,6 @@ $(function(){
 			$(this).stop(); $(this).animate({top:"0px"},200);  $(divlist).eq(indexs).css({"box-shadow": "0px 0px 0px rgb(0,0,0,0.15)"});
 		})
 	}
-	
-	
-	
-	
-	
 	
 	
 })
