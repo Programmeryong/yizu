@@ -1,5 +1,5 @@
 $(function(){
-	//模仿单选按钮效果
+	//经纪人房源表模仿单选按钮效果
 	$('.ulradio li').on('click',function(){
 		let i = $(this).index();
 		// console.log($('.thanradio'));
@@ -18,6 +18,16 @@ $(function(){
 	});
 	$('.ulradio1 li:eq(1)').click();
 
+	//房东房源表模仿单选按钮效果
+	$('.brokerage li').on('click',function(){
+		let i = $(this).index();
+		$('.hiderad:eq('+i+')').click();
+		$('.brokerage li').css({'border':'1px solid rgba(0,0,0,.15)','color':'rgba(0,0,0,.25)','background-color':'rgba(0,0,0,.01)'});
+		$('.brokerage li:eq('+i+')').css({'border':'1px solid #198cff','color':'#fff','background-color':'#198cff'})
+	});
+	$('.brokerage li:eq(1)').click();
+
+
 	// 配套设施的标签效果
 	var arr=[];
 	//给JS的数组对象定义一个函数，用于查找指定的元素在数组中的位置，即索引
@@ -34,7 +44,7 @@ $(function(){
 			this.splice(index, 1); 
 		} 
 	};
-
+	//这里是经纪人表的
 	function cs(){
 		$('.tabnavbox1 li').on('click',function(){
 			let i = $(this).index();
@@ -44,66 +54,54 @@ $(function(){
 				case 0: 
 					if(than.css('background-color') == 'rgb(255, 247, 230)'){
 						textcolor(than,'#FFB319','#fff');
-
 						arr.push('0');
 					}else{
 						textcolor(than,'rgb(255, 247, 230)','#ffb319');
-
 						arr.remove('0');
 					};
 				break;
 				case 1: 
 					if(than.css('background-color') == 'rgb(255, 235, 236)'){
 						textcolor(than,'#F52230','#fff');
-
 						arr.push('1');
 					}else{
 						textcolor(than,'rgb(255, 235, 236)','#f52230');
-
 						arr.remove('1');
 					};
 				break;
 				case 2: 
 					if(than.css('background-color') == 'rgb(245, 255, 235)'){
 						textcolor(than,'#52C41A','#fff');
-
 						arr.push('2');
 					}else{
 						textcolor(than,'rgb(245, 255, 235)','#52c41a');
-
 						arr.remove('2');
 					};
 				break;
 				case 3: 
 					if(than.css('background-color') == 'rgb(235, 245, 255)'){
 						textcolor(than,'#2D96FF','#fff');
-
 						arr.push('3');
 					}else{
 						textcolor(than,'rgb(235, 245, 255)','#198cff');
-
 						arr.remove('3');
 					};
 				break;
 				case 4: 
 					if(than.css('background-color') == 'rgb(235, 255, 253)'){
 						textcolor(than,'#13c2c2','#fff');
-
 						arr.push('4');
 					}else{
 						textcolor(than,'rgb(235, 255, 253)','#13c2c2');
-
 						arr.remove('4');
 					};
 				break;
 				case 5: 
 					if(than.css('background-color') == 'rgb(243, 237, 255)'){
 						textcolor(than,'#722ed1','#fff');
-
 						arr.push('5');
 					}else{
 						textcolor(than,'rgb(243, 237, 255)','#722ed1');
-
 						arr.remove('5');
 					};
 				break;
@@ -142,6 +140,9 @@ $(function(){
 	// 模拟点击提交事件
 	$('.releasethis').click(function(){
 		$('.clicksubmit').click();
+	});
+	$('.releasethis1').click(function(){
+		$('.clicksubmit1').click();
 	});
 	// 模拟点击上传单张图片事件
 	$('.analogclick1').click(function(){
@@ -235,11 +236,20 @@ $(function(){
 			return true;
 		}
 	}
+	//提交时的表单验证
 	$('#form').submit(function(){
 		if(textname('.username')==true && textchines('.housename1')==true && 
 		   textmaxnum('.number1')==true && textmaxnum('.number2')==true && 
 		   textmaxnum('.number3')==true && Dropdown('.dropdown1') ==true &&
 		   Dropdown('.dropdown2')==true){
+			return true;
+		}else{
+			return false;
+		}	
+	})
+	$('#form1').submit(function(){
+		if(textname('.housename1')==true && textchines('.address1')==true && 
+		   textmaxnum('.number4')==true ){
 			return true;
 		}else{
 			return false;

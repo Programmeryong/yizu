@@ -106,11 +106,11 @@ input{
 	border-radius: 2px;
 	border: 1px solid rgba(0,0,0,.15);
 }
-.clicksubmit{
+.clicksubmit,.clicksubmit1{
 	opacity: 0;
 	margin-left: -999px;
 }
-.releasethis{
+.releasethis,.releasethis1{
 	padding: 10px 34px;
 	border-radius: 2px;
 	line-height: 37px;
@@ -176,5 +176,33 @@ input{
 .csclass{
 	color: rgba(0,0,0,.25);
 	border:1px solid rgba(0,0,0,.25);
+}
+/*结束*/
+
+
+/*房东页面的样式*/
+.brokerage{
+	padding:0;
+	margin: 0;
+}
+.brokerage li{
+	float: left;
+	font-size: 14px!important;
+	margin-right: 1rem;
+	width: 5rem;
+	padding: 5px 0;
+	text-align: center;
+	color: rgba(0,0,0,.25);
+	border:1px solid rgba(0,0,0,.15);
+	border-radius: 2px;
+}
+.hidebox{
+	position: absolute;
+	left: -9999px;
+}
+.broktext{
+	margin-top: 5px;
+	color: rgba(0,0,0,.45);
+
 }
 /*结束*/
