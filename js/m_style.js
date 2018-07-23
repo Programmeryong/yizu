@@ -30,34 +30,3 @@
         });
     };
 })(jQuery);
-
-$(function(){
-	$('.m_top_l').touchClick(function(){
-		$('.Curtain').css({'display': 'block'});
-		$('.menustyle').css({'display':'block'});
-	});
-	$('.Curtain').touchClick(function(){
-		$('.Curtain').css({'display': 'none'});
-		$('.menustyle').css({'display':'none'});
-	});
-	$('.menu_img img').touchClick(function(){
-		$('.Curtain').css({'display': 'none'});
-		$('.menustyle').css({'display':'none'});
-	});
-	$('.menu_ul li').touchClick(function(){
-		$('.menu_ul li p').removeClass('menuul');
-		i = $(this).index();
-		$('.menu_ul li:eq('+i+') p').addClass('menuul');
-	});
-	$('.box2btn').touchClick(function(){
-		$('.box2submit').click();
-	})
-	$('.touchthis').touchClick(function(){
-		$('.m_top_box2').css({'display':'block'});
-		$('.m_top_box1').css({'display':'none'});
-	})
-	$('.m_box2_l').touchClick(function(){
-		$('.m_top_box2').css({'display':'none'});
-		$('.m_top_box1').css({'display':'block'});
-	})
-})

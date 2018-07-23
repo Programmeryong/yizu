@@ -273,12 +273,12 @@ footer{
 	color: #F52230;
 	padding-right: 5px;
 }
-.ulradio{
+.ulradio ,.ulradio1{
 	line-height: 2rem;
 	padding:0;
 	margin: 0;
 }
-.ulradio li{
+.ulradio li ,.ulradio1 li{
 	display: block;
 	cursor:pointer;
 	float: left;

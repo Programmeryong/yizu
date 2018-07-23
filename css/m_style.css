@@ -24,16 +24,20 @@ i{
 
 /*字体大小*/
 .mfszie20{
-	font-size: .83rem;
+	font-size: 14px;
 }
 .mfszie24{
-	font-size: 1rem;
+	font-size: 16px;
 }
 .mfszie28{
-	font-size: 1.17rem; 
+	font-size: 20px; 
+}
+.mfszie28w{
+	font-size: 20px;
+	font-weight: 600;
 }
 .mfszie32{
-	font-size: 1.34rem;
+	font-size: 22px;
 }
 
 /*重写内外边距*/
