@@ -46,7 +46,6 @@ $(function(){
     function clicktopbut(clas1,cals2){
         $(clas1).click(function(){
             $(cals2).click();
-            console.log(1);
         })
     } 
 
@@ -103,18 +102,15 @@ $(function(){
     }
     
     $(".login form").submit(function(){
-        
         let mobile = $(".login input[type='tel']");
         let tel = mobile.val();
         let yanzm = $(".login input[type='text']");
         let yanzm_value = $(yanzm).val();
         let phone = /^[1][3,4,5,7,8][0-9]{9}$/;
-        
         if(tel==null || tel=="" || !phone.test(tel)){
             $(".login input[type='tel']").css({"border":"1px solid #F52230"});
             //return false;
-        }else{$(".login input[type='tel']").css({"border":"1px solid #5FCC29"});}
-        
+        }else{$(".login input[type='tel']").css({"border":"1px solid #5FCC29"});}       
         if(yanzm_value==""){
             $(".login input[type='text']").css({"border":"1px solid #F52230"});
             return false;
@@ -125,7 +121,38 @@ $(function(){
                 return false;
             }
         }
-        
+    })
+
+    //上传房源弹窗模块
+    $('.nav_rightbtn').click(function(){
+        $('.uploadbox').show();
+        $('.temp_1').show();
+    })
+    $('.upboxtop2').click(function(){
+        $('.uploadbox').hide();
+        $('.temp_1').hide();
+    })
+    $('.temp_1').click(function(){
+         $('.uploadbox').hide();
+        $('.temp_1').hide();
+    })
+    $('.upboxc1').hover(function(){
+        $('.upboxc1 img').attr('src','./images/icon/Property_2.png');
+        $('.upbtn1').css({'background':'#198cff'});
+        $('.uptoptext1').css({'color':'#198cff'});
+    },function(){
+        $('.upboxc1 img').attr('src','./images/icon/Property_1.png');
+        $('.upbtn1').css({'background':'#999'}); 
+        $('.uptoptext1').css({'color':'#999'});
+    })
+    $('.upboxc2').hover(function(){
+        $('.upboxc2 img').attr('src','./images/icon/Agent_2.png');
+        $('.upbtn2').css({'background':'#FFB319'});
+        $('.uptoptext2').css({'color':'#FFB319'});
+    },function(){
+        $('.upboxc2 img').attr('src','./images/icon/Agent_1.png');
+        $('.upbtn2').css({'background':'#999'}); 
+        $('.uptoptext2').css({'color':'#999'});
     })
 
     console.log([
@@ -179,6 +206,7 @@ $(function(){
     //     "◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◆◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇",
     //     "◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇",
     //     "◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇",
+    //     "乙租网 - 写字楼、厂房、创意园区专业互联网服务平台，精品写字楼，广州楼盘全覆盖，真实房源，现场实勘，专业顾问2对1服务！预约看房，免费咨询请拨打 400-886-6391"
     //     ].join('\n'));
 
 })
