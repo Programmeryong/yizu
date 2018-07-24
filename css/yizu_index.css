@@ -78,19 +78,18 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 125rem;
+	width: 2050px;
 	height: 20rem;
 }
 .movebox ul{
 	padding: 0;
 }
 .movebox ul li{
-	/*width: 380px;*/
 	float: left;
-	padding-right: 10px;
+	margin-right: 30px;
 }
 .movebox ul li img{
-	height: 18rem;
+	width: 100%;
 }
 .movebox ul li p{
 	text-align: center;
