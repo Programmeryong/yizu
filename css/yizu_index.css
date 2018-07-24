@@ -74,8 +74,7 @@
 	overflow: hidden;
 	position: relative;
 }
-
-/*.movebox{
+.movebox{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -86,19 +85,16 @@
 	padding: 0;
 }
 .movebox ul li{
-	width: 380px;
-	height: 310px;
 	float: left;
 	margin-right: 30px;
 }
 .movebox ul li img{
-	/*height: 18rem;*/
 	width: 100%;
 }
 .movebox ul li p{
 	text-align: center;
 }
-/*结*/束*/
+/*结束*/
 
 /*main_box4开始*/
 .box4_nav li{
