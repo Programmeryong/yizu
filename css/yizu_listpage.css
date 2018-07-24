@@ -1,10 +1,16 @@
 /*yizu_listpage 中部内容开始*/
+.breadcrumb{margin-bottom: 0; margin-top: 1rem;}
+.list_box1{ padding-top: 1rem; padding-left: 3rem;}
+.sousuo{width: 162%; height: 100%; background: #fff; position: absolute; left: -31%; top: 0;}
 .list_box1 > div{
 	margin: 10px 0;
 	border-bottom:1px solid rgba(0,0,0,.04);
 }
 .list_box1 > div > span{
 	float: left;
+}
+.padbox{
+	
 }
 .list_box1 > div > ul{
 	padding-left: 20px;
@@ -43,15 +49,16 @@
 	padding:5px 10px; 
 	float: left;
 }
+.list_box2{margin-top: 2rem;}
 
 /*房源列表*/
 /*标题*/
 .house_listbox{width: 53rem;height: auto; background: #fff; padding-top: 10px;}
 .house_listnav{width: 53rem; height: auto; margin: 0 auto;}
-.house_listnav>ul{ overflow:hidden;width: 53rem; border-bottom: 1px solid #00A0E9; margin: 0 auto; margin-top: 1rem;}
+.house_listnav>ul{ width: 96%; overflow:hidden; border-bottom: 1px solid #00A0E9; margin: 0 auto; margin-top: 1rem;}
 .house_listnav>ul>li{width:6.5rem; height: 2.5rem; line-height: 2.5rem; text-align: center; cursor: pointer; border-right: 3px solid #fff;}
 .house_listnav>ul>li:hover{background: #198CFF; color: #ffffff;}
-.house_listnav>span{float: right; position: relative; top: -1.8rem;}					 
+.house_listnav>span{float: right; position: relative; top: -1.8rem; right: 2rem;}					 
 .evaluate_no{display: none;}				 
 /*列表项*/
 .house_list_out>div:first-child{width: 100%;}
@@ -156,7 +163,7 @@
 }
 .list_box3 ul li{
 	float: left;
-	width: 16.8rem;
+	width: 18rem;
 	border-bottom: 1px solid rgba(0,0,0,0.04);
 	padding-bottom: 10px;
 	margin-right: 10px;
@@ -166,6 +173,7 @@
 	width: 100%;
 	height: 13.75rem;
 }
+.list_box3 ul li div{padding: 0 0.5rem;}
 /*结束*/
 /*选中时的颜色*/
 .clickcolor{

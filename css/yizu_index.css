@@ -85,6 +85,7 @@
 	padding: 0;
 }
 .movebox ul li{
+	/*width: 380px;*/
 	float: left;
 	padding-right: 10px;
 }
