@@ -61,6 +61,7 @@
 .house_listnav>span{float: right; position: relative; top: -1.8rem; right: 2rem;}					 
 .evaluate_no{display: none;}				 
 /*列表项*/
+.house_lists h3{font-size: 18px;}
 .house_list_out>div:first-child{width: 100%;}
 .house_lists{width: 53rem; height: auto; margin: 0 auto;}
 .house_list_out{width: 100%; height: 15.5rem; padding: 24px 0; border-bottom: 2px solid rgb(0,0,0,0.04);}
