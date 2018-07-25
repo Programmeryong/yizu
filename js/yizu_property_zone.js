@@ -1,113 +1,38 @@
-$(document).ready(function(){
+$(function(){
 	
 	
-	/*选项卡（平面图，全景图，户型图）*/
-	function xuanka(){
-		$('.tabs_li ul li').on('click',function(){
-			$('.tabs_li ul li').removeClass("active");
-			$(this).addClass("active");
-			let num = $(this).val();
-			let offset = 848;
-			// console.log(num);
-			$(".xuanka_in").animate({"left":"-"+offset*num+"px"},500);
-		});
-		
-	}
-	xuanka();
+	/*收藏*/
 	
-	var s = $(document).scrollTop();
-	function xuanka2(){
-		$('.middle_title ul li').on('click',function(){
-			$('.middle_title ul li').removeClass("active");
-			$(this).addClass("active");
-			let indexs = $(this).index();
-			switch (indexs){
-				case 0:
-						navs("body",500);
-					break;
-				case 1:
-						navs(".houseinfo",800);
-					break;
-				case 2:
-						navs("#office_info",1000);
-					break;
-				case 3:
-						navs("#around",1200);
-					break;
-				default:
-					break;
-			}
-		});
-	}
-	function navs(id,time){$("html,body").animate({scrollTop:$(id).offset().top},time);}
-	xuanka2();
+	/*$(".love").hover(function(){
+		$(this).css({"background":"url(images/icon/love-red.png) no-repeat", "background-size": "18px 18px"});
+	},function(){
+		$(this).css({"background":"url(images/icon/love-white.png) no-repeat", "background-size": "18px 18px"});
+	})*/
 	
-	
-
-	
-	
-	
-	/*委托找房*/
-	
-	$("input[type='tel']").change(function(){
-		$("#telText").css("display","none");
-	});
-	
-	
-	
-	$("form").submit(function(){
-		let tel = $("#tel").val();
-		let phone = /^[1][3,4,5,7,8][0-9]{9}$/;  
-		let telText = document.getElementById("telText");
-		if (tel==null || tel=="") {
-			telText.style.display = "block";
-			telText.innerHTML="手机号不能为空";
-			return false;
-		}else if(!phone.test(tel)){
-			telText.style.display = "block";
-			telText.innerHTML="请输入正确的手机号";
-			return false
-		}else{
-			telText.innerHTML="";
+	var i = 0;
+	$(".love").click(function(){
+		i++;
+		if (i%2==1) {
+			$(".love").css({"background":"url(images/icon/collection-red.png) no-repeat", "background-size": "18px 18px"});
+		} else{
+			$(".love").css({"background":"url(images/icon/love-white.png) no-repeat", "background-size": "18px 18px"});
 		}
 	})
 	
 	
 	
-	$(".tabs_img_small,.pre_small,.next_small").hover(function(){
-		$(".pre_small,.next_small").css({"background": "rgba(0,0,0,0.5)"});
-	},function(){$(".pre_small,.next_small").css({"background": "rgba(0,0,0,0.01)"});
-	})
-	
-	
-	
-	/*鼠标移入，显示上下一页按钮*/
- 	$("#lovely").mouseover(function(){
+	/*鼠标移入，显示上下一页按钮(猜你喜欢)*/
+ 	$("#youlove").mouseover(function(){
  		$(".pre,.next").css("display","block");
  	})
  	/*鼠标移出，隐藏上下一页按钮*/
- 	$("#lovely").mouseout(function(){
+ 	$("#youlove").mouseout(function(){
  		$(".pre,.next").css("display","none");
  	})
  	
-	$(".pre").mouseover(function(){
-        $(".pre img:first-child").css("display","none");
-        $(".pre img:last-child").css("display","block");
-    })
-    $(".pre").mouseout(function(){
-        $(".pre img:first-child").css("display","block");
-        $(".pre img:last-child").css("display","none");
-    })
-    $(".next").mouseover(function(){
-    	$(".next img:first-child").css("display","none");
-        $(".next img:last-child").css("display","block");
-    })
-    $(".next").mouseout(function(){
-    	$(".next img:first-child").css("display","block");
-        $(".next img:last-child").css("display","none");
-    })
-
-	// 地图模块
+ 	
+ 	
+ 	// 地图模块
 	$('.map_top ul li').on('click',function(){
 		$('.map_top ul li').css({'border-top-color':'#f4f4f4','background':'rgba(0,0,0,.04)'});
 		$('.map_bom ul li').hide();
@@ -160,8 +85,10 @@ $(document).ready(function(){
 	    local.searchNearby(typename,mPoint,1000);
 	    console.log(local);
 	}	
-
+	
 })
+
+	
 
 	/*大图片轮播*/
 	function lunbo_big(div_id, auto_time){
@@ -195,8 +122,8 @@ $(document).ready(function(){
 	        console.log(new_index);*/
 	        let new_top = -height* (new_index+1);
 	       
-	       	let num = max_index - 4;
-	       	if(new_top==0){ $(".tabs_img_small").animate({top: -num*98.3+"px"},500);  }
+	       	let num = max_index - 5;
+	       	if(new_top==0){ $(".tabs_img_small").animate({top: -num*82.5+"px"},500);  }
 	       	else if(index<=num){$(".tabs_img_small").animate({top: "0px"},1000);}
 	       	animate(new_top, new_index);
 	    }
@@ -214,8 +141,8 @@ $(document).ready(function(){
 	        let new_top =-height* (new_index+1);
 	        animate(new_top, new_index);
 	        
-	        if (new_index>=4 && new_index<(dots.length-1)) {
-		        $(".tabs_img_small").animate({top: "-"+(new_index-3)*98+"px"},500);
+	        if (new_index>=5 && new_index<(dots.length-1)) {
+		        $(".tabs_img_small").animate({top: "-"+(new_index-4)*82.5+"px"},500);
 		    }else if(new_index==(dots.length)){
 		       	$(".tabs_img_small").animate({top: "-0px"},500);
 		    }
@@ -228,8 +155,8 @@ $(document).ready(function(){
 		        let new_index = this.getAttribute('index');
 		        let new_top = (-height * new_index)-496;
 		        animate(new_top, new_index);
-		        if (i>=4 && i<(dots.length-1)) {
-		        	$(".tabs_img_small").animate({top: "-"+(i-3)*98.3+"px"},500);
+		        if (i>=5 && i<(dots.length-1)) {
+		        	$(".tabs_img_small").animate({top: "-"+(i-4)*82.5+"px"},500);
 		        }else if(i==(dots.length-1)){
 		        	//$(".tabs_img_small").animate({top: "-0px"},500);
 		        }
