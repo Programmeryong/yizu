@@ -1,4 +1,23 @@
 $(document).ready(function(){
+	/*导航滑动到顶端固定*/
+	function hua(){
+		var oTop = $(".middle").offset().top;
+		var sTop = 0;
+		$(window).scroll(function(){
+			sTop = $(this).scrollTop();
+			if(sTop >= oTop){
+			$('.middle').addClass('navbar-fixed-top');
+			$('.middle').css({"padding-left":"18.5%"});
+			$('.middle').removeClass("posit");
+			}else{
+			$('.middle').removeClass('navbar-fixed-top');
+			$('.middle').addClass("posit");
+			$('.middle').css({"padding-left":"0"});
+			}
+		});
+		
+	}
+	hua();
 	
 	
 	/*选项卡（平面图，全景图，户型图）*/
