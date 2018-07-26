@@ -23,6 +23,9 @@ i{
 }
 
 /*字体大小*/
+.mfsziemin{
+	font-size: 12px;
+}
 .mfszie20{
 	font-size: 14px;
 }
@@ -39,7 +42,18 @@ i{
 .mfszie32{
 	font-size: 22px;
 }
-
+.textcolor85{
+	color: rgba(0,0,0,.85);
+}
+.textcolor65{
+	color: rgba(0,0,0,.65);
+}
+.textcolor45{
+	color: rgba(0,0,0,.45);
+}
+.textfw600{
+	font-weight: 600;
+}
 /*重写内外边距*/
 .marpad{
 	margin:0;

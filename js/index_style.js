@@ -136,6 +136,21 @@ $(function(){
          $('.uploadbox').hide();
         $('.temp_1').hide();
     })
+
+
+    $('.tr_btn').click(function(){
+        $('.uploadbox').show();
+        $('.temp_1').show();
+    })
+    $('.upboxtop2').click(function(){
+        $('.uploadbox').hide();
+        $('.temp_1').hide();
+    })
+    $('.temp_1').click(function(){
+         $('.uploadbox').hide();
+        $('.temp_1').hide();
+    })
+    
     $('.upboxc1').hover(function(){
         $('.upboxc1 img').attr('src','./images/icon/Property_2.png');
         $('.upbtn1').css({'background':'#198cff'});

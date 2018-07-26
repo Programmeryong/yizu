@@ -48,8 +48,36 @@ $(function(){
 		}
 	});
 	
-	
-	
+	/*
+	角标 number ==> 第几个li 
+	type1 ==> 状态 1 ==> 显示 2 ==> 隐藏  
+	text1 ==> 文字
+	*/
+	function Superscript(arr){
+		for(var i =0;i<arr.length;i++){
+			var a =Number(arr[i].number);
+			var b =Number(arr[i].type1);
+			var c =arr[i].text1;
+			$('.yizu_service li:eq('+a+') .superscript').text(c).append('<i class="glyphicon glyphicon-triangle-bottom"></i>');
+			if(b == 1){
+				$('.yizu_service li:eq('+a+') .superscript').css({'display':'block'});
+			}else if(b == 0){
+				$('.yizu_service li:eq('+a+') .superscript').css({'display':'none'});
+			}
+		}
+	}
+	// ajax获取到这样的数组
+	var arr = [
+		{'number':0,'type1':1,'text1':'9.5折'},
+		{'number':1,'type1':0,'text1':'HOT'},
+		{'number':2,'type1':1,'text1':'HOT'},
+		{'number':3,'type1':0,'text1':'HOT'},
+		{'number':4,'type1':0,'text1':'HOT'},
+		{'number':5,'type1':0,'text1':'HOT'},
+		{'number':6,'type1':0,'text1':'HOT'},
+		{'number':7,'type1':0,'text1':'HOT'}
+	];
+	Superscript(arr);
 	
 	/*精选写字楼*/
 	jinxuan(".box4_nav li",".box4_nav li div");
@@ -70,6 +98,4 @@ $(function(){
 			$(this).stop(); $(this).animate({top:"0px"},200);  $(divlist).eq(indexs).css({"box-shadow": "0px 0px 0px rgb(0,0,0,0.15)"});
 		})
 	}
-	
-	
 })

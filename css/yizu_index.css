@@ -59,11 +59,32 @@
 	width: 12.5%;
 	height: 6rem;
 	text-align: center;
+	position: relative;
 }
 .yizu_service li p{
 	margin-top: 10px;
 	font-size: 14px!important;
 	color: #333;
+}
+
+
+.superscript{
+	width: 40px;
+	height: 24px;
+	text-align: center;
+	line-height: 24px;
+	background: #FF5533;
+	color: #fff;
+	border-radius: 2px;
+	position: absolute;
+	top: -30px;
+	left: 50%;
+	margin-left: -20px;
+	display: none;
+}
+.glyphicon{
+	top: -8px;
+	color: #ff5533;
 }
 /*结束*/
 
@@ -87,13 +108,43 @@
 .movebox ul li{
 	/*width: 380px;*/
 	float: left;
-	padding-right: 10px;
+	margin-right: 10px;
 }
 .movebox ul li img{
 	height: 18rem;
 }
 .movebox ul li p{
 	text-align: center;
+}
+.moveboxtext{
+	position: relative;
+	top: 0px;
+	transition: all 0.5s;
+}
+.moveboxtext p:first-of-type{
+	color: #000;
+	transition: all 0.5s;
+}
+.moveboxtext p:last-of-type{
+	color: #FA541C;
+}
+.movetemp{
+	content: ' ';
+	width: 92%;
+	height: 90%;
+	background: rgba(0,0,0,0.01);
+	position: absolute;
+	top: 0;
+	transition: all 0.5s;
+}
+.moveli:hover .moveboxtext{
+	top:-25px;
+}
+.moveli:hover .moveboxtext p:first-of-type{
+	color: #fff;
+}
+.moveli:hover .movetemp{
+	background: rgba(0,0,0,.5);
 }
 /*结束*/
 
@@ -257,7 +308,6 @@
 .right_icon li p img{
 	width: 30px;
 }
-
 /*媒体查询当设备宽度小于等于1024px*/
 @media only screen and  (max-width: 1024px){
 	.foot_logo img{
