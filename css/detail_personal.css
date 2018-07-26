@@ -1,5 +1,5 @@
 *{margin: 0; padding: 0; list-style: none;}
-a{text-decoration: none;}
+a{text-decoration: none; color: rgba(0,0,0,0.85);}
 a:hover{text-decoration: none;}
 .fontSize12{font-size: 12px!important;}
 .fontSize14{font-size: 14px!important;}
@@ -10,7 +10,7 @@ a:hover{text-decoration: none;}
 .clear:after{content: "";display: block;clear: both;}
 .active{background: #198CFF; color: #ffffff;}
 main{width: 1200px; height: auto; margin: 0 auto;}
-.house_from{width: 100%; height: 9.125rem; background: #fff; margin: 1rem auto; padding-top: 1.75rem;}
+.house_from{width: 100%; height: 9.125rem; background: #fff; margin: 1.5rem auto; padding-top: 1.75rem;}
 .photo_info{width: 72rem; height: 5.625rem; line-height: 5.625rem; margin-left: 3rem; }
 .house_from_photo{width: 90px; height: 90px; border-radius: 50px; float: left; overflow: hidden;}
 .house_from_photo img{width: 90px; height: 92px;}
@@ -21,43 +21,27 @@ main{width: 1200px; height: auto; margin: 0 auto;}
 /*房源列表*/
 /*标题*/
 .house_listbox{width: 75rem;height: auto; background: #fff; padding-top: 10px;}
-.house_listnav{width: 73rem; height: auto; margin: 0 auto;}
+.house_listnav{width: 73rem; height: auto; margin: 0 auto; position: relative;}
 .house_listnav>ul{ overflow:hidden;width: 73rem; border-bottom: 1px solid #00A0E9; margin: 0 auto; margin-top: 1rem;}
 .house_listnav>ul>li{width:6.5rem; height: 2.5rem; line-height: 2.5rem; text-align: center; cursor: pointer; border-right: 3px solid #fff;}
 .house_listnav>ul>li:hover{background: #198CFF; color: #ffffff;}
-.house_listnav>span{float: right; position: relative; top: -1.8rem;}					 
-.evaluate_no{display: none;}				 
+.house_listnav>span{float: right; position: absolute; right: 1rem; top: 10px;}					 
+.evaluate_no{display: none;}		
+		 
 /*列表项*/
-/*.house_list_out>div:first-child{width: 100%;}
-.house_lists{width: 73rem; height: auto; margin: 0 auto;}
-.house_list_out{width: 100%; height: 15.5rem; padding: 24px 0; border-bottom: 2px solid rgb(0,0,0,0.04);}
-.house_list_img{width: 17.81rem; height: 12.44rem; margin-right: 0;}
-.house_list_img img{width: 285px; height: 199px;}
-.media-body{padding-left: 1rem; position: relative;}
-.media-body>p{height: 2rem; line-height: 2.5rem;}
-.house_list_out h3{float: left;}
-.allowance{display:block;width: 6rem; height: 22px; line-height: 22px;
-									background:-webkit-gradient(linear, 0 0, 0 100%, from(rgba(245,206,98,1)), to(rgba(245,180,49,1)));
-									background:-webkit-linear-gradient(rgba(245,206,98,1), rgba(245,180,49,1));
-									background:-moz-linear-gradient(rgba(245,206,98,1), rgba(245,180,49,1));
-									background:-o-linear-gradient(rgba(245,206,98,1), rgba(245,180,49,1));
-									background:linear-gradient(rgba(245,206,98,1), rgba(245,180,49,1));
-									color: #ffffff; transform:skew(-12deg);text-align: center; border-radius: 2px;
-								    float: left; margin-top: 2px; margin-left: 1.5rem; overflow: hidden;}
-.allowance a{color: #fff;}
-.where{padding-left: 25px; background: url(../images/icon/where.png) no-repeat; background-size: 18px 18px; background-position:0px 0px;}
-.area{padding-left: 25px; background: url(../images/icon/house.png) no-repeat; background-size: 18px 18px; background-position:0px 0px;}
-.floor{margin-left: 4rem; padding-left: 20px; background: url(../images/icon/floor.png) no-repeat; background-size: 18px 18px; background-position:0px 0px;}
-.from{padding-left: 25px; background: url(../images/icon/people.png) no-repeat; background-size: 16px 16px; background-origin: 0px 0px;}
+#all_house{width: 100%; height: auto; margin: 0rem auto 1.5rem; background: #fff; padding-bottom: 1rem;}
+.all_house_list{width: 98%; margin: 0 auto;  border-bottom: 1px solid rgba(0,0,0,0.15);}
+.all_house_list>ul>li{width: 19.5%; height: 8.75rem; line-height: 8.75rem;  text-align: center; }
+.all_house_list>ul>li:first-child{text-align: left; padding-left: 3px;}
+.all_house_list>ul>li img{width: 65%; height: 70%;}
+.show_all_house{width: 180px; height: 36px; line-height: 36px; margin: 1rem auto; border-radius: 3px;
+					border: 2px solid rgba(0,0,0,0.15); text-align: center; margin-top: 20px; cursor: pointer;}
+.show_all_house:hover{background: #F5B431; color: #fff;}
 
-.metro,.less_house{width: auto; height: 22px; padding: 2px 1rem; border-radius: 3px; cursor: pointer;}
-.metro{background:#FFF7E; border: 1px solid #FFD580; color: #FFB319;}
-.metro:hover{background:#FFB319; color: #fff;}
-.less_house{background: #FFEBEC; border: 1px solid #FFA39E; color: #F52230; margin-left: 1rem;}
-.less_house:hover{background: #F52230; color: #fff;}
-.metro_house_money{position: absolute; top: 10.4rem;}
-.metro_house_money>span:last-child{float: right; position: relative; top:-1rem;}
-.media-body>p:last-child{font-size: 16px; width: 100%; padding-right: 1.5rem;}*/
+/*#all_house>ul>li{transition: all 1s;}
+#all_house>ul>li:hover{background: rgba(0,0,0,0.04);}*/
+/*列表项结束*/
+
 
 /*分页按钮*/
 .paging{height: 4.5rem;text-align: center;}
@@ -81,8 +65,6 @@ main{width: 1200px; height: auto; margin: 0 auto;}
 .near,.house_analyse{width: auto; height: 22px; padding: 2px 1rem; border-radius: 3px; }
 .near{background:#FFF7E; border: 1px solid #FFD580; color: #FFB319;}
 .house_analyse{background: #FFEBEC; border: 1px solid #FFA39E; color: #F52230; margin-left: 1rem;}
-.near:hover{background:#FFB319; color: #fff; }
-.house_analyse:hover{background: #F52230; color: #fff;}
 
 /*分页*/		/*上面已有一个分页按钮样式*/
 /*.paging{height: 4.5rem;text-align: center;}

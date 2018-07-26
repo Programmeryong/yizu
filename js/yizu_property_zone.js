@@ -141,7 +141,7 @@ $(function(){
 	        let new_top =-height* (new_index+1);
 	        animate(new_top, new_index);
 	        
-	        if (new_index>=5 && new_index<(dots.length-1)) {
+	        if (new_index>=4 && new_index<(dots.length-1)) {
 		        $(".tabs_img_small").animate({top: "-"+(new_index-4)*82.5+"px"},500);
 		    }else if(new_index==(dots.length)){
 		       	$(".tabs_img_small").animate({top: "-0px"},500);
