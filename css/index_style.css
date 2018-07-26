@@ -172,6 +172,16 @@ i{
 	text-align: center;
 }
 /*重写响应式框架的样式*/
+.carousel-indicators li{
+	width: 20px;
+	height: 2px;
+	border: none;
+	background: rgba( 0, 0, 0,.2);
+}
+.carousel-indicators .active{
+	width: 20px;
+	height: 2px;
+}
 .navbar-default .navbar-nav>.open>a,.nav .open>a{
 	background: #198cff;
 }
