@@ -60,10 +60,13 @@ ul{text-decoration: none;list-style: none;margin: 0;padding: 0;}
 	.tabs_img_small ul li{width:8.6rem; height: 6.21rem; border-bottom: 1px solid #ffffff; cursor: pointer;}
 	.tabs_img_small li:last-child{border:0;}
 	.img_small{position: relative;}
-	.pre_small,.next_small{width: 138px; height: 50px; position: absolute; z-index: 2; }
+	.pre_small,.next_small{width: 138px; height: 50px; position: absolute; z-index: 2; display: none;}
 	.pre_small img ,.next_small img{width: 60px; height: 40px; margin-left: 40px; margin-top: 5px;}
 	.pre_small{background: rgba(0,0,0,0.01); right: 0; }
 	.next_small{background: rgba(0,0,0,0.01); right: 0; bottom: 0; }
+	
+	.tabs_img:hover .pre_small,.tabs_img:hover .next_small{display: block; /*background: rgba(0,0,0,0.3);*/}
+	.tabs_img .pre_small:hover,.tabs_img .next_small:hover{background: rgba(0,0,0,0.6);}
 	/*house info*/
 	.top_infos{width: 19.5rem; height: 31.1rem; margin-right: 1rem; color: rgba(0,0,0,0.8);}
 	.top_house_info{width: 19.5rem; height: 17rem; border-bottom: 2px solid rgba(0,0,0,0.04);}
@@ -158,8 +161,8 @@ ul{text-decoration: none;list-style: none;margin: 0;padding: 0;}
 	.near,.house_analyse{width: auto; height: 22px; padding: 2px 1rem; border-radius: 3px; }
 	.near{background:#FFF7E; border: 1px solid #FFD580; color: #FFB319;}
 	.house_analyse{background: #FFEBEC; border: 1px solid #FFA39E; color: #F52230; margin-left: 1rem;}
-	.near:hover{background:#FFB319; color: #fff;}
-	.house_analyse:hover{background: #F52230; color: #fff;}
+	/*.near:hover{background:#FFB319; color: #fff;}*/
+	/*.house_analyse:hover{background: #F52230; color: #fff;}*/
 	/*分页*/
 	.paging{height: 4.5rem;text-align: center;}
 	.paging ul li a{width: 32px; height: 32px; line-height: 20px; text-align: center; margin-left: 8px; padding-left: 10px;

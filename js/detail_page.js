@@ -73,14 +73,6 @@ $(document).ready(function(){
 	})
 	
 	
-	
-	$(".tabs_img_small,.pre_small,.next_small").hover(function(){
-		$(".pre_small,.next_small").css({"background": "rgba(0,0,0,0.5)"});
-	},function(){$(".pre_small,.next_small").css({"background": "rgba(0,0,0,0.01)"});
-	})
-	
-	
-	
 	/*鼠标移入，显示上下一页按钮*/
  	$("#lovely").mouseover(function(){
  		$(".pre,.next").css("display","block");

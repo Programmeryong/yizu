@@ -101,6 +101,9 @@ a:hover{text-decoration: none;}
 .show_all_house{width: 180px; height: 36px; line-height: 36px; margin: 1rem auto; border-radius: 3px;
 					border: 2px solid rgba(0,0,0,0.15); text-align: center; margin-top: 20px; cursor: pointer;}
 .show_all_house:hover{background: #F5B431; color: #fff;}
+
+#all_house>ul>li{transition: all 1s;}
+#all_house>ul>li:hover{background: rgba(0,0,0,0.04);}
 /*全部户型结束*/
 
 
