@@ -6,13 +6,19 @@ $(document).ready(function(){
 		$(window).scroll(function(){
 			sTop = $(this).scrollTop();
 			if(sTop >= oTop){
-			$('.middle').addClass('navbar-fixed-top');
-			$('.middle').css({"padding-left":"18.5%"});
-			$('.middle').removeClass("posit");
+				$('.middle').addClass('navbar-fixed-top');
+				$('.middle').css({"padding-left":"18.5%"});
+				$('.middle').removeClass("posit");
+				
+				/*$('.middle').css({"padding-left":"18.5%","position":"fixed","left":"0","top":"0","display":"none","width":"100%"});
+				$('.middle').slideDown();*/
 			}else{
-			$('.middle').removeClass('navbar-fixed-top');
-			$('.middle').addClass("posit");
-			$('.middle').css({"padding-left":"0"});
+				$('.middle').removeClass('navbar-fixed-top');
+				$('.middle').addClass("posit");
+				$('.middle').css({"padding-left":"0"});
+				
+				/*$('.middle').css({"padding-left":"0","position":"relative"});
+				$('.middle').show();*/
 			}
 		});
 		
