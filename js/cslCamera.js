@@ -39,7 +39,7 @@ $.Pgater.prototype.bindFuc=function(ele,callBack){
 					callBack(album,img);
 				};
 			};
-			return thisarr;
+			console.log(thisarr);
 		};
 		recur();
 	});
@@ -52,8 +52,9 @@ $.Pgater.prototype.bindClk=function(ele,tar){
 };
 $(function(){
 	$('.clickthisul').on('click','li',function(){
+		var thanarr = thisarr;
 		var i = $(this).index();
-		$('.clickthisul li:eq('+i+')').hide();
-		thisarr.splice(i,1);
+		$('.clickthisul li:eq('+i+')').remove();
+		thanarr.splice(i,1);
 	})
 })
