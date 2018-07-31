@@ -55,12 +55,12 @@ $(function(){
 	})
 	
 	/*单选按钮*/
- 	$('.ulradio li').on('click',function(){
+ 	/*$('.ulradio li').on('click',function(){
 		let i = $(this).index();
 		$('.ulradio li').css({"background-image":"url(./images/icon/btn_on.png)"});
 		$('.ulradio li:eq('+i+')').css({"background-image":"url(./images/icon/btn_off.png)"});
 	})
-	$('.ulradio li:eq(0)').click();
+	$('.ulradio li:eq(0)').click();*/
 	
 	
 	/*服务标签*/
@@ -69,38 +69,68 @@ $(function(){
 	let i2=0;
 	let i3 = 0;
 	let sum = 0;
+	var arr = [];
 	$(".metro_lable").click(function(){
 		i++;
-		if(i%2==1){$(this).css({"background":"#FFB319","color":"#fff"}); sum++;}else{$(this).css({"background":"#FFF7E6","color":"#FFB319"}); sum--;}
+		if(i%2==1){$(this).css({"background":"#FFB319","color":"#fff"}); sum++;
+			arr.push(1);
+		}else{$(this).css({"background":"#FFF7E6","color":"#FFB319"}); sum--; arr.splice(arr.indexOf(1),1);}
 		$(".label_sum").html(sum);
 	})
 	
 	$(".less_lable").click(function(){
 		i1++;
-		if(i1%2==1){$(this).css({"background":"#F52230","color":"#fff"}); sum++;}else{$(this).css({"background":"#FFEBEC","color":"#F52230"}); sum--;}
+		if(i1%2==1){$(this).css({"background":"#F52230","color":"#fff"}); sum++; arr.push(2);
+		}else{$(this).css({"background":"#FFEBEC","color":"#F52230"}); sum--; arr.splice(arr.indexOf(2),1);}
 		$(".label_sum").html(sum);
 	})
 	
 	$(".worked_jiaju").click(function(){
 		i2++;
-		if(i2%2==1){$(this).css({"background":"#52C41A","color":"#fff"}); sum++;}else{$(this).css({"background":"#F5FFEB","color":"#52C41A"}); sum--;}
+		if(i2%2==1){$(this).css({"background":"#52C41A","color":"#fff"}); sum++; arr.push(3);
+		}else{$(this).css({"background":"#F5FFEB","color":"#52C41A"}); sum--; arr.splice(arr.indexOf(3),1);}
 		$(".label_sum").html(sum);
 	})
 	
 	$(".property").click(function(){
 		i3++;
-		if(i3%2==1){$(this).css({"background":"#2D96FF","color":"#fff"}); sum++;}else{$(this).css({"background":"#EBF5FF","color":"#198CFF"}); sum--;}
+		if(i3%2==1){$(this).css({"background":"#2D96FF","color":"#fff"}); sum++; arr.push(4);
+		}else{$(this).css({"background":"#EBF5FF","color":"#198CFF"}); sum--; arr.splice(arr.indexOf(4),1);}
 		$(".label_sum").html(sum);
 	})
 	
 	/*星星*/
 	$(".stars").click(function(){
 		$(".stars").css({"background":"url(images/icon/star.png) no-repeat","background-size":"20px 20px"});
-		let indexs = ($(this).index())+1;
+		var indexs = ($(this).index())+1;
 		$(".stars:lt("+indexs+")").css({"background":"url(images/icon/star-yellow.png) no-repeat","background-size":"20px 20px"});
 		$(".star_sum").html(indexs);
+		commend(indexs);
 	})
 	$('.stars:eq(4)').click();
+	
+	function commend(stars){
+		
+		switch (stars){
+			case 1:
+				$(".commend").html("一般");
+				break;
+			case 2:
+				$(".commend").html("推荐");
+				break;
+			case 3:
+			$(".commend").html("推荐");
+			break;
+			case 4:
+				$(".commend").html("非常推荐");
+				break;
+			case 5:
+				$(".commend").html("非常推荐");
+				break;
+			default:
+				break;
+		}
+	}
 	
 	/*文本域*/
 	

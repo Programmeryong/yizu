@@ -1,13 +1,25 @@
 $(function(){
 	
 	
-	/*收藏*/
+	/*选项卡（全景图，户型图）*/
+	function xuanka(){
+		$('.tabs_li ul li').on('click',function(){
+			$('.tabs_li ul li').removeClass("active");
+			$(this).addClass("active");
+			let num = $(this).val();
+			if (num==0) {
+				$(".tabs_img").hide();
+				$(".panorama").show();
+			} else{
+				$(".tabs_img").show();
+				$(".panorama").hide();
+			}
+		});
+		
+		$('.tabs_li ul li').eq(0).click();
+	}
+	xuanka();
 	
-	/*$(".love").hover(function(){
-		$(this).css({"background":"url(images/icon/love-red.png) no-repeat", "background-size": "18px 18px"});
-	},function(){
-		$(this).css({"background":"url(images/icon/love-white.png) no-repeat", "background-size": "18px 18px"});
-	})*/
 	
 	var i = 0;
 	$(".love").click(function(){
@@ -72,7 +84,7 @@ $(function(){
 	$('.map_top ul li:eq(0)').click();
 
 	function thismap(typename){
-		var map = new BMap.Map("allmap");            // 创建Map实例
+		var map = new BMap.Map("allmap1");            // 创建Map实例
 		var mPoint = new BMap.Point(113.2956311606, 23.2085909690);  //中心点的经纬度
 	  	var marker = new BMap.Marker(mPoint); 
 	    map.addOverlay(marker);

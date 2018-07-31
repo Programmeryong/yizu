@@ -6,167 +6,196 @@
 	<meta name="description" content="乙租网 - 写字楼、厂房、创意园区专业互联网服务平台，精品写字楼，广州楼盘全覆盖，真实房源，现场实勘，专业顾问3对1服务！预约看房，免费咨询请拨打 400-886-6391">
 	<title>乙租网-详情页</title>
 	<link rel="shortcut icon" href="images/yz.ico">
+	<link rel="stylesheet" href="css/swiper-4.3.3.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/index_style.css" />
 	<link rel="stylesheet" href="css/detail_page.css" />
+	<link rel="stylesheet" href="css/show_img.css" />
 	<link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/swiper-4.3.3.min.js" ></script>
 	<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=GGUV8UDfxsNh5apcGscrvFErOIn2gAK4"></script>
 	<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/detail_page.js" ></script>	
 	<script type="text/javascript" src="js/yizu_collection_bottom.js" ></script>
+	<script type="text/javascript" src="js/show_img.js" ></script>
+	
 </head>
 <body style="background:rgba(0,0,0,.04)">
 <!-- index_top.html -->
-	<!-- 中部 -->
-	<main>
-		<!--主体-->
-		<div class="main">
-			<!--主体头部-->
-			<div class="main_top">
-				<!--头部标题-->
-				<div class="main_top_title clear">
-					<span style="font-size: 18px!important; height: 25px; line-height: 25px; float: left;">红盾大厦写字楼</span>
-					<span><a href="" style="color: #ffffff;font-size: 12px!important;">平台租金补贴</a></span>
-				</div>
-				<!--头部选项卡-->
-				<div class="tabs">
-					<div class="tabs_li">
-						<ul class="nav nav-pills">
-							<li role="presentation" class="active" value="0">720°全景</li>
-							<li role="presentation" value="1">平面图</li>
-							<!--<li role="presentation" value="2">户型图</li>-->
-						</ul>
-					</div>
-	
-					<div class="tabs_box">
-						<div class="xuanka_out">
-							<div class="xuanka_in clear">
-								<!--全景-->
-								<div class="quanjin"><img src="images/banner/banner_1.png" alt="" style="width: 100%; height: 100%;"/></div>
-								
-								<!--平面图-->
-								<div class="tabs_img" id="lunbo_box">
-									<div class="pre_small"><img src="images/icon/up-blue.png"/></div>
-			        				<div class="next_small"><img src="images/icon/down-blue.png"/></div>
-									<div class="tabs_img_big">
-										<div class="tabs_img_big_lun" style="top: -496px;">
-											<!--第五张-->
-											<div>
-												<img src="images/test/5ae2c75458309.jpg" alt="" style="width: 100%; height: 100%;" />
-											</div>
-											<div><!--第一张-->
-												<img src="images/test/5abde9af0f974.jpg" alt="" style="width: 100%; height: 100%;" />
-											</div>
-											<div><!--第二张-->
-												<img src="images/test/5abde9af99991.jpg" alt="" style="width: 100%; height: 100%;" />
-											</div>
-											<div><!--第三张-->
-												<img src="images/test/5add7e68d9421.jpg" alt="" style="width: 100%; height: 100%;" />
-											</div>
-											<div><!--第四张-->
-												<img src="images/test/5ae2c7541ef77.jpg" alt="" style="width: 100%; height: 100%;" />
-											</div>
-											<div><!--第二张-->
-												<img src="images/test/5abde9af99991.jpg" alt="" style="width: 100%; height: 100%;" />
-											</div>
-											<div><!--第三张-->
-												<img src="images/test/5add7e68d9421.jpg" alt="" style="width: 100%; height: 100%;" />
-											</div>
-											<div><!--第五张-->
-												<img src="images/test/5ae2c75458309.jpg" alt="" style="width: 100%; height: 100%;" />
-											</div>
-											<div><!--第一张-->
-												<img src="images/test/5abde9af0f974.jpg" alt="" style="width: 100%; height: 100%;" />
-											</div>
-										</div>
-									</div>
+
+	<!--查看图片-->
+	<div class="show-img">
+		<span class="close_show_img"> <img src="images/icon/close_white.png"/></span>
+		<div class="swiper-container show_big_img">
+			<ul class="swiper-wrapper">
+				<li class="swiper-slide orange-slide">
+					<img src="images/test/5abde9af0f974.jpg"/>
+				</li>
+				<li class="swiper-slide blue-slide">
+					<img src="images/test/5abde9af99991.jpg"/>
+				</li>
+				<li class="swiper-slide red-slide">
+					<img src="images/test/5add7e68d9421.jpg"/>
+				</li>
+				<li class="swiper-slide red-slide">
+					<img src="images/test/5ae2c7541ef77.jpg"/>
+				</li>
+				<li class="swiper-slide blue-slide">
+					<img src="images/test/5abde9af99991.jpg"/>
+				</li>
+				<li class="swiper-slide red-slide">
+					<img src="images/test/5add7e68d9421.jpg"/>
+				</li>
+				<li class="swiper-slide red-slide">
+					<img src="images/test/5ae2c75458309.jpg"/>
+				</li>
+				
+			</ul>
+			<div class="swiper-button-prev">
+				&nbsp;</div>
+			<div class="swiper-button-next">
+				&nbsp;
+			</div>
 			
-									<div class="tabs_img_small">
-										<ul class="img_small">
-											<li data-index="0" class="cur"><img src="images/test/5abde9af0f974.jpg" alt="" style="width: 100%; height: 100%;" /></li>
-											<li data-index="1"><img src="images/test/5abde9af99991.jpg" alt="" style="width: 100%; height: 100%;" /></li>
-											<li data-index="2"><img src="images/test/5add7e68d9421.jpg" alt="" style="width: 100%; height: 100%;" /></li>
-											<li data-index="3"><img src="images/test/5ae2c7541ef77.jpg" alt="" style="width: 100%; height: 100%;" /></li>
-											<li data-index="4"><img src="images/test/5abde9af99991.jpg" alt="" style="width: 100%; height: 100%;" /></li>
-											<li data-index="5"><img src="images/test/5add7e68d9421.jpg" alt="" style="width: 100%; height: 100%;" /></li>
-											<li data-index="6"><img src="images/test/5ae2c75458309.jpg" alt="" style="width: 100%; height: 100%;" /></li>
-										</ul>
-										<ul class="img_hadow">
-											<li class="curr" index="0"></li>
-											<li index="1"></li>
-											<li index="2"></li>
-											<li index="3"></li>
-											<li index="4"></li>
-											<li index="5"></li>
-											<li index="6"></li>
-										</ul>
-									</div>
-								</div>
-								
-								<!--户型图-->
-								<div class="house-style"></div>
-							</div>
-						</div>
-						<div class="top_infos fontSize14">
-							<div class="top_house_info">
-								<div class="house_title">
-									<div class="house_title_left">
-										<p>￥<span class="money fontSize36">73</span>/㎡</p>
-									</div>
-									<div class="house_title_right">
-										<a href=""><span class="collection">收藏</span></a>
-										<a href="" style="margin-left: 15px;"><span class="share">分享</span></a>
-									</div>
-								</div>
-								<p><span class="area">面积：285 ㎡</span></p>
-								<p class="address"><span class="where" title="地址：广州市的时空裂缝宽度是dsfdsfdsfdsfdsf否 ">
-														地址：广州市的时空裂缝宽度是dsfdsfdsfdsfdsf否 </span><br/>
-									<a href="#" style="margin-left: 70px; color: #40ACFF;">[查看地图]</a>
-								</p>
-								<p><span class="floor">楼层：地区楼层</span></p>
-								<p><span class="wuye">物业费：100元 / 月</span></p>
-							</div>
-							<div class="top_house_from">
-								<div class="top_house_from_title">
-									<div class="top_house_from_img"><img src="images/banner/banner_1.png" width="100%" height="100%"/></div>
-									<div class="top_house_from_title_right">
-										<p><span class="from_name" style="font-size: 22px!important;">金鱼钰&nbsp;</span>
-										评分：<span class="score"">5.0</span> /
-										<span class="people-sun">13</span>评价					
-										</p>
-										<p>来源：<span>经纪人</span></p>
-									</div>	
-								</div>
-								
-								<div style="display: flex; justify-content: space-between; margin-top: 10px;">
-									<div>写字楼出租<span class="out_house">59</span>套</div>
-									<div><a href="" style="color: #198CFF;">进入他的店铺</a></div>
-								</div>
-								<p class="zixun fontSize18">免费咨询：400-886-6391</p>
-								<!--<div class="cctn cursor"><img src="images/icon/cctn.png" alt="" width="22px" height="22px"/>沟 通</div>-->
-							</div>
-						</div>
-					</div>
+			<div class="swiper-pagination">
+				&nbsp;
+			</div>
+
+		</div>
+	</div>
+	<!--查看图片结束-->
 	
+	<p style="height: 2rem; line-height: 2rem; width: 63%; margin: 0 auto; color: rgba(0,0,0,0.65);">乙租>写字楼出租>三号线 天河客运站</p>
+	<!--主体头部-->
+	<div class="main_top">
+		<!--头部标题-->
+		<!--<div class="main_top_title clear">
+			<span style="font-size: 18px!important; height: 25px; line-height: 25px; float: left;">红盾大厦写字楼</span>
+			<span><a href="" style="color: #ffffff;font-size: 12px!important;">平台租金补贴</a></span>
+		</div>-->
+		
+			<div class="tabs_box">
+				
+				<div class="tabs_left">
+					
+					<p class="fontSize24">带空调带停车位</p>
+					
+					<div class="broadcast">
+						<!--轮播-->
+						<div id="carousel-example-generic" class="carousel slide banner" data-ride="carousel">
+						  <!-- Indicators -->
+						  <ol class="carousel-indicators">
+						    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+						    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+						  </ol>
+						
+						  <!-- Wrapper for slides -->
+						  <div class="carousel-inner" role="listbox">
+						    <div class="item active">
+						      <img src="images/banner/banner_1.jpg" alt="...">
+						    </div>
+						    <div class="item">
+						      <img src="images/banner/banner_1.png" alt="...">
+						    </div>
+						    <div class="item">
+						      <img src="images/banner/banner_3.jpg" alt="...">
+						    </div>
+						    <div class="item">
+						      <img src="images/banner/banner_2.jpg" alt="...">
+						    </div>
+						  </div>
+						
+						  <!-- Controls -->
+						  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+						    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+						  </a>
+						  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+						    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+						  </a>
+						</div>
+	
+							
+						<!--轮播结束-->
+					</div>
+				</div>
+				
+				<div class="top_infos fontSize14">
+					<div class="top_house_info">
+						<div class="love_share">
+							<a href=""><span class="collection">收藏</span></a>
+							<a href="" style="margin-left: 15px;"><span class="share">分享</span></a>
+						</div>
+						
+						<div class="jmw">
+							<div class="price_jmw">
+								<img src="images/banner/banner_3.jpg"/>
+								<p class="fontSize14 black45" style="margin-bottom: 0px; margin-top: 5px;">价格(元/m²/月)</p>
+								<p><span class="price">68</span></p>
+							</div>
+							<div class="area_jmw">
+								<img src="images/banner/banner_3.jpg"/>
+								<p class="fontSize14 black45" style="margin-bottom: 0px; margin-top: 5px;">面积(m²)</p>
+								<p style="color: #F52230;"><span class="area">1285</span>m²</p>
+							</div>
+							<div class="wuyePrice_jmw">
+								<img src="images/banner/banner_3.jpg"/>
+								<p class="fontSize14 black45" style="margin-bottom: 0px; margin-top: 5px;">物业费(元/m²/月)</p>
+								<p class="wuyePrice">15</p>
+							</div>
+						</div>
+						
+						<p class="address">区域：<span class="qu">天河</span>-<span class="dian">体育西路</span>
+							<a href="#" style="margin-left: 10px; color: #40ACFF;">[查看地图]</a>
+						</p>
+					</div>
+					<div class="top_house_from">
+						<div class="top_house_from_title">
+							<div class="top_house_from_img"><img src="images/banner/banner_1.png" width="100%" height="100%"/></div>
+							<div class="top_house_from_title_right">
+								<p><span class="from_name" style="font-size: 22px!important;">金鱼钰&nbsp;</span>
+								评分：<span class="score"">5.0</span> /
+								<span class="people-sum">13</span>评价					
+								</p>
+								<p>来源：<span>经纪人</span></p>
+							</div>	
+						</div>
+						
+						<div style="display: flex; justify-content: space-between; margin-top: 30px;">
+							<div>写字楼出租<span class="out_house">59</span>套</div>
+							<div><a href="" style="color: #198CFF;">进入他的主页 ></a></div>
+						</div>
+						<p class="zixun fontSize24">免费咨询：400-886-6391</p>
+						<!--<div class="cctn cursor"><img src="images/icon/cctn.png" alt="" width="22px" height="22px"/>沟 通</div>-->
+					</div>
 				</div>
 			</div>
-			<!--主体头部结束-->
 			
-			<!--中部导航-->
+		<!--中部导航-->
 			<nav class="middle">
 				<div class="middle_title">
 					<ul class="nav nav-pills">
-						<li role="presentation" class="active" value="0">乙租优惠</li>
-						<li role="presentation" value="1">全部户型</li>
-						<li role="presentation" value="2">基本信息</li>
-						<li role="presentation" value="3">周边设施</li>
+						<li role="presentation" class="active" value="0">基本信息</li>
+						<li role="presentation" value="1">用户评价</li>
+						<li role="presentation" value="2">周边设施</li>
+						<li role="presentation" value="3">猜你喜欢</li>
 					</ul>
 				</div>
 			
 			</nav>
 			<!--中部导航结束-->
+
+	</div>
+	<!--主体头部结束-->
+	
+	<!-- 中部 -->
+	<main>
+		<!--主体-->
+		<div class="main">
+			
 			
 			<!--全部户型和写字楼基本信息-->
 			<div class="houseinfo">
@@ -176,8 +205,8 @@
 						<h1 class="fontSize24">写字楼基本信息</h1>
 						<div class="office_content clear">
 							<div>
-								<span class="metro cursor fontSize14">地铁十分钟</span>
-								<span class="less_house cursor fontSize14">稀缺房源</span>
+								<span class="metro fontSize14">地铁十分钟</span>
+								<span class="less_house fontSize14">稀缺房源</span>
 							</div>
 							
 							<ul>
@@ -206,9 +235,9 @@
 						<div class="user_evaluate_list">
 							<ul>
 								<li>
-									<div class="">
+									<div class="123456">
 										<p class="clear">
-											<span>用户<span class="userId">****02</span>
+											<span>用户<span class="userId">13729013881</span>
 												<span class="star">
 													<span class="stars"></span>
 													<span class="stars" ></span>
@@ -216,21 +245,23 @@
 													<span class="stars"></span>
 													<span class="stars"></span>
 												</span>
-												<span><a href="">推荐</a></span>
+												<span class="commend black85">推荐</span>
 											</span>
 											<span class="evaluate_time">2018-05-01</span>
 										</p>
 										<p class="evaluate_content">胡子很不错，户型可以</p>
-										<div>
-											<span class="near fontSize14">熟悉社区及周边</span>
-											<span class="house_analyse fontSize14">房源讲解分析到位</span>
+										<div class="biaoqian">
+											<span class="near fontSize14">地铁十分钟</span>
+											<span class="house_analyse fontSize14">稀缺房源</span>
+											<span class="worked_jiaju fontSize14">带办公家具</span>
+											<span class="property fontSize14">知名物业</span>
 										</div>
 									</div>
 								</li>
 								<li>
-									<div class="">
+									<div class="1234">
 										<p class="clear">
-											<span>用户<span class="userId">****02</span>
+											<span>用户<span class="userId">13729013881</span>
 												<span class="star">
 													<span class="stars"></span>
 													<span class="stars" ></span>
@@ -238,21 +269,23 @@
 													<span class="stars"></span>
 													<span class="stars"></span>
 												</span>
-												<span><a href="">推荐</a></span>
+												<span class="commend black85">推荐</span>
 											</span>
 											<span class="evaluate_time">2018-05-01</span>
 										</p>
 										<p class="evaluate_content">胡子很不错，户型可以</p>
-										<div>
-											<span class="near fontSize14">熟悉社区及周边</span>
-											<span class="house_analyse fontSize14">房源讲解分析到位</span>
+										<div class="biaoqian">
+											<span class="near fontSize14">地铁十分钟</span>
+											<span class="house_analyse fontSize14">稀缺房源</span>
+											<span class="worked_jiaju fontSize14">带办公家具</span>
+											<span class="property fontSize14">知名物业</span>
 										</div>
 									</div>
 								</li>
 								<li>
-									<div class="">
+									<div class="123">
 										<p class="clear">
-											<span>用户<span class="userId">****02</span>
+											<span>用户<span class="userId">13729013881</span>
 												<span class="star">
 													<span class="stars"></span>
 													<span class="stars" ></span>
@@ -260,14 +293,16 @@
 													<span class="stars"></span>
 													<span class="stars"></span>
 												</span>
-												<span><a href="">推荐</a></span>
+												<span class="commend black85">推荐</span>
 											</span>
 											<span class="evaluate_time">2018-05-01</span>
 										</p>
 										<p class="evaluate_content">胡子很不错，户型可以</p>
-										<div>
-											<span class="near fontSize14">熟悉社区及周边</span>
-											<span class="house_analyse fontSize14">房源讲解分析到位</span>
+										<div class="biaoqian">
+											<span class="near fontSize14">地铁十分钟</span>
+											<span class="house_analyse fontSize14">稀缺房源</span>
+											<span class="worked_jiaju fontSize14">带办公家具</span>
+											<span class="property fontSize14">知名物业</span>
 										</div>
 									</div>
 								</li>
@@ -304,11 +339,15 @@
 				<nav id="find_house_out">
 					
 						<nav class="find_map">
-							<h2 style="font-size: 18px!important;"><strong>免费委托找房</strong></h2>
-							<div class="inputphone">
+							<h2 style="font-size: 18px!important;"><strong>广州写字楼地图找房</strong></h2>
+							<div class="map_img">
 							</div>
+							
+							<div style="width: 17.75rem; height: 1px; background: rgba(0,0,0,0.15); margin: 1.5rem auto 0px;"> </div>
 						</nav>
-					
+						
+						
+						
 						<nav id="find_house">
 							<h2 style="font-size: 18px!important;"><strong>免费委托找房</strong></h2>
 							<div class="inputphone">
@@ -326,7 +365,6 @@
 							<ul>
 								<li><img src="images/banner/banner_1.png"/></li>
 								<li><img src="images/banner/banner_3.jpg"/></li>
-								<li><img src="images/test/5ae2c75458309.jpg"/></li>
 							</ul>
 						</div>
 				</nav>
@@ -512,9 +550,22 @@
 <script type="text/javascript">
 	window.onload = function (){
 	    lunbo2('lovely',3000,305);
-	    lunbo_big('lunbo_box',5000);
+	    
+	    
+		$(function(){
+			$(".banner").hover(function(){
+				$(".carousel-control.right span").fadeIn();
+				$(".carousel-control.left span").fadeIn();
+			},function(){
+				$(".carousel-control.right span").fadeOut();
+				$(".carousel-control.left span").fadeOut();
+			})
+		})    
 	}
+	
+	
 </script>
+
 </body>
 </html>
 
