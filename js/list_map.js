@@ -37,8 +37,6 @@ $(function(){
 	})
 	$('.map_top ul li:eq(0)').click();
 	function thismap(thisname){
-		// var i = Number(x);
-		// var j =Number(y);
 		var map = new BMap.Map("allmap");            // 创建Map实例
 		var mPoint = new BMap.Point(113.2956311606, 23.2085909690);  
 		map.enableScrollWheelZoom();
@@ -49,3 +47,4 @@ $(function(){
 	    local.searchNearby(thisname,mPoint,1000);
 	}
 })
+

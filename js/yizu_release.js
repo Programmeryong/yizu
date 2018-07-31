@@ -27,7 +27,6 @@ $(function(){
 	});
 	$('.brokerage li:eq(1)').click();
 
-
 	// 配套设施的标签效果
 	var arr=[];
 	//给JS的数组对象定义一个函数，用于查找指定的元素在数组中的位置，即索引
@@ -54,58 +53,71 @@ $(function(){
 				case 0: 
 					if(than.css('background-color') == 'rgb(255, 247, 230)'){
 						textcolor(than,'#FFB319','#fff');
+						$('.Tabnavbox2 :checkbox').eq(0).click();
 						arr.push('0');
 					}else{
 						textcolor(than,'rgb(255, 247, 230)','#ffb319');
+						$('.Tabnavbox2 :checkbox').eq(0).click();
 						arr.remove('0');
 					};
 				break;
 				case 1: 
 					if(than.css('background-color') == 'rgb(255, 235, 236)'){
 						textcolor(than,'#F52230','#fff');
+						$('.Tabnavbox2 :checkbox').eq(1).click();
 						arr.push('1');
 					}else{
 						textcolor(than,'rgb(255, 235, 236)','#f52230');
+						$('.Tabnavbox2 :checkbox').eq(1).click();
 						arr.remove('1');
 					};
 				break;
 				case 2: 
 					if(than.css('background-color') == 'rgb(245, 255, 235)'){
 						textcolor(than,'#52C41A','#fff');
+						$('.Tabnavbox2 :checkbox').eq(2).click();
 						arr.push('2');
 					}else{
 						textcolor(than,'rgb(245, 255, 235)','#52c41a');
+						$('.Tabnavbox2 :checkbox').eq(2).click();
 						arr.remove('2');
 					};
 				break;
 				case 3: 
 					if(than.css('background-color') == 'rgb(235, 245, 255)'){
 						textcolor(than,'#2D96FF','#fff');
+						$('.Tabnavbox2 :checkbox').eq(3).click();
 						arr.push('3');
 					}else{
 						textcolor(than,'rgb(235, 245, 255)','#198cff');
+						$('.Tabnavbox2 :checkbox').eq(3).click();
 						arr.remove('3');
 					};
 				break;
 				case 4: 
 					if(than.css('background-color') == 'rgb(235, 255, 253)'){
 						textcolor(than,'#13c2c2','#fff');
+						$('.Tabnavbox2 :checkbox').eq(4).click();
 						arr.push('4');
 					}else{
 						textcolor(than,'rgb(235, 255, 253)','#13c2c2');
+						$('.Tabnavbox2 :checkbox').eq(4).click();
 						arr.remove('4');
 					};
 				break;
 				case 5: 
 					if(than.css('background-color') == 'rgb(243, 237, 255)'){
 						textcolor(than,'#722ed1','#fff');
+						$('.Tabnavbox2 :checkbox').eq(5).click();
 						arr.push('5');
 					}else{
 						textcolor(than,'rgb(243, 237, 255)','#722ed1');
+						$('.Tabnavbox2 :checkbox').eq(5).click();
 						arr.remove('5');
 					};
 				break;
 			}
+			console.log($('.Tabnavbox2 :checkbox'));
 			arrcs(arr);
 			});
 	}
