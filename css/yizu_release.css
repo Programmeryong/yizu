@@ -155,11 +155,17 @@ input{
 }
 .filenav_2 li{
 	margin-bottom: 10px;
+	position: relative;
 }
 .filenav_2 li i{
-	position: relative;
+	position: absolute;
 	top: 0;
-	right: 0;
+	right:0;
+	width: 16px;
+	height: 16px;
+	background-image: url(../images/icon/icon_dele.png);
+	background-size: 16px 16px;
+	z-index: 888;
 }
 /*单选按钮样式*/
 .thanradio,.thanradio1{
@@ -204,5 +210,12 @@ input{
 	margin-top: 5px;
 	color: rgba(0,0,0,.45);
 
+}
+.Tabnavbox2{
+	display: none;
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+	
 }
 /*结束*/

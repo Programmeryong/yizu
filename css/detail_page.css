@@ -116,7 +116,7 @@ ul{text-decoration: none;list-style: none;margin: 0;padding: 0;}
 
 	
 	/*全部户型*/
-	.houseinfo{width: 75rem; margin-top: 2.5rem;  display: flex; justify-content: space-between;}
+	.houseinfo{width: 75rem; margin-top: 1.5rem;  display: flex; justify-content: space-between;}
 	/*#house_and_find{width: 75rem;height: auto; margin-top: 1rem; }*/
 	.houseinfo_left{width: 53rem; height: auto;}
 	#all_house{width: 53rem; height: auto; background: #ffffff; padding-top: 1px; padding-bottom: 10px;}
