@@ -1,0 +1,78 @@
+/*查看图片*/
+.show-img {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .95);
+	z-index: 999;
+	visibility: hidden;
+}
+
+.show_big_img {
+	width: 70%;
+	height: 80%;
+	margin: 0 auto;
+	margin-top: 5%;
+	overflow: visible;
+}
+
+.show_big_img ul li img {
+	width: 100%;
+	height: 100%;
+	border-radius: 8px;
+}
+
+ul li,
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+	width: 18%;
+	height: 100%;
+	top: 0;
+	padding-top: 28%;
+}
+
+.swiper-button-next {
+	right: -21%;
+	background: url(../images/icon/next.png) no-repeat;
+	background-size: 50px 65px;
+	background-origin:content-box;
+	padding-left: 14%;
+}
+
+.swiper-button-prev {
+	left: -21%;
+	background: url(../images/icon/pre1.png) no-repeat;
+	background-size: 50px 65px;
+	background-origin:content-box;
+}
+
+.swiper-pagination {
+	color: #fff;
+	bottom: -50px;
+}
+
+.swiper-button-disabled {
+	display: none;
+}
+
+
+
+.close_show_img {
+	
+	position: absolute;
+	right: 30px;
+	top: 30px;
+	transition: all 0.5s;
+	cursor: pointer;
+}
+.close_show_img:hover{transform:  rotateZ(180deg);}
+/*查看图片结束*/

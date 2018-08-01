@@ -1,13 +1,25 @@
 $(function(){
 	
 	
-	/*收藏*/
+	/*选项卡（全景图，户型图）*/
+	function xuanka(){
+		$('.tabs_li ul li').on('click',function(){
+			$('.tabs_li ul li').removeClass("active");
+			$(this).addClass("active");
+			let num = $(this).val();
+			if (num==0) {
+				$(".tabs_img").hide();
+				$(".panorama").show();
+			} else{
+				$(".tabs_img").show();
+				$(".panorama").hide();
+			}
+		});
+		
+		$('.tabs_li ul li').eq(0).click();
+	}
+	xuanka();
 	
-	/*$(".love").hover(function(){
-		$(this).css({"background":"url(images/icon/love-red.png) no-repeat", "background-size": "18px 18px"});
-	},function(){
-		$(this).css({"background":"url(images/icon/love-white.png) no-repeat", "background-size": "18px 18px"});
-	})*/
 	
 	var i = 0;
 	$(".love").click(function(){
@@ -71,6 +83,20 @@ $(function(){
 	// })
 	// $('.map_top ul li:eq(0)').click();
 
+	function thismap(typename){
+		var map = new BMap.Map("allmap1");            // 创建Map实例
+		var mPoint = new BMap.Point(113.2956311606, 23.2085909690);  //中心点的经纬度
+	  	var marker = new BMap.Marker(mPoint); 
+	    map.addOverlay(marker);
+	    marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+		map.enableScrollWheelZoom();
+		map.centerAndZoom(mPoint,15);
+		var circle = new BMap.Circle(mPoint,1000,{fillColor:"blue", strokeWeight: 1 ,fillOpacity: 0.3, strokeOpacity: 0.3});//画圈半径一千米
+	    map.addOverlay(circle);
+	    var local =  new BMap.LocalSearch(map, {renderOptions: {map: map, autoViewport: true,panel: "r-result",imagesUrl:'./images/icon/traffic.png',detail_info:2}});  
+	    local.searchNearby(typename,mPoint,1000);
+	    console.log(local);
+	}	
 	// function thismap(typename){
 	// 	var map = new BMap.Map("allmap");            // 创建Map实例
 	// 	var mPoint = new BMap.Point(113.2956311606, 23.2085909690);  //中心点的经纬度
@@ -225,5 +251,4 @@ $(function(){
 	    }
 	}
 		
-	//lunbo_big("lunbo_box",5000);
 	/*大图片轮播结束*/
