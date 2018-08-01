@@ -1,0 +1,16 @@
+.setupbox1,.setupbox2{
+	height: 3.75rem;
+	line-height: 3.75rem;
+	background: #fff;
+	margin-top: 20px;
+}
+.setupbox1 a div span:nth-of-type(1),.setupbox2 a div span:nth-of-type(1){
+	float: left;
+}
+.setupbox1 a div span:nth-of-type(2),.setupbox2 a div span:nth-of-type(2){
+	float: right;
+}
+.setupbox1 a div span:nth-of-type(2) img,.setupbox2 a div span:nth-of-type(2) img{
+	width: 12px;
+	height: 24px;
+}

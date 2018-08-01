@@ -1,0 +1,60 @@
+header div div{
+	height: 4.16667rem;
+	line-height: 4.16667rem;
+}
+.setup{
+	padding:0 10px;
+	margin: 0;
+}
+.setup li{
+	width: 100%;
+	display: inline-block;
+	margin-top: 10px;
+	background: #fff;
+}
+.setup li .setupulbox1 a{
+	width: 100%;
+	display: block;
+}
+.setup li .setupulbox1 a:after{
+	clear: both;
+}
+.setup li .setupulbox1 a span:nth-of-type(1){
+	float: left;
+}
+.setup li .setupulbox1 a span:nth-of-type(2){
+	float: right;
+	padding-right: 24px;
+	background: url(../images/icon/pre_right.png) no-repeat;
+	background-size: 12px 16px;
+	background-position: 100% 40%;
+}
+.setupulbox1,.setupulbox2{
+	margin-bottom: 10px;
+}
+.setupulbox2{
+	width: 100%;
+	/*height: 2.5rem;*/
+
+	overflow:hidden; 
+	text-overflow:ellipsis;
+	display:-webkit-box; 
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:2; 
+}
+.setupbtn{
+	width: 72px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	display: inline-block;
+	border-radius: 25px;
+	background: #198cff;
+	color: #fff;
+
+	float: right;
+	margin: 5px 0;
+}
+.setupbtn:after{
+	clear: both;
+}

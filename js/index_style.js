@@ -32,10 +32,12 @@ function change(id1,id2) {
      var file = file.files[0];
      var reader = new FileReader();
      reader.readAsDataURL(file);
-     console.log(reader);
+     // console.log(reader);
      reader.onload = function(e){
          var pic = document.getElementById(id1);
+         var hiede = document.getElementById('hidetext');
          pic.src=this.result;
+         hiede.innerHTML=this.result;
      }
  }
 
