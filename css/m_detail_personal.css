@@ -1,0 +1,111 @@
+html{ font-size: 12px;}
+*{ font-size: 16px; color: rgba(0,0,0,0.65);}
+.fsize12{font-size: 12px;}
+.fsize14{font-size: 14px;}
+.fsize16{font-size: 16px;}
+.fsize18{font-size: 18px;}
+.fsize20{font-size: 20px;}
+.fsize22{font-size: 22px;}
+.fsize28{font-size: 28px;}
+.fsize24{font-size: 24px;}
+.black85{color: rgba(0,0,0,0.85);}
+.black65{color: rgba(0,0,0,0.65);}
+.black45{color: rgba(0,0,0,0.45);}
+.mgr0{margin: 0;}
+.pad0{padding: 0;}
+a{text-decoration: none;}
+a:hover{text-decoration: none;}
+
+ul{list-style: none; padding: 0; margin: 0;}
+
+/*p标签只显示两行，溢出隐藏并且以...结束*/
+.twohide{overflow: hidden;
+	display: -webkit-box; display: -moz-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;}
+	
+.onehide{overflow: hidden;
+	display: -webkit-box; display: -moz-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;}
+
+/*导入数字字体包*/
+@font-face {
+  font-family: 'newnumebr';   /*字体名称*/
+  src: url('../fonts/DIN-Medium.otf');       /*字体源文件*/
+}
+.active{background: #fff; color: #198CFF;}
+.active:after {
+	content: '';
+	position: absolute;
+	left: 20%;
+	top: auto;
+	bottom: 0;
+	right: auto;
+	height: 4px;
+	width: 60%;
+	background-color: #0080FF;
+}
+
+
+main{width: 100%; height: auto; background: rgba(0,0,0,0.04); }
+
+/*头部*/
+.house_from{width: 100%; height: 17rem; background: #fff; 
+			padding-top: 1rem; border-bottom: 2px solid rgba(0,0,0,0.08);}
+
+.house_from_photo{width: 80px; height: 80px; border-radius: 50px; overflow: hidden;}
+.house_from_info{width: 50%; line-height: 2.8rem; padding-left: 1rem;} 
+.house_from_photo img{width: 90px; height: 92px;}
+.house_from_info p:first-child{margin-top: 0.5rem; margin-bottom: 0;}
+.photo_info{display: flex; padding-right: 0; padding-left: 0.5rem;}
+.tel_phone{color: #F52230; margin-top: 0.5rem; font-family: 'newnumebr';}
+.evaluate_no{margin-top: 1rem;}
+.evaluate_no span:last-child{text-align: right;}
+.evaluate_no span:nth-of-type(2){text-align: center;}
+.score,.people,.tao{ font-family: 'newnumebr';}
+
+/*标题*/
+.house_list{width: 100%; margin-top: 1.6rem;}
+.house_list ul{width: 100%; display: flex; justify-content: space-between; border-bottom: 0;}
+.house_list ul li{width: auto; height: 4.5rem; line-height: 4.5rem;  position: relative;}
+.house_list>ul>li:hover{background: #fff; color: #198CFF;}
+.house_list ul li,.house_list ul li span{font-size: 20px; color: rgba(0,0,0,0.85);}
+.house_list ul li.active,.house_list ul li.active *{color: #198CFF;}
+
+
+/*列表项*/
+#all_house{width: 100%; height: auto; margin: 1.5rem auto 1.5rem; background: #fff; padding-bottom: 1rem;}
+.all_house_list{width: 98%; margin: 0 auto;  border-bottom: 1px solid rgba(0,0,0,0.15);}
+.all_house_list>ul>li{width: 27%; height: 9rem; line-height: 9rem;  text-align: right; }
+.all_house_list>ul>li:nth-of-type(2){text-align: center; width: 23%;}
+.all_house_list>ul>li:first-child{text-align: right; width: 25%;}
+.all_house_list>ul>li:last-child{padding-right: 1rem; width: 23%;}
+.all_house_list>ul>li img{width: 96%; height: 70%;}
+
+.area,.price{color: #FF3333; font-size: 22px; font-family: 'newnumebr';}
+
+.show_more_house{width: 10rem; height: 36px; line-height: 36px; margin: 1rem auto; border-radius: 3px; 
+					border: 1px solid #0080FF; color: #0080FF; text-align: center; margin-top: 20px; border-radius: 5rem; }
+					
+.show_more_evaluate{width: 10rem; height: 36px; line-height: 36px; margin: 1rem auto; border-radius: 3px; 
+					border: 1px solid #0080FF; color: #0080FF; text-align: center; margin-top: 20px; border-radius: 5rem; }
+
+/*用户评价*/
+.user_evaluate{width: 100%; height: auto; background: #ffffff; margin-bottom: 1rem; margin-top: 20px; padding-bottom: 5px;}
+.user_evaluate h1{width:96%; height: 5rem; line-height: 5rem; margin: 0 auto; border-bottom: 2px solid rgba(0,0,0,0.04);}
+.user_evaluate_list{width:96%; height: auto; margin: 0 auto;}
+.user_evaluate_list ul li>a>div{width: auto; height: auto; line-height: 2.2rem; padding-top: 1rem; padding-bottom: 1.5rem;
+								border-bottom: 2px solid rgba(0,0,0,0.04);}
+.user_evaluate_list ul li>a>div>div{margin-top: 10px;}
+.user_evaluate_list ul li>a>div>p:first-child{color: rgba(0,0,0,0.6); margin-bottom: 1rem;}
+.star{margin-left: 1.5rem;}
+.stars{ padding-left: 2rem; background: url(../images/icon/star.png) no-repeat; background-size: 18px 18px;}
+.evaluate_time{float: right; margin-right: 1rem; font-family: 'newnumebr'; margin-top: 1rem;}
+.near,.house_analyse,.worked_jiaju,.property{width: auto; height: 22px; padding: 2px 0.4rem; border-radius: 3px; margin-right: 0.4rem;}
+.near{background:#FFF7E; border: 1px solid #FFD580; color: #FFB319;}
+.house_analyse{background: #FFEBEC; border: 1px solid #FFA39E; color: #F52230; }
+.commend{margin-left: 1rem;}
+.worked_jiaju{background:#F5FFEB; border: 1px solid #B7EB8F; color: #52C41A;}
+.property{background:#EBF5FF; border: 1px solid #80BFFF; color: #198CFF;}
+.evaluate_content{margin-bottom: 1rem;}

@@ -94,9 +94,15 @@
 .floor{ padding-left: 25px; background: url(../images/icon/floor.png) no-repeat; background-size: 18px 18px; background-position:0px 0px;}
 .from{padding-left: 25px; background: url(../images/icon/people.png) no-repeat; background-size: 16px 16px; background-origin: 0px 0px;}
 
-.metro,.less_house{width: auto; height: 22px; padding: 2px 1rem; border-radius: 3px; }
-.metro{background:rgba(245,180,49,0.1); border: 1px solid rgba(245,180,49,0.5); color: rgba(245,180,49,1);}
-.less_house{background: rgba(255,85,51,0.1); border: 1px solid rgba(255,85,51,0.5); color: rgba(255,85,51,1); margin-left: 1rem;}
+.metro,.less_house,.dai_jiaju,.know_prop,.mfcw,.zmkfs{width: auto; height: 22px; padding: 2px 1rem; border-radius: 3px; color: #fff; }
+.metro{background: #FFB319;}
+.less_house{background: #F52230;}
+.dai_jiaju{background: #52C41A;}
+.know_prop{background: #2D96FF;}
+.mfcw{background: #13c2c2;}
+.zmkfs{background: #722ed1;}
+
+
 .metro_house_money{position: absolute; top: 10.4rem;}
 .metro_house_money>span:last-child{float: right; position: relative; top:-1rem;}
 .media-body>p:last-child{font-size: 16px; width: 100%; padding-right: 1.5rem;}
@@ -104,7 +110,7 @@
 .pingmi{padding-left: 0px!important; margin-top: 0.7rem;}
 .pingmi li{ float: left; padding: 3px 10px; border: 1px solid rgba(0,0,0,0.15); font-size: 14px!important; cursor: pointer;}
 .pingmi li:hover{background: #198CFF; color: #fff;}
-.posit{width: 40%; height: 60%; text-align: right; position: absolute; top: 2px; right: 10px;}
+.posit{width: 40%; height: auto; text-align: right; position: absolute; top: 2px; right: 10px;}
 .posit p{margin-bottom: 1rem;}
 
 /*分页按钮*/
@@ -232,3 +238,10 @@
 .screen_type{height: 40px; width: 100%;}
 .screen_type li{height: 100%; line-height: 40px;}
 .screen_type li:hover{background: #198CFF; color: #fff!important;}
+
+/*去掉数字输入框的上下箭头*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;    
+    margin: 0;
+}

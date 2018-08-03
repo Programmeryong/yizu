@@ -121,4 +121,36 @@ $(function(){
 		$(this).addClass("clickcolor");
 	})
 	$(".top_tab4>li").eq(0).click();
+	
+	
+	
+	   
+	
+	/*只能输入数字*/
+	$('input').keypress(function(event){
+		var key = event.keyCode;
+		if(key == 46 || key == 43 || key == 45 || key ==189 || key == "undefined" || key == null || key == '')
+	    {
+	       return false;
+	    }
+	})
+	
+	
+	/*服务标签*/
+	$(".biao").hide();
+	var posit = $(".posit");
+	for (var i = 0; i < posit.length; i++) {
+		var str = $(".str").eq(i).html();
+		console.log(str);
+	 	var arr = new Array(); 
+	 	arr = str.split(""); 
+	 	console.log(arr);
+		for(var j in arr){
+			var biao = arr[j]-1;
+			$(".posit:eq("+i+") .biao:eq("+biao+")").show();
+		}
+	}
+	/*服务标签结束*/
+	
+	
 })

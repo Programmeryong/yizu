@@ -1,0 +1,52 @@
+html{ font-size: 12px;}
+.fsize12{font-size: 12px;}
+.fsize14{font-size: 14px;}
+.fsize16{font-size: 16px;}
+.fsize18{font-size: 18px;}
+.fsize20{font-size: 20px;}
+.fsize22{font-size: 22px;}
+.fsize28{font-size: 28px;}
+.fsize24{font-size: 24px;}
+.black85{color: rgba(0,0,0,0.85);}
+.black65{color: rgba(0,0,0,0.65);}
+.black45{color: rgba(0,0,0,0.45);}
+.mgr0{margin: 0;}
+.pad0{padding: 0;}
+a{text-decoration: none;}
+a:hover{text-decoration: none;}
+
+ul{list-style: none; padding: 0; margin: 0;}
+p{margin: 0; padding: 0;}
+
+.top{background: #fff;}
+/*返回（头部）*/
+.back{width: 100%; height: 5rem; line-height: 5rem; padding-left: 1rem;
+		background: url(../images/logo/max_logo.png) no-repeat center center;
+		background-size: 5rem 2rem;
+		border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+
+form{background: rgba(0,0,0,0.04); width: 100%; height: auto; position: relative;}
+.service_lable{padding-left: 0.5rem; background: #fff; height: 5rem; line-height: 5rem; margin-bottom: 2rem;}
+.service_lable li{float: left; margin-left: 0.5rem;}
+.service_lable li:first-child{font-size: 18px!important; color: rgba(0,0,0,0.85)!important;}
+.metro_lable,.less_lable,.worked_jiaju,.property{width: auto; height: 20px; padding: 3px 0.5rem; border-radius: 2px; cursor: pointer;
+			font-size: 10px;}
+.metro_lable{background:#FFF7E6; border: 1px solid #FFD580; color: #FFB319;}
+.metro_lable:hover{background:#FFB319; color: #fff;}
+.less_lable{background: #FFEBEC; border: 1px solid #FFA39E; color: #F52230;}
+.less_lable:hover{background: #F52230; color: #fff;}
+.worked_jiaju{background:#F5FFEB; border: 1px solid #B7EB8F; color: #52C41A;}
+.worked_jiaju:hover{background: #52C41A; color: #fff;}
+.property{background:#EBF5FF; border: 1px solid #80BFFF; color: #198CFF;}
+.property:hover{background: #2D96FF; color: #fff;}
+.house_service{height: 4rem; line-height: 5rem; padding-left: 1rem; background: #fff;}
+.house_service>span:first-child{margin-left: 0.5rem;}
+.stars{ padding-left: 2.5rem; background: url(../images/icon/star.png) no-repeat; background-size: 16px 16px; cursor: pointer;}
+textarea{overflow: hidden; width: 100%; height: 20rem; resize:none;  outline: none;
+			border:0;   padding-top: 1rem; padding-left: 1rem; font-size: 16px; color: rgba(0,0,0,0.65);} 
+.ok{width: 100%; height: 5rem; line-height: 5rem; color: #fff; background: #00A2FF;  cursor: pointer;
+		position: fixed; bottom: 0; left: 0; text-align: center;}
+
+input[type='submit']{ position: absolute; left: -9999px;}

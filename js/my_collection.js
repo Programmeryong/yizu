@@ -74,28 +74,37 @@ $(function(){
 		i++;
 		if(i%2==1){$(this).css({"background":"#FFB319","color":"#fff"}); sum++;
 			arr.push(1);
-		}else{$(this).css({"background":"#FFF7E6","color":"#FFB319"}); sum--; arr.splice(arr.indexOf(1),1);}
+			$('.service_lable2 :checkbox').eq(0).click();
+		}else{$(this).css({"background":"#FFF7E6","color":"#FFB319"}); sum--; arr.splice(arr.indexOf(1),1);
+			$('.service_lable2 :checkbox').eq(0).click();
+			}
 		$(".label_sum").html(sum);
 	})
 	
 	$(".less_lable").click(function(){
 		i1++;
 		if(i1%2==1){$(this).css({"background":"#F52230","color":"#fff"}); sum++; arr.push(2);
-		}else{$(this).css({"background":"#FFEBEC","color":"#F52230"}); sum--; arr.splice(arr.indexOf(2),1);}
+			$('.service_lable2 :checkbox').eq(1).click();
+		}else{$(this).css({"background":"#FFEBEC","color":"#F52230"}); sum--; arr.splice(arr.indexOf(2),1);
+			$('.service_lable2 :checkbox').eq(1).click();}
 		$(".label_sum").html(sum);
 	})
 	
 	$(".worked_jiaju").click(function(){
 		i2++;
 		if(i2%2==1){$(this).css({"background":"#52C41A","color":"#fff"}); sum++; arr.push(3);
-		}else{$(this).css({"background":"#F5FFEB","color":"#52C41A"}); sum--; arr.splice(arr.indexOf(3),1);}
+			$('.service_lable2 :checkbox').eq(2).click();
+		}else{$(this).css({"background":"#F5FFEB","color":"#52C41A"}); sum--; arr.splice(arr.indexOf(3),1);
+			$('.service_lable2 :checkbox').eq(2).click();}
 		$(".label_sum").html(sum);
 	})
 	
 	$(".property").click(function(){
 		i3++;
 		if(i3%2==1){$(this).css({"background":"#2D96FF","color":"#fff"}); sum++; arr.push(4);
-		}else{$(this).css({"background":"#EBF5FF","color":"#198CFF"}); sum--; arr.splice(arr.indexOf(4),1);}
+			$('.service_lable2 :checkbox').eq(3).click();
+		}else{$(this).css({"background":"#EBF5FF","color":"#198CFF"}); sum--; arr.splice(arr.indexOf(4),1);
+			$('.service_lable2 :checkbox').eq(3).click();}
 		$(".label_sum").html(sum);
 	})
 	

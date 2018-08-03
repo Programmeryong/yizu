@@ -173,12 +173,14 @@ a:hover{text-decoration: none; color: rgba(0,0,0,1);}
 /*房源列表结束*/
 
 /*发表评论*/
+.service_lable2{display: none;}
+
 .comment{display: none; width: 65rem; height: 50rem; background: #fff; position: fixed; left: 50%; top: 50%; z-index: 12;
 			margin-left: -32.5rem; margin-top: -25rem; box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.04);}
 .title{width: 100%; height: 6rem; line-height: 6rem; padding: 0 2rem; border-bottom: 2px solid rgba(0,0,0,0.04); margin-bottom: 1.5rem;}
 .close_but img{width: 100%; height: 100%;}
 .close_but{float: right; width: 1.8rem; height: 1.8rem; cursor: pointer;}
-.ulradio{
+/*.ulradio{
 	line-height: 2rem;
 	padding:0;
 	margin: 0;
@@ -194,7 +196,7 @@ a:hover{text-decoration: none; color: rgba(0,0,0,1);}
 	background-size: 18px 18px;
 	background-position:10% 50%;
 	margin-left: 2rem;
-}
+}*/
 .service_lable{padding-left: 5px; margin-top: 2.5rem;}
 .service_lable li{float: left; margin-left: 1rem;}
 .metro_lable,.less_lable,.worked_jiaju,.property{width: auto; height: 20px; padding: 0 1rem; border-radius: 2px; cursor: pointer;}
