@@ -54,6 +54,9 @@ i{
 .textfw600{
 	font-weight: 600;
 }
+.textfw500{
+	font-weight: 500;
+}
 /*重写内外边距*/
 .marpad{
 	margin:0;
@@ -65,6 +68,13 @@ i{
 .pad{
 	padding: 0;
 }
-
-
+.bgcolor{
+	background: #fff;
+}
+.martop1{
+	margin-top: 1rem;
+}
+.padtop1{
+	padding-top: 1rem;
+}
 /*结束

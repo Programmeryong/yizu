@@ -211,7 +211,7 @@ input{
 	color: rgba(0,0,0,.45);
 
 }
-.Tabnavbox2{
+.Tabnavbox2,#hidetext{
 	display: none;
 	position: absolute;
 	top: -9999px;

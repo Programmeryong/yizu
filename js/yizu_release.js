@@ -117,7 +117,6 @@ $(function(){
 					};
 				break;
 			}
-			console.log($('.Tabnavbox2 :checkbox'));
 			arrcs(arr);
 			});
 	}

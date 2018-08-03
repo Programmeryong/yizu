@@ -1,0 +1,148 @@
+.personal_top{
+	height: 12.25rem;
+	background:linear-gradient(90deg,rgba(0,162,255,1),rgba(0,128,255,1));
+}
+.topbox1{
+	display: block;
+	width: 158px;
+	height: 45px;
+	color: #fff;
+	margin: 0 auto;
+}
+.topboxl{
+	width: 45px;
+	height: 45px;
+	float: left;
+}
+.topboxl img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+.topboxr{
+	width: 113px;
+	float: left;
+}
+.topboxr div{
+	font-size: 16px;
+}
+.topboxr div i{
+	padding-left: 1rem;
+	font-size: 12px;
+}
+.minhorn{
+	padding-left: 32px;
+	font-size: 16px;
+	color: rgba(0,0,0,.65);
+	background: url(../images/icon/minhorn.png) no-repeat;
+	background-position: 7% 50%;
+	background-size: 20px 24px;
+}
+.box1top:after{
+	clear: both;
+}
+.box1top span:nth-of-type(1){
+	text-align: left;
+}
+.box1top span:nth-of-type(2){
+	text-align: right;
+}
+.box1con{
+	font-size: 16px;
+	color: rgba(0,0,0,.65);
+}
+.box1btm{
+	margin-top: 1rem;
+	text-align: center;
+}
+.box1btm span{
+	display: inline-block;
+	padding: 5px 10px;
+	border: 1px solid #198cff;
+	border-radius: 20px;
+	color: #198cff;
+}
+/*推荐拿佣金*/
+.redpacket a img{width: 100%;}
+.Entrustbox2{text-align: center;}
+.Entrustbox2>img{width: 208px;height: 36px;margin: 12px 0;}
+.indexbtn{position: absolute;top: -9999px;opacity: 0;}
+.indextext{width: 90%;height: 34px;padding-left: 1rem;border: 1px solid rgba(0,0,0,.15);margin-bottom: 1rem;border-radius: 2px;}
+.indexb{width: 90%;height: 34px;margin-bottom: 1rem;border-radius: 2px;}
+/*结束*/
+.brokerbox li{
+	/*padding-top: 1rem;*/
+	/*padding-bottom: 1rem;*/
+	padding:1rem 0;
+	border-bottom: 1px solid rgba(0,0,0,.15);
+}
+.brokertop span:nth-of-type(1){
+	color: #198cff;
+	font-size: 18px;
+}
+.brokertop span:nth-of-type(1) i{
+	color: rgba(0,0,0,.85);
+	font-size: 18px;
+}
+.brokertop span:nth-of-type(2){
+	color: rgba(0,0,0,.65);
+	font-size: 16px;
+}
+.brokercon{
+	color: rgba(0,0,0,.85);
+	font-size: 18px;
+}
+.brokerbtm span{
+	display: inline-block;
+	padding: 5px 10px;
+	border-radius: 20px;
+	color: #fff;
+	background:#198cff; 
+}
+.brokerbtmf span{
+	display: inline-block;
+	padding: 5px 10px;
+	border-radius: 20px;
+	border: 1px solid rgba(0,0,0,.09);
+	color: rgba(0,0,0,.25);
+}
+.brokerbtn{
+	padding: 1rem 0;
+}
+.brokerbtn span{
+	display: inline-block;
+	padding: 5px 10px;
+	border-radius: 20px;
+	border:1px solid #198cff;
+	color: #198cff;
+}
+.brokerage2{
+	background:#fff;
+	margin-top: 1rem;
+	padding: 5px 0;
+}
+.brokerage2 div	div:nth-of-type(1){
+	font-size: 18px;
+	font-weight: 500px;
+	color: rgba(0,0,0,.85);
+}
+.brokerage2 div div:nth-of-type(2){
+	font-size: 16px;
+	color: #198cff;
+	padding-right: 2rem;
+	background: url(../images/icon/pre_right.png) no-repeat;
+	background-position: 100% 40%;
+	background-size: 14px 20px;
+}
+.brokerage2 div div:nth-of-type(2) a{
+	font-size: 16px;
+	color: #198cff;
+}
+
+/*企业服务*/
+.index_topimg{text-align: center;line-height: 51px;}
+.index_topimg img{width: 14px;height: 24px;}
+.row2ul{width: 100%;margin-top: 1rem;}
+.row2ul li{width: 25%;float: left;text-align: center;margin-bottom:10px;}
+.row2ul li p{text-align: center;margin-top: .5rem;color: rgba(0,0,0,.65);}
+/*结束*/
