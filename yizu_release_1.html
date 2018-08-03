@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="description" content="乙租网 - 写字楼、厂房、创意园区专业互联网服务平台,精品写字楼,广州楼盘全覆盖,真实房源,现场实勘,专业顾问2对1服务!预约看房,免费咨询请拨打 400-886-6391">
+	<title>乙租网</title>
+	<link rel="shortcut icon" href="./images/yz.ico">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/index_style.css">
+	<link rel="stylesheet" type="text/css" href="./css/yizu_release.css">
+	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="./js/index_style.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/yizu_release.js"></script>
+	<script type="text/javascript" src="./js/cslCamera.js"></script>
+</head>
+<body style="background:rgba(0,0,0,.04)">
+	<!-- 中部 -->
+	<!-- 这一块是经纪人使用的 -->
+<main id="thisapp" class="container" style="margin-bottom: 8rem;">
+	<form id="form1" autocomplete="off">
+		<h1 class="fsize18 fw_bold">发布房源</h1>
+		<div class="row marpad margin40 ">
+			<div class="col-md-3">
+				<div class="col-md-3">
+					<div class="round round2">1</div>
+				</div>
+				<div class="col-md-4 fsize18 fw_bold marpad">填写信息</div>
+				<div class="col-md-4" style="border-bottom: 1px solid #198cff;padding:0;line-height: 10px;">&nbsp;</div>
+				<div class="col-md-9 text45">
+					提交闲置房源
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="col-md-3">
+					<div class="round round2">2</div>
+				</div>
+				<div class="col-md-4 fsize18 fw_bold marpad">采集信息</div>
+				<div class="col-md-4" style="border-bottom: 1px solid #198cff;padding:0;line-height: 10px;">&nbsp;</div>
+				<div class="col-md-9 text45">
+					平台24小时内联系您
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="col-md-3">
+					<div class="round round2">3</div>
+				</div>
+				<div class="col-md-4 fsize18 fw_bold marpad">展示房源</div>
+				<div class="col-md-4" style="border-bottom: 1px solid #198cff;padding:0;line-height: 10px;">&nbsp;</div>
+				<div class="col-md-9 text45">
+					加入乙租物业链，免费显示在首页
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="col-md-3">
+					<div class="round round2">4</div>
+				</div>
+				<div class="col-md-4 fsize18 fw_bold marpad">成交房源</div>
+				<div class="col-md-4">&nbsp;</div>
+				<div class="col-md-9 text45">
+					支付一定比例佣金
+				</div>
+			</div>
+		</div>
+		<h1 class="fsize18 fw_bold">楼盘基本信息</h1>
+		<div class="fw_bigbox2">
+			<!-- 这里是写字楼和创意园表单 -->
+			<div class="row marpad margin40">
+				<div class="col-md-12 marpad mar_t ">
+					<div class="col-md-2 text-right fsize14 edirt_text"><i>*</i>楼盘名称</div>
+					<div class="col-md-10 controls" style="margin-top: -5px;">
+						<input class="input423 fsize14 housename1" type="text" name="" placeholder="建议写物业名称">
+					</div>
+				</div>
+				<div class="col-md-12 marpad mar_t">
+					<div class="col-md-2 text-right fsize14 releaseline edirt_text"><i>*</i>所在区域</div>
+					<div class="col-md-10 controls">
+						<!-- 这里要动态生成地点 自行修改value值~~ -->
+						<select class="pull-left form-control select30 dropdown1" name="cars" style="padding:4px 4px; width: 115px">
+							<option value="0">请选择区域</option>
+							<option value="1">一号线</option>
+							<option value="2">二号线</option>
+							<option value="3">三号线</option>
+						</select>
+						<select class="pull-left form-control select30 dropdown2" name="cars" style="padding:4px 4px; width: 115px">
+							<option value="0">请选择商圈</option>
+							<option value="1">五山</option>
+							<option value="2">厂房</option>
+							<option value="3">创意园</option>
+						</select>
+						<input class="input423 fsize14 address1" type="text" name="">
+					</div>
+				</div>
+				<div class="col-md-12 marpad mar_t">
+					<div class="col-md-2 text-right fsize14 releaseline edirt_text"><i>*</i>面积</div>
+					<div class="col-md-10 controls">
+						<input class="input284 fsize14 number4" type="number" name="" placeholder="请输入6位数以内大于零的整数">
+						<i class="text65">㎡</i>
+					</div>
+				</div>
+				<div class="col-md-12 marpad mar_t">
+					<div class="col-md-2 text-right fsize14 releaseline">佣金</div>
+					<div class="col-md-10 controls">
+						<ul class="brokerage">
+							<li>0.5个月</li>
+							<li>1个月</li>
+							<li>1.5个月</li>
+							<li>2个月</li>
+						</ul>
+					</div>
+					<div class="col-md-10 controls col-md-offset-2">
+						<p class="broktext fsize14">悬赏一定佣金比例会更多促使成交，房源出租后支付。</p>
+					</div>
+					<div class="hidebox">
+						<input type="radio" name="heidbtn" value="0" class="hiderad">
+						<input type="radio" name="heidbtn" value="1" class="hiderad">
+						<input type="radio" name="heidbtn" value="2" class="hiderad">
+						<input type="radio" name="heidbtn" value="3" class="hiderad">
+					</div>
+				</div>
+				<div class="col-md-12 marpad mar_t">
+					<div class="col-md-2 text-right fsize14 releaseline edirt_text">联系电话</div>
+					<!-- 这里是登录的号码 -->
+					<div class="col-md-10">
+						<h2 class="footertel" style="margin: 10px 0">13160528993</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row marpad margin40">
+			<div class="col-md-12 marpad mar_t ">
+				<div class="col-md-10 col-md-offset-2">
+					<span class="releasethis1">确认发布</span>
+				</div>
+			</div>
+			<input class="clicksubmit1" type="submit" name="" >
+		</div>
+		
+	</form>
+</main>
+</body>
+</html>
