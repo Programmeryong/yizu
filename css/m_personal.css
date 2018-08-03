@@ -1,3 +1,18 @@
+/*弹出窗*/
+.entrustbox{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.25);
+	padding:10%;
+	z-index: 999;
+}
+.entrustbox div,.entrustbox div img{
+	width: 100%;
+	height: 100%;
+}
+
 .personal_top{
 	height: 12.25rem;
 	background:linear-gradient(90deg,rgba(0,162,255,1),rgba(0,128,255,1));
@@ -139,6 +154,13 @@
 	color: #198cff;
 }
 
+/*P标签接收数据*/
+.minp1,.minp2{
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
 /*企业服务*/
 .index_topimg{text-align: center;line-height: 51px;}
 .index_topimg img{width: 14px;height: 24px;}
@@ -146,3 +168,47 @@
 .row2ul li{width: 25%;float: left;text-align: center;margin-bottom:10px;}
 .row2ul li p{text-align: center;margin-top: .5rem;color: rgba(0,0,0,.65);}
 /*结束*/
+/*猜你喜欢*/
+.guessLove{width: 100%; height: auto; background: #fff; padding-top: 1px;margin-top: 1rem;}
+.guessLove>p:first-child{height: 3rem; line-height: 3rem;}
+.lunbo2 ul{padding: 0; list-style: none;}
+.lunbo2 ul li{padding-right: 1rem; width: 70%;}
+.lunbo2 ul li>a>div{width: 95%; /*background: #fff;*/ height: 100%; padding-bottom: 1rem;}
+.lunbo2 ul li>a>div p{padding-left: 1rem; padding-right: 1rem; margin-top: 5px;}
+.lunbo2 ul li>a>div #houseName{margin-bottom: 1px;}
+.lunbo2 ul li>a>div p:last-child{margin-top: 1px; height: 3rem; line-height: 3rem; text-align: center;
+								}
+								
+.lunbo2 img{width: 100%; height: 13rem;}
+.lunbo2{margin-left: 1rem; height: auto;}
+
+.swiper-button-next,.swiper-button-prev{display: none;}
+.next{height: 100%; width: 2rem; text-align: center;}
+
+.couponimg img{
+	width: 100%;
+	height: 100%;
+}
+
+/*返回（头部）*/
+.back{width: 100%; height: 5rem; line-height: 5rem; padding-left: 1rem;
+    background: url(../images/logo/max_logo.png) no-repeat center center;
+    background-size: 5rem 2rem;
+}
+
+.house_box1{
+	background: #fff;
+	padding: 5px 0 5px 10px;
+}
+.house_box1 p{
+	margin: 0;
+}
+.house_box1 p:nth-of-type(1){
+	color: rgba(0,0,0,.85);
+	font-size: 18px;
+	font-weight: 500;
+}
+.house_box1 p:nth-of-type(2){
+	color: rgba(0,0,0,.65);
+	font-size: 14px;
+}
