@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/m_comment.css" />
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+		<script type="text/javascript" src="js/m_comment.js" ></script>
+	</head>
+	
+	
+	<body style="background: rgba(0,0,0,0.04);">
+		
+		<!--返回（头部）-->
+		<div class="top">
+			<p class="back"><a href=""><img src="images/icon/back.png" /></a></p>
+		</div>
+		<form action="" method="post">
+			
+			<p class="house_service fsize18 black85">发表评价
+				<span class="stars" id="star1"></span>
+				<span class="stars" id="star2"></span>
+				<span class="stars" id="star3"></span>
+				<span class="stars" id="star4"></span>
+				<span class="stars" id="star5"></span>
+				<span class="star_sum"></span> 星
+				<span class="commend" style="margin-left: 0.3rem; font-size: 16px;"></span>
+			</p>
+			
+			<ul class="service_lable clearfix">
+				<li><span>服务标签</span></li>
+				<li><span class="metro_lable">地铁十分钟</span></li>
+				<li><span class="less_lable">稀缺房源</span></li>
+				<li><span class="worked_jiaju">带办公家具</span></li>
+				<li><span class="property">知名物业</span></li>
+			</ul>
+			
+			<!--这个位置加上4个多选框 让他模拟点击 -->
+			<div class="service_lable2" style="display: none;">
+				<input type="checkbox" name="tabnavbox2" value="0">
+				<input type="checkbox" name="tabnavbox2" value="1">
+				<input type="checkbox" name="tabnavbox2" value="2">
+				<input type="checkbox" name="tabnavbox2" value="3">
+				
+			</div> 
+			  
+			  
+			
+			
+			<textarea class="textArea" placeholder="对房源评价经纪人评价"></textarea>
+			<span class="fsize18 black45" style="position: absolute; bottom: 5px; right: 5px;">
+				<span class="textNum fsize18 black45">0</span>/250
+			</span>
+			
+			
+			<input type="submit" value="发表评论"/>
+		</form>
+		<p class="ok fsize22">提交评价</p>
+		
+	</body>
+	
+	<script type="text/javascript">
+		
+		$('.textArea').on("keyup",function(){
+	        $('.textNum').text($('.textArea').val().length);//这句是在键盘按下时，实时的显示字数
+	        if($('.textArea').val().length > 250){
+	            $('.textNum').text(250);//长度大于100时0处显示的也只是100
+	            $('.textArea').val($('.textArea').val().substring(0,250));//长度大于100时截取钱100个字符
+	        }
+	    })
+	    $('.textNum').text($('.textArea').val().length);//这句是在刷新的时候仍然显示字数
+		
+	</script>
+</html>
