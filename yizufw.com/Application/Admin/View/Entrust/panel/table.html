@@ -1,0 +1,57 @@
+<div class="layui-form">
+    <table class="layui-table">
+        <thead>
+        <tr>
+            <th width="14%">ID</th>
+            <th width="14%">用户</th>
+            <th width="14%">联系电话</th>
+            <th width="14%">委托时间</th>
+            <th width="14%">状态</th>
+            <th width="10%">处理人</th>
+            <th width="18%">操作</th>
+        </thead>
+        <tbody id="x-img">
+        <volist name="entrust_list" id="vo">
+            <tr>
+                <td>{$vo.id}</td>
+                <td>{$vo.user_id}</td>
+                <td>{$vo.phone}</td>
+                <td>{$vo.time|date='Y-m-d H:i:s',###}</td>
+                <td class="td-status">
+                    <eq name="vo.status" value="1">
+                        <span class="layui-badge layui-bg-green">已联系</span>
+                        <else/>
+                        <span class="layui-badge layui-bg-red">未联系</span>
+                    </eq>
+                </td>
+                <td class="admin-username">{$vo.username}</td>
+                <td class="td-manage">
+                    <eq name="vo.status" value="1">
+                        <a class="layui-btn layui-btn-small"
+                           style="line-height:1.6em;margin-top:3px;padding-top: 6px;cursor: default;opacity: 0.2;"
+                           href="javascript:void(0);" onclick="return false;">
+                            联系用户并填写要求和更改状态</a>
+                        <a class="layui-btn layui-btn-small"
+                           style="line-height:1.6em;margin-top:3px;padding-top: 6px;"
+                           href="javascript:void(0);" onclick="x_admin_show('要求详情','{:U('Entrust/read')}'+'?id='+{$vo.id}, 500,200)">
+                            要求详情</a>
+                        <else/>
+                        <a class="layui-btn layui-btn-small"
+                           style="line-height:1.6em;margin-top:3px;padding-top: 6px"
+                           href="javascript:void(0);"
+                           onclick="member_stop(this,'{$vo.id}','{$Think.session.admin_id}');">
+                            联系用户并填写要求和更改状态</a>
+                        <a class="layui-btn layui-btn-small layui-hide"
+                           style="line-height:1.6em;margin-top:3px;padding-top: 6px;"
+                           href="javascript:void(0);" onclick="x_admin_show('要求详情','{:U('Entrust/read')}'+'?id='+{$vo.id}, 500,200)">
+                            要求详情</a>
+                    </eq>
+                </td>
+            </tr>
+        </volist>
+        </tbody>
+    </table>
+    <div class="page">
+
+    </div>
+</div>

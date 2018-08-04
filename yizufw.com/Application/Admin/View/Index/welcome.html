@@ -1,0 +1,51 @@
+﻿<include file='Public/header' />
+<include file='Public/base_css' />
+<body>
+<div class="x-body">
+    <blockquote class="layui-elem-quote">欢迎使用乙租管理后台</blockquote>
+
+    <fieldset class="layui-elem-field">
+        <legend>服务器信息</legend>
+        <div class="layui-field-box">
+            <table class="layui-table">
+                <tbody>
+                <volist name="info" id="v">
+                <tr>
+                    <td>{$key}</td>
+                    <td>{$v}</td>
+                </tr>
+                </volist>
+                </tbody>
+            </table>
+        </div>
+    </fieldset>
+</div>
+</body>
+<include file='Public/base_js' />
+<script>
+    $(function () {
+        setInterval(showTime, 100);
+    });
+    function showTime() {
+        let time = getNowFormatDate();
+        $('.show-time').html(time);
+    }
+    function getNowFormatDate() {
+        let date = new Date();
+        let seperator1 = "-";
+        let seperator2 = ":";
+        let month = date.getMonth() + 1;
+        let strDate = date.getDate();
+        if (month >= 1 && month <= 9) {
+            month = "0" + month;
+        }
+        if (strDate >= 0 && strDate <= 9) {
+            strDate = "0" + strDate;
+        }
+        let currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+            + " " + date.getHours() + seperator2 + date.getMinutes()
+            + seperator2 + date.getSeconds();
+        return currentdate;
+    }
+</script>
+</html>
