@@ -115,9 +115,22 @@ input,textarea{
 	width: 100%;
 	height:7.5rem;
 }
-/*.border{
-	border:1px solid #ccc; 
-}*/
+.righthis{
+	width: 100%；
+	height:100%;
+	margin-right: 2rem;
+}
+.righthis:hover{
+	background: #40acff;
+}
+.righthis a{
+	padding-bottom: 0;
+}
+.righthis a img{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
 .top_logo >img{
 	width: 100%;
 	padding-top: 3.5rem;

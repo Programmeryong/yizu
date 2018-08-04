@@ -59,7 +59,7 @@ $(function(){
                 $(".login input[type='checkbox']").prop("checked",false);}
     })
     
-    $("#nav_right li:first-child,#nav_right li:nth-of-type(3)").click(function(){
+    $(".rightclick1,.rightclick2").click(function(){
         $(".login").show(); 
         $(".temp").css({"visibility":"visible"}); //添加一层膜)
         $(".temp").click(function(){$(".temp").css({"visibility":"hidden"});$('.login').hide(); })
@@ -76,7 +76,7 @@ $(function(){
             $(".temp").click(function(){$(".temp").css({"visibility":"hidden"}); $(".coupon").css({"display":"none"});})
         }
     }
-    $(".coupon_img img").click(function(){$("#nav_right li:first-child").click(); $(".coupon").hide();})
+    $(".coupon_img img").click(function(){$(".rightclick1").click(); $(".coupon").hide();})
     $(".close_coupon i").click(function(){$(".temp").css({"visibility":"hidden"}); $(".coupon").hide();})
     /*优惠券结束*/
 
