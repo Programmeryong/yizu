@@ -21,7 +21,9 @@ a:hover{
 i{
 	font-style:normal;
 }
-
+input,textarea{
+	outline:none;
+}
 /*字体大小*/
 .mfsziemin{
 	font-size: 12px;

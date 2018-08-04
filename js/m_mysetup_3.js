@@ -32,7 +32,15 @@
 })(jQuery);
 /*修改手机端的click---结束*/
 $(function(){
-	$('.thisbtn').touchClick(function(){
-		$('.thanbtn').click();
+	$('.headertopr').touchClick(function(){
+		$('.headertopr input').click();
 	})
+    $('.thistextarea').on('keyup',function(){
+         $('.thannum').text($('.thistextarea').val().length);
+             if($('.thistextarea').val().length > 200){
+                    $('.thannum').text(200);//长度大于100时0处显示的也只是100
+                    $('.thistextarea').val($('.thistextarea').val().substring(0,200));//长度大于100时截取钱100个字符
+            }
+         $('.thannum').text($('.thistextarea').val().length);
+    })
 })
