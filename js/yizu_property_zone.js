@@ -1,6 +1,4 @@
 $(function(){
-	
-	
 	/*选项卡（全景图，户型图）*/
 	function xuanka(){
 		$('.tabs_li ul li').on('click',function(){
@@ -83,20 +81,20 @@ $(function(){
 	// })
 	// $('.map_top ul li:eq(0)').click();
 
-	function thismap(typename){
-		var map = new BMap.Map("allmap1");            // 创建Map实例
-		var mPoint = new BMap.Point(113.2956311606, 23.2085909690);  //中心点的经纬度
-	  	var marker = new BMap.Marker(mPoint); 
-	    map.addOverlay(marker);
-	    marker.setAnimation(BMAP_ANIMATION_BOUNCE);
-		map.enableScrollWheelZoom();
-		map.centerAndZoom(mPoint,15);
-		var circle = new BMap.Circle(mPoint,1000,{fillColor:"blue", strokeWeight: 1 ,fillOpacity: 0.3, strokeOpacity: 0.3});//画圈半径一千米
-	    map.addOverlay(circle);
-	    var local =  new BMap.LocalSearch(map, {renderOptions: {map: map, autoViewport: true,panel: "r-result",imagesUrl:'./images/icon/traffic.png',detail_info:2}});  
-	    local.searchNearby(typename,mPoint,1000);
-	    console.log(local);
-	}	
+	// function thismap(typename){
+	// 	var map = new BMap.Map("allmap1");            // 创建Map实例
+	// 	var mPoint = new BMap.Point(113.2956311606, 23.2085909690);  //中心点的经纬度
+	//   	var marker = new BMap.Marker(mPoint); 
+	//     map.addOverlay(marker);
+	//     marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+	// 	map.enableScrollWheelZoom();
+	// 	map.centerAndZoom(mPoint,15);
+	// 	var circle = new BMap.Circle(mPoint,1000,{fillColor:"blue", strokeWeight: 1 ,fillOpacity: 0.3, strokeOpacity: 0.3});//画圈半径一千米
+	//     map.addOverlay(circle);
+	//     var local =  new BMap.LocalSearch(map, {renderOptions: {map: map, autoViewport: true,panel: "r-result",imagesUrl:'./images/icon/traffic.png',detail_info:2}});  
+	//     local.searchNearby(typename,mPoint,1000);
+	//     console.log(local);
+	// }	
 	// function thismap(typename){
 	// 	var map = new BMap.Map("allmap");            // 创建Map实例
 	// 	var mPoint = new BMap.Point(113.2956311606, 23.2085909690);  //中心点的经纬度
@@ -252,3 +250,34 @@ $(function(){
 	}
 		
 	/*大图片轮播结束*/
+
+	//必须在服务器上才能看到效果！
+window.onload=function(){
+	// 这里面写ajax 方法里面可以写一个参数来传图片地址
+	lunbo2('youlove',5000,305);
+	lunbo_big('lunbo_box',5000);
+    loadingAllImg();
+}
+	// 全景配置
+	function loadingAllImg(){
+    var div = document.getElementById('thisphoto');
+    var PSV = new PhotoSphereViewer({
+        // 全景图的完整路径  方法里面可以写一个参数来传图片地址
+        panorama: 'images/photo/photo_1.jpg',
+
+        // 放全景图的元素
+        container: div,
+
+        // 可选，默认值为2000，全景图在time_anim毫秒后会自动进行动画。（设置为false禁用它）
+        time_anim: 2000,
+
+        // 可选值，默认为false。显示导航条。
+        navbar: true,
+
+        // 可选，默认值null，全景图容器的最终尺寸。例如：{width: 500, height: 300}。
+        size: {
+            width: '100%',
+            height: 496
+        }
+    });
+}

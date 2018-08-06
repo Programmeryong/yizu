@@ -6,24 +6,18 @@
 		<meta name="description" content="乙租网 - 写字楼、厂房、创意园区专业互联网服务平台，精品写字楼，广州楼盘全覆盖，真实房源，现场实勘，专业顾问2对1服务！预约看房，免费咨询请拨打 400-886-6391">
 		<title>物业公司园区</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" href="css/swiper-4.3.3.min.css" />
-		<link rel="stylesheet" href="css/yizu_property_zone.css" />
 		<link rel="stylesheet" href="css/yizu_collection_bottom.css" />
+		<link rel="stylesheet" href="css/yizu_property_zone.css" />
 		<link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
 		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
-		<script type="text/javascript" src="js/bootstrap.min.js" ></script>
-		<script type="text/javascript" src="js/swiper-4.3.3.min.js" ></script>
+		<script type="text/javascript" src="js/three.min.js"></script>
+		<script type="text/javascript" src="js/photo-sphere-viewer.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js" ></script>		
 		<script type="text/javascript" src="js/yizu_property_zone.js" ></script>
-		<script type="text/javascript" src="js/yizu_collection_bottom.js" ></script>
-		<!-- <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=GGUV8UDfxsNh5apcGscrvFErOIn2gAK4"></script> -->
-		<!-- <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script> -->
-		<style type="text/css">
-			body, html {width: 100%;height: 100%;margin:0;font-family:"微软雅黑";}
-			#allmap{width:100%;height:500px;}
-			p{margin-left:5px; font-size:14px;}
-		</style>
-		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=GGUV8UDfxsNh5apcGscrvFErOIn2gAK4"></script>
-		</head>
+		<script type="text/javascript" src="js/yizu_collection_bottom.js" ></script>				
+		<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=GGUV8UDfxsNh5apcGscrvFErOIn2gAK4"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+	</head>
 	
 	<body>
 		<main style="background: rgba(0,0,0,0.04);">
@@ -31,10 +25,23 @@
 				乙租>写字楼出租>三号线 天河客运站
 			</p>
 			<div class="top">
+				
 				<div class="mohu">
 					
 				</div>
+				<div class="tabs_li">
+					<ul class="nav nav-pills">
+						<li role="presentation" class="active" value="0">720°全景</li>
+						<li role="presentation" value="1">平面图</li>
+					</ul>
+				</div>
 				<div class="top_conten">
+					<!--全景-->
+					<div class="panorama">
+						<!-- <img src="./images/banner/banner_2.jpg"> -->
+						<div id="thisphoto"></div>
+					</div>
+					<!--全景结束-->
 					
 					<!--轮播-->
 					<div class="tabs_img" id="lunbo_box">
@@ -103,6 +110,7 @@
 						</div>
 					</div>
 					<!--轮播结束-->
+							
 					
 					<div class="top_info">
 						<div class="info_title" style="display: flex;">
@@ -112,12 +120,10 @@
 								<span class="share" style="margin-left: 2rem;">分享</span>
 							</div>
 						</div>
-						<p class="fsize16" style="margin-top: 2rem;">
-							<span style="color: #FF3333; font-size: 18px;">¥
-								<span class="mixMoney">62</span>
-								<span class="fsize36" style="color: #FF3333;">~</span>
-								<span class="maxMoney">180</span>
-							</span>/㎡/月
+						<p class="fsize16" style="margin-top: 2rem;"><span style="color: #FF3333; font-size: 18px;">¥
+							<span class="mixMoney">62</span>
+							<span class="fsize36" style="color: #FF3333;">~</span>
+							<span class="maxMoney">180</span></span>/㎡/月
 						</p>
 						
 						<div class="area-zu">
@@ -390,11 +396,11 @@
 			</div>
 		</main>
 	</body>
-	<script type="text/javascript" src="./js/list_map.js"></script>
+	
 	<script type="text/javascript">
-		window.onload = function (){
-		    lunbo2('youlove',5000,305);
-		    lunbo_big('lunbo_box',5000);
-		}
+		// window.onload = function (){
+		//     lunbo2('youlove',5000,305);
+		//     lunbo_big('lunbo_box',5000);
+		// }
 	</script>
 </html>
