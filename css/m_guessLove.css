@@ -1,0 +1,16 @@
+/*猜你喜欢*/
+.guessLove{width: 100%; height: auto; background: #fff; padding-top: 1px;}
+.guessLove>p:first-child{height: 3rem; line-height: 3rem;}
+.lunbo2 ul{padding: 0; list-style: none;}
+.lunbo2 ul li{padding-right: 1rem; width: 70%;}
+.lunbo2 ul li>a>div{width: 95%; /*background: #fff;*/ height: 100%; padding-bottom: 1rem;}
+.lunbo2 ul li>a>div p{padding-left: 1rem; padding-right: 1rem; margin-top: 5px;}
+.lunbo2 ul li>a>div #houseName{margin-bottom: 1px;}
+.lunbo2 ul li>a>div p:last-child{margin-top: 1px; height: 3rem; line-height: 3rem; text-align: center;
+								}
+								
+.lunbo2 img{width: 100%; height: 13rem;}
+.lunbo2{margin-left: 1rem; height: auto; margin-bottom: 2rem;}
+
+.swiper-button-next,.swiper-button-prev{display: none;}
+.next{height: 100%; width: 2rem; text-align: center;}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>推荐用户</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/m_public.css" />
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+		<script type="text/javascript" src="js/m_style.js" ></script>
+	</head>
+	
+	<style type="text/css">
+		/*返回（头部）*/
+		.back{width: 100%; height: 5rem; line-height: 5rem; padding-left: 1rem;
+			background: url(images/logo/max_logo.png) no-repeat center center;
+			background-size: 5rem 2rem;
+			border-bottom: 1px solid rgba(0,0,0,0.15);
+		}
+		
+		.step{width: 100%; height: auto; display: flex; justify-content: space-around; margin-top: 2rem;}
+		.step div{width: 20%; text-align: center;}
+		.step>div>img{width: 80%; min-height: 5rem; height: 60%;}
+		.step>div>p{margin-top: 0.8rem;}
+		
+		/*form表单*/
+		form{padding: 0 1rem; margin-top: 2rem;}
+		form>input{width: 100%; height: 4rem; margin-bottom: 1.5rem; border-radius: 3px; padding-left: 1rem;
+				   outline: none; border: 1px solid rgba(0,0,0,0.15);}
+		form>input[type='submit']{background: #00A2FF; font-size: 18px; color: #fff;}
+	</style>
+	
+	<body style="background: #fff;">
+		<!--返回（头部）-->
+		<div class="top">
+			<p class="back"><a href=""><img src="images/icon/back.png"/></a></p>
+		</div>
+		
+		<div class="step">
+			<div>
+				<img src="images/banner/banner_3.jpg"/>
+				<p class="black85">填写资料</p>
+			</div>
+			<div>
+				<img src="images/banner/banner_3.jpg"/>
+				<p class="black85">平台联系</p>
+			</div>
+			<div>
+				<img src="images/banner/banner_3.jpg"/>
+				<p class="black85">匹配需求</p>
+			</div>
+			<div>
+				<img src="images/banner/banner_3.jpg"/>
+				<p class="black85">获得佣金</p>
+			</div>
+		</div>
+		<p class="black45" style="margin-top: 2rem; text-align: center;">10分钟内客服联系您的客户，反馈信息给您</p>
+		
+		<form action="">
+			<input type="text" class="black85" placeholder="请输入推荐用户的姓名" />
+			<input type="tel" class="black85" placeholder="请输入推荐用户的手机号"/>
+			<input type="submit" value="推荐用户"/>
+		</form>
+		
+		<p style="text-align: center; position: fixed; bottom: 10px;  left: 12%;">您可以拨打
+			<span style="color: #0080FF;"> 400-886-6391 </span>直接推荐用户</p>
+	</body>
+	
+	<script type="text/javascript">
+		$(function(){
+			
+			$("input[type='text'],input[type='tel']").touchClick(function(){
+				$(this).css({"border":"1px solid #00A2FF"});
+			})
+			
+			$("input[type='text'],input[type='tel']").blur(function(){
+				$(this).css({"border":"1px solid rgba(0,0,0,0.15)"});
+			})
+			
+			
+			
+			$("form").submit(function(){
+				var tex = $("input[type='text']").val();
+				var tel = $("input[type='tel']").val();
+				var tel2 = /^[1][3,4,5,7,8][0-9]{9}$/; 
+				
+				if(tex==""){
+					$("input[type='text']").css({"border":"1px solid red"});
+					if(tel==""){
+						$("input[type='tel']").css({"border":"1px solid red"});
+						return false;
+					}else if(!tel2.test(tel)){
+						$("input[type='tel']").css({"border":"1px solid red"});
+						return false;
+					}else{
+						$("input[type='tel']").css({"border":"1px solid green"});
+					}
+					return false;
+				}else{
+					$("input[type='text']").css({"border":"1px solid green"});
+				}
+				
+				if(tel==""){
+					$("input[type='tel']").css({"border":"1px solid red"});
+					return false;
+				}else if(!tel2.test(tel)){
+					$("input[type='tel']").css({"border":"1px solid red"});
+					return false;
+				}else{
+					$("input[type='tel']").css({"border":"1px solid green"});
+				}
+			})
+			
+		})
+	</script>
+</html>

@@ -61,41 +61,48 @@ $(function(){
 	
 	
 	/*点击地铁线路*/
+	var ditie;
 	$(".top_tab2>li").click(function(){
-		var quyu = $(this).index();
+		ditie = $(this).index();
 		$(".top_tab2>li").removeClass("clickcolor");
-		if($(".ditie").eq(quyu).css("display")=="none") {
+		if($(".ditie").eq(ditie).css("display")=="none") {
 			
 			$(this).addClass("clickcolor")
-			$(".ditie").not(quyu).hide();
-			$(".ditie").eq(quyu).show();
+			$(".ditie").not(ditie).hide();
+			$(".ditie").eq(ditie).show();
 			
 		} else{
-			$(".ditie").eq(quyu).slideUp();
+			$(".ditie").eq(ditie).slideUp();
 			$(this).removeClass("clickcolor");
 		}
 		
 	})
 	
 	/*类型*/
+	var type;
 	$(".screen_type>li").click(function(){
-		var station = $(this).index();
-		$(".screen_type>li").not(station).removeClass("active");
+		type = $(this).index();
+		$(".screen_type>li").not(type).removeClass("active");
 		$(this).addClass("active");
 	})
+	$(".screen_type>li").eq(0).click();
 	
 	/*来源*/
+	var pj;
 	$(".screen_from>li").click(function(){
 		var station = $(this).index();
 		$(".screen_from>li").not(station).removeClass("clickcolor");
 		$(this).addClass("clickcolor");
+		pj = $(this).index();
 	})
+	$(".screen_from>li").eq(0).click();
 	
 	/*点击地铁站点*/
 	$(".ditie>li").click(function(){
 		var station = $(this).index();
 		$(".ditie>li").not(station).removeClass("clickcolor");
 		$(this).addClass("clickcolor");
+		console.log(type+","+pj+","+ditie);
 	})
 	
 	/*面积*/
