@@ -6,38 +6,38 @@ a:active{text-decoration: none;}
 ul{list-style: none; padding: 0;}
 img{width: 100%; height: 100%; cursor: pointer;}
 
-.url{width: 120rem;height: auto;margin: 1rem auto;}
-main{width: 120rem; height: auto; margin: 1rem auto;}
+.url{width: 100rem;height: auto;margin: 1rem auto;}
+main{width: 100rem; height: auto; margin: 1rem auto;}
 /*主体左部*/
-.main_left{float: left; width: 84.8rem; height: auto; background: #fff; padding: 0 6rem; text-align: center;}
+.main_left{float: left; width: 70.67%; height: auto; background: #fff; padding: 0 4rem; text-align: center;}
 .main_left ul{display: flex; justify-content: space-around;}
-.main_left ul li img{width: 2rem; height: 2rem;}
-.main_left p{text-align: left; margin-top: 3rem; line-height: 2.5rem;}
-.main_left>img{width: 100%; height: 41rem; margin-top: 2rem;}
-.main_left>p:last-child{margin-top: 4rem; margin-bottom: 2rem;}
+.main_left ul li img{width: 1.6rem; height: 1.6rem;}
+.main_left p{text-align: left; margin-top: 3rem; line-height: 2.5rem; font-size: 16px;}
+.main_left>img{width: 100%; height: 34rem; margin-top: 1.6rem;}
+.main_left>p:last-child{margin-top: 3.5rem; margin-bottom: 1.6rem;}
 .next{float: right;}
 
 
 
 /*主体右部*/
-.main_right_out{float: right; width: 33.2rem; height: auto; background: #fff; }
-.main_right{width: 28.4rem; height: auto; margin: 0 auto; }
-.main_right>h3{margin: 3rem auto;}
+.main_right_out{float: right; width: 27.6%; height: auto; background: #fff; }
+.main_right{width: 85%; height: auto; margin: 0 auto; }
+.main_right>h3{margin: 2.5rem auto;}
 .right_top{width: 100%; height: auto; padding-bottom: 0.5rem; border-bottom: 2px solid rgba(0,0,0,0.06);}
-.right_top ul li div{width: 28.4rem; height: 32rem;}
+.right_top ul li div{width: 100%; height: 26.67rem;}
 .right_top ul li div img{width: 100%; height: 100%;}
-.right_top ul li{margin-top: 2.4rem;}
+.right_top ul li{margin-top: 2rem;}
 .right_hot{width: 100%; height: auto; border-bottom: 2px solid rgba(0,0,0,0.06);}
-.photo_info{width: 28.4rem; height: 29rem; position: relative;}
+.photo_info{width: 100%; height: 24.5rem; position: relative; margin: 0;}
 .photo_info:hover{top:-0.2rem; border-bottom: 2px solid rgba(0,0,0,0.04); box-shadow: 0px 5px 5px rgba(0,0,0,0.1);}
-.right_hot ul li{margin-bottom: 2rem;}
-.photo{width: 100%; height: 22rem; }
-.info{width: 100%; height: 7rem; padding-left: 1rem; padding-top: 1rem;}
-.info>p{height: 3rem; line-height: 2rem; margin: 0;}
+.right_hot ul li{margin-bottom: 1.6rem;}
+.photo{width: 100%; height: 18.3rem; }
+.info{width: 100%; height: 5.8rem; padding-left: 0.8rem; padding-top: 0.8rem;}
+.info>p{height: 2.5rem; line-height: 1.6rem; margin: 0;}
 .info_house{padding-left: 20px; background: url(../images/icon/edifice.png) no-repeat; background-size: 18px 18px; background-origin: 10px 10px;}
-.info_money{margin-left: 5rem;}
+.info_money{margin-left: 4rem;}
 .informal{width: 100%; height: auto;}
-.informal>p{width: 27rem; padding-left: 1rem; height: 2rem; line-height: 2rem; position: relative; white-space: nowrap; 
+.informal>p{width: 22.5rem; padding-left: 1rem; height: 1.6rem; line-height: 1rem; position: relative; white-space: nowrap; 
 			text-overflow:ellipsis; overflow: hidden;}
 .informal>p>a{color: rgba(0,0,0,0.8);}
 .informal>p:hover{left: 0.5rem;}
@@ -54,7 +54,7 @@ main{width: 120rem; height: auto; margin: 1rem auto;}
 	.fontSize18{font-size: 18px!important;}
 	.fontSize24{font-size: 24px!important;}
 	.fontSize36{font-size: 36px!important;}
-	html{font-size: 10px!important;}
+	html{font-size: 12px;}
 	*{font-size: 14px; font-family:PingFangSC-Medium;}
 	
 }

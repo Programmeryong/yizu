@@ -55,8 +55,8 @@
  
  
  window.onload = function (){
-    lunbo('brand', 3000);
-    lunbo2('vision_box',3000);
+    lunbo('brand', 5000);
+    lunbo2('vision_box',3500);
     
 }
 
@@ -170,7 +170,7 @@ function lunbo(div_id, auto_time){
                     go();
                 }, interval);
             }else{
-                if(new_left == -5088){
+                if(new_left == -((img_num-1)*848)){
                     list.style.left = '-848px';
                     index = 0;
                 }else if(new_left == 0){
@@ -212,7 +212,7 @@ function lunbo(div_id, auto_time){
 	    let index = -2;
 	
 	    // 窗口、图片的宽度
-	    let width = 289;
+	    let width = 293;
 	
 	    let status = false;
 	
@@ -269,7 +269,7 @@ function lunbo(div_id, auto_time){
 	                    go();
 	                }, interval);
 	            }else{
-	                if(new_left == -1734){
+	                if(new_left == -((img_num-3)*293)){
 	                    list.style.left = '0px';
 	                    index = -2;
 	                }/*else if(new_left == 0){
