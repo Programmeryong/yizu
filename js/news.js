@@ -3,24 +3,28 @@
  	
  	/*鼠标移入，显示上下一页按钮*/
  	$("#brand").mouseover(function(){
- 		$(".pre,.next").css("display","block");
+ 		$(".shang,.xia").css("display","block");
  	})
  	/*鼠标移出，隐藏上下一页按钮*/
  	$("#brand").mouseout(function(){
- 		$(".pre,.next").css("display","none");
+ 		$(".shang,.xia").css("display","none");
  	})
  	
  	
  	
  	/*选卡（全部，写字楼，创意园，出租屋）*/
+ 	$(".news>ul").css("display","none");
 	function xuanka(){
 		$('.tabs_li>ul>li').on('click',function(){
+			var index = $(this).index();
 			$('.tabs_li>ul>li').removeClass("active");
 			$(this).addClass("active");
+			$(".news>ul").not(index).css("display","none");
+			$(".news>ul").eq(index).css("display","block");
 		});
 	}
 	xuanka();
- 	
+ 	$('.tabs_li>ul>li').eq(0).click();
  	
  	/*视觉盛宴*/
 	let vision_box = $(".vision ul li div");
@@ -29,7 +33,7 @@
  		let index = $(this).index();
  		/*console.log(index);*/
  		$(vision_box[index]).stop();
- 		$(vision_box[index]).animate({top:"-194px"},500)
+ 		$(vision_box[index]).animate({top:"-184px"},500)
  	},function(){
  		let index = $(this).index();
  		$(vision_box[index]).stop();
@@ -64,9 +68,9 @@
 function lunbo(div_id, auto_time){
 	// 把常用的对象或变量先进行定义
     let box = document.getElementById(div_id);
-    let pre_btn = box.getElementsByClassName('pre')[0];
+    let pre_btn = box.getElementsByClassName('shang')[0];
 
-    let next_btn = box.getElementsByClassName('next')[0];
+    let next_btn = box.getElementsByClassName('xia')[0];
     let list = box.getElementsByClassName('brand_box')[0];
     let dots = box.getElementsByClassName('brand_lists')[0].getElementsByTagName('li');
 

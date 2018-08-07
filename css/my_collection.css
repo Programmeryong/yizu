@@ -91,13 +91,13 @@ a:hover{text-decoration: none; color: rgba(0,0,0,1);}
 .findhouse{width: 100rem; min-height: 75rem; margin: 0 auto; background: #fff; margin-top: 3.5rem; margin-bottom: 2rem; padding: 0 2rem; position: relative;}
 .top_box{ height: 8.333rem; border-bottom: 2px solid rgba(0,0,0,0.04); padding: 10px 0; position: relative;}
 .top_box h3{margin-bottom: 0; font-weight: bold;}
-.entrust_once{ width: 13.333rem; height: 4rem; line-height: 4rem; background: #198CFF; color: #fff; text-align: center; position: absolute;
+.entrust_once{ width: 13.333rem; height: 3.5rem; line-height: 3.5rem; background: #198CFF; color: #fff; text-align: center; position: absolute;
 				right: 15px; top: 3rem; cursor: pointer;}
 .findhouse_list_title{width: 100%; height: 4.167rem; line-height: 4.167rem; padding: 0; border-bottom: 2px solid rgba(0,0,0,0.04);}
 .findhouse_list_title>p{font-size: 18px; padding: 0; margin: 0; font-weight: bold;}
 .findhouse_list_title>p:last-child{margin-left: 6.667rem;}
 .findhouse_list{width: 100%; height: auto; padding: 0;}
-.findhouse_list ul li>div{width: 100%; height: 4.167rem;  padding: 0; border-bottom: 2px solid rgba(0,0,0,0.04);}
+.findhouse_list ul li>div{width: 100%; height: 5.2rem;  padding: 0; border-bottom: 2px solid rgba(0,0,0,0.04);}
 .findhouse_list ul li>div>p{padding: 0; margin: 0;}
 .findhouse_list ul li>div .list_time{margin-top: 1rem;}
 .findhouse_list ul li>div .list_state{margin-left: 11.667rem;}
