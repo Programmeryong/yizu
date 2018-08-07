@@ -9,10 +9,12 @@
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="./css/index_style.css">
 	<link rel="stylesheet" type="text/css" href="./css/yizu_editme.css">
+	<link rel="stylesheet" type="text/css" href="./css/layui.css">
 	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="./js/index_style.js"></script>
 	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./js/yizu_editme.js"></script>
+	<script type="text/javascript" src="./js/layui.js"></script>
 </head>
 <body style="background:rgba(0,0,0,.04)">
 	<!-- yizu_index_1.html -->
@@ -44,45 +46,52 @@
 					<div class="col-md-12 edirt_box">
 						<form>
 							<div class="currentimg">
-								<img id="preview3" class="clickimg" src="./images/head/minhead.jpeg">
-								<input id="h" class="filetyle" type="file" name="" value="上 传" onchange="change('preview3','h')">
+								<div class="layui-upload">
+								  <button type="button" class="layui-btn" id="test1" style="display:none">上传图片</button>
+								  <div class="layui-upload-list">
+								    <img class="layui-upload-img" id="demo1" style="width:130px;height: 104px;" src="./images/head/minhead.jpeg">
+								    <p id="demoText"></p>
+								  </div>
+								</div> 
 							</div>
 							<div class="col-md-9 col-md-offset-3" style="padding-bottom: 1rem;"><input class="instyle" type="submit" name="" value="保 存"></div>
 						</form>
 					</div>
 				</div>
-				<!-- <div class="col-md-12 editme_box">
-					<span class="fsize18 lead editmetit_l">密码设置</span>
-					<span class="fsize14 editmetit_c">******</span>
-					<span class="fsize14 editmetit_r">展开</span>
-					<div class="col-md-12 edirt_box">
-						<form>
-							<ul class="edirt_nav">
-								<li>
-									<div class="col-md-2 text-right fsize14 edirt_text"><i>*</i>无密码</div>
-									<div class="col-md-10"><input class="newpow" type="password" name="name" placeholder="没有密码，可直接填写新密码并保存"></div>
-								</li>
-								<li>
-									<div class="col-md-2 text-right fsize14 edirt_text"><i>*</i>当前密码</div>
-									<div class="col-md-10"><input class="pow1" type="password" name="name" placeholder="旧密码"></div>
-								</li>
-								<li>
-									<div class="col-md-2 text-right fsize14 edirt_text"><i>*</i>新密码</div>
-									<div class="col-md-10"><input class="pow2" type="password" name="phone" placeholder="请输入新密码"></div>
-								</li>
-								<li>
-									<div class="col-md-2 text-right fsize14 edirt_text"><i>*</i>确认新密码</div>
-									<div class="col-md-10"><input class="pow3" type="password" name="phone" placeholder="确认密码"></div>
-								</li>
-							</ul>
-						<div class="col-md-9 col-md-offset-3" style="padding-bottom: 1rem;"><input class="instyle" type="submit" name="" value="保 存"></div>
-						</form>
-					</div>
-				</div> -->
 			</div>
 		</div>
 		<p style="margin-bottom: 12rem;"></p>
 	</main>
 	<!-- 底部 -->		
 </body>
+<script type="text/javascript">
+	layui.use('upload', function(){
+  var $ = layui.jquery
+  ,upload = layui.upload;
+  
+  //普通图片上传
+  var uploadInst = upload.render({
+    elem: '#test1'
+    ,url: '/upload/'
+    ,before: function(obj){
+      //预读本地文件示例，不支持ie8
+      obj.preview(function(index, file, result){
+        $('#demo1').attr('src', result); //图片链接（base64）
+      });
+    }
+    ,done: function(res){
+      //如果上传失败
+      if(res.code > 0){
+        return layer.msg('上传失败');
+      }
+      //上传成功
+    }
+    ,error: function(){
+      //演示失败状态，并实现重传
+      var demoText = $('#demoText');
+      demoText.html('<span style="color: #FF5722;">上传失败</span>');
+    }
+  });
+});
+</script>
 </html>

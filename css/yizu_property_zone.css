@@ -125,6 +125,7 @@ a:hover{text-decoration: none;}
 
 
 /*周边设施*/
+
 	#around{width: 62.5%; height: 56rem; background: #ffffff; margin: 0 auto; margin-bottom: 2rem;}
 	#around h1{width: 97.3%;; height: 8rem; line-height: 8rem; margin: 0 auto; border-bottom: 2px solid rgba(0,0,0,0.04);}
 	.map_around{width: 97.3%; height: 83%; margin: 1rem auto;  overflow: hidden;position: relative;}
