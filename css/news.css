@@ -7,31 +7,31 @@ img{width: 100%; height: 100%; cursor: pointer;}
 
 .top_img{width: 100%; height: 30rem; overflow: hidden;}
 .top_img img{width: 100%; height: 100%;}
-main{width: 120rem; height: auto; margin: 3rem auto;}
+main{width: 100rem; height: auto; margin: 3rem auto;}
 /*主体左部*/
-.main_left{float: left; width: 84.8rem; height: auto; }
+.main_left{float: left; width: 70.67rem; height: auto; }
 /*轮播*/
-.brand{width: 848px; height: 40rem; overflow: hidden;}
-.brand_box{width: 5936px; height: 40rem; position: relative;}
-.brand_box>div{float: left; width: 84.8rem; height: 40rem;}
-.brand_lists ul{position: relative; left: 45%; top: -2rem;}
-.brand_lists ul li{float: left; width: 2rem; height: 0.3rem; background: rgba(0,0,0,0.4); margin-left: 1rem; border-radius: 1px;}
+.brand{width: 100%; height: 42rem; overflow: hidden;}
+.brand_box{width: 6000px; height: 100%; position: relative;}
+.brand_box>div{float: left; width: 70.67rem; height: 100%;}
+.brand_lists ul{position: relative; left: 45%; top: -1.8rem;}
+.brand_lists ul li{float: left; width: 1.67rem; height: 0.2rem; background: rgba(0,0,0,0.4); margin-left: 1rem; border-radius: 1px;}
 .brand_lists .curr{background:rgba(255,255,255,1);}
-.pre,.next{width: 4rem; height: 6rem; background: rgba(0,0,0,0.3); position: relative; cursor: pointer; z-index: 9px; 
-			border-radius: 2px; display: none;}
+.pre,.next{width: 3.5rem; height: 5.5rem;  background: rgba(0,0,0,0.3); position: relative; cursor: pointer; z-index: 9px; 
+			border-radius: 2px; /*display: none;*/}
 .pre:hover,.next:hover{background: rgba(0,0,0,0.6);}
-.pre{left:0rem;top:-25rem;}
-.next{left: 81rem; top:-31rem;}
+.pre{left:0rem;top:-24rem;}
+.next{left: 67.5rem; top:-30rem;}
 /*视觉盛宴*/
-.vision_box{width: 84.8rem; height: 18.4rem; margin-top: 2rem; overflow: hidden;}
-.vision{width: 260.1rem; height: 18.4; position: relative;}
+.vision_box{width: 100%; height: 15.3rem; margin-top: 1.6rem; overflow: hidden;}
+.vision{width: 260rem; height: 15.3; position: relative;}
 
-.vision ul li{width: 27rem; height: 18.4rem; float: left; }
+.vision ul li{width: 22.5rem; height: 15.3rem; float: left; }
 .vision ul li:not(.biaozhi){margin-left: 1.9rem;}
 .vision ul li img{width: 100%; height: 100%;}
-.vision ul li div{width: 27rem; height: 18.4rem; color: #fff; padding-top: 4rem; text-align: center;
+.vision ul li div{width: 27rem; height: 15.3rem; color: #fff; padding-top: 3rem; text-align: center;
 				background: rgba(0,0,0,0.2); position: relative;}
-.vision ul li div>p{margin: 0 auto; width: 19rem; line-height: 2.5rem; padding-top: 2rem;overflow: hidden;
+.vision ul li div>p{margin: 0 auto; width: 14rem; line-height: 2rem; padding-top: 1.6rem;overflow: hidden;
 					display: -webkit-box; display: -moz-box;
 					-webkit-line-clamp: 2;
 					-webkit-box-orient: vertical;}
@@ -39,63 +39,63 @@ main{width: 120rem; height: auto; margin: 3rem auto;}
 
 .tabs_li{margin-top: 1rem;}
 .tabs_li ul{border-bottom: none!important;}
-.tabs_li ul li{width:8rem; height: 3rem; line-height: 3rem; margin-top: 0.6rem; text-align: center; font-size: 16px;
+.tabs_li ul li{width:6.67rem; height: 2.5rem; line-height: 2.5rem; margin-top: 0.5rem; text-align: center; font-size: 16px;
 				border-bottom: 2px solid rgba(0,0,0,0.08); margin-right: 5px;}
 .tabs_li ul li:hover{background: #198CFF; color: #ffffff; cursor: pointer;}
 .tabs_li>span{float: right; position: relative; top: -2rem; padding-right: 1rem;}
 
 /*新闻列表*/
-.news{width: 100%; height: auto; margin-top:3rem; background: #fff; padding-top: 0.5rem; padding-left: 1rem;}
+.news{width: 100%; height: auto; margin-top:2.5rem; background: #fff; padding-top: 0.5rem; padding-left: 1rem;}
 .news>ul{ border-bottom: 2px solid rgba(0,0,0,0.06);}
-.media{width: 83.8rem; height: 23.6rem; padding: 2.3rem 0; /*position: relative;*/}
-.news_img img{width: 34rem; height: 19rem;}
-.news_info{width: 100%; height: 19rem; padding-left: 1rem; padding-top: 1.5rem; }
-.new_type{display: -webkit-box; width: 34rem; height: 3rem; -webkit-line-clamp: 1; overflow: hidden; -webkit-box-orient: vertical;
+.media{width: 69.8rem; height: 19.67rem; padding: 2.3rem 0; /*position: relative;*/}
+.news_img img{width: 28.3rem; height: 14rem;}
+.news_info{width: 100%; height: 14rem; padding-left: 1rem; padding-top: 1.5rem; }
+.new_type{display: -webkit-box; width: 28.3rem; height: 2.5rem; -webkit-line-clamp: 1; overflow: hidden; -webkit-box-orient: vertical;
 			display: -moz-box; -moz-line-clamp : 1; -moz-box-orient: vertical;
 			}
 			
-.time{ float: right; position: relative; top: -2rem; right: 3rem;}
-.news_info>p{display: -webkit-box; width: 32rem; margin-top: 2rem; -webkit-line-clamp: 2;overflow: hidden; -webkit-box-orient: vertical;}
+.time{ float: right; position: relative; top: -1.6rem; right: 2.5rem;}
+.news_info>p{display: -webkit-box; width: 26.67rem; margin-top: 1.6rem; -webkit-line-clamp: 2;overflow: hidden; -webkit-box-orient: vertical;}
 .news>ul>li{transition: all 1s;}
 .news>ul>li:hover{ box-shadow: 0px 5px 10px rgba(0,0,0,0.1); cursor: pointer;}
 .news .media{transition: all 0.5s;}
 .news>ul>li:hover .media{transform: translate(15px);}
 .news>ul>li .new_type{transition: all 1s;}
 .news>ul>li:hover .new_type{color: orange;}
-.arrow_right{ margin-left: 39rem; border-left: 2px solid rgba(0,0,0,0.1); padding-left: 2rem; height: 3rem; line-height: 3rem;}
+.arrow_right{ margin-left: 32.5rem; border-left: 2px solid rgba(0,0,0,0.1); padding-left: 1.6rem; height: 2.5rem; line-height: 3rem;}
 .arrow_right img{width: 25px; height: 20px;}
 .arrow_right a:hover{background: rgba(0,0,0,0.08);}
 /*新闻列表结束*/
 
 /*分页*/
-.paging{width: 20rem; height: 4rem; margin: 2rem auto;}
-.paging li{float: left; margin-left: 1rem; height: 3.2rem; line-height: 3.2rem;}
+.paging{width: 16.67rem; height: 3.5rem; margin: 1.6rem auto;}
+.paging li{float: left; margin-left: 1rem; height: 2.8rem; line-height: 2.8rem;}
 .paging li:not(.pages){padding-left: 0.5rem;}
-.pages{width: 4.8rem; height: 2.2rem; border-radius: 5px; text-align: center; border: 1px solid rgba(0,0,0,0.1);}
+.pages{width: 4rem; height: 1.8rem; border-radius: 5px; text-align: center; border: 1px solid rgba(0,0,0,0.1);}
 
 
 
 
 
 /*主体右部*/
-.main_right_out{float: right; width: 33.2rem; height: auto; background: #fff; }
-.main_right{width: 28.4rem; height: auto; margin: 0 auto; }
+.main_right_out{float: right; width: 27.67rem; height: auto; background: #fff; }
+.main_right{width: 23.67rem; height: auto; margin: 0 auto; }
 .main_right>h3{margin: 3rem 0;}
 .right_top{width: 100%; height: auto; padding-bottom: 0.5rem; border-bottom: 2px solid rgba(0,0,0,0.06);}
-.right_top ul li div{width: 28.4rem; height: 32rem;}
+.right_top ul li div{width: 23.67rem; height: 26.67rem;}
 .right_top ul li div img{width: 100%; height: 100%;}
-.right_top ul li{margin-top: 2.4rem;}
+.right_top ul li{margin-top: 2rem;}
 .right_hot{width: 100%; height: auto; border-bottom: 2px solid rgba(0,0,0,0.06);}
-.photo_info{width: 28.4rem; height: 29rem; position: relative;}
+.photo_info{width: 23.67rem; height: 24.17rem; position: relative;}
 .photo_info:hover{top:-0.2rem; border-bottom: 2px solid rgba(0,0,0,0.04); box-shadow: 0px 5px 5px rgba(0,0,0,0.1);}
-.right_hot ul li{margin-bottom: 2rem;}
-.photo{width: 100%; height: 22rem; }
-.info{width: 100%; height: 7rem; padding-left: 1rem; padding-top: 1rem;}
-.info>p{height: 3rem; line-height: 2rem; margin: 0;}
+.right_hot ul li{margin-bottom: 1.6rem;}
+.photo{width: 100%; height: 18.3rem; }
+.info{width: 100%; height: 5.8rem; padding-left: 1rem; padding-top: 1rem;}
+.info>p{height: 3rem; line-height: 1.6rem; margin: 0;}
 .info_house{padding-left: 20px; background: url(../images/icon/edifice.png) no-repeat; background-size: 18px 18px; background-origin: 10px 10px;}
-.info_money{margin-left: 5rem;}
+.info_money{margin-left: 4.17rem;}
 .informal{width: 100%; height: auto;}
-.informal>p{width: 27rem; padding-left: 1rem; height: 2rem; line-height: 2rem; position: relative; white-space: nowrap; 
+.informal>p{width: 22.5rem; padding-left: 1rem; height: 1.6rem; line-height: 1.6rem; position: relative; white-space: nowrap; 
 			text-overflow:ellipsis; overflow: hidden;}
 .informal>p>a{color: rgba(0,0,0,0.8);}
 .informal>p:hover{left: 0.5rem;}
@@ -106,16 +106,16 @@ main{width: 120rem; height: auto; margin: 3rem auto;}
 
 /*pc端*/
 @media only screen and (min-width: 1025px) {
+	
+	html{font-size: 12px;}
+	*{font-size: 14px; font-family:PingFangSC-Medium;}
+	
 	.fontSize12{font-size: 12px!important;}
 	.fontSize14{font-size: 14px!important;}
 	.fontSize16{font-size: 16px!important;}
 	.fontSize18{font-size: 18px!important;}
 	.fontSize24{font-size: 24px!important;}
 	.fontSize36{font-size: 36px!important;}
-	html{font-size: 10px!important;}
-	*{font-size: 14px; font-family:PingFangSC-Medium;}
-	
-	
 	
 }
 
