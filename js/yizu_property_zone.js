@@ -253,6 +253,7 @@ $(function(){
 
 	//必须在服务器上才能看到效果！
 window.onload=function(){
+	
 	lunbo2('youlove',5000,305);
 	lunbo_big('lunbo_box',5000);
 	// 这里面写ajax 方法里面可以写一个参数来传图片地址
