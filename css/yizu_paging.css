@@ -1,5 +1,5 @@
 /*分页*/
-	.paging{height: 6rem; text-align: center;}
+	.paging{height: 5rem; text-align: center;}
 	.paging ul{margin: 1rem 0;}
 	.paging ul li a{width: 32px; height: 32px; line-height: 20px; text-align: center; margin-left: 8px; padding-left: 10px;
 					 border-radius: 5px; color: rgba(0,0,0,0.8);}	
