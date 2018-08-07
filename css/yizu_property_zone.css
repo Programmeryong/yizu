@@ -18,7 +18,9 @@ ul{text-decoration: none;list-style: none;margin: 0;padding: 0;}
 a{text-decoration: none;}
 a:hover{text-decoration: none;}
 /*p标签只显示两行，溢出隐藏并且以...结束*/
-.twohide{overflow: hidden;
+.twohide{overflow: hidden; 
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	display: -webkit-box; display: -moz-box;
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;}
