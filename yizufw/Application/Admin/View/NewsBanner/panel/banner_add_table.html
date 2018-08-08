@@ -1,0 +1,32 @@
+<div class="layui-form">
+    <table class="layui-table">
+        <thead>
+        <tr>
+            <th width="10%">ID</th>
+            <th width="15%">新闻类别</th>
+            <th width="20%">展示缩略图</th>
+            <th width="45%">文章标题</th>
+            <th width="10%">操作</th>
+        </thead>
+        <tbody id="x-img">
+        <volist name='news_list' id='vo'>
+            <tr>
+                <td>{$vo.id}</td>
+                <td>{$vo.title}</td>
+                <td>
+                    <img class="layui-upload-img table-img" id="preview" src='{$vo.img_url}'>
+                </td>
+                <td>{$vo.news_title}</td>
+                <td>
+                    <button class="layui-btn" id="save" data-id="{$vo.id}">
+                        选择
+                    </button>
+                </td>
+            </tr>
+        </volist>
+        </tbody>
+    </table>
+    <div class="page">
+        {$page}
+    </div>
+</div>

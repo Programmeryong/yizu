@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--<meta charset="utf-8">-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">-->
+    <!--<meta name="description" content="乙租网 - 写字楼、厂房、创意园区专业互联网服务平台，精品写字楼，广州楼盘全覆盖，真实房源，现场实勘，专业顾问2对1服务！预约看房，免费咨询请拨打 400-886-6391">-->
+    <!--<title>乙租网</title>-->
+    <link rel="shortcut icon" href="__PUBLIC__/Home/images/yz.ico">
+    <!--<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/bootstrap.min.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/index_style.css">-->
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/yizu_editme.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/js/css/layui.css">
+    <script type="text/javascript" src="__PUBLIC__/Home/js/jquery-3.3.1.min.js"></script>
+    <!--<script type="text/javascript" src="__PUBLIC__/Home/js/index_style.js"></script>-->
+    <!--<script type="text/javascript" src="__PUBLIC__/Home/js/bootstrap.min.js"></script>-->
+    <script type="text/javascript" src="__PUBLIC__/Home/js/yizu_editme.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Home/js/layui.js"></script>
+</head>
+<body style="background:rgba(0,0,0,.04)">
+<include file="Public/index_top1"/>
+<!-- yizu_index_1.html -->
+<!-- 中部 -->
+<main>
+    <p class="fsize24 lead text-center" style="border-bottom: 1px solid rgba(0,0,0,.04);padding-bottom: 2rem;">账号设置</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 editme_box">
+                <span class="fsize18 lead editmetit_l">个人资料</span>
+                <span class="fsize14 editmetit_c">{$user_info.nickname}</span>
+                <span class="fsize14 editmetit_r">展开</span>
+                <div class="col-md-12 edirt_box">
+                    <form class="save_name" action="" method="post">
+                        <ul class="edirt_nav">
+                            <li>
+                                <div class="col-md-2 text-right fsize14 edirt_text"><i>*</i>你的昵称</div>
+                                <div class="col-md-10">
+                                    <input class="yourname" type="text" id="nickname" value="{$user_info.nickname}">
+                                    &nbsp;&nbsp;&nbsp;<span style="color: red">只能输入2-4个汉字</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="col-md-9 col-md-offset-3" style="padding-bottom: 1rem;">
+                            <input class="instyle" type="button" id="save_name" value="保 存">
+                        </div>
+                        <input class="hidden" id="user_id" value="{$user_info.id}"/>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-12 editme_box">
+                <span class="fsize18 lead editmetit_l">个人头像</span>
+                <span class="editmetit_img"><img id="img_show" src="{$user_info.img_url}"></span>
+                <span class="fsize14 editmetit_r">展开</span>
+                <div class="col-md-12 edirt_box">
+                    <form class="save_img">
+                        <div class="currentimg">
+                            <div class="layui-upload">
+                                <button type="button" class="layui-btn" id="upload_img" style="display:none">上传图片</button>
+                                <div class="layui-upload-list">
+                                    <img class="layui-upload-img" id="img" style="width:130px;height: 104px;"
+                                         src="{$user_info.img_url}">
+                                    <p id="demoText"></p>
+                                    <div class="hidden" id="img_url"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-md-offset-3" style="padding-bottom: 1rem;">
+                            <input class="instyle" type="submit" id="save_img" value="保 存"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p style="margin-bottom: 12rem;"></p>
+</main>
+<!-- 底部 -->
+<include file="Public/index_bto"/>
+</body>
+<script type="text/javascript">
+    layui.use('upload', function () {
+        let $ = layui.jquery
+            , upload = layui.upload;
+
+        //普通图片上传
+        upload.render({
+            elem: '#img'
+            , url: '{:U(\'User/upload\')}'
+            , before: function (obj) {
+                //预读本地文件示例，不支持ie8
+                obj.preview(function (index, file, result) {
+                    $('#img').attr('src', result); //图片链接（base64）
+                });
+            }
+            , done: function (res) {
+                if (res.status == 0) {
+                    let demoText = $('#demoText');
+                    demoText.html('<span style="color: #FF5722;">上传失败，请重新上传1</span>');
+                } else if (res.status == 1) {
+                    //上传成功
+                    $('#img_url').html(res.src);
+                    let demoText = $('#demoText');
+                    demoText.html('<span style="color: green;">上传成功，请点击保存</span>');
+                }
+            }
+            , error: function () {
+                //演示失败状态，并实现重传
+                let demoText = $('#demoText');
+                demoText.html('<span style="color: #FF5722;">上传失败，请重新上传2</span>');
+            }
+        });
+    });
+    $("#save_name").click(function () {
+        let nickname = $("#nickname").val();
+        let user_id = $("#user_id").val();
+        $.post("{:U(\'User/updateNickname\')}", {
+            nickname: nickname,
+            id: user_id
+        }, function (res) {
+            if (res == 200) {
+                $('.editmetit_c').html(nickname);
+                $('.yourname').css('border','1px solid rgb(95, 204, 41)');
+                alert('更改成功')
+            } else {
+                alert('更改失败')
+            }
+        });
+        return false;
+    });
+
+    $("#save_img").click(function () {
+        let img_url = $("#img_url").html();
+        let user_id = $("#user_id").val();
+        $.post("{:U(\'User/updateImg\')}", {
+            img_url: img_url,
+            id: user_id
+        }, function (res) {
+            if (res == 200) {
+                $('#img_show').attr('src', img_url);
+                alert('更改成功')
+            } else {
+                alert('更改失败')
+            }
+        });
+        return false;
+    });
+</script>
+</html>

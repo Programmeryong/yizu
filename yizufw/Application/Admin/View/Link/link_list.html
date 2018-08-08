@@ -1,0 +1,186 @@
+﻿<include file='Public/header'/>
+<include file='Public/base_css'/>
+<body>
+<include file='Public/base_js'/>
+<div class="x-nav">
+      <span class="layui-breadcrumb">
+        <a><cite>链接管理</cite></a>
+      </span>
+    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right;padding-top: 6px"
+       href="javascript:location.replace(location.href);" title="刷新">
+        刷新</a>
+</div>
+<div class="x-body">
+    <blockquote class="layui-elem-quote">
+        <span class="x-red">*</span>最多显示7条友情链接，如果大于7条，将从ID大小降序显示
+    </blockquote>
+    <xblock>
+        <button class="layui-btn layui-btn-danger" onclick="delAll()">
+            <i class="layui-icon">&#xe640;</i>批量删除
+        </button>
+        <button class="layui-btn" onclick="x_admin_show('添加友情链接','{:U(\'link/addShow\')}',700,420)">
+            <i class="layui-icon">&#xe608;</i>添加
+        </button>
+        <span class="x-right" style="line-height:40px;">
+            &nbsp;&nbsp;&nbsp;共有数据：&nbsp;<span id="count">{$count}</span>&nbsp;条
+        </span>
+    </xblock>
+    <div id="panel" lay-filter="panel">
+        <div class="layui-form">
+            <table class="layui-table">
+                <thead>
+                <tr>
+                    <th width="20">
+                        <input type="checkbox" class="-checkbox -header" lay-skin="primary" lay-filter="allChoose">
+                    </th>
+                    <th width="30">ID</th>
+                    <th width="150">链接名称</th>
+                    <th width="200">链接URL</th>
+                    <th width="400">网站简介</th>
+                    <th width="80">添加人</th>
+                    <th width="150">添加时间</th>
+                    <th width="50">显示状态</th>
+                    <th width="50">操作</th>
+                </thead>
+                <tbody>
+                <volist name="link_list" id="vo">
+                    <td>
+                        <input type="checkbox" class="-checkbox" lay-skin="primary" lay-filter="itemChoose"
+                               data-id='{$vo.id}'>
+                    </td>
+                    <td>{$vo.id}</td>
+                    <td>{$vo.link_name}</td>
+                    <td>{$vo.link_url}</td>
+                    <td>{$vo.link_desc}</td>
+                    <td>{$vo.username}</td>
+                    <td>{$vo.add_time|date="Y-m-d H:i:s",###}</td>
+                    <td class="td-status">
+                        <eq name="vo.status" value="1">
+                        <span class="layui-badge layui-bg-green">已显示</span>
+                        <else/>
+                        <span class="layui-badge layui-bg-gray">已隐藏</span>
+                        </eq>
+                    </td>
+                    <td class="td-manage">
+                        <eq name="vo.status" value="1">
+                        <a onclick="member_stop(this,'{$vo.id}','{$vo.status}')"
+                           href="javascript:void(0);" title="隐藏">
+                            <i class="layui-icon">&#xe6af;</i>
+                        </a>
+                        <else/>
+                        <a onclick="member_stop(this,'{$vo.id}','{$vo.status}')"
+                           href="javascript:void(0);" title="显示">
+                            <i class="layui-icon">&#xe69c;</i>
+                        </a>
+                        </eq>
+                        <a title="修改" onclick="x_admin_show('修改','{:U(\'Link/updateShow\')}'+'?id='+{$vo.id},700,420)"
+                           href="javascript:void(0);">
+                            <i class="layui-icon">&#xe642;</i>
+                        </a>
+                        <a title="删除" onclick="member_del(this,'{$vo.id}')"
+                           href="javascript:void(0);">
+                            <i class="layui-icon">&#xe640;</i>
+                        </a>
+                    </td>
+                    </tr>
+                </volist>
+                </tbody>
+            </table>
+            <div class="page">
+                {$page}
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    layui.use(['layer', 'form', 'laydate'], function () {
+        let layer = layui.layer,
+            form = layui.form;
+        form.render();
+    });
+
+
+    /*隐藏*/
+    function member_stop(obj, id, status) {
+        layer.confirm('确认要更改状态吗？', function () {
+            if ($(obj).attr('title') == '显示') {
+                //发异步把用户状态进行更改
+                $.post("{:U('Link/setStatus')}", {
+                    id: id,
+                    status: status
+                }, function (res) {
+                    if (res == 200) {
+                        $(obj).attr('title', '隐藏');
+                        $(obj).find('i').html('&#xe6af;');
+
+                        $(obj).parents("tr").find(".td-status").find('span').removeClass('layui-bg-gray').addClass('layui-bg-green').html('已显示');
+                        layer.msg('已显示!', {icon: 1, time: 3000});
+                    } else {
+                        layer.msg('显示失败!', {icon: 2, time: 1000});
+                    }
+                });
+            } else {
+                //发异步把用户状态进行更改
+                $.post("{:U('Link/setStatus')}", {
+                    id: id,
+                    status: status
+                }, function (res) {
+                    if (res == 200) {
+                        $(obj).attr('title', '显示');
+                        $(obj).find('i').html('&#xe69c;');
+
+                        $(obj).parents("tr").find(".td-status").find('span').removeClass('layui-bg-green').addClass('layui-bg-gray').html('已隐藏');
+                        layer.msg('已隐藏!', {icon: 1, time: 3000});
+                    } else {
+                        layer.msg('隐藏失败!', {icon: 2, time: 1000});
+                    }
+                });
+            }
+            return false;
+        });
+    }
+
+    /*删除*/
+    function member_del(obj, id) {
+        layer.confirm('确认要删除吗？', function () {
+            //发异步删除数据
+            $.post("{:U('Link/delete')}", {
+                id: id
+            }, function (res) {
+                if (res == 200) {
+                    $(obj).parents("tr").remove();
+                    layer.msg('已删除!', {icon: 1, time: 1000});
+                } else {
+                    layer.msg('删除失败!', {icon: 2, time: 1000});
+                }
+            });
+            return false;
+        });
+    }
+
+
+    function delAll() {
+        let data = tableCheck.getData();
+        if (data != '') {
+            layer.confirm('确认要删除吗？', function () {
+                //捉到所有被选中的，发异步进行删除
+                $.post("{:U('Link/delAll')}", {
+                    data: data
+                }, function (res) {
+                    if (res == 200) {
+                        layer.msg('删除成功', {icon: 1});
+                        $(".layui-form-checked").not('.header').parents('tr').remove();
+                    } else {
+                        layer.msg('删除失败', {icon: 2});
+                    }
+                });
+            });
+        } else {
+            layer.msg('请勾选需要删除的数据', function () {
+            });
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<include file='public/header'/>
+<include file='public/base_css'/>
+<body>
+<include file='public/base_js'/>
+<div class="x-nav">
+      <span class="layui-breadcrumb">
+        <a><cite>用户消息管理</cite></a>
+      </span>
+    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right;padding-top: 6px"
+       href="javascript:location.replace(location.href);" title="刷新">
+        刷新</a>
+</div>
+<div class="x-body">
+    <blockquote class="layui-elem-quote">
+        <span class="x-red">*</span>
+        用户10000000000为全部人的消息
+    </blockquote>
+    <xblock>
+        <button class="layui-btn layui-btn-danger" onclick="delAll()">
+            <i class="layui-icon">&#xe640;</i>批量删除
+        </button>
+        <button class="layui-btn" onclick="x_admin_show('增加轮播图','{:U(\'Banner/addShow\')}', 800, 530)">
+            <i class="layui-icon">&#xe608;</i>发布消息
+        </button>
+        <span class="x-right" style="line-height:40px;">
+            &nbsp;&nbsp;&nbsp;共有数据：&nbsp;<span id="count">{$count}</span>&nbsp;条
+        </span>
+    </xblock>
+    <div id="panel" lay-filter="panel">
+        <div class="layui-form">
+            <table class="layui-table">
+                <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox" class="-checkbox -header" lay-skin="primary" lay-filter="allChoose">
+                    </th>
+                    <th>ID</th>
+                    <th>用户</th>
+                    <th>消息标题</th>
+                    <th>消息内容</th>
+                    <th>发布时间</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </thead>
+                <tbody id="x-img">
+                <volist name="userNews_list" id="vo">
+                    <tr>
+                        <td>
+                            <input type="checkbox" class="-checkbox" lay-skin="primary" lay-filter="itemChoose"
+                                   data-id='{$vo.id}'>
+                        </td>
+                        <td>{$vo.id}</td>
+                        <td>{$vo.phone}</td>
+                        <td>{$vo.title}</td>
+                        <td>{$vo.content}</td>
+                        <td>{$vo.time|date='Y-m-d H:i',###}</td>
+                        <td class="td-status">
+                            <eq name="vo.status" value="1">
+                                <span class="layui-badge layui-bg-green">已读</span>
+                            <else/>
+                                <span class="layui-badge layui-bg-gray">未读</span>
+                            </eq>
+                        </td>
+                        <td class="td-manage">
+                            <a title="删除"
+                               onclick="member_del(this,'{$vo.id}')"
+                               href="javascript:void(0);">
+                                <i class="layui-icon">&#xe640;</i>
+                            </a>
+                        </td>
+                    </tr>
+                </volist>
+                </tbody>
+            </table>
+            <div class="page">
+                {$page}
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    layui.use(['layer', 'form'], function () {
+        let layer = layui.layer,
+            form = layui.form;
+        form.render();
+        layer.ready(function () { //为了layer.ext.js加载完毕再执行
+            layer.photos({
+                photos: '#x-img'
+                , shift: 4 //0-6的选择，指定弹出图片动画类型，默认随机
+            });
+        });
+
+        //无刷新分页
+        $('body').on('click', '.page a', function () {
+            let url = $(this).attr('href');
+            if (typeof(url) != "undefined") {
+                $.get(url, function (data) {
+                    $('#panel').html(data);
+                    form.render();
+                    layer.ready(function () { //为了layer.ext.js加载完毕再执行
+                        layer.photos({
+                            photos: '#x-img'
+                            , shift: 4 //0-6的选择，指定弹出图片动画类型，默认随机
+                        });
+                    });
+                });
+            } else {
+                layer.ready(function () { //为了layer.ext.js加载完毕再执行
+                    layer.photos({
+                        photos: '#x-img'
+                        , shift: 4 //0-6的选择，指定弹出图片动画类型，默认随机
+                    });
+                });
+            }
+            return false;
+        });
+    });
+
+    /*隐藏*/
+    function member_stop(obj, id, status) {
+        layer.confirm('确认要更改状态吗？', function () {
+            if ($(obj).attr('title') == '显示') {
+                //发异步把用户状态进行更改
+                $.post("{:U('Banner/setStatus')}", {
+                    id: id,
+                    status: status
+                }, function (res) {
+                    if (res == 200) {
+                        $(obj).attr('title', '隐藏');
+                        $(obj).find('i').html('&#xe6af;');
+                        $(obj).parents("tr").find(".td-status").find('span').removeClass('layui-bg-gray').addClass('layui-bg-green').html('已显示');
+                        layer.msg('已显示', {icon: 1, time: 1500});
+                    } else if (res == 0) {
+                        layer.msg('显示失败', {icon: 2, time: 1500});
+                    }
+                });
+            } else {
+                //发异步把用户状态进行更改
+                $.post("{:U('Banner/setStatus')}", {
+                    id: id,
+                    status: status
+                }, function (res) {
+                    if (res == 200) {
+                        $(obj).attr('title', '显示');
+                        $(obj).find('i').html('&#xe69c;');
+                        $(obj).parents("tr").find(".td-status").find('span').removeClass('layui-bg-green').addClass('layui-bg-gray').html('已隐藏');
+                        layer.msg('已隐藏', {icon: 1, time: 1500});
+                    } else if (res == 0) {
+                        layer.msg('隐藏失败', {icon: 2, time: 1500});
+                    }
+                });
+            }
+            return false;
+        });
+    }
+
+    /*删除*/
+    function member_del(obj, id) {
+        layer.confirm('确认要删除吗？', function () {
+            //发异步删除数据
+            $.post("{:U('Banner/delete')}", {
+                id: id
+            }, function (res) {
+                if (res == 200) {
+                    $(obj).parents("tr").remove();
+                    layer.msg('删除成功', {icon: 1, time: 1500});
+                } else {
+                    layer.msg('删除失败', {icon: 2, time: 1500});
+                }
+            });
+            return false;
+        });
+    }
+
+    function delAll() {
+        let data = tableCheck.getData();
+        if (data != '') {
+            layer.confirm('确认要删除吗？', function () {
+                //捉到所有被选中的，发异步进行删除
+                $.post("{:U('Banner/delAll')}", {
+                    data: data
+                }, function (res) {
+                    // alert(res);
+                    if (res == 200) {
+                        layer.msg('删除成功', {icon: 1, time: 1500});
+                        $(".layui-form-checked").not('.header').parents('tr').remove();
+                    } else {
+                        layer.msg('删除失败', {icon: 2, time: 1500});
+                    }
+                });
+                return false;
+            });
+        } else {
+            layer.msg('请勾选需要删除的数据');
+        }
+    }
+</script>
+</body>
+</html>
