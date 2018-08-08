@@ -1,0 +1,57 @@
+/*返回（头部）*/
+.back{
+	width: 100%; 
+	height: 5rem; 
+	border-bottom: 1px solid rgba(0,0,0,.15); 
+	line-height: 5rem; 
+	padding-left: 1rem;
+    background: url(../images/logo/max_logo.png) no-repeat center center;
+    background-size: 5rem 2rem;
+}
+p{
+	margin: 0;
+}
+hr{
+	margin:0 0 5px 0;
+}
+.loginbox{
+	padding: 0 10px;
+}
+.loginbox .phone{
+	width: 100%;
+	padding: 5px 0 5px 5px;
+	border:none;
+}
+.loginbox .yzm{
+	width: 74%;
+	padding: 5px 0 5px 5px;
+	border: none;
+}
+.loginbox .yzmbtn{
+	display:inline-block;
+	border: none;
+	width: 24%;
+	text-align: center;
+	background: #fff;
+	padding: 5px 0 5px 0;
+}
+.loginbox input[type='checkbox'],.thisform{
+	position: relative; 
+	top: -2999rem;
+}
+.checkb{
+	padding-left: 25px;
+	background: url(../images/icon/checkbox-o.png) no-repeat;
+	background-size: 20px 20px;
+	background-position: 5px 50%;
+}	
+.thansubmit{
+	display: inline-block;
+	width: 90%;
+	height: 45px;
+	margin: 0 5%;
+	color: #fff;
+	text-align: center;
+	line-height: 45px;
+	background: #198cff;
+}

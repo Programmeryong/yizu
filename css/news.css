@@ -36,7 +36,7 @@ main{width: 100rem; height: auto; margin: 3rem auto;}
 .brand_lists ul li{float: left; width: 1.67rem; height: 0.2rem; background: rgba(0,0,0,0.4); margin-left: 1rem; border-radius: 1px;}
 .brand_lists .curr{background:rgba(255,255,255,1);}
 .shang,.xia{width: 3.5rem; height: 5.5rem;  background: rgba(0,0,0,0.3); position: relative; cursor: pointer; z-index: 9px; 
-			border-radius: 2px; /*display: none;*/}
+			border-radius: 2px; display: none;}
 .shang:hover,.xia:hover{background: rgba(0,0,0,0.6);}
 .shang{left:0rem;top:-24rem;}
 .xia{left: 67.5rem; top:-30rem;}
@@ -45,7 +45,7 @@ main{width: 100rem; height: auto; margin: 3rem auto;}
 .vision{width: 260rem; height: 15.3; position: relative;}
 
 .vision ul li{width: 22.5rem; height: 15.3rem; float: left; }
-.vision ul li:not(.biaozhi){margin-left: 1.9rem;}
+.vision ul li:not(.biaozhi){margin-left: 1.6rem;}
 .vision ul li img{width: 100%; height: 100%;}
 .vision ul li div{width: 100%; height: 100%; color: #fff; padding-top: 3rem; text-align: center;
 				background: rgba(0,0,0,0.2); position: relative;}
@@ -104,14 +104,15 @@ main{width: 100rem; height: auto; margin: 3rem auto;}
 .right_top ul li div img{width: 100%; height: 100%;}
 .right_top ul li{margin-top: 2rem;}
 .right_hot{width: 100%; height: auto; border-bottom: 2px solid rgba(0,0,0,0.06);}
-.photo_info{width: 23.67rem; height: 24.17rem; position: relative;}
+.photo_info{width: 23.67rem; height: 24.1rem; position: relative;}
 .photo_info:hover{top:-0.2rem; border-bottom: 2px solid rgba(0,0,0,0.04); box-shadow: 0px 5px 5px rgba(0,0,0,0.1);}
-.right_hot ul li{margin-bottom: 1.6rem;}
+.right_hot ul li{margin-bottom: 1.3rem;}
 .photo{width: 100%; height: 18.3rem; }
-.info{width: 100%; height: 5.8rem; padding-left: 1rem; padding-top: 1rem;}
-.info>p{height: 3rem; line-height: 1.6rem; margin: 0;}
-.info_house{padding-left: 20px; background: url(../images/icon/edifice.png) no-repeat; background-size: 18px 18px; background-origin: 10px 10px;}
-.info_money{margin-left: 4.17rem;}
+.info{width: 100%; height: 5.8rem; padding-left: 0.5rem; padding-top: 1rem; padding-right: 0.5rem;}
+.info>p{height: 2.2rem; line-height: 1.6rem; margin: 0;}
+.info>p:last-child{display: flex; justify-content: space-between;}
+.info_house{padding-left: 20px; background: url(../images/icon/edifice.png) no-repeat; background-size: 18px 18px; 
+			background-origin: 10px 10px; margin-top: 0.3rem;}
 .informal{width: 100%; height: auto;}
 .informal>p{width: 22.5rem; padding-left: 1rem; height: 1.6rem; line-height: 1.6rem; position: relative; white-space: nowrap; 
 			text-overflow:ellipsis; overflow: hidden;}

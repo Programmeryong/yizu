@@ -27,21 +27,43 @@ $(function(){
     $(".login .closed").click(function(){$(".login").hide(); $(".temp").css({"visibility":"hidden"});})
 
     /*优惠券*/
-    window.onload = function(){
-        $(".temp").css({"visibility":"visible"});
-        $(".coupon").show();
-        
-        let ifshow = $(".coupon").css("display");
-        if (ifshow=="block") {
-            $(".temp").click(function(){$(".temp").css({"visibility":"hidden"}); $(".coupon").css({"display":"none"});})
-        }
+    $(".temp").css({"visibility":"visible"});
+    $(".coupon").show();
+    
+    let ifshow = $(".coupon").css("display");
+    if (ifshow=="block") {
+        $(".temp").click(function(){$(".temp").css({"visibility":"hidden"}); $(".coupon").css({"display":"none"});})
     }
+    
     $(".coupon_img img").click(function(){$(".rightclick1").click(); $(".coupon").hide();})
     $(".close_coupon i").click(function(){$(".temp").css({"visibility":"hidden"}); $(".coupon").hide();})
     /*优惠券结束*/
 
 
 /*登录表单验证*/
+
+	/*获取验证码 60s后重试*/
+	var ding = null;
+	var ifclick = true;
+	$("input[type='button']").click(function(){
+		var time = 60;
+		if (ifclick==true) {
+			ding = setInterval(function(){
+				ifclick = false;
+		        $("input[type='button']").val(time+"s 重试");
+		        //$("input[type='button']").disable=true;
+		        //disabled=ture;
+		        time--;
+		        if(time==-2){
+			    	ifclick = true;
+			    	clearInterval(ding);
+			    	$("input[type='button']").val("获取验证码");
+			    }
+		    },1000);
+		} 
+	})
+	/*获取验证码 60s后重试结束*/
+	
     
     $(".login input[type='tel']").click(function(){$(this).css({"border":"none"});})
     $(".login input[type='text']").click(function(){$(this).css({"border":"none"});})
@@ -129,21 +151,5 @@ $(function(){
         $('.upbtn2').css({'background':'#999'}); 
         $('.uptoptext2').css({'color':'#999'});
     })
-
-    // function baidumap(l,r,thismap){
-    //     // 百度地图API功能
-    //     // l:经度 r:维度 this:传入要搜索的内容
-    //     var map = new BMap.Map("allmap");            // 创建Map实例
-    //     var mPoint = new BMap.Point(l, r);  
-    //     map.enableScrollWheelZoom();
-    //     map.centerAndZoom(mPoint,18);
-    //     var marker = new BMap.Marker(mPoint); 
-    //     marker.setAnimation(BMAP_ANIMATION_BOUNCE);
-    //     var circle = new BMap.Circle(mPoint,1000,{fillColor:"blue", strokeWeight: 1 ,fillOpacity: 0.3, strokeOpacity: 0.3});
-    //     map.addOverlay(circle);
-    //     var local =  new BMap.LocalSearch(map, {renderOptions: {map: map, panel: "r-result", autoViewport: true}});  
-    //     local.searchNearby(thismap,mPoint,1000);
-    // }
-    // baidumap(113.295105, 23.243797,'餐馆')
 })
  

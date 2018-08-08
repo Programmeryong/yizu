@@ -9,3 +9,7 @@
 .news_box p:first-child{height: 30px; line-height: 30px; color: rgba(0,0,0,0.85);}
 .new_title{padding-left: 30px; background: url(../images/icon/disport.png) 0px center no-repeat; background-size: 20px 20px;}
 .new_time{float: right; color: rgba(0,0,0,0.5);}
+
+/*为空*/
+.myNews_none{background: #fff; width: 62.5%; height: 98rem; margin: 0 auto; text-align: center; padding-top: 15%; display: none;}
+.myNews_none img{width: 200px; height: 186px; margin: 0;}

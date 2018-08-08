@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="css/my_collection.css" />
 		<link rel="stylesheet" href="css/yizu_paging.css" />
 		<link rel="stylesheet" href="css/yizu_collection_bottom.css" />
+		<link rel="stylesheet" href="css/index_style.css" />
 		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
 		<script type="text/javascript" src="js/bootstrap.min.js" ></script>
 		<title></title>
@@ -15,6 +16,81 @@
 	
 	
 	<body>
+		
+		<!--用于弹框后一层阴影铺满浏览器-->
+	<div class="temp"></div>
+
+	<!-- 登录 -->
+	<div class="login">
+		<div class="title">
+			<p class="fsize24 clearfix">快捷登录 <span class="closed"></span></p>
+			<p class="fsize14">登录享受更多优惠服务</p>
+		</div>
+		<form action="" method="post" class="clearfix">
+			<input type="tel" class="phone" name="" id="" value="" placeholder="手机号码"/>
+			<input type="text" class="yzm" name="" id="" value="" placeholder="验证码"/>
+			<input type="button" name="" id="" value="获取验证码" />
+			<p class="clearfix"><input type="checkbox" name="" id="" value=""/><span class="checkb fsize14">7天内免登录</span></p>
+			<input type="submit" value="确    定"/>
+		</form>
+	</div>
+
+	<!-- 顶部导航栏开始 -->
+<nav class="navbar navbar-default top_bg mar">
+	  <div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+
+	    </div>
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul id="top_text" class="nav navbar-nav">
+	        <li><a href="#">首页</a></li>
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">出租 <span class="caret"></span></a>
+	          <ul id="nav_mintext" class="dropdown-menu nav_mintext">
+	            <li><a href="#">写字楼出租</a></li>
+	            <li><a href="#">创意园出租</a></li>
+	            <li><a href="#">厂房出租</a></li>
+	         </ul></li>
+	        <!-- <li><a href="#">地图找房</a></li> -->
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">乙租服务 <span class="caret"></span></a>
+	          <ul id="nav_mintext" class="dropdown-menu">
+	            <li><a href="#">装修服务</a></li>
+	            <li><a href="#">工商服务</a></li>
+	            <li><a href="#">财税</a></li>
+	            <li><a href="#">办公设备</a></li>
+	            <li><a href="#">品牌推广</a></li>
+	            <li><a href="#">活动策划</a></li>
+	            <li><a href="#">办公协同系统</a></li>
+	            <li><a href="#">搬家服务</a></li>
+	          </ul></li>
+	        <li><a href="#">新闻资讯</a></li>
+	        <li><a href="#">关于乙租</a></li>
+	      </ul>
+	      <ul id="nav_right" class="nav navbar-nav navbar-right">
+	      	<li><a href="#">登录</a></li>
+	      	<li><span>｜</span></li>
+	      	<li><a href="#">注册</a></li>
+	      	<li><a href="#">消息</a></li>
+	      	<li><a href="#" class="nav_rightbtn">发布房源</a></li>
+	      </ul>
+	    </div>
+	  </div>
+</nav>
+	<header class="editmeimg">
+		<img src="./images/banner/banner_2.jpg">
+	</header>
+		
+		
+		
 		<!--用于弹框后一层阴影铺满浏览器-->
 		<div class="temp"></div>
 				<!--头部-->
@@ -105,6 +181,12 @@
 				<!--上传房源-->
 				<h3>共上传<span class="fontSize24">23</span>个房源</h3>
 				<div class="upload">
+					<!--为空-->
+					<div class="upload_none">
+						<img src="images/banner/banner_3.jpg" width="200px" height="186px"/>
+						<p class="black45 fontSize18" style="margin-top: 1rem;">您还没有投放房源～</p>
+					</div>
+					
 					<ul class="row">
 						<li class="col-md-3">
 							<a href="#">
@@ -440,6 +522,15 @@
 			<!--我的收藏-->
 			<div class="center collection" id="indexs1">
 				<p>共收藏<span>23</span>个房源</p>
+				
+				<!--为空-->
+				<div class="collection_none">
+					<img src="images/banner/banner_3.jpg" width="200px" height="186px"/>
+					<p class="black45 fontSize18" style="margin-top: 1rem; margin-bottom: 1px;">您还没有收藏房源～</p>
+					<p class="black45 fontSize14" style="margin-bottom: 2rem;">还没有收藏的房源？何不去看看？</p>
+					<a href=""><span>去找房列表</span></a>
+				</div>
+				
 				<ul class="row">
 					<li class="col-md-3">
 						<a href="#">
@@ -773,24 +864,40 @@
 			
 			<!--我的优惠券-->
 			<div class="coupon1" id="indexs2">
-				<p style="height: 4rem; line-height: 4rem; background: #F5F7FA;">
-					共有<span>3</span>张优惠券
-				</p>
-				<img src="images/banner/banner_3.jpg"/>
-				<img src="images/banner/banner_1 - 副本.png"/>
-				
-				<div class="rule">
-					<p class="fontSize18 black85" style="text-align: center;">优惠规则</p>
-					<p class="">1优惠规则</p>
-					<p class="">2优惠规则</p>
-					<p class="">3优惠规则</p>
-					<p class="">4优惠规则</p>
+				<div>
+					<p style="height: 4rem; line-height: 4rem; background: #F5F7FA;">
+						共有<span>3</span>张优惠券
+					</p>
+					<img src="images/banner/banner_3.jpg"/>
+					<img src="images/banner/banner_1 - 副本.png"/>
+					
+					<div class="rule">
+						<p class="fontSize18 black85" style="text-align: center;">优惠规则</p>
+						<p class="">1优惠规则</p>
+						<p class="">2优惠规则</p>
+						<p class="">3优惠规则</p>
+						<p class="">4优惠规则</p>
+					</div>
 				</div>
+				
+				<div class="coupon_none">
+					<img src="images/banner/banner_3.jpg" width="200px" height="186px"/>
+					<p class="black45 fontSize18" style="margin-top: 1rem;">您还没有优惠券～</p>
+				</div>
+				
 			</div>
 			<!--我的优惠券结束-->
 			
 			<!--委托找房-->
 			<div class="findhouse" id="indexs3">
+				<!--为空-->
+				<div class="findhouse_none">
+					<img src="images/banner/banner_3.jpg" width="200px" height="186px"/>
+					<p class="black45 fontSize18" style="margin-top: 1rem; margin-bottom: 1px;">您还没有找房记录～</p>
+					<p class="black45 fontSize14" style="margin-bottom: 2rem;">找房麻烦？平台经纪人免费帮您找房</p>
+					<a href=""><span>委托找房</span></a>
+				</div>
+				
 				<div class="top_box col-md-12">
 					<h3>填写租赁要求</h3>
 					<p>10分钟内客服联系您</p>
@@ -847,6 +954,13 @@
 			
 			<!--看房记录-->
 			<div class="house_record" id="indexs4">
+				
+				<!--为空-->
+				<div class="lookHouse_none">
+					<img src="images/banner/banner_3.jpg"/>
+					<p class="black45 fontSize18" style="margin-top: 1rem; margin-bottom: 1px;">您暂时还没有预约记录</p>
+				</div>
+				
 				<!--房源列表-->
 				<div class="house_listbox">
 					<!--菜单栏-->
@@ -873,66 +987,45 @@
 										</div>
 										<div class="media-body">
 											
-											<div class="clearfix">
-											    <h3 class="media-heading">蝙蝠侠创意园</h3>
-											    <span class="allowance"><a href="#">平台租金补贴</a></span>
+											<div class="title_house">
+												<h3 class="media-heading block85">蝙蝠侠创意园</h3>
 											</div>
 											
-										    <p><span class="where" title="地址：广州市天河区体育西路57号红盾大厦 ">
-															地址：广州市天河区体育西路57号红盾大厦 </span><br/>
+										    <p>
+										    	<span class="where">
+													区域：<span class="qu">天河</span> - <span class="">体育西路</span>
+										    	</span>
 											</p>
 											
-										    <p><span class="area">面积：285 ㎡</span><span class="floor">楼层：底区楼层</span></p>	
 										    <p><span class="from">来自：平台房源</span></p>
-										    <p class="clearfix metro_house_money">
-										    	<span class="metro cursor fontSize14">地铁十分钟</span>
-												<span class="less_house cursor fontSize14">稀缺房源</span>
-										    	<span>
-										    		<span style="color: #FF3333;">￥<span style="font-size: 24px;">49</span></span>/㎡
-										    	</span>
-										    </p>
-										</div>
-										<div class="media-right">
-											<div class="state">
-												<a href="#"><span>确认看房</span></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="house_list_out">
-									<div class="media">
-										<div class="media-left house_list_img">
-										    <a href="#">
-										        <img class="media-object" src="images/test/5ae2c75458309.jpg" alt="...">
-										    </a>
-										</div>
-										<div class="media-body">
-											
-											<div class="clearfix">
-											    <h3 class="media-heading">蝙蝠侠创意园</h3>
-											    <span class="allowance"><a href="#">平台租金补贴</a></span>
-											</div>
-											
-										    <p><span class="where" title="地址：广州市天河区体育西路57号红盾大厦 ">
-															地址：广州市天河区体育西路57号红盾大厦 </span><br/>
-											</p>
-											
-										    <p><span class="area">面积：285 ㎡</span><span class="floor">楼层：底区楼层</span></p>	
-										    <p><span class="from">来自：平台房源</span></p>
-										    <p class="clearfix metro_house_money">
-										    	<span class="metro cursor fontSize14">地铁十分钟</span>
-												<span class="less_house cursor fontSize14">稀缺房源</span>
-										    	<span>
-										    		<span style="color: #FF3333;">￥<span style="font-size: 24px;">49</span></span>/㎡
-										    	</span>
-										    </p>
+										    <p><span class="floor">总层：26层</span></p>	
+										    
+										    <ul class="pingmi clearfix">
+										    	<li>125㎡</li>
+										    	<li>325㎡</li>
+										    	<li>425㎡</li>
+										    	<li>725㎡</li>
+										    	<li>1285㎡</li>
+										    	<li>更多</li>
+										    </ul>
+										    
+										    <div class="posit">
+										    	<p>
+										    		<span style="color: #FF3333;">￥<span style="font-size: 28px!important;">49</span></span>/㎡/月起
+										    	</p>
+										    	<p style="display: none;"><span class="str">235</span></p>
+										    	<p><span class="biao metro fontSize14">地铁十分钟</span></p>
+												<p><span class="biao less_house fontSize14">稀缺房源</span></p>
+												<p><span class="biao dai_jiaju fontSize14">带办公家具</span></p>
+												<p><span class="biao know_prop fontSize14">知名物业</span></p>
+												<p><span class="biao mfcw fontSize14">免费车位</span></p>
+										    	<p><span class="biao zmkfs fontSize14">知名开发商</span></p>
+										    </div>
 										</div>
 										
 										<div class="media-right">
 											<div class="state">
-												<a href="#"><span>评论</span></a>
+												<a href="#"><span>待看房</span></a>
 											</div>
 										</div>
 									</div>
@@ -948,24 +1041,40 @@
 										</div>
 										<div class="media-body">
 											
-											<div class="clearfix">
-											    <h3 class="media-heading">蝙蝠侠创意园</h3>
-											    <span class="allowance"><a href="#">平台租金补贴</a></span>
+											<div class="title_house">
+												<h3 class="media-heading block85">蝙蝠侠创意园</h3>
 											</div>
 											
-										    <p><span class="where" title="地址：广州市天河区体育西路57号红盾大厦 ">
-															地址：广州市天河区体育西路57号红盾大厦 </span><br/>
+										    <p>
+										    	<span class="where">
+													区域：<span class="qu">天河</span> - <span class="">体育西路</span>
+										    	</span>
 											</p>
 											
-										    <p><span class="area">面积：285 ㎡</span><span class="floor">楼层：底区楼层</span></p>	
 										    <p><span class="from">来自：平台房源</span></p>
-										    <p class="clearfix metro_house_money">
-										    	<span class="metro cursor fontSize14">地铁十分钟</span>
-												<span class="less_house cursor fontSize14">稀缺房源</span>
-										    	<span>
-										    		<span style="color: #FF3333;">￥<span style="font-size: 24px;">49</span></span>/㎡
-										    	</span>
-										    </p>
+										    <p><span class="floor">总层：26层</span></p>	
+										    
+										    <ul class="pingmi clearfix">
+										    	<li>125㎡</li>
+										    	<li>325㎡</li>
+										    	<li>425㎡</li>
+										    	<li>725㎡</li>
+										    	<li>1285㎡</li>
+										    	<li>更多</li>
+										    </ul>
+										    
+										    <div class="posit">
+										    	<p>
+										    		<span style="color: #FF3333;">￥<span style="font-size: 28px!important;">49</span></span>/㎡/月起
+										    	</p>
+										    	<p style="display: none;"><span class="str">156</span></p>
+										    	<p><span class="biao metro fontSize14">地铁十分钟</span></p>
+												<p><span class="biao less_house fontSize14">稀缺房源</span></p>
+												<p><span class="biao dai_jiaju fontSize14">带办公家具</span></p>
+												<p><span class="biao know_prop fontSize14">知名物业</span></p>
+												<p><span class="biao mfcw fontSize14">免费车位</span></p>
+										    	<p><span class="biao zmkfs fontSize14">知名开发商</span></p>
+										    </div>
 										</div>
 										
 										<div class="media-right">
@@ -987,29 +1096,45 @@
 										</div>
 										<div class="media-body">
 											
-											<div class="clearfix">
-											    <h3 class="media-heading">蝙蝠侠创意园</h3>
-											    <span class="allowance"><a href="#">平台租金补贴</a></span>
+											<div class="title_house">
+												<h3 class="media-heading block85">蝙蝠侠创意园</h3>
 											</div>
 											
-										    <p><span class="where" title="地址：广州市天河区体育西路57号红盾大厦 ">
-															地址：广州市天河区体育西路57号红盾大厦 </span><br/>
+										    <p>
+										    	<span class="where">
+													区域：<span class="qu">天河</span> - <span class="">体育西路</span>
+										    	</span>
 											</p>
 											
-										    <p><span class="area">面积：285 ㎡</span><span class="floor">楼层：底区楼层</span></p>	
 										    <p><span class="from">来自：平台房源</span></p>
-										    <p class="clearfix metro_house_money">
-										    	<span class="metro cursor fontSize14">地铁十分钟</span>
-												<span class="less_house cursor fontSize14">稀缺房源</span>
-										    	<span>
-										    		<span style="color: #FF3333;">￥<span style="font-size: 24px;">49</span></span>/㎡
-										    	</span>
-										    </p>
+										    <p><span class="floor">总层：26层</span></p>	
+										    
+										    <ul class="pingmi clearfix">
+										    	<li>125㎡</li>
+										    	<li>325㎡</li>
+										    	<li>425㎡</li>
+										    	<li>725㎡</li>
+										    	<li>1285㎡</li>
+										    	<li>更多</li>
+										    </ul>
+										    
+										    <div class="posit">
+										    	<p>
+										    		<span style="color: #FF3333;">￥<span style="font-size: 28px!important;">49</span></span>/㎡/月起
+										    	</p>
+										    	<p style="display: none;"><span class="str">134</span></p>
+										    	<p><span class="biao metro fontSize14">地铁十分钟</span></p>
+												<p><span class="biao less_house fontSize14">稀缺房源</span></p>
+												<p><span class="biao dai_jiaju fontSize14">带办公家具</span></p>
+												<p><span class="biao know_prop fontSize14">知名物业</span></p>
+												<p><span class="biao mfcw fontSize14">免费车位</span></p>
+										    	<p><span class="biao zmkfs fontSize14">知名开发商</span></p>
+										    </div>
 										</div>
 										
 										<div class="media-right">
 											<div class="state">
-												<a href="#"><span>确认看房</span></a>
+												<a href="#"><span>待看房</span></a>
 											</div>
 										</div>
 									</div>
@@ -1067,7 +1192,7 @@
 						</ul>
 						
 						<!--这个位置加上4个多选框 让他模拟点击 -->
-						<div class="service_lable2">
+						<div class="service_lable2" style="display: none;">
 							<input type="checkbox" name="tabnavbox2" value="0">
 							<input type="checkbox" name="tabnavbox2" value="1">
 							<input type="checkbox" name="tabnavbox2" value="2">
