@@ -2,9 +2,10 @@
 	首页顶部公共导航栏
 	与底部公共部分
 */
+html{font-size: 12px;}
 *{
     list-style: none;
-    font-size: 16px!important;
+    font-size: 16px;
 }
 /*导入数字字体包*/
 @font-face {
@@ -282,7 +283,7 @@ footer{
 
 /*特殊模板*/
 .editmeimg{
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
 }
 .editmeimg img{
     width: 100%;

@@ -81,15 +81,7 @@
 .house_list_img img{width: 100%; height: 180px;}
 .media-body{padding-left: 1rem; position: relative;}
 .media-body>p{height: 2rem; line-height: 2.5rem; color: rgba(0,0,0,0.65); margin-bottom: 6px;}
-/*
-.allowance{display:block; height: 22px; line-height: 22px; padding: 0 0.5rem;
-									background:-webkit-gradient(linear, 0 0, 0 100%, from(rgba(245,206,98,1)), to(rgba(245,180,49,1)));
-									background:-webkit-linear-gradient(rgba(245,206,98,1), rgba(245,180,49,1));
-									background:-moz-linear-gradient(rgba(245,206,98,1), rgba(245,180,49,1));
-									background:-o-linear-gradient(rgba(245,206,98,1), rgba(245,180,49,1));
-									background:linear-gradient(rgba(245,206,98,1), rgba(245,180,49,1));
-									color: #ffffff; transform:skew(-12deg);text-align: center; border-radius: 2px;
-								    float: left; margin-top: 2px; margin-left: 1.5rem; overflow: hidden;} */
+
 .where{padding-left: 25px; background: url(../images/icon/where.png) no-repeat; background-size: 18px 18px; background-position:0px 0px;}
 .floor{ padding-left: 25px; background: url(../images/icon/floor.png) no-repeat; background-size: 18px 18px; background-position:0px 0px;}
 .from{padding-left: 25px; background: url(../images/icon/people.png) no-repeat; background-size: 16px 16px; background-origin: 0px 0px;}
@@ -111,6 +103,7 @@
 .pingmi li{ float: left; padding: 3px 10px; border: 1px solid rgba(0,0,0,0.15); font-size: 14px!important; cursor: pointer;}
 .pingmi li:hover{background: #198CFF; color: #fff;}
 .posit{width: 40%; height: auto; text-align: right; position: absolute; top: 2px; right: 10px;}
+
 .posit p{margin-bottom: 1rem;}
 
 /*分页按钮*/

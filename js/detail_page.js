@@ -147,6 +147,8 @@ $(document).ready(function(){
     })
 
 	// 地图模块
+	var map_x = 113.2956311606;
+	var map_y = 23.2085909690;
 	$('.map_top ul li').on('click',function(){
 		$('.map_top ul li').css({'border-top-color':'#f4f4f4','background':'rgba(0,0,0,.04)'});
 		$('.map_bom ul li').hide();
@@ -155,27 +157,27 @@ $(document).ready(function(){
 			case 0: 
 				$('.map_top > ul > li:eq('+i+')').css({'border-top-color':'#87c4e5','background':'#fff'});
 				$('.map_bom > ul > li:eq('+i+')').show();
-				thismap('公交车');
+				thismap('公交车',map_x,map_y);
 			break;
 			case 1: 
 				$('.map_top > ul > li:eq('+i+')').css({'border-top-color':'#f6b674','background':'#fff'});
 				$('.map_bom > ul > li:eq('+i+')').show();
-				thismap('餐饮');
+				thismap('餐饮',map_x,map_y);
 			break;
 			case 2: 
 				$('.map_top > ul > li:eq('+i+')').css({'border-top-color':'#ed93b1','background':'#fff'});
 				$('.map_bom > ul > li:eq('+i+')').show();
-				thismap('娱乐');
+				thismap('娱乐',map_x,map_y);
 			break;
 			case 3: 
 				$('.map_top > ul > li:eq('+i+')').css({'border-top-color':'#b0e0a3','background':'#fff'});
 				$('.map_bom > ul > li:eq('+i+')').show();
-				thismap('银行');
+				thismap('银行',map_x,map_y);
 			break;
 			case 4: 
 				$('.map_top > ul > li:eq('+i+')').css({'border-top-color':'#f1c493','background':'#fff'});
 				$('.map_bom > ul > li:eq('+i+')').show();
-				thismap('酒店');
+				thismap('酒店',map_x,map_y);
 			break;
 			case 5: 
 				$('.map_top > ul > li:eq('+i+')').css({'border-top-color':'#dfaadf','background':'#fff'});
@@ -185,9 +187,9 @@ $(document).ready(function(){
 	})
 	$('.map_top ul li:eq(0)').click();
 
-	function thismap(typename){
+	function thismap(typename,x,y){
 		var map = new BMap.Map("allmap");            // 创建Map实例
-		var mPoint = new BMap.Point(113.2956311606, 23.2085909690);  //中心点的经纬度
+		var mPoint = new BMap.Point(x,y);  //中心点的经纬度
 	  	var marker = new BMap.Marker(mPoint); 
 	    map.addOverlay(marker);
 	    marker.setAnimation(BMAP_ANIMATION_BOUNCE);

@@ -143,6 +143,25 @@ $(function(){
 	
 	/*文本域*/
 	
+	
+	/*服务标签*/
+	$(".biao").hide();
+	var posit = $(".posit");
+	
+	for (var ii = 0; ii < posit.length; ii++) {
+		var str = $(".str").eq(ii).html();
+		console.log(str);
+	 	var arr = new Array(); 
+	 	arr = str.split(""); 
+	 	console.log(arr);
+		for(var j in arr){
+			var biao = arr[j]-1;
+			$(".posit:eq("+ii+") .biao:eq("+biao+")").show();
+		}
+	}
+	/*服务标签结束*/
+	
+	
 	/*委托找房*/
 	$(".entrust_once").click(function(){$(".application").css({"display":"block"});
 		$(".temp").css({"visibility":"visible"});//添加一层膜

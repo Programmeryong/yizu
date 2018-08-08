@@ -1,5 +1,5 @@
 html{font-size: 12px!important;}
-*{font-size: 14px; list-style: none;  margin: 0; padding: 0;}
+*{font-size: 16px; list-style: none;  margin: 0; padding: 0;}
 .fontSize12{font-size: 12px!important;}
 .fontSize14{font-size: 14px!important;}
 .fontSize16{font-size: 16px!important;}
@@ -37,7 +37,7 @@ main{font-size:14px;
 .main{width: 100rem; height: auto; margin:0 auto;/*background: #F5F7FA;*/padding-top: 2rem;}
 .main_top{width: 100%; height: 50rem; background: #FFFFFF; margin-bottom: 1.333rem;}
 
-.tabs_box{width: 63%; height: 100%; margin: 0 auto; display: flex; justify-content: space-between;}
+.tabs_box{width: 100rem; height: 100%; margin: 0 auto; display: flex; justify-content: space-between;}
 .tabs_left{width: 60%; height: 100%; overflow: hidden;}
 .tabs_left>p{height: 4rem; line-height: 4rem; margin: 0;}
 .broadcast{width: 100%; height: 88%; background: blue;}
@@ -66,10 +66,9 @@ main{font-size:14px;
 	
 	/*中部导航*/
 	.middle{background: #fff; }
-	.middle_title{background: #ffffff; padding-left: 18.5%;}
+	.middle_title{background: #ffffff; width: 100rem; margin: 0 auto;}
 	.middle_title li{width: 11.464rem; height: 3.999rem; line-height: 3.999rem; text-align: center; margin: 0; padding: 0;}
 	.middle_title li:hover{background: #198CFF; color: #fff; cursor: pointer;}
-	/*.middle_content{background: #ffffff; width: 100%; height: 11.75rem; margin-top: 1.333rem; margin-bottom: 20px;}*/
 	
 	/*house info*/
 	.top_infos{width: 38%; height: 100%; color: rgba(0,0,0,0.8);}
@@ -106,7 +105,7 @@ main{font-size:14px;
 
 	
 	/*全部户型*/
-	.houseinfo{width: 99.975rem; margin-top: 1.999rem;  display: flex; justify-content: space-between;}
+	.houseinfo{width: 100rem; margin-top: 1.999rem;  display: flex; justify-content: space-between;}
 	/*#house_and_find{width: 99.975rem;height: auto; margin-top: 1.333rem; }*/
 	.houseinfo_left{width: 70.649rem; height: auto;}
 	#all_house{width: 70.649rem; height: auto; background: #ffffff; padding-top: 1px; padding-bottom: 10px;}
@@ -148,7 +147,7 @@ main{font-size:14px;
 	.metro{background:#FFB319; border: 1px solid #FFD580; color: #fff;}
 	.less_house{background: #F52230; border: 1px solid #FFA39E; color: #fff; margin-left: 1.333rem;}
 	.office_list{width: 100%; height: 100%; outline: 1px solid red;}
-	.office_content ul{float: left; width: 25.5rem; height: 15.996rem; line-height: 3.999rem;}
+	.office_content ul{float: left; width: 28rem; height: 15.996rem; line-height: 3.999rem;}
 	.house_present{width: 67.983rem; margin: 1.333rem auto;}
 	#telText{padding-left: 2.666rem; color: red; display: none;}
 	
@@ -178,7 +177,7 @@ main{font-size:14px;
 	/*用户评价结束*/
 	
 	/*周边设施*/
-	#around{width: 99.975rem; height: 50.654rem; background: #ffffff; margin-bottom: 1.333rem; margin-top: 1.333rem;}
+	#around{width: 100rem; height: 50.654rem; background: #ffffff; margin-bottom: 1.333rem; margin-top: 1.333rem;}
 	#around h1{width: 97.309rem; height: 5.332rem; line-height: 5.332rem; margin: 0 auto; border-bottom: 2px solid rgba(0,0,0,0.04);}
 	.map_around{width: 97.4%; height: 44rem; margin: 1.333rem auto;  overflow: hidden; position: relative;}
 	.map_box{
@@ -234,9 +233,7 @@ main{font-size:14px;
 	#r-result >div>div>ol>li>div>div:last-child>b{
 		color: rgba(0,0,0,0.65)!important;
 	}
-/*	
-=======
->>>>>>> a939766b549a7793b90682a9fc790a899cefbcbf*/
+
 	#r-result >div>div>ol>li>div>div>span{
 		color: #000!important;
 	}
@@ -249,9 +246,9 @@ main{font-size:14px;
 	
 	/*猜你喜欢*/
 	.lovely{width: 100%; height: 32.792rem; background: #fff;}
-	.lovely_middle{width: 99.975rem; height: 32.792rem; margin: 0 auto; }
+	.lovely_middle{width: 100rem; height: 32.792rem; margin: 0 auto; }
 	.lovely_middle h1{ height: 5.332rem; line-height: 5.332rem; margin: 0 auto;}
-	.lovely_infoimg{width: 99.975rem; height: 26.127rem; overflow: hidden; position: relative;}
+	.lovely_infoimg{width: 100rem; height: 26.127rem; overflow: hidden; position: relative;}
 	.lunbo{width: 399.999rem; height: 26.127rem; position: relative;}
 	.pre,.next{width: 50px; height: 220px; background: rgba(0,0,0,0.2); display: none; position: absolute; z-index: 3; cursor: pointer; overflow: hidden;}
 	.pre:hover,.next:hover{background: rgba(0,0,0,0.5);}
@@ -275,6 +272,8 @@ main{font-size:14px;
 	.howMoney{float: right; margin-top: -5px;}
 	.howMoney .moneys{color:rgba(250,84,28,1); font-size: 24px!important;}
 
+
+
 	#allmap{width:100%;height:100%;}
 	/*滚动条样式*/
     .map_bom::-webkit-scrollbar {/*滚动条整体样式*/
@@ -294,3 +293,6 @@ main{font-size:14px;
 	}
 
 
+
+
+/**/

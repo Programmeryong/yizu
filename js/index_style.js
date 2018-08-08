@@ -67,21 +67,43 @@ $(function(){
     $(".login .closed").click(function(){$(".login").hide(); $(".temp").css({"visibility":"hidden"});})
 
     /*优惠券*/
-    window.onload = function(){
-        $(".temp").css({"visibility":"visible"});
-        $(".coupon").show();
-        
-        let ifshow = $(".coupon").css("display");
-        if (ifshow=="block") {
-            $(".temp").click(function(){$(".temp").css({"visibility":"hidden"}); $(".coupon").css({"display":"none"});})
-        }
+    $(".temp").css({"visibility":"visible"});
+    $(".coupon").show();
+    
+    let ifshow = $(".coupon").css("display");
+    if (ifshow=="block") {
+        $(".temp").click(function(){$(".temp").css({"visibility":"hidden"}); $(".coupon").css({"display":"none"});})
     }
+    
     $(".coupon_img img").click(function(){$(".rightclick1").click(); $(".coupon").hide();})
     $(".close_coupon i").click(function(){$(".temp").css({"visibility":"hidden"}); $(".coupon").hide();})
     /*优惠券结束*/
 
 
 /*登录表单验证*/
+
+	/*获取验证码 60s后重试*/
+	var ding = null;
+	var ifclick = true;
+	$("input[type='button']").click(function(){
+		var time = 60;
+		if (ifclick==true) {
+			ding = setInterval(function(){
+				ifclick = false;
+		        $("input[type='button']").val(time+"s 重试");
+		        //$("input[type='button']").disable=true;
+		        //disabled=ture;
+		        time--;
+		        if(time==-2){
+			    	ifclick = true;
+			    	clearInterval(ding);
+			    	$("input[type='button']").val("获取验证码");
+			    }
+		    },1000);
+		} 
+	})
+	/*获取验证码 60s后重试结束*/
+	
     
     $(".login input[type='tel']").click(function(){$(this).css({"border":"none"});})
     $(".login input[type='text']").click(function(){$(this).css({"border":"none"});})

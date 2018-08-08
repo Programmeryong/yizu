@@ -31,7 +31,6 @@
  	/*第一个函数是鼠标悬停，第二个函数是鼠标移出*/
  	$(".vision ul li").hover(function(){
  		let index = $(this).index();
- 		/*console.log(index);*/
  		$(vision_box[index]).stop();
  		$(vision_box[index]).animate({top:"-184px"},500)
  	},function(){
@@ -39,30 +38,17 @@
  		$(vision_box[index]).stop();
  		$(vision_box[index]).animate({top:"0px"},500)
  	})
- 		
- 	/*
- 	let new_box = $(".news .media");
- 	$(".news>ul>li").hover(function(){
- 		let indexs = $(this).index();
- 		$(new_box[indexs]).stop();
- 		$(new_box[indexs]).animate({left: "15px"},500)
- 		//$(".new_type").eq(indexs).css({"color":"#F59331"});
- 	},function(){
- 		let indexs = $(this).index();
- 		$(new_box[indexs]).stop();
- 		$(new_box[indexs]).animate({left: "0px"},500)
- 		//$(".new_type").eq(indexs).css({"color":"rgba(0,0,0,0.85)"});
-	})
- 	*/
+ 	
+ 	
+ 	lunbo('brand', 5000);
+	lunbo2('vision_box',3500);
+	
+	
  })
  
  
  
- window.onload = function (){
-    lunbo('brand', 5000);
-    lunbo2('vision_box',3500);
-    
-}
+ 
 
 
 function lunbo(div_id, auto_time){
@@ -205,7 +191,7 @@ function lunbo(div_id, auto_time){
 		// 把常用的对象或变量先进行定义
 	    let box = document.getElementById(div_id);
 	
-	    let next_btn = box.getElementsByClassName('xia')[0];
+	    let next_btn = box.getElementsByClassName('xia2')[0];
 	    let list = box.getElementsByClassName('vision')[0];
 	
 	    // 图片数量
@@ -216,7 +202,7 @@ function lunbo(div_id, auto_time){
 	    let index = -2;
 	
 	    // 窗口、图片的宽度
-	    let width = 293;
+	    let width = 289;
 	
 	    let status = false;
 	
@@ -273,7 +259,7 @@ function lunbo(div_id, auto_time){
 	                    go();
 	                }, interval);
 	            }else{
-	                if(new_left == -((img_num-3)*293)){
+	                if(new_left == -((img_num-3)*289)){
 	                    list.style.left = '0px';
 	                    index = -2;
 	                }/*else if(new_left == 0){
