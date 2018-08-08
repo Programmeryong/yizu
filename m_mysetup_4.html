@@ -9,14 +9,19 @@
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="./css/m_style.css">
 	<link rel="stylesheet" type="text/css" href="./css/m_mysetup_4.css">
+	<link rel="stylesheet" type="text/css" href="./js/css/layui.css">
 </head>
 <body style="background: #333">
 	<!-- 这个页面不用加顶部和底部 -->
 	<form>
 		<div class="m_bigbox">
-			<input id="m" class="filestyle1" type="file" name="" onchange="change('m_img','m')">
-			<img id="m_img" class="analogclick1" src="./images/head/minhead.jpeg" >
-			<div id="hidetext"></div>
+			<div class="layui-upload">
+			  <button type="button" class="layui-btn" id="test1" style="display:none">上传图片</button>
+			  <div class="layui-upload-list">
+			    <img class="layui-upload-img" id="demo1" style="width:100%;" src="./images/head/minhead.jpeg">
+			    <p id="demoText" style="display: none"></p>
+			  </div>
+			</div>  
 		</div>
 		<p class="newhead"><span>更换头像</span></p>
 		<p class="bombtn">
@@ -28,7 +33,37 @@
 </body>
 <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/layui.js"></script>
 <script type="text/javascript" src="./js/m_style.js"></script>
-<script type="text/javascript" src="./js/m_mysetup_type.js"></script>
 <script type="text/javascript" src="./js/m_mysetup_4.js"></script>
+<script type="text/javascript">
+	layui.use('upload', function(){
+  var $ = layui.jquery
+  ,upload = layui.upload;
+  
+  //普通图片上传
+  var uploadInst = upload.render({
+    elem: '#test1'
+    ,url: '/upload/'
+    ,before: function(obj){
+      //预读本地文件示例，不支持ie8
+      obj.preview(function(index, file, result){
+        $('#demo1').attr('src', result); //图片链接（base64）
+      });
+    }
+    ,done: function(res){
+      //如果上传失败
+      if(res.code > 0){
+        return layer.msg('上传失败');
+      }
+      //上传成功
+    }
+    ,error: function(){
+      //演示失败状态，并实现重传
+      var demoText = $('#demoText');
+      demoText.html('<span style="color: #FF5722;">上传失败</span>');
+    }
+  });
+});
+</script>
 </html>
