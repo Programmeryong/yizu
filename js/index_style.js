@@ -129,21 +129,5 @@ $(function(){
         $('.upbtn2').css({'background':'#999'}); 
         $('.uptoptext2').css({'color':'#999'});
     })
-
-    // function baidumap(l,r,thismap){
-    //     // 百度地图API功能
-    //     // l:经度 r:维度 this:传入要搜索的内容
-    //     var map = new BMap.Map("allmap");            // 创建Map实例
-    //     var mPoint = new BMap.Point(l, r);  
-    //     map.enableScrollWheelZoom();
-    //     map.centerAndZoom(mPoint,18);
-    //     var marker = new BMap.Marker(mPoint); 
-    //     marker.setAnimation(BMAP_ANIMATION_BOUNCE);
-    //     var circle = new BMap.Circle(mPoint,1000,{fillColor:"blue", strokeWeight: 1 ,fillOpacity: 0.3, strokeOpacity: 0.3});
-    //     map.addOverlay(circle);
-    //     var local =  new BMap.LocalSearch(map, {renderOptions: {map: map, panel: "r-result", autoViewport: true}});  
-    //     local.searchNearby(thismap,mPoint,1000);
-    // }
-    // baidumap(113.295105, 23.243797,'餐馆')
 })
  

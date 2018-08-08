@@ -1,10 +1,11 @@
 $(function(){
 	var mheight =  $(document.body).height();
-	$('.m_bigbox').css({'height':(mheight*0.6)});
-    $('.newhead span').touchClick(function(){
-        $('#m_img').click();
-    })
+	$('#demo1').css({'height':(mheight*0.6)});
+
     $('.thansubmit').touchClick(function(){
         $('.thissubmit').click();
+    })
+    $('#demo1').touchClick(function(){
+    	$('#test1').click();
     })
 })
