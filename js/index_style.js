@@ -1,48 +1,8 @@
-// 单张图片上传
-function change(id1,id2) {
-    var pic = document.getElementById(id1),
-        file = document.getElementById(id2);
-    var ext=file.value.substring(file.value.lastIndexOf(".")+1).toLowerCase();
-     // gif在IE浏览器暂时无法显示
-     if(ext!='png'&&ext!='jpg'&&ext!='jpeg'&&ext!='png'){
-         alert("图片的格式必须为png或者jpg或者jpeg格式或者png格式！"); 
-         return;
-     }
-     var isIE = navigator.userAgent.match(/MSIE/)!= null,
-         isIE6 = navigator.userAgent.match(/MSIE 6.0/)!= null;
-     if(isIE) {
-        file.select();
-        console.log(file.select());
-        var reallocalpath = document.selection.createRange().text;
-        // IE6浏览器设置img的src为本地路径可以直接显示图片
-         if (isIE6) {
-            pic.src = reallocalpath;
-         }else {
-            // 非IE6版本的IE由于安全问题直接设置img的src无法显示本地图片，但是可以通过滤镜来实现
-             pic.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='image',src=\"" + reallocalpath + "\")";
-             // 设置img的src为base64编码的透明图片 取消显示浏览器默认图片
-             pic.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
-         }
-     }else {
-        html5Reader(file,id1);
-     }
-}
- function html5Reader(file,id1){
-     var file = file.files[0];
-     var reader = new FileReader();
-     reader.readAsDataURL(file);
-     reader.onload = function(e){
-         var pic = document.getElementById(id1);
-         var hiede = document.getElementById('hidetext');
-         pic.src=this.result;
-         hiede.innerHTML=this.result;
-     }
- }
-
 $(function(){
  /*模拟点击事件*/
     clicktopbut('.top_buttom','.top_submit');
     clicktopbut('.advert_call','.advert_submit');
+    clicktopbut('#demo1','#test1');
     function clicktopbut(clas1,cals2){
         $(clas1).click(function(){
             $(cals2).click();
@@ -192,79 +152,20 @@ $(function(){
         $('.uptoptext2').css({'color':'#999'});
     })
 
-//     console.log([
-//     "                   _ooOoo_",
-//     "                  o8888888o",
-//     "                  88\" . \"88",
-//     "                  (| -_- |)",
-//     "                  O\\  =  /O",
-//     "               ____/`---'\\____",
-//     "             .'  \\\\|     |//  `.",
-//     "            /  \\\\|||  :  |||//  \\",
-//     "           /  _||||| -:- |||||-  \\",
-//     "           |   | \\\\\\  -  /// |   |",
-//     "           | \\_|  ''\\---/''  |   |",
-//     "           \\  .-\\__  `-`  ___/-. /",
-//     "         ___`. .'  /--.--\\  `. . __",
-//     "      .\"\" '<  `.___\\_<|>_/___.'  >'\"\".",
-//     "     | | :  `- \\`.;`\\ _ /`;.`/ - ` : | |",
-//     "     \\  \\ `-.   \\_ __\\ /__ _/   .-` /  /",
-//     "======`-.____`-.___\\_____/___.-`____.-'======",
-//     "                   `=---='",
-//     "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
-//     "         佛祖保佑       永无BUG"
-// ].join('\n'));
-/**
- *
- * 　　　┏┓　　　┏┓
- * 　　┏┛┻━━━┛┻┓
- * 　　┃　　　　　　　┃
- * 　　┃　　　━　　　┃
- * 　　┃　┳┛　┗┳　┃
- * 　　┃　　　　　　　┃
- * 　　┃　　　┻　　　┃
- * 　　┃　　　　　　　┃
- * 　　┗━┓　　　┏━┛Code is far away from bug with the animal protecting
- * 　　　　┃　　　┃    神兽保佑,代码无bug
- * 　　　　┃　　　┃
- * 　　　　┃　　　┗━━━┓
- * 　　　　┃　　　　　 ┣┓
- * 　　　　┃　　　　 ┏┛
- * 　　　　┗┓┓┏━┳┓┏┛
- * 　　　　　┃┫┫　┃┫┫
- * 　　　　　┗┻┛　┗┻┛
- *
- */
-    // console.log([
-    //     "◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇",
-    //     "◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◆◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇",
-    //     "◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◆◆◆◆◇◇◇◇◇◇◆◇◇◇◇◇◇◇◇◇",
-    //     "◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◆◆◆◆◇◆◆◇◇◇◇◆◆◆◇◇◇◇◇◇◇◇",
-    //     "◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◆◆◆◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◆◆◆◆◇◇◇◆◆◆◆◆◆◆◆◆◇◇◇◇◇◇◇◇",
-    //     "◇◇◇◇◇◇◆◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◆◆◆◆◆◇◇◇◆◆◆◆◆◆◆◆◆◇◇◇◇◇◇◇◇",
-    //     "◇◇◇◇◆◆◆◆◆◆◆◆◆◇◆◆◆◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◇◇◇◆◆◇◇◇◆◆◇◇◇◇◇◆◆◇◇◇◇◇◇◇◇",
-    //     "◇◇◇◇◇◆◆◇◇◇◇◇◇◆◆◆◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◆◇◇◇◆◆◇◇◇◇◇◆◆◇◇◇◇◇◇◇◇",
-    //     "◇◇◇◇◇◇◇◇◇◇◇◇◆◆◆◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◆◆◆◆◆◆◇◇◇◇◇◆◆◇◇◇◇◇◇◇◇",
-    //     "◇◇◇◇◇◇◇◇◇◇◇◆◆◆◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◆◆◆◆◆◆◆◆◆◆◆◇◇◇◆◇◆◆◇◇◇◇◇◇◇◇",
-    //     "◇◇◇◇◇◇◇◇◇◇◆◆◆◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◆◆◆◆◆◇◇◇◇◆◆◆◆◆◆◆◆◆◇◇◇◇◇◇◇◇",
-    //     "◇◇◇◇◇◇◇◇◇◇◆◆◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◆◆◆◇◇◆◆◆◆◆◆◇◆◆◇◇◇◇◇◇◇◇",
-    //     "◇◇◇◇◇◇◇◇◇◆◆◆◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◆◆◆◆◆◇◆◆◇◇◇◇◇◆◆◇◇◇◇◇◇◇◇",
-    //     "◇◇◇◇◇◇◇◇◆◆◆◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◆◆◆◆◆◆◆◆◇◇◇◇◇◆◆◇◇◇◇◇◇◇◇",
-    //     "◇◇◇◇◇◇◇◇◆◆◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◆◇◆◆◆◆◇◆◆◇◇◇◆◇◆◆◇◇◇◇◇◇◇◇",
-    //     "◇◇◇◇◇◇◇◆◆◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◆◆◇◆◆◇◆◇◆◆◆◆◆◆◆◆◆◇◇◇◇◇◇◇◇",
-    //     "◇◇◇◇◇◇◆◆◆◇◇◇◇◇◇◇◇◇◇◇◇◇◆◇◇◇◇◇◇◇◇◇◇◇◆◆◇◇◆◆◇◇◇◆◆◆◆◆◆◆◆◆◇◇◇◇◇◇◇◇",
-    //     "◇◇◇◇◇◇◆◆◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◆◇◇◇◇◇◇◇◇◇◆◆◇◇◇◆◆◇◇◇◆◆◇◇◇◇◇◆◆◇◇◇◇◇◇◇◇",
-    //     "◇◇◇◇◇◆◆◆◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◆◇◇◇◇◇◇◇◇◆◆◆◇◇◇◆◆◇◇◇◆◆◇◇◇◇◇◆◆◇◇◇◇◇◇◇◇",
-    //     "◇◇◇◇◇◆◆◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◆◇◇◇◇◇◇◇◇◆◆◇◇◇◇◆◆◇◇◇◆◆◇◇◇◇◇◆◆◇◇◇◇◇◇◇◇",
-    //     "◇◇◇◇◇◆◆◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◆◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◆◇◇◇◆◆◇◇◇◇◇◆◆◇◇◇◇◇◇◇◇",
-    //     "◇◇◇◇◇◆◆◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◆◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◆◇◇◇◆◆◇◇◇◇◇◆◆◆◆◆◇◇◇◇◇",
-    //     "◇◇◇◇◇◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇◇◇◇◇◇◇◇◇◇◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇",
-    //     "◇◇◇◇◇◇◇◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◆◇◆◆◆◆◆◆◆◆◆◇◇◇◇◇◇◇◇◇◇◇",
-    //     "◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◆◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇",
-    //     "◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◆◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇",
-    //     "◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇◇",
-    //     "乙租网 - 写字楼、厂房、创意园区专业互联网服务平台，精品写字楼，广州楼盘全覆盖，真实房源，现场实勘，专业顾问2对1服务！预约看房，免费咨询请拨打 400-886-6391"
-    //     ].join('\n'));
-
+    // function baidumap(l,r,thismap){
+    //     // 百度地图API功能
+    //     // l:经度 r:维度 this:传入要搜索的内容
+    //     var map = new BMap.Map("allmap");            // 创建Map实例
+    //     var mPoint = new BMap.Point(l, r);  
+    //     map.enableScrollWheelZoom();
+    //     map.centerAndZoom(mPoint,18);
+    //     var marker = new BMap.Marker(mPoint); 
+    //     marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+    //     var circle = new BMap.Circle(mPoint,1000,{fillColor:"blue", strokeWeight: 1 ,fillOpacity: 0.3, strokeOpacity: 0.3});
+    //     map.addOverlay(circle);
+    //     var local =  new BMap.LocalSearch(map, {renderOptions: {map: map, panel: "r-result", autoViewport: true}});  
+    //     local.searchNearby(thismap,mPoint,1000);
+    // }
+    // baidumap(113.295105, 23.243797,'餐馆')
 })
  
