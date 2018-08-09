@@ -1,0 +1,233 @@
+/*发布房源页面样式表*/
+/*开始*/
+.round{
+	width: 32px;
+	height: 32px;
+	text-align: center;
+	line-height: 32px;
+	border-radius: 50%;
+	border:1px solid rgba(0,0,0,.14);
+}
+input{
+	border-radius: 2px;
+}
+.round2{
+	border:1px solid #198cff;
+	background: #198cff;
+	color: #fff;
+}
+.text15{
+	color: rgba(0,0,0,.15);
+}
+.text45{
+	color: rgba(0,0,0,.45);
+}
+.text65{
+	color: rgba(0,0,0,.65);
+}
+.margin40{
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+.border04{
+	padding-bottom: 20px;
+	border-bottom:1px solid rgba(0,0,0,.15);
+}
+.input284{
+	border: 1px solid rgba(0,0,0,.25);
+	border-radius: 2px;
+	width: 284px;
+	height: 30px;
+	padding: 5px;
+	color: rgba(0,0,0,.45);
+}
+.input423{
+	border: 1px solid rgba(0,0,0,.25);
+	border-radius: 2px;
+	width: 423px;
+	height: 30px;
+	padding: 5px;
+	color: rgba(0,0,0,.45);
+}
+.select30{
+	width: 102px;
+	height: 30px;
+	padding: 4px 12px;
+	margin: 0 10px 0 0;
+}
+.releaseline{
+	line-height: 30px;
+}
+.tabnavbox,.tabnavbox1{
+	padding: 0;
+}
+.tabnavbox li,.tabnavbox1 li{
+	float: left;
+	margin: 0 12px 0 0;
+ 	padding: 6px 16px;
+ 	border-radius: 2px;
+ 	cursor: pointer;
+}	
+.tabcolor1{
+	color: #ffb319;
+	border: 1px solid #ffd580;
+	background: #fff7e6;
+}
+.tabcolor2{
+	color: #f52230;
+	border:1px solid #ffa39e;
+	background: #ffebec;
+}
+.tabcolor3{
+	color: #52c41a;
+	border: 1px solid #b7eb8f;
+	background: #f5ffeb;
+}
+.tabcolor4{
+	color: #198cff;
+	border: 1px solid #80bfff;
+	background: #ebf5ff;
+}
+.tabcolor5{
+	color: #13C2C2;
+	border:1px solid #87e8de;
+	background: #ebfffd;	
+}
+.tabcolor6{
+	color: #722ed1;
+	border:1px solid #d3adf7;
+	background: #f3edff;		
+}
+.textfield{
+	width: 754px;
+	height: 230px;
+	padding: 5px;
+	resize : none; 
+	border-radius: 2px;
+	border: 1px solid rgba(0,0,0,.15);
+}
+.clicksubmit,.clicksubmit1{
+	opacity: 0;
+	margin-left: -999px;
+}
+.releasethis,.releasethis1{
+	padding: 10px 34px;
+	border-radius: 2px;
+	line-height: 37px;
+	color: #fff;
+	background: #FFB319;
+	text-align: center;
+	cursor: pointer;
+}
+.filestyle1,.filestyle2,.filestyle3{
+	position: absolute;
+	left: -9999px;
+	opacity: 0;
+}
+#release_btn{
+	width: 128px;
+	height: 102px;
+	float: left;
+	padding:8px;
+	/*margin-top: -10px;*/
+	border: 1px dashed rgba(0,0,0,.15);
+}
+#release_btn img{
+	width: 112px;
+	height: 86px;
+}
+.filenav_1,.filenav_2{
+	padding: 0;
+}
+.filenav_1 li,.filenav_2 li{
+	float: left;
+	width: 128px;
+	height: 102px;
+	border:1px dashed rgba(0,0,0,.15);
+	margin-right: 10px;
+	/*background: rgba(0,0,0,.04);*/
+	padding: 8px;
+	cursor: pointer;
+}
+.filenav_1 li img,.filenav_2 li img{
+	width: 112px;
+	height: 86px;
+}
+.filenav_2 li{
+	margin-bottom: 10px;
+	position: relative;
+}
+.filenav_2 li i{
+	position: absolute;
+	top: 0;
+	right:0;
+	width: 16px;
+	height: 16px;
+	background-image: url(../images/icon/icon_dele.png);
+	background-size: 16px 16px;
+	z-index: 888;
+}
+/*单选按钮样式*/
+.thanradio,.thanradio1{
+	position: absolute;
+	left: -9999px;
+	opacity: 0;
+}
+/*多选按钮*/
+/*.Tabnavbox2{
+	position: absolute;
+	left: -9999px;
+	opacity: 0;
+}*/
+.csclass{
+	color: rgba(0,0,0,.25);
+	border:1px solid rgba(0,0,0,.25);
+}
+/*结束*/
+
+
+/*房东页面的样式*/
+.brokerage{
+	padding:0;
+	margin: 0;
+}
+.brokerage li{
+	float: left;
+	font-size: 14px!important;
+	margin-right: 1rem;
+	width: 5rem;
+	padding: 5px 0;
+	text-align: center;
+	color: rgba(0,0,0,.25);
+	border:1px solid rgba(0,0,0,.15);
+	border-radius: 2px;
+}
+.hidebox{
+	position: absolute;
+	left: -9999px;
+}
+.broktext{
+	margin-top: 5px;
+	color: rgba(0,0,0,.45);
+
+}
+.clickthisul li input{
+	display: none;
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+#hiedtext{
+	display: none;
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+/*结束*/
+.Tabnavbox2{
+	display: none;
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+	
+}

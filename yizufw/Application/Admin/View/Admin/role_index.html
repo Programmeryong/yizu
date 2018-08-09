@@ -1,0 +1,334 @@
+<include file='Public/header' />
+<include file='Public/base_css' />
+<body>
+<include file='Public/base_js' />
+<div class="x-nav">
+      <span class="layui-breadcrumb">
+        <a><cite>管理员列表</cite></a>
+      </span>
+    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right;padding-top: 6px"
+       href="javascript:location.replace(location.href);" title="刷新">
+        刷新</a>
+</div>
+<div class="x-body">
+    <blockquote class="layui-elem-quote">
+        <span class="x-red">*</span>S
+    </blockquote>
+
+    <xblock>
+        <button class="layui-btn layui-btn-danger" onclick="delAll()">
+            <i class="layui-icon">&#xe640;</i>批量删除
+        </button>
+        <button class="layui-btn" onclick="x_admin_show('添加管理员','{:url("admin/create")}', 900,350)">
+        <i class="layui-icon">&#xe608;</i>添加
+        </button>
+
+        <span class="x-right" style="line-height:40px;">
+            &nbsp;&nbsp;&nbsp;共有数据：&nbsp;<span id="count"></span>&nbsp;条
+        </span>
+
+    </xblock>
+
+    <div id="panel" lay-filter="panel">
+        <div class="layui-form">
+            <table class="layui-table">
+                <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox" class="-checkbox -header" lay-skin="primary" lay-filter="allChoose">
+                    </th>
+                    <th>ID</th>
+                    <th>角色名称</th>
+                    <th>权限列表</th>
+                    <th>操作</th>
+                </thead>
+                <tbody>
+                <volist name='admin_list' id='vo'>
+                <tr class="{$vo.id != $Think.session.admin_id ? '' :'layui-bg-green'}">
+                    <td>
+                        {if condition="$Think.session.admin_result.role lt $vo.role"}
+                        {if condition="$vo.id neq $Think.session.admin_id"}
+                        {if condition="$Think.session.admin_result.role neq $vo.role"}
+                        <input type="checkbox" class="-checkbox" lay-skin="primary" lay-filter="itemChoose"
+                               data-id='{$vo.id}'>
+                        {/if}
+                        {/if}
+                        {/if}
+                    </td>
+                    <td>{$vo.id}</td>
+                    <td>{$vo.username}</td>
+                    <td>{$vo.login_count}</td>
+                    <td>{$vo.reg_time|date='Y-m-d H:i:s',###}</td>
+                    <td>
+                        {eq name="$vo.last_time" value=""}
+                        新增用户
+                        {else /}
+                        {$vo.last_time|date='Y-m-d H:i:s',###}
+                        {/eq}
+                    </td>
+                    <td>{$vo.reger_name}</td>
+                    <td>
+                        {if condition="$vo.role eq '0'"}超级管理员
+                        {elseif condition="$vo.role eq '1'"/}管理员
+                        {else /}编辑人员
+                        {/if}
+                    </td>
+                    <td>{$vo.updater}</td>
+                    <td>{$vo.update_time}</td>
+                    <td class="td-status">
+                        {eq name="$vo.status" value="1"}
+                        <span class="layui-badge layui-bg-green">已启用</span>
+                        {else/}
+                        <span class="layui-badge layui-bg-gray">已禁用</span>
+                        {/eq}
+                    </td>
+                    <td class="td-manage">
+                        {if condition="$Think.session.admin_result.role lt $vo.role"}
+                        {if condition="$vo.role neq '0'"}
+                        {if condition="$vo.id neq $Think.session.admin_id"}
+                        {eq name="$vo.status" value="1"}
+                        <a onclick="member_stop(this,'{$vo.id}','{$vo.status}','{$Think.session.admin_result.username}')"
+                           href="javascript:;" title="禁用">
+                            <i class="layui-icon">&#xe6af;</i>
+                        </a>
+                        {else/}
+                        <a onclick="member_stop(this,'{$vo.id}','{$vo.status}', '{$Think.session.admin_result.username}')"
+                           href="javascript:;" title="启用">
+                            <i class="layui-icon">&#xe69c;</i>
+                        </a>
+                        {/eq}
+                        {/if}
+                        <a title="修改密码"
+                           onclick="x_admin_show('修改密码','{:url('admin/edtPassShow')}'+'?id='+{$vo.id},500,250)"
+                           href="javascript:;">
+                            <i class="layui-icon">&#xe642;</i>
+                        </a>
+                        <a onclick="x_admin_show('修改角色','{:url('admin/edtRoleShow')}'+'?id='+{$vo.id},500,200)"
+                           title="修改角色"
+                           href="javascript:;">
+                            <i class="layui-icon">&#xe631;</i>
+                        </a>
+                        {if condition="$vo.id neq $Think.session.admin_id"}
+                        <a title="删除" onclick="member_del(this,'{$vo.id}')"
+                           href="javascript:;">
+                            <i class="layui-icon">&#xe640;</i>
+                        </a>
+                        {/if}
+                        {/if}
+                        {/if}
+                    </td>
+                </tr>
+                {/volist}
+                </tbody>
+            </table>
+            <div class="page">
+                {$admin_list->render()}
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    layui.use(['layer', 'form','laydate'], function () {
+        var layer = layui.layer,
+            form = layui.form;
+        var laydate = layui.laydate;
+
+        form.render();
+
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#time' //指定元素
+            ,done: function(value){
+                $.get('{:url("admin/regTime")}', {
+                    time: value
+                },function (res) {
+                    $('#panel').html(res);
+                    var count = $('#admin_count').text();
+                    $('#count').text(count);
+                    form.render();
+                })
+            }
+        });
+
+
+        form.on('select(sort)', function (data) {
+            var sort = (data.value);
+            if (sort === 'asc') {
+                $.get('{:url("admin/asc")}', function (res) {
+                    $('#panel').html(res);
+                    var count = $('#admin_count').text();
+                    $('#count').text(count);
+                    form.render();
+                })
+            } else {
+                $.get('{:url("admin/desc")}', function (res) {
+                    $('#panel').html(res);
+                    var count = $('#admin_count').text();
+                    $('#count').text(count);
+                    form.render();
+                })
+            }
+        });
+
+        form.on('select(role)', function (data) {
+            var role = (data.value);
+            if (role != '') {
+                if (role == 0) {
+                    $.get('{:url("admin/role")}', {
+                        role: role
+                    }, function (res) {
+                        $('#panel').html(res);
+                        var count = $('#admin_count').text();
+                        $('#count').text(count);
+                        form.render();
+                    })
+                }
+                if (role == 1) {
+                    $.get('{:url("admin/role")}', {
+                        role: role
+                    }, function (res) {
+                        $('#panel').html(res);
+                        var count = $('#admin_count').text();
+                        $('#count').text(count);
+                        form.render();
+                    })
+                }
+                if (role == 2) {
+                    $.get('{:url("admin/role")}', {
+                        role: role
+                    }, function (res) {
+                        $('#panel').html(res);
+                        var count = $('#admin_count').text();
+                        $('#count').text(count);
+                        form.render();
+                    })
+                }
+            }
+        });
+
+        form.on('select(status)', function (data) {
+            var status = (data.value);
+            if (status != '') {
+                if (status == 0) {
+                    $.get('{:url("admin/status")}', {
+                        status: status
+                    }, function (res) {
+                        $('#panel').html(res);
+                        var count = $('#admin_count').text();
+                        $('#count').text(count);
+                        form.render();
+                    })
+                }
+                if (status == 1) {
+                    $.get('{:url("admin/status")}', {
+                        status: status
+                    }, function (res) {
+                        $('#panel').html(res);
+                        var count = $('#admin_count').text();
+                        $('#count').text(count);
+                        form.render();
+                    })
+                }
+            }
+        });
+
+        form.on('submit(sreach)', function () {
+            var username = $('#username').val();
+            if (username != '') {
+                $.get('{:url("admin/sreach")}', {
+                    username: username
+                }, function (res) {
+                    $('#panel').html(res);
+                    var count = $('#admin_count').text();
+                    $('#count').text(count);
+                    form.render();
+                })
+            }
+        });
+    });
+
+    /*用户-停用*/
+    function member_stop(obj, id, status, updater) {
+        layer.confirm('确认要更改状态吗？', function () {
+            if ($(obj).attr('title') == '启用') {
+                //发异步把用户状态进行更改
+                $.post("{:url('admin/setStatus')}", {
+                    id: id,
+                    status: status,
+                    updater: updater
+                }, function (res) {
+                    if (res == 1) {
+                        $(obj).attr('title', '禁用');
+                        $(obj).find('i').html('&#xe6af;');
+
+                        $(obj).parents("tr").find(".td-status").find('span').removeClass('layui-bg-gray').addClass('layui-bg-green').html('已启用');
+                        layer.msg('已启用', {icon: 1, time: 1500});
+                    } else if (res == 0) {
+                        layer.msg('启用失败', {icon: 2, time: 1500});
+                    }
+                });
+            } else {
+                //发异步把用户状态进行更改
+                $.post("{:url('admin/setStatus')}", {
+                    id: id,
+                    status: status,
+                    updater: updater
+                }, function (res) {
+                    if (res == 1) {
+                        $(obj).attr('title', '启用');
+                        $(obj).find('i').html('&#xe69c;');
+
+                        $(obj).parents("tr").find(".td-status").find('span').removeClass('layui-bg-green').addClass('layui-bg-gray').html('已禁用');
+                        layer.msg('已禁用', {icon: 1, time: 1500});
+                    } else if (res == 0) {
+                        layer.msg('禁用失败', {icon: 2, time: 1500});
+                    }
+                });
+            }
+            return false;
+        });
+    }
+
+    /*用户-删除*/
+    function member_del(obj, id) {
+        layer.confirm('确认要删除吗？删除后将无法恢复，可禁用处理，禁用用户将无法登入系统', function () {
+            //发异步删除数据
+            $.post("{:url('admin/delete')}", {
+                id: id
+            }, function (res) {
+                if (res == 1) {
+                    $(obj).parents("tr").remove();
+                    layer.msg('已删除', {icon: 1, time: 1500});
+                } else if (res == 0) {
+                    layer.msg('删除失败', {icon: 2, time: 1500});
+                }
+            });
+            return false;
+        });
+    }
+
+
+    function delAll() {
+        var data = tableCheck.getData();
+        // 每一个被选中项的值
+        if (data != '') {
+            layer.confirm('确认要删除吗？删除后将无法恢复，可禁用处理，禁用用户将无法登入系统', function () {
+                //捉到所有被选中的，发异步进行删除
+                $.post("{:url('admin/delAll')}", {
+                    data: data
+                }, function (res) {
+                    if (res == 1) {
+                        layer.msg('删除成功', {icon: 1, time: 1500});
+                        $(".layui-form-checked").not('.header').parents('tr').remove();
+                    } else if (res == 0) {
+                        layer.msg('删除失败', {icon: 2, time: 1500});
+                    }
+                });
+            });
+        } else {
+            layer.msg('请勾选需要删除的数据');
+        }
+    }
+</script>
+</body>
+</html>
