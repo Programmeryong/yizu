@@ -3,22 +3,16 @@ namespace Home\Controller;
 use Think\Controller;
 class ReleaseController extends Controller {
     public function index(){
+        // session(array('name'=>'session_id','expire'=>3600));
+        
     	$res = M('guangzhou_district')->field('id,district_name')->select();
-    	// $test = M('fangyuan')->field('xiangqing_img,fengmian_img')->where('id = 27')->select();
-    	// dump($test);
-    	// $this->assign('test',$test);
-    	// dump($res);
-    	$this->assign('res',$res);
-    	
+        $user = M('user')->field('nickname,phone')->select();
+    	$this->assign('res',$res);   	
     	$this->display('Release/release');
-    	// var_dump(time());
-    	// var_dump(date('Y-m-d',1533116007));
-    	// $data = Date(1533113837);
-    	// dump($data);
     }
     public function metro1(){
     	$id = I('post.id');
-    	// $id = 1;
+
     	$res = M('guangzhou_district')->where('id ='.$id)->select();
     	$sum =$res[0]['metro'];
     	//分割字符串
@@ -30,8 +24,7 @@ class ReleaseController extends Controller {
     	$data = M('metro')->field('id,metro_name')->where($where)->select();
     	$this->ajaxReturn($data);
     }
-    public function metro2(){
-    	
+    public function metro2(){  	
     	$dis_id = I('post.dis_id');
     	$ret_id = I('post.ret_id');
     	$term['metro_id'] = $ret_id;
@@ -73,6 +66,7 @@ class ReleaseController extends Controller {
     		I('post.tabnavbox4').
     		I('post.tabnavbox5').
     		I('post.tabnavbox6');
+        
     	$data = array(
 	        'type'	=> I('post.thisradio'), 
 	        'fangyuanname'    => I('post.fangyuanname'),
@@ -94,24 +88,38 @@ class ReleaseController extends Controller {
 	        'xiangqing_img' =>	I('post.detail_picture'),
 	        'sheshi'	=>	$tabnavbox,
 	        'danjia_wei'	=>	$danjie_wei,
-	        'identity'	=>	'经纪人'
+	        'identity'	=>	'2',
+            'xiangqing_img' => I('post.pic_all'),
+            // -------------------------
+            "lx_phone"  => I('post.lx_phone'),
+            "fy_name"   => I('post.username'),
+            'user_id'   => I('post.user_id')
+
 	    );
     	$res = M('fangyuan')->add($data);
-    	// $this->ajaxReturn(I('post.'));
+
     	if(!empty($res)){$this->ajaxReturn(200);}
-    	else{$this->ajaxReturn(404);}     
+    	else{$this->ajaxReturn(404);}  
     }
 
-        //图片上传
-    public function index1()
+    //图片上传
+    public function upload_pic()
     {
-         return $this->fetch();
+        $system=I('post.');
+        $upload = new \Think\Upload();
+        // $upload->maxSize = 3145728 ;// 设置附件上传大小
+        $upload->exts = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
+        $upload->rootPath = './Public/';
+        $upload->savePath  = './housingPic/';
+        $info = $upload->upload();
+        $a = '';
+            foreach ($info as $key=>$value)
+            {
+                     $a.="#".$value['savepath'].$value['savename'];//我用符号把图片路径拼起来 
+            }
+        $this->ajaxReturn($a);
     }
-    function upload(){
-        $file = $this->request->file('file');//file是传文件的名称，这是webloader插件固定写入的。因为webloader插件会写入一个隐藏input，不信你们可以通过浏览器检查页面
-        $info = $file->move(ROOT_PATH . 'public' . DS . 'uploads');
+    public function like(){
+        $this->display('Release/like');
     }
-
-
-
 }
