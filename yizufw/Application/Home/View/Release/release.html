@@ -110,8 +110,8 @@
 						<input class="pull-left input284 number2" type="number" name="danjie" placeholder="请输入单价" style="margin-right: 10px;">
 						<select class="pull-left form-control select30" name="danjie_1" style="padding:4px 4px; width: 115px">
 							<option value="1">元/㎡/月</option>
-							<option value="2">元/工位/月</option>
-							<option value="3">面议</option>
+							<!-- <option value="2">元/工位/月</option>
+							<option value="3">面议</option> -->
 						</select>
 					</div>
 				</div>
@@ -239,6 +239,7 @@
 					    </div>
 				</div>
 			</div>
+			<textarea class="photoArr" style="display: none;" name="pic_all"></textarea>
 		</div>
 		<h1 class="fsize18 fw_bold">联系方式</h1>
 		<!-- 这里的联系方式默认填用户自己的 -->
@@ -247,14 +248,15 @@
 				<div class="col-md-2 text-right fsize14 edirt_text"><i>*</i>联系人</div>
 				<div class="col-md-10 controls" style="margin-top: -5px;">
 					<!-- 这里要把用户的名字传进来 到value里面 -->
-					<input class="input284 fsize14 username" type="text" name="username" value="金鱼">
+					<input class="input284 fsize14 username" type="text" name="username" value="{$Think.session.nickname} ">
+					<input class="hidden" type="text" name="user_id" value="{$Think.session.user_id} " >
 				</div>
 			</div>
 			<div class="col-md-12 marpad mar_t ">
 				<div class="col-md-2 text-right fsize14 edirt_text">联系电话</div>
 				<div class="col-md-10 controls" style="margin-top: -5px;">
 					<!-- 这里是登录的号码 -->
-					<h2 style="margin: 10px 0">13160528993</h2>
+					<h2 style="margin: 10px 0">{$Think.session.phone}</h2>
 				</div>
 			</div>
 		</div>
@@ -368,8 +370,9 @@
                 //打印服务端返回的数据(调试用)
                 console.log(result);
                 if (result == 200) {
-                	
+
                     alert("添加成功");parent.location.reload("{:U('Release/index')}");
+
                 }
             },
             error : function() {

@@ -1,92 +1,62 @@
 <?php
-
 namespace Home\Controller;
+use Think\Controller;
+class NewsController extends Controller {
+    public function index(){
+    	$news = M('cassify_news');
+    	$data = $news->field('id,title')->select();
+     //    $res = M('news')->field('')->where("cassify_news_id =".$data[2]['id'])->limit(8)->select();
+    
 
-use Home\Common\BaseController;
-use Think\Page;
-
-class NewsController extends BaseController
-{
-    public function index()
-    {
-        $this->isLogin();
-        $this->getNewsType();//获取新闻类型
-        $this->allNews();//获取全部新闻
-        $news_1 = $this->getList(1);//获取第一类新闻
-        $news_2 = $this->getList(2);//获取第二类新闻
-        $news_3 = $this->getList(3);//获取第三类新闻
-        $this->assign(array('news_1'=> $news_1['res'],'page1'=>$news_1['page']));
-        $this->assign(array('news_2'=> $news_2['res'],'page2'=>$news_2['page']));
-        $this->assign(array('news_3'=> $news_3['res'],'page3'=>$news_3['page']));
-        if (IS_AJAX){
-            if (I('get.tag') == 1){
-//                $news_1 = $this->getList(1);//获取第一类新闻
-//                $this->assign(array('news_1'=> $news_1['res'],'page1'=>$news_1['page']));
-                $this->display('News/panel/list1');
-            }
-            if (I('get.tag') == 2){
-//                $news_2 = $this->getList(2);//获取第二类新闻
-//                $this->assign(array('news_2'=> $news_2['res'],'page2'=>$news_2['page']));
-                $this->display('News/panel/list2');
-            }
-            if (I('get.tag') == 3){
-//                $news_3 = $this->getList(3);//获取第三类新闻
-//                $this->assign(array('news_3'=> $news_3['res'],'page3'=>$news_3['page']));
-                $this->display('News/panel/list3');
-            }
-            if (I('get.tag') == 0){
-//                $this->allNews();//获取全部新闻
-                $this->display('News/panel/list');
-            }
-        }else{
-
-            $this->display('News/news');
-        }
-
+        $User = M('news'); // 实例化User对象
+        $count  = $User->field('id,title')->count();// 查询满足要求的总记录数
+        // dump($count);
+        $Page  = new \Think\Page($count,1);// 实例化分页类 传入总记录数和每页显示的记录数(25)
+        $show  = $Page->show();// 分页显示输出
+        $res = M('news n')
+        ->join('yz_cassify_news c on c.id = n.cassify_news_id')
+        ->field('n.id,n.news_title,n.time,n.new_img,n.author,n.new_text,c.title')
+        ->limit($Page->firstRow.','.$Page->listRows)
+        ->select();
+        $this->assign('page',$show);// 赋值分页输出
+        $this->assign('res',$res);
+    	$this->assign('data',$data);
+        $this->display('News/news');
+      
     }
 
-    //获取某篇文章
-    public function getNews($id)
-    {
-        $this->isLogin();
-        $news = D('News');
-        $res = $news->getNews($id);
-        $news->addPageView($id);//增加1点击量
-        $this->assign($res);
+    public function news_personal(){
+    	
         $this->display('News/news_personal');
-
+        
     }
-
-    //新闻资讯页面查询全部新闻(加载时调用)
-    public function allNews()
-    {
-        $news = D('News');
-        $array = $news->allNews();
-        $this->assign($array);
+    public function shuju(){
+        $id = I('get.id');
+        if ($id == '') { $this->ajaxReturn(21);}
+        $res = M('news n')
+        ->join('yz_cassify_news c on c.id = n.cassify_news_id')
+        ->field('n.id,n.news_title,n.time,n.new_img,n.author,n.new_text,c.title')
+        ->where("cassify_news_id =".$id)
+        ->limit(6)
+        ->select();
+        $this->ajaxReturn($res);
+                       
     }
-
-    //新闻资讯页面新闻标题(加载时调用)
-    public function getNewsType()
-    {
-        $type = D('NewsType');
-        $res = $type->checkAll();
-        $this->assign('type', $res);
+    public function new_whole(){
+        $res = M('news n')
+        ->join('yz_cassify_news c on c.id = n.cassify_news_id')
+        ->field('n.id,n.news_title,n.time,n.new_img,n.author,n.new_text,c.title')
+        ->limit(6)
+        ->select();
+        $this->ajaxReturn($res);
+        // if ($res) { $this->ajaxReturn($res);}
+        // else{ $this->ajaxReturn(null);}           
     }
-
-    //点击新闻类型更新数据
-    public function getList($type_id)
-    {
-        $type = D('News');
-        $res = $type->getList($type_id);
-        return $res;
-    }
-
-    //点击新闻类型更新数据
-    public function getAllList()
-    {
-        $this->getNewsType();
-        $this->allNews();
-        $this->display('News/panel/list');
+    public function page(){
+        $data = D('news')->new_page('news');
+       
+        dump($res);
+        dump($data);
     }
 
 }
