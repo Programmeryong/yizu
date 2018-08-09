@@ -295,4 +295,16 @@ main{font-size:14px;
 
 
 
-/**/
+/*预约是否成功弹框*/
+.succe{width: 50rem; height: 8.5rem; position: fixed; left: 50%; top: 50%; margin-left: -30rem; margin-top: -4.3rem;
+			background: #F6FFED; border: 1px solid #B7EB8F; border-radius: 5px; z-index: 9999; padding-top: 15px; display: none;}
+
+.succe_title{margin-left: 25px; padding-left: 42px; background: url(../images/icon/succe.png) no-repeat; background-size: 24px 24px;}
+
+.error{width: 50rem; height: 8.5rem; position: fixed; left: 50%; top: 50%; margin-left: -30rem; margin-top: -4.3rem;
+			background: #FFF1F0; border: 1px solid #FFA39E; border-radius: 5px; z-index: 9999; padding-top: 15px; display: none;}
+
+.error_title{margin-left: 25px; padding-left: 42px; background: url(../images/icon/error.png) no-repeat; background-size: 24px 24px;}
+
+.close_succe,.close_error{position: absolute; top: 3px; right: 5px; padding: 3px 3px; cursor: pointer;}
+.close_succe img,.close_error img{width: 16px; height: 16px;}

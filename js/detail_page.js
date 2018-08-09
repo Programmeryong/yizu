@@ -92,10 +92,46 @@ $(document).ready(function(){
 	
 
 	
+	/*提交成功后提示*/
+	/*$("input[type='submit']").click(function(){
+		$(".succe").show(500,function(){
+		    $(".succe").fadeOut(6000);
+		});
+	})*/
+	
+	/*提交出错后提示*/
+	/*$("input[type='submit']").click(function(){
+		$(".error").show(500,function(){
+			$(".close_error").click(function(){
+				$(".error").hide(500);
+			})
+		    $(".error").fadeOut(6000);
+		});
+	})*/
+	//ifsucce("succe","哈哈","hkjhjkhj");
+	function ifsucce(id,title,info){
+		$("."+id+"_title").html(title);
+		$(".juese_"+id).html(info);
+		
+		$("."+id).show(500).delay(10).fadeOut(4000);
+		
+		/*提示框慢慢消失，如果鼠标移到上面，显示回来，鼠标移出继续消失*/
+		$("."+id).hover(function(){
+			$(this).fadeIn(500).delay(10).stop();
+		},function(){
+			$(this).fadeOut(2500);
+		})
+		
+		/*点击关闭xx,关闭提示框*/
+		$(".close_"+id).click(function(){
+			$("."+id).stop().delay(10).hide(500);
+		})
+		
+	}
+	
 	
 	
 	/*委托找房*/
-	
 	$("input[type='tel']").change(function(){
 		$("#telText").css("display","none");
 	});
