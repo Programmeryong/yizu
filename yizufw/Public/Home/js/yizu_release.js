@@ -4,8 +4,8 @@ $(function(){
 		let i = $(this).index();
 		// console.log($('.thanradio'));
 		$('.thanradio:eq('+i+')').click();
-		$('.ulradio li').css({"background-image":"url(/yizufw/Public/Home/images/icon/btn_on.png)"});
-		$('.ulradio li:eq('+i+')').css({"background-image":"url(/yizufw/Public/Home/images/icon/btn_off.png)"});
+		$('.ulradio li').css({"background-image":"url(/Public/Home/images/icon/btn_on.png)"});
+		$('.ulradio li:eq('+i+')').css({"background-image":"url(/Public/Home/images/icon/btn_off.png)"});
 	});
 	$('.ulradio li:eq(0)').click();
 
@@ -13,8 +13,8 @@ $(function(){
 		let i = $(this).index();
 		// console.log($('.thanradio'));
 		$('.thanradio1:eq('+i+')').click();
-		$('.ulradio1 li').css({"background-image":"url(/yizufw/Public/Home/images/icon/btn_on.png)"});
-		$('.ulradio1 li:eq('+i+')').css({"background-image":"url(/yizufw/Public/Home/images/icon/btn_off.png)"});
+		$('.ulradio1 li').css({"background-image":"url(/Public/Home/images/icon/btn_on.png)"});
+		$('.ulradio1 li:eq('+i+')').css({"background-image":"url(/Public/Home/images/icon/btn_off.png)"});
 	});
 	$('.ulradio1 li:eq(1)').click();
 

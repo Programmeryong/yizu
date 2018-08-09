@@ -143,12 +143,11 @@
                     </ul>
                 </div>
                 <div class="col-md-12">
-                    <form action="<?php echo U('Like/index');?>" id="top_like" enctype="multipart/form-data" method="post">
-                        <input class="top_search" type="text" name="search" placeholder="请输入区域、商圈或名称开始找房">
-                        <input class="top_submit" type="submit" name=""
-                               style="position: absolute;top: -999px;opacity: 0;">
-                        <span class="top_buttom"><img src="/Public/Home/images/icon/magnifier.png"></span>
-                    </form>
+                    <form action="<?php echo U('Like/vague_like');?>" id="top_like" enctype="multipart/form-data"  method="get">
+						<input class="top_search" type="text" name="title" placeholder="请输入区域、商圈或名称开始找房" value="<?php echo ($title); ?>">
+						<input class="top_submit" type="submit" name="" style="position: absolute;top: -999px;opacity: 0;">
+						<span class="top_buttom"><img src="/Public/Home/images/icon/magnifier.png"></span>
+					</form>
 
                 </div>
             </div>

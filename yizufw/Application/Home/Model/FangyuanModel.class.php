@@ -27,7 +27,9 @@ class FangyuanModel extends Model {
 	   		->join('yz_metro m on m.id = f.metro')
 	   		->join('yz_site s on s.id = f.site')
 	   		->join('yz_unit u on u.id = f.danjia_wei')
+	   		->order('danjia asc')
 	   		->where($map)
+
 	   		->select();
         $Page  = new \Think\Page(count($result),8);// 实例化分页类 传入总记录数和每页显示的记录数(25)
   //       foreach($map as $key=>$val) {
@@ -43,7 +45,7 @@ class FangyuanModel extends Model {
 	   		->join('yz_unit u on u.id = f.danjia_wei')
 	   		->limit($Page->firstRow.','.$Page->listRows)
 	   		->where($map)
-	   		->order('id desc')
+	   		->order('danjia asc')
 	   		->select();	   		
 	    $res =array('fy_list' => $result,'page' => $show);// 赋值数据集
 	    return $res;

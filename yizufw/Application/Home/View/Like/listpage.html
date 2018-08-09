@@ -14,7 +14,7 @@
 	<script type="text/javascript" src="__PUBLIC__/Home/js/yizu_listpage.js"></script>
 </head>
 <body style="background:rgba(0,0,0,.04)">
-	<include file="Index/index_top"/>
+	<include file="Public/index_top"/>
 	<!-- yizu_index.html -->
 <!-- 中部开始 -->
 	<main>
@@ -332,8 +332,8 @@
 				<div class="house_listnav">
 					<ul class="nav nav-pills nav-justified">
 					  	<li role="presentation" class="active">默认排序</li>
-						<li role="presentation">价格</li>
-						<li role="presentation">最新</li>
+						<li role="presentation" price="danjia" class="price">价格</li>
+						<li role="presentation" NewestTime="time">最新</li>
 					</ul>
 					<span>共有<span class="fontSize18">194</span> 个房源满足您的需求</span>
 				</div>
@@ -623,9 +623,19 @@ $(document).ready(function(){
     		console.log(result);
     		$('.house_lists').html(result);
 		});		       
-    });
-	
-		
+    });	
+    $(".price").click(function(){
+    	var price = $(this).attr('price');
+		console.log(price);
+		$.get(
+			"{:U('Like/screen')}",
+			{'type':type,'identity':identity,'metro':metro,'site':site,'mianji1':mianji1,'mianji2':mianji2,'danjia1':danjia1,'danjia2':danjia2,'price':price},
+			function(result){
+    		console.log(result);
+    		$('.house_lists').html(result);
+		});			
+					
+	});
 })
 	
 </script> 	
