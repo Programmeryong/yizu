@@ -3,4 +3,16 @@ $(function(){
 	$('.indexb').click(function(){
 		$('.indexbtn').click();
 	})
+	$(document).ready(function(){
+		$('.adact').show();
+		$('.minadbox').show();
+	})
+	$('.mainadboxclose').click(function(){
+		$('.adact').hide();
+		$('.minadbox').hide();
+	})
+	$('.adact').click(function(){
+		$('.adact').hide();
+		$('.minadbox').hide();
+	})
 })
