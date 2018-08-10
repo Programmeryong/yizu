@@ -51,6 +51,10 @@ input,textarea{
 .fsize24{
     font-size: 24px!important;
 }
+.black85{color: rgba(0,0,0,0.85);}
+.black65{color: rgba(0,0,0,0.65);}
+.black45{color: rgba(0,0,0,0.45);}
+
 .fw_bold{
     font-weight:bold;
 }
@@ -327,25 +331,29 @@ footer{
 /*登录*/
 .temp{width: 100%; height: 100%; background: rgba(0,0,0,0.5); visibility: hidden; z-index: 9911;  position: fixed;}
 .login{width: 420px; height: 370px; background: #fff; position: fixed; left: 50%; top: 50%; margin-left: -210px; margin-top: -200px; z-index: 9999;
-    border-radius: 10px; display: none;}
+    border-radius: 10px; display: none; box-shadow:0px 4px 8px 0px rgba(0,0,0,0.1);}
 .login .closed{padding-left: 25px; margin-right: 5px; margin-top: -5px; width: 5px; height: 30px; float: right; cursor: pointer;
     background: url(../images/icon/close.png) no-repeat; background-size: 20px 20px;}
 .login .title{width: 100%; height: auto; text-align: center; padding-top: 1rem;  margin-bottom: 3rem;}
 .login .title p:first-child{padding-left: 2rem;}
 .login .title p{margin-bottom: 2px; }
-.login form{position: relative; height: 210px;}
-.login input{height: 45px; border-radius: 4px; background: rgba(0,0,0,.06); border: 0; padding-left:1rem; outline: none;}
-.login input:first-child,.login input[type='submit'],.login input[type='checkbox']{display: block;}
-.login input[type='tel']{width: 380px;  margin:0 auto;  margin-bottom: 1rem; }
-.login input[type='text']{width: 270px; margin-left: 20px; }
-.login input[type='button']{padding-right: 1rem; color: rgba(0,0,0,0.65); margin-left: -7px;}
-.login input[type='button']:hover{color: orange;}
-.login input[type='checkbox']{position: relative; top: -2999rem;}
-.login form p{float: right; padding-right: 22px; height: 35px; line-height: 40px;}
-.login form p input,.login form p span{float: left;}
-.login form p span{ padding-left: 20px; background: url(../images/icon/checkbox-o.png) 0px 9px no-repeat; background-size: 20px 20px; cursor: pointer;}
-.login input[type='submit']{position: absolute; left: 20px; bottom: 0px; width: 380px; height: 45px; background: #00A0E9; color: #fff;}
+.login form{height: auto;}
+.login input[type='tel'],.login input[type='text'],.login input[type='submit']{height: 45px; border-radius: 4px; background: rgba(0,0,0,.06); border: 0; padding-left:1rem; outline: none;}
+.login input:first-child{display: block;}
+.login input[type='tel']{width: 380px;  margin:0 auto;  margin-bottom: 2px; }
+.login input[type='text']{width: 380px; margin:0 auto; }
+.login input[type='button']{ position: absolute; top: 13px; right: 0; outline: none; border: none; border-left: 1px solid rgb(0,0,0,0.3);
+							background: rgba(0,0,0,0.01); padding: 0 15px;}
+.login input[type='button']:hover{color: #198CFF;}
+.login input[type='checkbox']{position: absolute; top: -2999rem;}
+.login form p{padding-left: 20px; padding-right: 22px; height: 35px; line-height: 40px;}
+.login form>p{display: flex; justify-content: space-between;}
+.login form p span{ padding-left: 22px; background: url(../images/icon/checkbox-null.png) 0px 9px no-repeat; background-size: 20px 20px; cursor: pointer;}
+.login form>p a{font-size: 14px; color: #00A0E9;}
+.login input[type='submit']{position: absolute; left: 20px; bottom: 2rem; width: 380px; height: 45px; background: #00A0E9; color: #fff;}
 .login input[type='submit']:hover{background: #1783E8; color: #fff;}
+
+.login form>span{margin-left: 3rem;}
 /*登录结束*/
 
 /*上传房源按钮*/

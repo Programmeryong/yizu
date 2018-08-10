@@ -298,6 +298,7 @@
 	background-color: rgba(255,255,255,1);
 	box-shadow:4px 4px 4px rgba(0,0,0,.04);
 }
+.right_icon li{cursor: pointer;}
 .right_icon li p{
 	text-align: center;
 	color: #666666;
@@ -308,6 +309,23 @@
 .right_icon li p img{
 	width: 30px;
 }
+
+/*反馈*/
+.feedback{width: 50rem; height: 40rem; border-radius: 3px; box-shadow:0px 4px 8px 0px rgba(0,0,0,0.1); background: #fff; z-index: 9999;
+		 position:fixed; left: 50%; top: 40%; margin-left: -25rem; margin-top: -20rem; padding: 1.5rem 2rem; display: none;}
+.feedback form{margin-top: 2rem; /*position: relative;*/}
+.feedback textarea{width: 39rem; height: 15rem; margin-left: 1rem; border: 1px solid #E1E1E1; resize:none;  outline: none;
+					padding: 5px 8px; border-radius: 3px;}
+.feedback input[type='text']{width: 39rem; height: 3rem; margin-left: 1rem; border: 1px solid #E1E1E1; padding-left: 8px;
+							border-radius: 3px; font-size: 14px; margin-bottom: 5px;}
+.feedback input[type='submit']{position: absolute; bottom: 4rem; right: 2.6rem; border: none; color: #fff; 
+								background: #1890FF; border-radius: 3px; 
+								padding: 5px 1.5rem;}
+.feedback input[type='submit']:hover{background: #40ACFF;}
+.close_feedback{position: absolute; top: 10px; right: 10px; transition: all 1s; cursor: pointer;}
+.close_feedback:hover{transform: rotateZ(-360deg);}
+.close_feedback img{width: 20px; height: 20px;}
+
 /*媒体查询当设备宽度小于等于1024px*/
 @media only screen and  (max-width: 1024px){
 	.foot_logo img{

@@ -134,13 +134,18 @@ $(function(){
 	   
 	
 	/*只能输入数字*/
-	$('input').keypress(function(event){
+	/*$('input').keypress(function(event){
 		var key = event.keyCode;
 		if(key == 46 || key == 43 || key == 45 || key ==189 || key == "undefined" || key == null || key == '')
 	    {
 	       return false;
 	    }
-	})
+	})*/
+	$('input').keyup(function(){
+	    $(this).val($(this).val().replace( /[^0-9]/g,''));
+	}).bind("paste",function(){
+	    $(this).val($(this).val().replace( /[^0-9]/g,''));
+	});  
 	
 	
 	/*服务标签*/

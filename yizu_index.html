@@ -18,7 +18,7 @@
 </head>
 <body style="background:#fff">
 	<!--用于弹框后一层阴影铺满浏览器-->
-		<div class="temp"></div>
+	<div class="temp"></div>
 	<!-- 广告-优惠券--> 
 	<div class="coupon clearfix">
 		<span class="close_coupon"> 
@@ -631,7 +631,7 @@
 				<p><img src="./images/icon/groon.png"></p>
 				<p class="fsize18">推荐</p>
 			</li>
-			<li>
+			<li class="fankui">
 				<p><img src="./images/icon/feedback.png"></p>
 				<p class="fsize18">反馈</p>
 			</li>
@@ -640,6 +640,31 @@
 			</li>
 		</ul>
 	</div>
+	
+	<!--反馈-->
+	<div class="feedback">
+		<p class="fsize18 black85 tac" style="margin-bottom: 1.8rem;">用户反馈</p>
+		<p class="black85">您对新版乙租网有任何意见和建议，或使用中遇到的问题，请在本页面中反馈。我们会每天关注并不断优化产品，为您提供更好的服务！</p>
+		<form action="" method="post">
+			<div class="clearfix" style="position: relative;">
+				<span style="float: left;">反馈内容</span>
+				
+				<textarea class="textArea" placeholder="我们非常乐意收到您使用网站过程中的感受和意见。"></textarea>
+				<span class="fsize18 black45" style="position: absolute; bottom: 8px; right: 12px; background: #E1E1E1;">
+					<span class="textNum fsize18 black45">0</span>/500
+				</span>
+			</div>
+			
+			<div class="clearfix" style="margin-top: 1rem;">
+				<span style="float: left;">联系方式</span>
+				<input type="text" placeholder="手机号、593791504@qq.com、QQ均可"/>
+				<span class="tishi" style="margin-left: 7rem; color: #F52230; font-size: 14px;"></span>
+			</div>
+			<input type="submit" value="确认提交"/>
+		</form>
+		<span class="close_feedback"><img src="images/icon/close.png"/></span>
+	</div>
+	
 </body>
 <script type="text/javascript">
 	var mySwiper = new Swiper('.movebox',{
@@ -651,5 +676,16 @@
 		    disableOnInteraction: false, /*触碰后是否停止切换*/
 		},	
 	})
+	
+	
+	/*文本域的字数控制*/
+	$('.textArea').on("keyup",function(){
+        $('.textNum').text($('.textArea').val().length);//这句是在键盘按下时，实时的显示字数
+        if($('.textArea').val().length > 500){
+            $('.textNum').text(500);//长度大于100时0处显示的也只是100
+            $('.textArea').val($('.textArea').val().substring(0,500));//长度大于100时截取钱100个字符
+        }
+    })
+    $('.textNum').text($('.textArea').val().length);//这句是在刷新的时候仍然显示字数
 </script>
 </html>

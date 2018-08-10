@@ -100,6 +100,66 @@ $(function(){
 	}
 	
 	
+	/*反馈*/
+	$(".feedback textarea").focus(function(){
+		$(this).css({"border":"1px solid #198CFF"});
+	})
+	$(".feedback textarea").blur(function(){
+		$(this).css({"border":"1px solid #E1E1E1"});
+	})
+	
+	
+	var iftrue;/*声明全局变量，判断是否能提交*/
+	/*获取焦点*/
+	$(".feedback input[type='text']").focus(function(){
+		$(this).css({"border":"1px solid #198CFF"});
+		$(".tishi").html("");
+	})
+	
+	/*失去焦点*/
+	$(".feedback input[type='text']").blur(function(){
+		yanzeng();
+	})
+	
+	/*提交表单*/
+	$(".feedback form").submit(function(){
+		yanzeng();
+		return iftrue;
+	})
+	
+	function yanzeng(){
+		
+		var txt = $(".feedback input[type='text']").val();
+		var email = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/;/*邮箱*/
+		var phone = /^[1][3,4,5,7,8][0-9]{9}$/; /*电话号码*/
+		var qq = /^[0-9]{4,12}$/; /*4-12位纯数字qq号*/
+		
+		if(txt=="" || txt==null){
+			$(".feedback input[type='text']").css({"border":"1px solid #F52230"});
+			$(".tishi").html("联系方式不能为空！");
+			iftrue = false;
+		}else if(!email.test(txt) && !phone.test(txt) && !qq.test(txt)){
+			$(".feedback input[type='text']").css({"border":"1px solid #F52230"});
+			$(".tishi").html("请输入正确的手机号码,邮箱或QQ！");
+			iftrue = false;
+		}else{
+			$(".feedback input[type='text']").css({"border":"1px solid #5FCC29"});
+			$(".tishi").html("");
+			iftrue = true;
+		}
+	}
+	/*反馈结束*/
+	
+	/*点击反馈*/
+	$(".fankui").click(function(){
+		$(".temp").css("visibility","visible");
+		$(".feedback").show();
+	})
+	
+	$(".temp,.close_feedback").click(function(){
+		$(".temp").css("visibility","hidden");
+		$(".feedback").hide();
+	})
 	
 	
 })

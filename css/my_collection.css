@@ -215,7 +215,7 @@ a:hover{text-decoration: none; color: rgba(0,0,0,1);}
 /*发表评论*/
 .service_lable2{display: none;}
 
-.comment{display: none; width: 54.167rem; height: 41.667rem; background: #fff; position: fixed; left: 50%; top: 50%; z-index: 12;
+.comment{display: none; width: 54.167rem; height: 41.667rem; background: #fff; position: fixed; left: 50%; top: 50%; z-index: 9912;
 			margin-left: -32.5rem; margin-top: -20.833rem; box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.04);}
 .title{width: 100%; height: 4.167rem; line-height: 4.167rem; padding: 0 2rem; border-bottom: 2px solid rgba(0,0,0,0.04); margin-bottom: 1.5rem;}
 .close_but img{width: 100%; height: 100%;}
