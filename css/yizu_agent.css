@@ -86,7 +86,7 @@ a:hover{text-decoration: none;}
 .bus{margin-top: 2rem;}
 .food{margin-left: -3px;}
 .food,.bank{margin-top: 2.2rem;}
-.bus>ul,.food>ul,.bank>ul{padding-left: 0.6rem;}
+.bus>ul,.food>ul,.bank>ul{padding-left: 0.1rem; margin-left: 0;}
 .bus>p,.food>p,.bank>p{font-size: 18px; padding-left: 30px;}
 .bus li,.food li,.bank li{float: left; margin-left: 2.5rem; padding-top: 0.5rem; color: rgba(255,255,255,0.85);}
 .bus>p{background: url(../images/icon/bus.png) no-repeat; background-size: 20px 20px;}

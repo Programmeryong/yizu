@@ -1,6 +1,6 @@
 *{margin: 0; padding: 0; list-style: none;}
-a{text-decoration: none; color: rgba(0,0,0,0.85);}
-a:hover{text-decoration: none;}
+a,a *{text-decoration: none; color: rgba(0,0,0,0.85);}
+a:hover,a *{text-decoration: none;}
 .fontSize12{font-size: 12px!important;}
 .fontSize14{font-size: 14px!important;}
 .fontSize16{font-size: 16px!important;}
@@ -30,8 +30,10 @@ main{width: 1200px; height: auto; margin: 0 auto;}
 		 
 /*列表项*/
 #all_house{width: 100%; height: auto; margin: 0rem auto 1.5rem; background: #fff; padding-bottom: 1rem;}
+#all_house>ul>li{transition: all 1s;}
+#all_house>ul>li:hover{background: rgba(0,0,0,0.04);}
 .all_house_list{width: 98%; margin: 0 auto;  border-bottom: 1px solid rgba(0,0,0,0.15);}
-.all_house_list>ul>li{width: 19.5%; height: 11.5rem; line-height: 11.5rem;  text-align: center; }
+.all_house_list>ul>li{width: 19.5%; height: 11.5rem; line-height: 11.5rem;  text-align: center;}
 .all_house_list>ul>li:first-child{text-align: left; padding-left: 3px;}
 .all_house_list>ul>li img{width: 65%; height: 70%;}
 .show_all_house{width: 180px; height: 36px; line-height: 36px; margin: 1rem auto; border-radius: 3px;

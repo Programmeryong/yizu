@@ -218,7 +218,22 @@ $(function(){
 	})
 	
 	
-	
+	/*服务标签*/
+	$(".biao").hide();
+	var posit = $(".posits");
+	for (var i = 0; i < posit.length; i++) {
+		var str = $(".str").eq(i).html();
+		//console.log(str);
+	 	var arr = new Array(); 
+	 	arr = str.split(""); 
+	 	//console.log(arr);
+		for(var j in arr){
+			var biaos = arr[j]-1;
+			//console.log(i+","+biaos);
+			$(".posits:eq("+i+") .biao:eq("+biaos+")").show();
+		}
+	}
+	/*服务标签结束*/
 	
 	
 	
