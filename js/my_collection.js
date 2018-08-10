@@ -40,6 +40,7 @@ $(function(){
  
  
  	/*发表评论*/
+ 	$(".temp").css({"visibility":"hidden"});
  	$(".comment .ok").click(function(){//点击class为ok的按钮时模拟点击submit按钮
  		$(".comment input[type='submit']").click();
  	})

@@ -354,6 +354,7 @@ footer{
 .login input[type='submit']:hover{background: #1783E8; color: #fff;}
 
 .login form>span{margin-left: 3rem;}
+.tishi_phone,.tishi_yzm{font-size: 14px;}
 /*登录结束*/
 
 /*上传房源按钮*/
