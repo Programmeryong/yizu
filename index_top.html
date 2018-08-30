@@ -18,7 +18,7 @@
 
 	<!--用于弹框后一层阴影铺满浏览器-->
 	<!-- <div class="temp"></div> -->
-	<!-- <div class="temp_1"></div> -->
+	<div class="temp_1"></div>
 	<!-- 上传房源选择按钮 -->
 	<div class="uploadbox">
 		<div class="row marpad">
@@ -128,7 +128,7 @@
 	            <li><a href="#">退出</a></li>
 	         </ul>
 	     	</li> 
-	      	<li><a href="#" class="nav_rightbtn">发布房源</a></li>
+	      	<li><a href="#" class="nav_rightbtn clickthisbtn">发布房源</a></li>
 	      </ul>
 	    </div>
 	  </div>
@@ -190,4 +190,12 @@
 	</div>
 </header>	
 </body>
+<script type="text/javascript">
+	$(function(){
+		$('.clickthisbtn').click(function(){
+			$('.uploadbox').show();
+			$('.temp_1').show();
+		})
+	})
+</script>
 </html>
